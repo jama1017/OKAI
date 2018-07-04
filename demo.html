@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/demo.css">
+
+    <title>Project SynGap Demo</title>
+  </head>
+
+  <body>
+
+    <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
+  <svg version="1.1"
+  	 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+
+  <defs>
+    <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
+        <feBlend/>
+    	</filter>
+  </defs>
+
+  <!-- <g id="context">
+  	<rect x="0.5" y="0.5" class="st0" width="599" height="599"/>
+  	<path d="M599,1v598H1V1H599 M600,0H0v600h600V0L600,0z"/>
+  </g> -->
+
+  <g id="neuronGroup" filter="url(#goo)">
+  <g>
+  	<circle class="neuron" cx="300" cy="300" r="47"/>
+  </g>
+  <g>
+  	<circle class="input" cx="162" cy="196" r="28"/>
+  </g>
+  <g>
+  	<circle class="input" cx="162" cy="300" r="28"/>
+  </g>
+  <g>
+  	<circle class="output" cx="434" cy="300" r="28"/>
+  </g>
+  <g>
+  	<circle class="input" cx="162" cy="404" r="28"/>
+  </g>
+  <line class="axon" x1="162" y1="196" x2="300" y2="300"/>
+  <line class="axon" x1="162" y1="300" x2="300" y2="300"/>
+  <line class="axon" x1="162" y1="404" x2="300" y2="300"/>
+  <line class="axon" x1="434" y1="300" x2="300" y2="300"/>
+
+  </g>
+  </svg>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/demo.js"></script>
+
+  </script>
+  </body>
+</html>
