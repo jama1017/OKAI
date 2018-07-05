@@ -23,33 +23,45 @@
     	</filter>
   </defs>
 
-  <!-- <g id="context">
-  	<rect x="0.5" y="0.5" class="st0" width="599" height="599"/>
-  	<path d="M599,1v598H1V1H599 M600,0H0v600h600V0L600,0z"/>
-  </g> -->
-
   <g id="neuronGroup" filter="url(#goo)">
-  <g>
-  	<circle class="neuron" cx="300" cy="300" r="47"/>
-  </g>
-  <g>
-  	<circle class="input" cx="162" cy="196" r="28"/>
-  </g>
-  <g>
-  	<circle class="input" cx="162" cy="300" r="28"/>
-  </g>
-  <g>
-  	<circle class="output" cx="434" cy="300" r="28"/>
-  </g>
-  <g>
-  	<circle class="input" cx="162" cy="404" r="28"/>
-  </g>
-  <line class="axon" x1="162" y1="196" x2="300" y2="300"/>
-  <line class="axon" x1="162" y1="300" x2="300" y2="300"/>
-  <line class="axon" x1="162" y1="404" x2="300" y2="300"/>
-  <line class="axon" x1="434" y1="300" x2="300" y2="300"/>
+
+    <line class="dendrites" x1="186" y1="214" x2="266" y2="275"/>
+    <line class="dendrites" x1="192" y1="300" x2="258" y2="300"/>
+    <line class="dendrites" x1="184" y1="387" x2="268" y2="324"/>
+    <line class="axon" x1="407" y1="300" x2="340" y2="300"/>
+
+    <g id="neuron">
+    	<circle class="whitespace" cx="300" cy="300" r="41"/>
+    </g>
+
+    <g class="input">
+    	<circle class="whitespace" cx="162" cy="196" r="29"/>
+    </g>
+
+    <g class="input">
+    	<circle class="whitespace" cx="162" cy="300" r="29"/>
+    </g>
+
+    <g class="input">
+    	<circle class="whitespace" cx="162" cy="404" r="29"/>
+    </g>
+
+    <g class="output">
+    	<circle class="whitespace" cx="434" cy="301" r="29.5"/>
+    </g>
+
+    <line class="signalTransit" x1="186" y1="214" x2="266" y2="275"/>
+    <line class="signalTransit" x1="192" y1="300" x2="258" y2="300"/>
+    <line class="signalTransit" x1="184" y1="387" x2="268" y2="324"/>
 
   </g>
+
+	<!-- <circle class="signal" fill="#FC5F0F" cx="162" cy="196" r="23"/>
+	<circle class="signal" fill="#f8b82c" cx="162" cy="404" r="23"/>
+	<circle class="signal" fill="#29b4ac" cx="162" cy="300" r="23"/> -->
+
+
+
   </svg>
 
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
