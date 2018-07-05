@@ -20,20 +20,37 @@ svg {
   left: 0px;
 }
 
-.neuron {
-  fill: #3fa9f5;
+#neuron {
+  fill: none;
+  stroke: #3fa9f5;
+  stroke-width: 11px;
 }
 
 .input {
-  fill: #3fd7f5;
+  fill: none;
+  stroke: #3fd7f5;
+  stroke-width: 11px;
 }
 
 .output {
-  fill: #3f7cf5;
+  fill: none;
+  stroke: #3f7cf5;
+  stroke-width: 11px;
 }
 
 .axon {
   fill:none;
   stroke: #3fa9f5;
-  stroke-width: 12;
+  stroke-width: 11px;
+}
+
+
+.dendrites {
+  stroke: #3fa9f5;
+  stroke-width: 11px;
+}
+
+.signalTransit {
+  stroke: #3fa9f5;
+  stroke-width: 14px;
 }
