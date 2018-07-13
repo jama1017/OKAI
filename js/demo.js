@@ -12,6 +12,7 @@ let everything = select('#neuronSys'); //is the SVG
 //and the filter
 let neuronGroup = select('#neuronGroup');
 
+//graphics
 let topSignal = select('#topSignal');
 let midSignal = select('#midSignal');
 let botSignal = select('#botSignal');
@@ -27,20 +28,18 @@ let axon = select('.axon');
 let outTransit = axon.cloneNode();
 neuronGroup.appendChild(outTransit);
 
-let outSig = select('#outSig');
 
 var tl = new TimelineMax({repeat: -1});
 
-tl.set(topSignal, {transformOrigin: '110%, 110%'});
+tl.set([topSignal], {transformOrigin: '110%, 110%'});
 tl.set(midSignal, {transformOrigin: '110%, 50%'});
 tl.set(botSignal, {transformOrigin: '110%, 0%'});
-
 tl.set(cenSig2, {transformOrigin: '0%, 50%'});
 tl.set(cenSig3, {transformOrigin: '0%, 100%'});
-
 tl.set(outSig, {transformOrigin: '0%, 50%'});
 
 tl.set(outTransit, {strokeWidth: "25px"});
+
 
 tl.staggerTo([topSignal, midSignal, botSignal], 1, {scale: 0}, 0.5)
   .staggerFromTo(transit, 1.5, {drawSVG:'0% 10%'}, {drawSVG: "90%, 100%"}, 0.5, "-=1.95")
@@ -49,5 +48,6 @@ tl.staggerTo([topSignal, midSignal, botSignal], 1, {scale: 0}, 0.5)
   .to([cenSig, cenSig2, cenSig3], 2.5, {scale: 0, overwrite:"none"}, "-=1")
   .fromTo(outTransit, 2, {drawSVG: "90%, 100%"}, {drawSVG: "0% 10%"}, "-=2.5")
   .fromTo(outSig, 1, {scale: 0}, {scale: 1}, "-=1.5");
+
 
 // GSDevTools.create();
