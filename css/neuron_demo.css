@@ -81,3 +81,7 @@ svg {
 .num{
   fill: white;
 }
+
+#num4, #numBig3{
+  visibility: hidden;
+}
