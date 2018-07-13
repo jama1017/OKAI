@@ -1,6 +1,6 @@
 body {
   background-color:#FFF;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-align:center;
 }
 
@@ -13,7 +13,7 @@ html {
 }
 
 svg {
- position:absolute;
+  position:absolute;
   width:100%;
   height:100%;
   top: 0px;
@@ -34,7 +34,7 @@ svg {
 
 .output {
   fill: none;
-  stroke: #3f7cf5;
+  stroke: #3f8bf5;
   stroke-width: 11px;
 }
 
@@ -52,5 +52,17 @@ svg {
 
 .signalTransit {
   stroke: #3fa9f5;
-  stroke-width: 14px;
+  stroke-width: 20px;
+}
+
+.signal {
+  fill: #3fa9f5;
+}
+
+#cenSig {
+  fill: #3f8bf5;
+}
+
+#outSig {
+  fill: #3f6df5;
 }
