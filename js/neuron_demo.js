@@ -28,6 +28,8 @@ neuronGroup.appendChild(outTransit);
 let num1 = select('#num1');
 let num2 = select('#num2');
 let num3 = select('#num3');
+let numBig3 = select('#numBig3');
+let num4 = select('#num4');
 
 let topSigInTL = new TimelineMax();
 
@@ -48,6 +50,7 @@ let botSigInTL = new TimelineMax();
 
 botSigInTL.set(botSignal, {transformOrigin: '110%, 0%'})
     .set(num3, {transformOrigin: '240%, -40%'})
+    .set(num4, {transformOrigin: '-110%, 140%'})
     .set(cenSig3, {transformOrigin: '0%, 100%'})
     .add("enterCenSig3", 0.8);
 
@@ -56,6 +59,14 @@ botSigInTL.to(botSignal, 1, {scale: 0}, "botSignal")
      .fromTo(inTransit2, 1.5, {drawSVG:'0% 10%'}, {drawSVG: "90%, 100%"}, "botSignal")
 
      .fromTo(cenSig3, 1, {scale: 0}, {scale: 1}, "enterCenSig3")
+     //.fromTo(num4, 1, {scale: 0}, {scale: 1}, "enterCenSig3")
+
+let counting = new TimelineMax();
+
+counting.to(num2, 0.5, {morphSVG: numBig3})
+        .set(num2, {visibility: "hidden"})
+        .set(numBig3, {visibility: "visible"})
+        .to(numBig3, 0.5, {morphSVG: num4})
 
 // let SigCenTL = new TimelineMax();
 
@@ -81,6 +92,7 @@ botSigInTL.to(botSignal, 1, {scale: 0}, "botSignal")
 let masterTL = new TimelineMax({repeat: -1});
 
 masterTL.add(topSigInTL)
-        .add(botSigInTL);
+        .add(botSigInTL)
+        .add(counting, "-=1");
 
 GSDevTools.create();
