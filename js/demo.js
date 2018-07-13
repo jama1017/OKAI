@@ -49,3 +49,5 @@ tl.staggerTo([topSignal, midSignal, botSignal], 1, {scale: 0}, 0.5)
   .to([cenSig, cenSig2, cenSig3], 2.5, {scale: 0, overwrite:"none"}, "-=1")
   .fromTo(outTransit, 2, {drawSVG: "90%, 100%"}, {drawSVG: "0% 10%"}, "-=2.5")
   .fromTo(outSig, 1, {scale: 0}, {scale: 1}, "-=1.5");
+
+// GSDevTools.create();
