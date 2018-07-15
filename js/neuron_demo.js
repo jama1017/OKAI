@@ -68,6 +68,19 @@ counting.to(num2, 0.5, {morphSVG: numBig3})
         .set(numBig3, {visibility: "visible"})
         .to(numBig3, 0.5, {morphSVG: num4})
 
+let SigOutTL = new TimelineMax();
+
+SigOutTL.set(outTransit, {strokeWidth: "24px"})
+
+SigOutTL.to([cenSig, cenSig3], 2, {
+              scale: 0,
+              transformOrigin: '110%, 50%',
+              smoothOrigin:true}, "SigOut")
+
+  .to(numBig3, 1.5, {opacity: 0, scale: 0, transformOrigin: '200%, 50%'}, "SigOut")
+  .fromTo(outTransit, 2, {drawSVG: "90%, 100%"}, {drawSVG: "0% 10%"}, "SigOut")
+  .fromTo(outSig, 1, {scale: 0, transformOrigin: '0%, 50%'}, {scale: 1}, "SigOut+=1");
+
 // let SigCenTL = new TimelineMax();
 
 //
@@ -93,6 +106,7 @@ let masterTL = new TimelineMax({repeat: -1});
 
 masterTL.add(topSigInTL)
         .add(botSigInTL)
-        .add(counting, "-=1");
+        .add(counting, "-=1")
+        .add(SigOutTL);
 
 GSDevTools.create();
