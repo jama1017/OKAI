@@ -30,6 +30,7 @@ let num2 = select('#num2');
 let num3 = select('#num3');
 let numBig3 = select('#numBig3');
 let num4 = select('#num4');
+let numOut4 = select('#numOut4');
 
 let topSigInTL = new TimelineMax();
 
@@ -79,7 +80,8 @@ SigOutTL.to([cenSig, cenSig3], 2, {
 
   .to(numBig3, 1.5, {opacity: 0, scale: 0, transformOrigin: '200%, 50%'}, "SigOut")
   .fromTo(outTransit, 2, {drawSVG: "90%, 100%"}, {drawSVG: "0% 10%"}, "SigOut")
-  .fromTo(outSig, 1, {scale: 0, transformOrigin: '0%, 50%'}, {scale: 1}, "SigOut+=1");
+  .fromTo(outSig, 1, {scale: 0, transformOrigin: '0%, 50%'}, {scale: 1}, "SigOut+=1")
+  .from(numOut4, 1, {scale: 0, transformOrigin: '-100%, 50%'}, "SigOut+=1");
 
 // let SigCenTL = new TimelineMax();
 
