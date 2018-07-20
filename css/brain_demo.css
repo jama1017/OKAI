@@ -19,3 +19,19 @@ svg {
   top: 0px;
   left: 0px;
 }
+
+.body {
+  fill:#FCD0FA;
+}
+
+.neuronBG {
+  opacity:0.29;
+}
+
+.coreSurr {
+  fill:#B6D2FC;
+}
+
+.core {
+  fill:#92FFF7;
+}
