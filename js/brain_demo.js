@@ -8,19 +8,24 @@ selectAll = function(s) {
 
 let svg = select("svg");
 
-let newMaskShape = select('#newMaskShape');
+let cenMaskShape = select('#cenMaskShape');
+let topMaskShape = select('#topMaskShape');
+let botMaskShape = select('#botMaskShape');
+let outMaskShape = select('#outMaskShape');
 
-let cenNeuronGroup = select('#cenNeuronGroup');
-let cenBody = select('#cenBody');
-let coreSurr = select('.coreSurr');
-let core = select('.core');
+let cenCore = select('cenCore');
+let topCore = select('topCore');
+let botCore = select('botCore');
+let outCore = select('outCore');
+
+let nerveTL = new TimelineMax({repeat: -1});
 
 
+nerveTL.set([cenMaskShape, topMaskShape, botMaskShape, outMaskShape], {transformOrigin: '50% 50%'});
 
-let testTL = new TimelineMax({repeat: -1});
-
-
-testTL.to(newMaskShape, 1, {scale: 10, transformOrigin: '50% 50%'});
-// testTL.to(secondaryMask, 1, {scale: 2});
+nerveTL.to(topMaskShape, 1, {scale: 13})
+       .to(botMaskShape, 1, {scale: 12}, "-=0.5")
+       .to(cenMaskShape, 1, {scale: 10}, "-=0.5")
+       .to(outMaskShape, 1, {scale: 17}, "-=0.5")
 
 GSDevTools.create();
