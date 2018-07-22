@@ -35,3 +35,17 @@ svg {
 .core {
   fill:#92FFF7;
 }
+
+#face {
+  fill-rule:evenodd;
+  clip-rule:evenodd;
+  fill:none;stroke:#D1D1D1;
+  stroke-width:7;
+  stroke-miterlimit:10;
+}
+
+#brain {
+  fill-rule:evenodd;
+  clip-rule:evenodd;
+  fill:#FFBFAE;
+}
