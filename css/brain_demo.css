@@ -13,11 +13,11 @@ html {
 }
 
 svg {
-  position:absolute;
+  /* position:absolute; */
   width:100%;
   height:100%;
-  top: 0px;
-  left: 0px;
+  /* top: 0px;
+  left: 0px; */
 }
 
 .body {
@@ -48,4 +48,9 @@ svg {
   fill-rule:evenodd;
   clip-rule:evenodd;
   fill:#FFBFAE;
+}
+
+#brainNerveAnimation {
+  /* width: 50%;
+  height: 50%; */
 }
