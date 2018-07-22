@@ -28,7 +28,7 @@ let face = select('#face');
 //brain timeline
 let brainTL = new TimelineMax();
 
-brainTL.from(face, 0.5, {scale: 0.5,
+brainTL.from(face, 0.5, {scale: 0,
                        // ease: Bounce.easeOut,
                        transformOrigin: '50%, 50%'})
        .from(brain, 0.5, {opacity: 0, y: +100})
@@ -93,4 +93,4 @@ nerveMasterTL.add(brainTL)
              .add(transitionTL)
              .add(nerveTL);
 
-// GSDevTools.create();
+GSDevTools.create();
