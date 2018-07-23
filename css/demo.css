@@ -1,0 +1,154 @@
+body {
+  background-color:#FFF;
+  /* overflow: hidden; */
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  width:100%;
+  height:100%;
+}
+
+.animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-85%, -50%);
+  margin: auto 0;
+  /* background-color: #000; */
+  width: 60%;
+  height: auto;
+}
+
+section {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  width: 60%;
+  /* background-color: black; */
+  /* float:right; */
+}
+
+.text {
+  position: absolute;
+  text-align: left;
+  /* height: 100%; */
+  /* background-color: red; */
+  transform: translate(100%, 0%);
+  /* padding: auto 0; */
+  /* float: left; */
+  top: 30%;
+  left: 50%;
+  /* transform: translate(-100px, -50%); */
+}
+
+
+/* ------------------------brain nerve stuff-------------------------- */
+
+.body {
+  fill:#FCD0E4;
+}
+
+.neuronBG {
+  opacity:0.29;
+}
+
+.coreSurr {
+  fill:#B6D2FC;
+}
+
+.core {
+  fill:#92FFF7;
+}
+
+#face {
+  fill-rule:evenodd;
+  clip-rule:evenodd;
+  fill:none;stroke:#D1D1D1;
+  stroke-width:7;
+  stroke-miterlimit:10;
+}
+
+#brain {
+  fill-rule:evenodd;
+  clip-rule:evenodd;
+  fill:#FFBFAE;
+}
+
+
+/* neuron animation stuff */
+#neuron {
+  fill: none;
+  stroke: #3fa9f5;
+  stroke-width: 11px;
+}
+
+.input {
+  fill: none;
+  stroke: #3fd7f5;
+  stroke-width: 11px;
+}
+
+.output {
+  fill: none;
+  stroke: #3f8bf5;
+  stroke-width: 11px;
+}
+
+.axon {
+  fill:none;
+  stroke: #3fa9f5;
+  stroke-width: 11px;
+}
+
+
+.dendrites {
+  stroke: #3fa9f5;
+}
+
+#dendrites1 {
+  stroke-width: 15px;
+}
+
+#dendrites2 {
+  stroke-width: 11px;
+}
+
+.inTransit {
+  stroke: #3fa9f5;
+  stroke-width: 20px;
+}
+
+.signal {
+  fill: #3fa9f5;
+}
+
+#cenSig{
+  fill: #3f8bf5;
+}
+
+#cenSig3 {
+  fill: #326fc4;
+}
+
+#outSig {
+  fill: #3f6df5;
+}
+
+.num{
+  fill: white;
+}
+
+#num4, #numBig3, #numBig5{
+  visibility: hidden;
+}
