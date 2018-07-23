@@ -2,6 +2,8 @@ body {
   background-color:#FFF;
   /* overflow: hidden; */
   text-align:center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
 }
 
 body,
@@ -13,11 +15,8 @@ html {
 }
 
 svg {
-  /* position:absolute; */
   width:100%;
   height:100%;
-  /* top: 0px;
-  left: 0px; */
 }
 
 .body {
@@ -50,7 +49,35 @@ svg {
   fill:#FFBFAE;
 }
 
-#brainNerveAnimation {
-  /* width: 50%;
-  height: 50%; */
+.animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-85%, -50%);
+  margin: auto 0;
+  /* background-color: #000; */
+  width: 60%;
+  height: auto;
+}
+
+section {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  width: 60%;
+  /* background-color: black; */
+  /* float:right; */
+}
+
+.text {
+  position: absolute;
+  text-align: left;
+  /* height: 100%; */
+  /* background-color: red; */
+  transform: translate(100%, 0%);
+  /* padding: auto 0; */
+  /* float: left; */
+  top: 30%;
+  left: 50%;
+  /* transform: translate(-100px, -50%); */
 }

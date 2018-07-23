@@ -36,7 +36,7 @@ brainTL.from(face, 0.5, {scale: 0,
 //brain to nerve transition
 let transitionTL = new TimelineMax();
 
-transitionTL.to(brain, 1, {scale: 2.5,
+transitionTL.to(brain, 1, {scale: 2,
                            opacity: 0,
                            y: +50,
                            transformOrigin: '50%, 50%'}, "brainZoom")
@@ -89,21 +89,42 @@ nerveTL.fromTo(topCore, 0.5, {y:-2}, {y:0,
 
 let nerveMasterTL = new TimelineMax();
 
-nerveMasterTL.add(brainTL)
-             .add(transitionTL)
+nerveMasterTL.add(transitionTL)
              .add(nerveTL);
 
 
-let controller = new ScrollMagic.Controller();
+let controller = new ScrollMagic.Controller({globalSceneOptions: {
+                                    	        triggerHook: 'onLeave'}
+                                    	       });
 
-let scene = new ScrollMagic.Scene({triggerElement: "#brainNerveTrigger",
-                                   offset: 100,
-                                   triggerHook: "0.01",
-                                   duration: 2000});
-scene.setTween(nerveMasterTL)
-     .setPin("#brainNerveAnimation")
-     .addIndicators({name: "neuron"})
-     .addTo(controller);
+let brainAnimScene = new ScrollMagic.Scene({triggerElement: "#brainText",
+                                   duration: '100%'});
+
+brainAnimScene.setTween(brainTL)
+               .setPin("#brainNerveAnimation")
+               // .addIndicators({name: "brainAnim"})
+               .addTo(controller);
+
+let nerveAnimScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
+                                  duration: '100%'});
+
+nerveAnimScene.setTween(nerveMasterTL)
+              .setPin("#brainNerveAnimation")
+              // .addIndicators({name: "nerveAnim"})
+              .addTo(controller);
+
+let brainScene = new ScrollMagic.Scene({triggerElement: "#brainText",
+                                   			duration: '100%'});
+
+brainScene.setPin('#brainText')
+          // .addIndicators({name: "brain"})
+          .addTo(controller);
+
+let nerveScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
+                                   			duration: '100%'});
+nerveScene.setPin('#nerveText')
+          // .addIndicators({name: "nerve"})
+          .addTo(controller);
 
  // scene.on("enter", function (event) {
  //     console.log("Scene entered.");
