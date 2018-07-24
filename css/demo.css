@@ -59,6 +59,13 @@ svg {
   text-align: center;
 }
 
+.firstScene {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
 .text {
   width: 30%;
   position: absolute;
