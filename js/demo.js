@@ -31,9 +31,9 @@ let brainNerveAnimation = select('#brainNerveAnimation');
 let neuronAnimation = select('#neuronAnimation');
 
 //text
-let brainText = select('#brainText')
-let nerveText = select('#nerveText')
-let neuron1Text = select('#neuron1Text')
+// let brainText = select('#brainText')
+// let nerveText = select('#nerveText')
+// let neuron1Text = select('#neuron1Text')
 
 //nerve system graphics
 let cenMaskShape = select('#cenMaskShape');
@@ -137,6 +137,7 @@ nerveMasterTL.add(transitionTL)
 
 //neuron appearance timeline
 let appearanceTL = new TimelineMax();
+appearanceTL.set(num2, {y: -3});
 appearanceTL.from(neuron, 1, {scale: 0,
                              transformOrigin: '50%, 50%',
                              ease: Elastic.easeOut})
@@ -148,7 +149,7 @@ appearanceTL.from(neuron, 1, {scale: 0,
                                        transformOrigin: '50%, 50%',
                                        ease: Elastic.easeOut})
            .staggerFrom([dendrites1, dendrites2], 1, {drawSVG: '0%, 0%'}, 1)
-           .from([topSignal, botSignal], 1, {scale: 0,
+           .from([topSignal, botSignal, num1, num3], 1, {scale: 0,
                                              transformOrigin: '50%, 50%',
                                              ease: Elastic.easeOut})
 
@@ -206,22 +207,14 @@ SigOutTL.to([cenSig, cenSig3], 2, {
              transformOrigin: '110%, 50%',
              smoothOrigin:true}, "SigOut")
 
- .to(numBig3, 1.5, {opacity: 0, scale: 0, transformOrigin: '200%, 50%'}, "SigOut")
- .fromTo(outTransit, 2, {drawSVG: "90%, 100%"}, {drawSVG: "0% 10%"}, "SigOut")
- .fromTo(outSig, 1, {scale: 0, transformOrigin: '0%, 50%'}, {scale: 1}, "SigOut+=1")
- .from(numOut5, 1, {scale: 0, opacity: 0, transformOrigin: '-120%, 50%'}, "SigOut+=1");
+         .to(numBig3, 1.5, {opacity: 0, scale: 0, transformOrigin: '200%, 50%'}, "SigOut")
+         .fromTo(outTransit, 2, {drawSVG: "90%, 100%"}, {drawSVG: "0% 10%"}, "SigOut")
+         .fromTo(outSig, 1, {scale: 0, transformOrigin: '0%, 50%'}, {scale: 1}, "SigOut+=1")
+         .from(numOut5, 1, {scale: 0, opacity: 0, transformOrigin: '-120%, 50%'}, "SigOut+=1");
 
-let masterTL = new TimelineMax();
-
-//offsetting num2 up to fix the miscenter error
-masterTL.set(num2, {y: -3});
-
-masterTL.add(appearanceTL)
-       .add(topSigInTL)
-       .add(botSigInTL)
-       .add(counting, "-=1")
-       .add(biasTL, "+=0.5")
-       .add(SigOutTL, "+=0.5");
+let botAndCountingTL = new TimelineMax();
+botAndCountingTL.add(botSigInTL)
+                .add(counting, "-=1")
 
 
 // ---------------------------------------------------------
@@ -233,7 +226,7 @@ $(".scene").each(function() {
 		new ScrollMagic.Scene({ triggerElement: this,
 			                      duration: '100%'})
                           		.setPin(this)
-                              .addIndicators({name: "text"})
+                              // .addIndicators({name: "text"})
                           		.addTo(controller);
 });
 
@@ -245,7 +238,6 @@ let brainAnimScene = new ScrollMagic.Scene({triggerElement: "#brainText",
                                         toggleAnimation(neuronAnimation, false)
                                       })
                                     .setPin("#brainNerveAnimation")
-                                    // .addIndicators({name: "brainAnim"})
                                     .addTo(controller);
 
 let nerveAnimScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
@@ -255,20 +247,40 @@ let nerveAnimScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
                                         toggleAnimation(brainNerveAnimation, true)
                                         toggleAnimation(neuronAnimation, false)
                                       })
-                                    .on("leave", function(){
-                                        // brainNerveAnimation.style.position = "absolute";
-                                    })
                                     .setPin("#brainNerveAnimation")
-                                    .addIndicators({name: "nerveAnim"})
+                                    // .addIndicators({name: "nerveAnim"})
                                     .addTo(controller);
 
-let neuronAniScene = new ScrollMagic.Scene({triggerElement: "#neuron1Text",
+let neuronAppearScene = new ScrollMagic.Scene({triggerElement: "#neuron1Text",
                                   duration: '100%'})
-                                    .setTween(masterTL)
+                                    .setTween(appearanceTL)
                                     .on("enter", function () {
                                         toggleAnimation(brainNerveAnimation, false)
                                         toggleAnimation(neuronAnimation, true)
                                       })
                                     .setPin("#neuronAnimation")
-                                    // .addIndicators({name: "nerveAnim"})
+                                    .addTo(controller);
+
+let neuronTopSigScene = new ScrollMagic.Scene({triggerElement: "#neuron2Text",
+                                  duration: '100%'})
+                                    .setTween(topSigInTL)
+                                    .setPin("#neuronAnimation")
+                                    .addTo(controller);
+
+let neuronBotSigScene = new ScrollMagic.Scene({triggerElement: "#neuron3Text",
+                                  duration: '100%'})
+                                    .setTween(botAndCountingTL)
+                                    .setPin("#neuronAnimation")
+                                    .addTo(controller);
+
+let neuronBiasScene = new ScrollMagic.Scene({triggerElement: "#neuron4Text",
+                                  duration: '100%'})
+                                    .setTween(biasTL)
+                                    .setPin("#neuronAnimation")
+                                    .addTo(controller);
+
+let neuronSigOutScene = new ScrollMagic.Scene({triggerElement: "#neuron5Text",
+                                  duration: '100%'})
+                                    .setTween(SigOutTL)
+                                    .setPin("#neuronAnimation")
                                     .addTo(controller);
