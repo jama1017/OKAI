@@ -29,11 +29,47 @@
 
     <div id="neuron1Text" class="scene bg-grey upperLayer">
       <div class="text left">
-        <p>An artificial neuron models a biological neuron in a simplified manner. Input signals received via dendrites are represented with numbers, and each dendrite is assigned a “weight”
-          representing how “connected” two neurons at the ends of the dendrite are.
+        <p>An <strong>artificial neuron</strong> models a biological neuron in a simplified manner.
+          Here the previous biological nerve system is represented by an artificial neuron with two inputs and a output.
         </p>
       </div>
     </div>
+
+    <div id="neuron2Text" class="scene bg-grey upperLayer">
+      <div class="text left">
+        <p>Signals transmitted are represented with <strong>numbers</strong>.
+          The input on top is connected to the central neuron with a thick dendrites,
+          thus the signal is amplified by a factor of 2 when it reaches the neuron.
+        </p>
+      </div>
+    </div>
+
+    <div id="neuron3Text" class="scene bg-grey upperLayer">
+      <div class="text left">
+        <p>The input at the bottom, however, has a thinner connection to the neuron,
+          thus the signal is reduced to 2, resulting in a final signal of value 4 received by the neuron.
+          The thickness, or the strength of connection between two neurons, is called <strong>weight</strong> in machine learning.
+        </p>
+      </div>
+    </div>
+
+    <div id="neuron4Text" class="scene bg-grey upperLayer">
+      <div class="text left">
+        <p>Next, the neuron processes the signal by shaking itself. In this case, doing so incremented the signal by 1.
+          The “shakiness” of a neuron is called <strong>bias</strong>, which can both increase or decrease the value of the signal by any amount.
+        </p>
+      </div>
+    </div>
+
+    <div id="neuron5Text" class="scene bg-grey upperLayer">
+      <div class="text left">
+        <p>Finally, the signal is passed through an <strong>activation function</strong> and becomes the final output signal of this neuron.
+          Here the activation function used is called <strong>ReLU</strong>, which preserves the signal value if it is 0 or greater.
+          More on activation functions will be covered in later chapters.
+        </p>
+      </div>
+    </div>
+
 
     <div id="brainNerveAnimation" class="animation animLeft">
       <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
