@@ -19,6 +19,17 @@ svg {
   height:100%;
 }
 
+/* The progress bar (scroll indicator) */
+.scrollBar {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  height: 6px;
+  background: #3BB9FF;
+  width: 0%;
+  opacity: 0.5;
+}
+
 .animation {
   position: fixed;
   top: 50%;

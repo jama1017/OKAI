@@ -18,22 +18,25 @@ let toggleAnimation = function(animation, bool) {
      }
 };
 
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
 // ---------------------------------------------------------
 // ------------------ graphic vars--------------------
 // --------------------------------------------------------
 
 let svg = select('svg');
 
-let nerveGroup = select('#nerveGroup');
-
 //animations
 let brainNerveAnimation = select('#brainNerveAnimation');
 let neuronAnimation = select('#neuronAnimation');
-
-//text
-// let brainText = select('#brainText')
-// let nerveText = select('#nerveText')
-// let neuron1Text = select('#neuron1Text')
 
 //nerve system graphics
 let cenMaskShape = select('#cenMaskShape');
@@ -49,6 +52,7 @@ let outCore = select('#outCore');
 //brain graphics
 let brain = select('#brain');
 let face = select('#face');
+let nerveGroup = select('#nerveGroup');
 
 //neuronGraphics
 let neuronGroup = select('#neuronGroup');
@@ -230,15 +234,15 @@ $(".scene").each(function() {
                           		.addTo(controller);
 });
 
-let brainAnimScene = new ScrollMagic.Scene({triggerElement: "#brainText",
-                                   duration: '100%'})
-                                    // .setTween(brainTL)
-                                    .on("enter", function () {
-                                        toggleAnimation(brainNerveAnimation, true)
-                                        toggleAnimation(neuronAnimation, false)
-                                      })
-                                    .setPin("#brainNerveAnimation")
-                                    .addTo(controller);
+// let brainAnimScene = new ScrollMagic.Scene({triggerElement: "#brainText",
+//                                    duration: '100%'})
+//                                     // .setTween(brainTL)
+//                                     .on("enter", function () {
+//                                         toggleAnimation(brainNerveAnimation, true)
+//                                         toggleAnimation(neuronAnimation, false)
+//                                       })
+//                                     .setPin("#brainNerveAnimation")
+//                                     .addTo(controller);
 
 let nerveAnimScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
                                   duration: '100%'})
