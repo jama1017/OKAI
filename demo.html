@@ -14,28 +14,28 @@
 
   <body>
 
-    <section id="brainText" >
-      <div class="text">
+    <div id="brainText" class="scene">
+      <div class="text right">
         <p>Artificial neural networks are a type of machine learning algorithm inspired by the human brain.</p>
         <p>Our brains are comprised of a network of biological neurons that fire signals upon receiving stimulus, ultimately telling our bodies what function to perform.</p>
       </div>
-    </section>
+    </div>
 
-    <section id="nerveText">
-      <div class="text">
+    <div id="nerveText" class="scene">
+      <div class="text right">
         <p>At a more microscopic level, the dendrites of a single neuron in the brain receives inputs, and fire output signals via the axon to the dendrites of other neurons, and so on.</p>
       </div>
-    </section>
+    </div>
 
-    <section id="neuron1Text">
-      <div class="text">
+    <div id="neuron1Text" class="scene bg-grey upperLayer">
+      <div class="text left">
         <p>An artificial neuron models a biological neuron in a simplified manner. Input signals received via dendrites are represented with numbers, and each dendrite is assigned a “weight”
           representing how “connected” two neurons at the ends of the dendrite are.
         </p>
       </div>
-    </section>
+    </div>
 
-    <div id="brainNerveAnimation" class="animation">
+    <div id="brainNerveAnimation" class="animation animLeft">
       <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
 
@@ -483,7 +483,7 @@
     </div>
 
     <!-- beginning of neuronAnimation -->
-    <div id="neuronAnimation" class="animation">
+    <div id="neuronAnimation" class="animation animRight upperLayer">
 
       <svg id="neuronSys" class="neuronSVG" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
 
@@ -495,9 +495,9 @@
           </filter>
         </defs>
 
-        <g id="neuronGroup" filter="url(#goo)">
-        <!-- <g id="neuronGroup"> -->
+        <!-- <rect fill="#f1f1f1" x="0" y="0"  width="600" height="600"/> -->
 
+        <g id="neuronGroup" filter="url(#goo)">
           <line id="dendrites1" class="dendrites" x1="186" y1="214" x2="266" y2="275"/>
           <line id="dendrites2" class="dendrites" x1="184" y1="387" x2="268" y2="324"/>
           <line class="axon" x1="407" y1="300" x2="340" y2="300"/>
@@ -609,8 +609,8 @@
   <!-- Boostrap JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 
   <script type="text/javascript" src="js/TweenMax.min.js"></script>
   <script type="text/javascript" src="js/DrawSVGPlugin.min.js"></script>
