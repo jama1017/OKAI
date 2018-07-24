@@ -1,9 +1,13 @@
 body {
   background-color:#FFF;
-  /* overflow: hidden; */
   text-align:center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Oxygen', sans-serif;
+  /* font-family: 'Rubik', sans-serif; */
+  /* font-family: 'Hind Madurai', sans-serif; */
+  /* font-family: 'Gudea', sans-serif; */
+  font-size: 23px;
 }
 
 body,
