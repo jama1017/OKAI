@@ -84,11 +84,11 @@ let numBig5 = select('#numBig5');
 // ------------------ Animation Timelines--------------------
 // --------------------------------------------------------
 
-//brain timeline
-let brainTL = new TimelineMax();
-
-brainTL.from(face, 0.5, {scale: 0,transformOrigin: '50%, 50%'})
-       .from(brain, 0.5, {opacity: 0, y: +100})
+// //brain timeline
+// let brainTL = new TimelineMax();
+//
+// brainTL.from(face, 0.5, {scale: 0,transformOrigin: '50%, 50%'})
+//        .from(brain, 0.5, {opacity: 0, y: +100})
 
 //brain to nerve transition
 let transitionTL = new TimelineMax();
@@ -156,7 +156,7 @@ appearanceTL.from(neuron, 1, {scale: 0,
 //top signal comming into the center neuron timeline
 let topSigInTL = new TimelineMax();
 
-topSigInTL.set(inTransit1, {strokeWidth: '40px'})
+topSigInTL.set(inTransit1, {strokeWidth: '28px'})
          .add("enterCenSig1", 0.8);
 
 topSigInTL.to(topSignal, 0.7, {scale: 0, transformOrigin: '110%, 110%'}, "topSignal")
@@ -232,7 +232,7 @@ $(".scene").each(function() {
 
 let brainAnimScene = new ScrollMagic.Scene({triggerElement: "#brainText",
                                    duration: '100%'})
-                                    .setTween(brainTL)
+                                    // .setTween(brainTL)
                                     .on("enter", function () {
                                         toggleAnimation(brainNerveAnimation, true)
                                         toggleAnimation(neuronAnimation, false)
