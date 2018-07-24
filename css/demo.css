@@ -3,7 +3,7 @@ body {
   /* overflow: hidden; */
   text-align:center;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 body,
@@ -23,35 +23,52 @@ svg {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-85%, -50%);
   margin: auto 0;
-  /* background-color: #000; */
   width: 60%;
   height: auto;
+  /* z-index: -1; */
 }
 
-section {
+.animLeft {
+  transform: translate(-85%, -50%);
+}
+
+.animRight {
+  transform: translate(-17%, -50%);
+}
+
+.scene {
   height: 100%;
+  width: 100%;
   position: relative;
   text-align: center;
-  width: 60%;
-  /* background-color: black; */
-  /* float:right; */
 }
 
 .text {
+  width: 30%;
   position: absolute;
   text-align: left;
-  /* height: 100%; */
-  /* background-color: red; */
-  transform: translate(100%, 0%);
-  /* padding: auto 0; */
-  /* float: left; */
-  top: 30%;
-  left: 50%;
-  /* transform: translate(-100px, -50%); */
+  line-height: 1.5;
+  top: 50%;
 }
 
+.left {
+  left: 0%;
+  transform: translate(30%, -50%);
+}
+
+.right {
+  left: 70%;
+  transform: translate(-30%, -50%);
+}
+
+.bg-grey {
+  background-color: #f1f1f1;
+}
+
+.upperLayer {
+  z-index: 1;
+}
 
 /* ------------------------brain nerve stuff-------------------------- */
 

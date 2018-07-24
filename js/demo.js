@@ -1,9 +1,21 @@
-select = function(s) {
-  return document.querySelector(s);
+// ---------------------------------------------------------
+// ------------------ functions  --------------------------
+// --------------------------------------------------------
+
+let select = function(s) {
+    return document.querySelector(s);
 };
 
-selectAll = function(s) {
-  return document.querySelectorAll(s);
+let selectAll = function(s) {
+    return document.querySelectorAll(s);
+};
+
+let toggleAnimation = function(animation, bool) {
+     if (bool) {
+       animation.style.visibility = "visible";
+     } else {
+       animation.style.visibility = "hidden";
+     }
 };
 
 // ---------------------------------------------------------
@@ -13,6 +25,15 @@ selectAll = function(s) {
 let svg = select('svg');
 
 let nerveGroup = select('#nerveGroup');
+
+//animations
+let brainNerveAnimation = select('#brainNerveAnimation');
+let neuronAnimation = select('#neuronAnimation');
+
+//text
+let brainText = select('#brainText')
+let nerveText = select('#nerveText')
+let neuron1Text = select('#neuron1Text')
 
 //nerve system graphics
 let cenMaskShape = select('#cenMaskShape');
@@ -66,22 +87,17 @@ let numBig5 = select('#numBig5');
 //brain timeline
 let brainTL = new TimelineMax();
 
-brainTL.from(face, 0.5, {scale: 0,
-                       // ease: Bounce.easeOut,
-                       transformOrigin: '50%, 50%'})
+brainTL.from(face, 0.5, {scale: 0,transformOrigin: '50%, 50%'})
        .from(brain, 0.5, {opacity: 0, y: +100})
 
 //brain to nerve transition
 let transitionTL = new TimelineMax();
 
-transitionTL.to(brain, 1, {scale: 2,
-                           opacity: 0,
-                           y: +50,
+transitionTL.to(brain, 1, {scale: 2,opacity: 0,y: +50,
                            transformOrigin: '50%, 50%'}, "brainZoom")
             .to(face, 1, {opacity: 0, y: +100}, "brainZoom")
-            .fromTo(nerveGroup, 1, {scale: 0,
-                                    transformOrigin: '50%, 50%'},
-                                    {scale: 1}, "brainZoom")
+            .fromTo(nerveGroup, 1, {scale: 0,transformOrigin: '50%, 50%'},
+                                   {scale: 1}, "brainZoom")
 
 //nerve system timeline
 let nerveTL = new TimelineMax();
@@ -90,39 +106,27 @@ nerveTL.set([cenMaskShape, topMaskShape, botMaskShape, outMaskShape],
             {transformOrigin: '50% 50%'});
 
 nerveTL.fromTo(topCore, 0.5, {y:-2}, {y:0,
-                  ease:RoughEase.ease.config({
-                    strength:6,
-                    points:6,
-                    template:Linear.easeNone,
-                    randomize:false
-                  }) , clearProps:"y"})
+                  ease:RoughEase.ease.config({strength:6,points:6,
+                                              template:Linear.easeNone,
+                                              randomize:false}) , clearProps:"y"})
        .to(topMaskShape, 1, {scale: 13}, "-=0.3")
 
        .fromTo(botCore, 0.5, {y:-2}, {y:0,
-                         ease:RoughEase.ease.config({
-                           strength:6,
-                           points:6,
-                           template:Linear.easeNone,
-                           randomize:false,
-                         }) , clearProps:"y"}, "-=0.5")
+                         ease:RoughEase.ease.config({strength:6,points:6,
+                                                     template:Linear.easeNone,
+                                                     randomize:false}) , clearProps:"y"}, "-=0.5")
        .to(botMaskShape, 1, {scale: 12}, "-=0.3")
 
        .fromTo(cenCore, 0.5, {y:-2}, {y:0,
-                         ease:RoughEase.ease.config({
-                           strength:7,
-                           points:6,
-                           template:Linear.easeNone,
-                           randomize:false
-                         }) , clearProps:"y"}, "-=0.5")
+                         ease:RoughEase.ease.config({strength:7,points:6,
+                                                     template:Linear.easeNone,
+                                                     randomize:false}) , clearProps:"y"}, "-=0.5")
        .to(cenMaskShape, 1, {scale: 10}, "-=0.3")
 
        .fromTo(outCore, 0.5, {y:-2}, {y:0,
-                         ease:RoughEase.ease.config({
-                           strength:5,
-                           points:6,
-                           template:Linear.easeNone,
-                           randomize:false
-                         }) , clearProps:"y"}, "-=0.5")
+                         ease:RoughEase.ease.config({strength:5,points:6,
+                                                     template:Linear.easeNone,
+                                                     randomize:false}) , clearProps:"y"}, "-=0.5")
        .to(outMaskShape, 1, {scale: 17}, "-=0.3")
 
 //trans + nerve timeline
@@ -133,7 +137,6 @@ nerveMasterTL.add(transitionTL)
 
 //neuron appearance timeline
 let appearanceTL = new TimelineMax();
-
 appearanceTL.from(neuron, 1, {scale: 0,
                              transformOrigin: '50%, 50%',
                              ease: Elastic.easeOut})
@@ -220,21 +223,27 @@ masterTL.add(appearanceTL)
        .add(biasTL, "+=0.5")
        .add(SigOutTL, "+=0.5");
 
+
 // ---------------------------------------------------------
 // ------------------ Scrolling Control--------------------
 // --------------------------------------------------------
 let controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: 'onLeave'}});
 
-$("section").each(function() {
+$(".scene").each(function() {
 		new ScrollMagic.Scene({ triggerElement: this,
-			                      duration: '50%'})
+			                      duration: '100%'})
                           		.setPin(this)
+                              .addIndicators({name: "text"})
                           		.addTo(controller);
 });
 
 let brainAnimScene = new ScrollMagic.Scene({triggerElement: "#brainText",
                                    duration: '100%'})
                                     .setTween(brainTL)
+                                    .on("enter", function () {
+                                        toggleAnimation(brainNerveAnimation, true)
+                                        toggleAnimation(neuronAnimation, false)
+                                      })
                                     .setPin("#brainNerveAnimation")
                                     // .addIndicators({name: "brainAnim"})
                                     .addTo(controller);
@@ -242,29 +251,24 @@ let brainAnimScene = new ScrollMagic.Scene({triggerElement: "#brainText",
 let nerveAnimScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
                                   duration: '100%'})
                                     .setTween(nerveMasterTL)
+                                    .on("enter", function() {
+                                        toggleAnimation(brainNerveAnimation, true)
+                                        toggleAnimation(neuronAnimation, false)
+                                      })
+                                    .on("leave", function(){
+                                        // brainNerveAnimation.style.position = "absolute";
+                                    })
                                     .setPin("#brainNerveAnimation")
-                                    // .addIndicators({name: "nerveAnim"})
+                                    .addIndicators({name: "nerveAnim"})
                                     .addTo(controller);
 
 let neuronAniScene = new ScrollMagic.Scene({triggerElement: "#neuron1Text",
                                   duration: '100%'})
                                     .setTween(masterTL)
+                                    .on("enter", function () {
+                                        toggleAnimation(brainNerveAnimation, false)
+                                        toggleAnimation(neuronAnimation, true)
+                                      })
                                     .setPin("#neuronAnimation")
                                     // .addIndicators({name: "nerveAnim"})
                                     .addTo(controller);
-
-
-
-
-// let brainScene = new ScrollMagic.Scene({triggerElement: "#brainText",
-//                                    			duration: '100%'});
-//
-// brainScene.setPin('#brainText')
-//           // .addIndicators({name: "brain"})
-//           .addTo(controller);
-//
-// let nerveScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
-//                                    			duration: '100%'});
-// nerveScene.setPin('#nerveText')
-//           // .addIndicators({name: "nerve"})
-//           .addTo(controller);
