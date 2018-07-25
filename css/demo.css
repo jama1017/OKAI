@@ -140,14 +140,14 @@ svg {
 
 .output {
   fill: none;
-  stroke: #3f8bf5;
+  stroke: #0b51dc;
   stroke-width: 11px;
 }
 
 .axon {
   fill:none;
-  stroke: #3fa9f5;
-  stroke-width: 11px;
+  stroke: #0b74dc;
+  stroke-width: 13px;
 }
 
 
@@ -181,7 +181,7 @@ svg {
 }
 
 #outSig {
-  fill: #3f6df5;
+  fill: #3f6cf5;
 }
 
 .num{
@@ -190,4 +190,8 @@ svg {
 
 #num4, #numBig3, #numBig5{
   visibility: hidden;
+}
+
+#ReLU{
+  fill: #d0eafd;
 }
