@@ -40,7 +40,9 @@
 
     <div id="nerveText" class="scene">
       <div class="text right">
-        <p>At a more <strong>microscopic</strong> level, the dendrites of a single neuron in the brain receives inputs, and fire output signals via the axon to the dendrites of other neurons, and so on.</p>
+        <p>At a more <strong>microscopic</strong> level, the dendrites of a single neuron in the brain receives inputs,
+          and fire output signals via the axon to the dendrites of other neurons, and so on.
+        </p>
       </div>
     </div>
 
@@ -50,28 +52,33 @@
           From Biological to Artificial
         </h3>
         <hr>
-        <p>An <strong>artificial neuron</strong> models a biological neuron in a simplified manner.
-          Here the previous biological nerve system is represented by an artificial neuron with two inputs and a output.
+        <p>An <strong>artificial neuron</strong> models a biological neuron in a simplified manner.  <br>
+          Here, the previous biological nerve system is represented by an artificial neuron with two inputs and a output.
         </p>
       </div>
     </div>
 
     <div id="neuron2Text" class="scene bg-grey upperLayer">
       <div class="text left">
-        <p>Signals transmitted are represented with <strong>numbers</strong>.
-          The input on top is connected to the central neuron with a <strong>thick</strong> dendrites,
+        <p>Between two neurons, the biological axon-to-dendrite connection is simplified to an <strong>edge</strong>, and
+           signals transmitted are represented with <strong>numbers</strong>.
+        </p>
+
+        <p>The input on top is connected to the central neuron with a <strong>thick</strong> edge,
           thus the signal is amplified by a factor of 2 when it reaches the neuron.
         </p>
+
       </div>
     </div>
 
     <div id="neuron3Text" class="scene bg-grey upperLayer">
       <div class="text left">
         <p>The input at the bottom, however, has a <strong>thinner</strong> connection to the neuron,
-          thus the signal is reduced to 2, resulting in a final signal of value 4 received by the neuron.
+          thus the signal is reduced to 2, resulting in a final signal of <strong>2 + 2 = 4</strong> received, instead of
+          3 + 2 = 5.
         </p>
         <p>
-          The thickness, or the strength of connection between two neurons, is called <strong>weight</strong> in machine learning.
+          The thickness of the edge is called <strong>weight</strong> in machine learning.
         </p>
       </div>
     </div>
@@ -81,17 +88,19 @@
         <p>Next, the neuron processes the signal by shaking itself. In this case, doing so incremented the signal by 1.
         </p>
         <p>
-          The “shakiness” of a neuron is called <strong>bias</strong>, which can both increase or decrease the value of the signal by any amount.
+          The “shakiness” of a neuron is called <strong>bias</strong>, which can both increase or decrease the value of the signal by any set amount.
         </p>
       </div>
     </div>
 
     <div id="neuron5Text" class="scene bg-grey upperLayer">
       <div class="text left">
-        <p>Finally, the signal is passed through an <strong>activation function</strong> and becomes the final output signal of this neuron.</p>
+        <p>Finally, an <strong>activation function</strong> is used to simulate how "fired" the neuron is.</p>
         <p>
-          Here the activation function used is called <strong>ReLU</strong>, which preserves the signal value if it is 0 or greater.
-          More on activation functions will be covered in later chapters.
+          <strong>ReLU</strong>, a type of activation functions, is used here. It preserves the signal value if it is 0 or greater.
+        </p>
+        <p>
+          In our case, a positive signal would fully fire the neuron, so the value 5 is preserved and becomes the final output of the neuron.
         </p>
       </div>
     </div>
@@ -562,6 +571,7 @@
         <g id="neuronGroup" filter="url(#goo)">
           <line id="dendrites1" class="dendrites" x1="186" y1="214" x2="266" y2="275"/>
           <line id="dendrites2" class="dendrites" x1="184" y1="387" x2="268" y2="324"/>
+
           <line class="axon" x1="407" y1="300" x2="340" y2="300"/>
 
           <g id="neuron">
@@ -662,6 +672,29 @@
             c0,0.5-0.2,0.9-0.5,1.2c-0.3,0.3-0.8,0.5-1.3,0.5H431l-0.6,4.6c0.4-0.2,0.9-0.4,1.5-0.6c0.6-0.1,1.2-0.2,1.8-0.2
             C435.1,297,436.4,297.3,437.6,298z"/>
         </g>
+
+        <g id="ReLU">
+        	<path d="M359.7,301v3.7H358v-9.4h2.9c0.6,0,1.2,0.1,1.6,0.2c0.5,0.1,0.8,0.3,1.1,0.6c0.3,0.2,0.5,0.5,0.6,0.9
+        		c0.1,0.3,0.2,0.7,0.2,1.1c0,0.3,0,0.6-0.1,0.9c-0.1,0.3-0.2,0.5-0.4,0.8c-0.2,0.2-0.4,0.4-0.6,0.6c-0.3,0.2-0.6,0.3-0.9,0.4
+        		c0.2,0.1,0.4,0.3,0.6,0.5l2.4,3.5h-1.6c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.2-0.1-0.3-0.3l-2-3c-0.1-0.1-0.2-0.2-0.2-0.2
+        		c-0.1,0-0.2-0.1-0.4-0.1H359.7z M359.7,299.7h1.1c0.3,0,0.6,0,0.9-0.1c0.2-0.1,0.4-0.2,0.6-0.3c0.2-0.1,0.3-0.3,0.4-0.5
+        		c0.1-0.2,0.1-0.4,0.1-0.7c0-0.5-0.2-0.8-0.5-1.1c-0.3-0.3-0.8-0.4-1.4-0.4h-1.1V299.7z"/>
+        	<path d="M369.5,297.9c0.4,0,0.8,0.1,1.2,0.2c0.4,0.1,0.7,0.3,0.9,0.6c0.3,0.3,0.5,0.6,0.6,0.9s0.2,0.8,0.2,1.3
+        		c0,0.1,0,0.2,0,0.3c0,0.1,0,0.1-0.1,0.2c0,0-0.1,0.1-0.1,0.1s-0.1,0-0.2,0h-4.1c0,0.7,0.2,1.2,0.6,1.5c0.3,0.3,0.7,0.5,1.3,0.5
+        		c0.3,0,0.5,0,0.7-0.1c0.2-0.1,0.4-0.1,0.5-0.2s0.3-0.1,0.4-0.2c0.1-0.1,0.2-0.1,0.3-0.1c0.1,0,0.1,0,0.2,0c0,0,0.1,0.1,0.1,0.1
+        		l0.5,0.6c-0.2,0.2-0.4,0.4-0.6,0.5c-0.2,0.1-0.5,0.3-0.7,0.3c-0.2,0.1-0.5,0.1-0.7,0.2c-0.2,0-0.5,0.1-0.7,0.1
+        		c-0.5,0-0.9-0.1-1.3-0.2c-0.4-0.2-0.7-0.4-1-0.7c-0.3-0.3-0.5-0.7-0.7-1.1c-0.2-0.4-0.3-1-0.3-1.5c0-0.5,0.1-0.9,0.2-1.3
+        		c0.1-0.4,0.4-0.8,0.6-1c0.3-0.3,0.6-0.5,1-0.7C368.6,298,369,297.9,369.5,297.9z M369.6,299c-0.5,0-0.8,0.1-1.1,0.4
+        		c-0.3,0.3-0.4,0.6-0.5,1.1h3c0-0.2,0-0.4-0.1-0.6c-0.1-0.2-0.1-0.3-0.3-0.5c-0.1-0.1-0.3-0.2-0.4-0.3
+        		C370,299.1,369.8,299,369.6,299z"/>
+        	<path d="M375.9,303.2h3.8v1.4h-5.5v-9.4h1.7V303.2z"/>
+        	<path d="M385.1,303.2c0.3,0,0.6-0.1,0.9-0.2s0.5-0.3,0.7-0.5c0.2-0.2,0.3-0.5,0.4-0.7c0.1-0.3,0.1-0.6,0.1-1v-5.6h1.7
+        		v5.6c0,0.6-0.1,1.1-0.3,1.6s-0.4,0.9-0.8,1.2c-0.3,0.3-0.7,0.6-1.2,0.8c-0.5,0.2-1,0.3-1.6,0.3c-0.6,0-1.1-0.1-1.6-0.3
+        		c-0.5-0.2-0.9-0.5-1.2-0.8c-0.3-0.3-0.6-0.8-0.8-1.2c-0.2-0.5-0.3-1-0.3-1.6v-5.6h1.7v5.6c0,0.4,0,0.7,0.1,1
+        		c0.1,0.3,0.2,0.5,0.4,0.7c0.2,0.2,0.4,0.4,0.7,0.5C384.5,303.2,384.8,303.2,385.1,303.2z"/>
+        </g>
+
+
 
     </svg>
 

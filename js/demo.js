@@ -199,7 +199,8 @@ biasTL.fromTo([neuron, cenSig, cenSig3, numBig3], 1, {y:-3}, {y:3,
 let SigOutTL = new TimelineMax();
 SigOutTL.set(outTransit, {strokeWidth: "24px"})
 
-SigOutTL.to([cenSig, cenSig3], 2, {
+SigOutTL.from(ReLU, 1, {opacity: 0})
+        .to([cenSig, cenSig3], 2, {
              scale: 0,
              transformOrigin: '110%, 50%',
              smoothOrigin:true}, "SigOut")
