@@ -104,25 +104,25 @@ nerveTL.set([cenMaskShape, topMaskShape, botMaskShape, outMaskShape],
             {transformOrigin: '50% 50%'});
 
 nerveTL.fromTo(topCore, 0.5, {y:-2}, {y:0,
-                  ease:RoughEase.ease.config({strength:6,points:6,
+                  ease:RoughEase.ease.config({strength:10,points:10,
                                               template:Linear.easeNone,
                                               randomize:false}) , clearProps:"y"})
        .to(topMaskShape, 1, {scale: 13}, "-=0.3")
 
        .fromTo(botCore, 0.5, {y:-2}, {y:0,
-                         ease:RoughEase.ease.config({strength:6,points:6,
+                         ease:RoughEase.ease.config({strength:10,points:10,
                                                      template:Linear.easeNone,
                                                      randomize:false}) , clearProps:"y"}, "-=0.5")
        .to(botMaskShape, 1, {scale: 12}, "-=0.3")
 
        .fromTo(cenCore, 0.5, {y:-2}, {y:0,
-                         ease:RoughEase.ease.config({strength:7,points:6,
+                         ease:RoughEase.ease.config({strength:10,points:10,
                                                      template:Linear.easeNone,
                                                      randomize:false}) , clearProps:"y"}, "-=0.5")
        .to(cenMaskShape, 1, {scale: 10}, "-=0.3")
 
        .fromTo(outCore, 0.5, {y:-2}, {y:0,
-                         ease:RoughEase.ease.config({strength:5,points:6,
+                         ease:RoughEase.ease.config({strength:10,points:10,
                                                      template:Linear.easeNone,
                                                      randomize:false}) , clearProps:"y"}, "-=0.5")
        .to(outMaskShape, 1, {scale: 17}, "-=0.3")
@@ -236,6 +236,7 @@ $(".scene").each(function() {
 //                                       })
 //                                     .setPin("#brainNerveAnimation")
 //                                     .addTo(controller);
+toggleAnimation(neuronAnimation, false);
 
 let nerveAnimScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
                                   duration: '100%'})
