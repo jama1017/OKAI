@@ -214,6 +214,114 @@ let botAndCountingTL = new TimelineMax();
 botAndCountingTL.add(botSigInTL)
                 .add(counting, "-=1")
 
+//transition to appanana
+let fruitsTL = new TimelineMax();
+fruitsTL.staggerFrom([apple, banana], 1, {opacity: 0}, 0.5);
+
+let appleAppearTL = new TimelineMax();
+appleAppearTL.from([topLine, topAnd], 0.5, {opacity: 0})
+             .staggerFrom([red, sphere], 1, {opacity: 0}, 0.3);
+
+let bananaAppearTL = new TimelineMax();
+bananaAppearTL.from([botLine, botAnd], 0.5, {opacity: 0})
+              .staggerFrom([yellow, cylinder], 1, {opacity: 0}, 0.3);
+
+let appananaAppearTL = new TimelineMax();
+appananaAppearTL.add(appleAppearTL)
+                .add(bananaAppearTL);
+
+
+
+//apple perceptron timeline
+let transitionToAppleTL = new TimelineMax();
+transitionToAppleTL.to(appanana_breakdown, 0.5, {opacity:0})
+                   .from([perceptron_base, apple_perceptron], 0.5, {opacity:0});
+
+let sphereSigInTL = new TimelineMax();
+sphereSigInTL.delay(2)
+             .to(appanana_topSig, 1.7, {scale: 0, transformOrigin: '110%, 110%'}, "appleSigIn")
+             .to(sphere_s, 1.5, {scale: 0, opacity: 0, transformOrigin: '110%, 110%'}, "appleSigIn")
+             .fromTo(appanana_topTransit, 2, {drawSVG:'0% 10%'}, {drawSVG: "90%, 100%"}, "appleSigIn");
+
+let redSigInTL = new TimelineMax();
+redSigInTL.delay(2)
+          .to(appanana_botSig, 1.7, {scale: 0, transformOrigin: '110%, 0%'}, "redSigIn")
+          .to(red_s, 1.5, {scale: 0, opacity: 0, transformOrigin: '110%, 0%'}, "redSigIn")
+          .fromTo(appanana_botTransit, 2, {drawSVG:'0% 10%'}, {drawSVG: "90%, 100%"}, "redSigIn")
+          .from(appanana_cenSig, 1, {scale: 0, opacity: 0, transformOrigin: '-20%, 50%'}, "qIn")
+          .from(question, 1, {scale: 0, opacity: 0, transformOrigin: '-200%, 50%'}, "qIn");
+
+let appleQuestionTL = new TimelineMax();
+appleQuestionTL.fromTo([appanana_cenNeuron, appanana_cenSig, question], 1, {y:-3}, {y:3,
+                  ease:RoughEase.ease.config({
+                    strength:6,
+                    points:12,
+                    template:Linear.easeNone,
+                    randomize:false
+                  }) , clearProps:"y"});
+
+let appleSigOutTL = new TimelineMax();
+appleSigOutTL.to(appanana_cenSig, 2, {scale: 0, transformOrigin: '110%, 50%', smoothOrigin:true}, "appleSigOut")
+           .to(question, 1.5, {opacity: 0, scale: 0, transformOrigin: '200%, 50%'}, "appleSigOut")
+           .fromTo(appanana_outTransit, 2, {drawSVG: "90%, 100%"}, {drawSVG: "0% 10%"}, "appleSigOut")
+           .fromTo(appanana_outSig, 1, {scale: 0, transformOrigin: '-20%, 50%'}, {scale: 1}, "appleSigOut+=1")
+           .from(apple_s, 0.9, {scale: 0, opacity: 0, transformOrigin: '-50%, 50%'}, "appleSigOut+=1.1");
+
+let applePerceptronSigInTL = new TimelineMax();
+applePerceptronSigInTL.add(transitionToAppleTL)
+                      .add(sphereSigInTL, "aSigIn")
+                      .add(redSigInTL, "aSigIn")
+
+let applePerceptronSigOutTL = new TimelineMax();
+applePerceptronSigOutTL.add(appleQuestionTL, "-=0.5")
+                       .add(appleSigOutTL)
+
+
+//banana perceptron timeline
+let appleToBananaTL = new TimelineMax();
+
+appleToBananaTL.to([apple_perceptron, perceptron_base], 0.5, {opacity: 0})
+               .from([banana_perceptron, perceptron_base_2], 0.5, {opacity: 0});
+
+
+let cylinderSigInTL = new TimelineMax();
+cylinderSigInTL.delay(2)
+               .to(appanana_topSig_2, 1.7, {scale: 0, transformOrigin: '110%, 110%'}, "bananaSigIn")
+               .to(cylinder_s, 1.5, {scale: 0, opacity: 0, transformOrigin: '210%, 110%'}, "bananaSigIn")
+               .fromTo(appanana_topTransit_2, 2, {drawSVG:'0% 10%'}, {drawSVG: "90%, 100%"}, "bananaSigIn");
+
+let yellowSigInTL = new TimelineMax();
+yellowSigInTL.delay(2)
+             .to(appanana_botSig_2, 1.7, {scale: 0, transformOrigin: '110%, 0%'}, "yellowSigIn")
+             .to(yellow_s, 1.5, {scale: 0, opacity: 0, transformOrigin: '110%, 0%'}, "yellowSigIn")
+             .fromTo(appanana_botTransit_2, 2, {drawSVG:'0% 10%'}, {drawSVG: "90%, 100%"}, "yellowSigIn")
+             .from(appanana_cenSig_2, 1, {scale: 0, opacity: 0, transformOrigin: '-20%, 50%'}, "bqIn")
+             .from(question_2, 1, {scale: 0, opacity: 0, transformOrigin: '-200%, 50%'}, "bqIn");
+
+let bananaQuestionTL = new TimelineMax();
+bananaQuestionTL.fromTo([appanana_cenNeuron_2, appanana_cenSig_2, question_2], 1, {y:-3}, {y:3,
+                   ease:RoughEase.ease.config({
+                     strength:6,
+                     points:12,
+                     template:Linear.easeNone,
+                     randomize:false
+                   }) , clearProps:"y"});
+
+let bananaSigOutTL = new TimelineMax();
+bananaSigOutTL.to(appanana_cenSig_2, 2, {scale: 0, transformOrigin: '110%, 50%', smoothOrigin:true}, "appleSigOut")
+             .to(question_2, 1.5, {opacity: 0, scale: 0, transformOrigin: '200%, 50%'}, "appleSigOut")
+             .fromTo(appanana_outTransit_2, 2, {drawSVG: "90%, 100%"}, {drawSVG: "0% 10%"}, "appleSigOut")
+             .fromTo(appanana_outSig_2, 1, {scale: 0, transformOrigin: '-20%, 50%'}, {scale: 1}, "appleSigOut+=1")
+             .from(banana_s, 0.9, {scale: 0, opacity: 0, transformOrigin: '-50%, 50%'}, "appleSigOut+=1.1");
+
+let bananaPerceptronSigInTL = new TimelineMax();
+bananaPerceptronSigInTL.add(appleToBananaTL)
+                  .add(cylinderSigInTL, "bSigIn")
+                  .add(yellowSigInTL, "bSigIn")
+
+let bananaPerceptronSigOutTL = new TimelineMax();
+bananaPerceptronSigOutTL.add(bananaQuestionTL, "-=0.5")
+                        .add(bananaSigOutTL);
 
 // ---------------------------------------------------------
 // ------------------ Scrolling Control--------------------
@@ -245,18 +353,24 @@ let nerveAnimScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
                                     .on("enter", function() {
                                         toggleAnimation(brainNerveAnimation, true)
                                         toggleAnimation(neuronAnimation, false)
+                                        toggleAnimation(appanananAnimation, false)
                                       })
                                     .setPin("#brainNerveAnimation")
                                     // .addIndicators({name: "nerveAnim"})
                                     .addTo(controller);
 
+//transition to neuron
 let neuronAppearScene = new ScrollMagic.Scene({triggerElement: "#neuron1Text",
                                   duration: '100%'})
                                     .setTween(appearanceTL)
                                     .on("enter", function () {
                                         toggleAnimation(brainNerveAnimation, false)
                                         toggleAnimation(neuronAnimation, true)
+                                        toggleAnimation(appanananAnimation, false)
                                       })
+                                    .on("leave", function () {
+                                        toggleAnimation(brainNerveAnimation, true)
+                                    })
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
 
@@ -281,5 +395,50 @@ let neuronBiasScene = new ScrollMagic.Scene({triggerElement: "#neuron4Text",
 let neuronSigOutScene = new ScrollMagic.Scene({triggerElement: "#neuron5Text",
                                   duration: '100%'})
                                     .setTween(SigOutTL)
+                                    .setPin("#neuronAnimation")
+                                    .addTo(controller);
+
+//transition to appanana
+let appananaAppearScene = new ScrollMagic.Scene({triggerElement: "#appanana1Text",
+                                  duration: '100%'})
+                                    .setTween(fruitsTL)
+                                    .on("enter", function () {
+                                        toggleAnimation(brainNerveAnimation, false)
+                                        toggleAnimation(neuronAnimation, false)
+                                        toggleAnimation(appanananAnimation, true)
+                                      })
+                                    .on("leave", function () {
+                                        toggleAnimation(neuronAnimation, true)
+                                    })
+                                    .setPin("#appanananAnimation")
+                                    .addTo(controller);
+
+let appananaBreakdownScene = new ScrollMagic.Scene({triggerElement: "#appanana2Text",
+                                  duration: '100%'})
+                                    .setTween(appananaAppearTL)
+                                    .setPin("#neuronAnimation")
+                                    .addTo(controller);
+
+let applePerceptronSigInScene = new ScrollMagic.Scene({triggerElement: "#appanana3Text",
+                                  duration: '100%'})
+                                    .setTween(applePerceptronSigInTL)
+                                    .setPin("#neuronAnimation")
+                                    .addTo(controller);
+
+let applePerceptronSigOutScene = new ScrollMagic.Scene({triggerElement: "#appanana4Text",
+                                  duration: '100%'})
+                                    .setTween(applePerceptronSigOutTL)
+                                    .setPin("#neuronAnimation")
+                                    .addTo(controller);
+
+let bananaPerceptronSigInScene = new ScrollMagic.Scene({triggerElement: "#appanana5Text",
+                                  duration: '100%'})
+                                    .setTween(bananaPerceptronSigInTL)
+                                    .setPin("#neuronAnimation")
+                                    .addTo(controller);
+
+let bananaPerceptronSigOutScene = new ScrollMagic.Scene({triggerElement: "#appanana6Text",
+                                  duration: '100%'})
+                                    .setTween(bananaPerceptronSigOutTL)
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
