@@ -27,7 +27,7 @@ svg {
 .scrollBar {
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   height: 6px;
   background: #3BB9FF;
   width: 0%;
