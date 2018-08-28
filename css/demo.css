@@ -345,25 +345,25 @@ svg {
 /* ----------------------perceptron_base stuff-------------- */
 .appanana_transit {
   fill:none;
-  stroke:#edffff;
+  stroke:#c0f7f4;
   stroke-width:12;
 }
 
 #appanana_topSig, #appanana_botSig, #appanana_cenSig, #appanana_outSig,
 #appanana_topSig_2, #appanana_botSig_2, #appanana_cenSig_2, #appanana_outSig_2 {
-  fill: #aff4f1;
+  fill: #7bede7;
 }
 
 #appanana_topTransit, #appanana_botTransit, #appanana_outTransit,
 #appanana_topTransit_2, #appanana_botTransit_2, #appanana_outTransit_2 {
   fill:none;
-  stroke:#edffff;
+  stroke:#c0f7f4;
   stroke-width:30px;
 }
 
 #appanana_topNeuron, #appanana_botNeuron, #appanana_cenNeuron, #appanana_outNeuron,
 #appanana_topNeuron_2, #appanana_botNeuron_2, #appanana_cenNeuron_2, #appanana_outNeuron_2 {
-  fill:#edffff;
+  fill:#c0f7f4;
 }
 
 /* relu white */
