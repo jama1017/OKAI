@@ -18,6 +18,18 @@ let toggleAnimation = function(animation, bool) {
      }
 };
 
+let keepAppanana = function() {
+  toggleAnimation(brainNerveAnimation, false)
+  toggleAnimation(neuronAnimation, false)
+  toggleAnimation(appanananAnimation, true)
+}
+
+let keepNeuron = function() {
+  toggleAnimation(brainNerveAnimation, false)
+  toggleAnimation(neuronAnimation, true)
+  toggleAnimation(appanananAnimation, false)
+}
+
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
@@ -336,15 +348,6 @@ $(".scene").each(function() {
                           		.addTo(controller);
 });
 
-// let brainAnimScene = new ScrollMagic.Scene({triggerElement: "#brainText",
-//                                    duration: '100%'})
-//                                     // .setTween(brainTL)
-//                                     .on("enter", function () {
-//                                         toggleAnimation(brainNerveAnimation, true)
-//                                         toggleAnimation(neuronAnimation, false)
-//                                       })
-//                                     .setPin("#brainNerveAnimation")
-//                                     .addTo(controller);
 toggleAnimation(neuronAnimation, false);
 
 let nerveAnimScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
@@ -377,24 +380,36 @@ let neuronAppearScene = new ScrollMagic.Scene({triggerElement: "#neuron1Text",
 let neuronTopSigScene = new ScrollMagic.Scene({triggerElement: "#neuron2Text",
                                   duration: '100%'})
                                     .setTween(topSigInTL)
+                                    .on("enter", function () {
+                                      keepNeuron()
+                                    })
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
 
 let neuronBotSigScene = new ScrollMagic.Scene({triggerElement: "#neuron3Text",
                                   duration: '100%'})
                                     .setTween(botAndCountingTL)
+                                    .on("enter", function () {
+                                      keepNeuron()
+                                    })
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
 
 let neuronBiasScene = new ScrollMagic.Scene({triggerElement: "#neuron4Text",
                                   duration: '100%'})
                                     .setTween(biasTL)
+                                    .on("enter", function () {
+                                      keepNeuron()
+                                    })
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
 
 let neuronSigOutScene = new ScrollMagic.Scene({triggerElement: "#neuron5Text",
                                   duration: '100%'})
                                     .setTween(SigOutTL)
+                                    .on("enter", function () {
+                                      keepNeuron()
+                                    })
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
 
@@ -416,29 +431,44 @@ let appananaAppearScene = new ScrollMagic.Scene({triggerElement: "#appanana1Text
 let appananaBreakdownScene = new ScrollMagic.Scene({triggerElement: "#appanana2Text",
                                   duration: '100%'})
                                     .setTween(appananaAppearTL)
+                                    .on("enter", function (){
+                                      keepAppanana()
+                                    })
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
 
 let applePerceptronSigInScene = new ScrollMagic.Scene({triggerElement: "#appanana3Text",
                                   duration: '100%'})
                                     .setTween(applePerceptronSigInTL)
+                                    .on("enter", function (){
+                                      keepAppanana()
+                                    })
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
 
 let applePerceptronSigOutScene = new ScrollMagic.Scene({triggerElement: "#appanana4Text",
                                   duration: '100%'})
                                     .setTween(applePerceptronSigOutTL)
+                                    .on("enter", function (){
+                                      keepAppanana()
+                                    })
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
 
 let bananaPerceptronSigInScene = new ScrollMagic.Scene({triggerElement: "#appanana5Text",
                                   duration: '100%'})
                                     .setTween(bananaPerceptronSigInTL)
+                                    .on("enter", function (){
+                                      keepAppanana()
+                                    })
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
 
 let bananaPerceptronSigOutScene = new ScrollMagic.Scene({triggerElement: "#appanana6Text",
                                   duration: '100%'})
                                     .setTween(bananaPerceptronSigOutTL)
+                                    .on("enter", function (){
+                                      keepAppanana()
+                                    })
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
