@@ -58,11 +58,20 @@ anim.addEventListener('DOMLoaded', onDOMLoaded);
 anim.setSpeed(1);
 
 var infoHolder = document.getElementById("information");
-var mytl = mytl = new TimelineMax({});
+var mytl = new TimelineMax();
+var mytl2 = new TimelineMax();
 
 function onDOMLoaded(e){
-  var proxy = {frame: 0};
-  mytl.to(proxy, 3, {
+  var proxy1 = {frame: 0};
+  mytl.to(proxy1, 3, {
+    frame: 38,
+    onUpdate: function() {
+      anim.goToAndStop(Math.round(this.target.frame), true)
+    },
+    ease: Linear.easeNone
+  })
+
+  mytl2.to({frame: 38}, 3, {
     frame: anim.totalFrames-1,
     onUpdate: function() {
       anim.goToAndStop(Math.round(this.target.frame), true)
@@ -96,4 +105,11 @@ let sigmoidScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
                                     //   })
                                     .setPin("#lottie")
                                     .addIndicators({name: "sigmoidLottie"})
+                                    .addTo(controller);
+
+let sigmoidScene2 = new ScrollMagic.Scene({triggerElement: "#neuron1Text",
+                                  duration: '100%'})
+                                    .setTween(mytl2)
+                                    .setPin("#lottie")
+                                    .addIndicators({name: "2sigmoidLottie"})
                                     .addTo(controller);
