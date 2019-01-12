@@ -53,9 +53,23 @@ var animationWindow = select('#lottie'),
   path: './data.json',
 };
 
+var animationWindow2 = select('#lottie2');
+var animData2 = {
+  wrapper: animationWindow2,
+  animType: 'svg',
+  loop: false,
+  prerender: true,
+  autoplay: false,
+  path: './ch3_humanDetector.json',
+}
+
 var anim = bodymovin.loadAnimation(animData);
 anim.addEventListener('DOMLoaded', onDOMLoaded);
 anim.setSpeed(1);
+
+var anim2 = bodymovin.loadAnimation(animData2);
+anim2.addEventListener('DOMLoaded', onDOMLoaded2);
+anim2.setSpeed(1);
 
 var infoHolder = document.getElementById("information");
 var mytl = new TimelineMax();
@@ -64,21 +78,22 @@ var mytl2 = new TimelineMax();
 function onDOMLoaded(e){
   var proxy1 = {frame: 0};
   mytl.to(proxy1, 3, {
-    frame: 38,
-    onUpdate: function() {
-      anim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-
-  mytl2.to({frame: 38}, 3, {
     frame: anim.totalFrames-1,
     onUpdate: function() {
       anim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
+}
 
+function onDOMLoaded2(e){
+  mytl2.to({frame: 0}, 3, {
+    frame: anim2.totalFrames-1,
+    onUpdate: function() {
+      anim2.goToAndStop(Math.round(this.target.frame), true)
+    },
+    ease: Linear.easeNone
+  })
 }
 
 // ---------------------------------------------------------
@@ -110,6 +125,12 @@ let sigmoidScene = new ScrollMagic.Scene({triggerElement: "#nerveText",
 let sigmoidScene2 = new ScrollMagic.Scene({triggerElement: "#neuron1Text",
                                   duration: '100%'})
                                     .setTween(mytl2)
-                                    .setPin("#lottie")
+                                    .on("enter", function() {
+                                        toggleAnimation(animationWindow, false)
+                                     })
+                                    .on("leave", function() {
+                                      toggleAnimation(animationWindow, true)
+                                    })
+                                    .setPin("#lottie2")
                                     .addIndicators({name: "2sigmoidLottie"})
                                     .addTo(controller);
