@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gudea|Hind+Madurai|Oxygen:300|Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/demo.css">
+    <!-- <link rel="stylesheet" href="css/neuron_demo.css"> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122864673-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122864673-1');
+    </script>
+
+    <title>Project SynGap - Demo</title>
+
+  </head>
+
+  <body>
+
+    <div class="scrollBar" id="myBar"></div>
+
+    <div id="brainText" class="firstScene">
+      <div class="text right">
+        <h2>An Interactive <br> Introduction to <br> Artificial Intelligence</h2>
+        <hr>
+        <p><strong>Artificial neural network</strong> is a type of machine learning algorithm inspired by the human brain.</p>
+        <p>Our brains are comprised of a network of biological neurons that fire signals upon receiving stimulus, ultimately telling our bodies what function to perform.</p>
+        <p style="text-align: center"> <i>Scroll</i> <br> <i class="fas fa-angle-down fa-2x"></i></p>
+      </div>
+    </div>
+
+    <div id="nerveText" class="scene">
+      <div class="text right">
+        <div id="information"></div>
+        <p>Sigmoid calculates the probability of two things, for example, if you
+          want to classify if an image is a cat or isn’t a cat (binary classification),
+          you would want to use a sigmoid activation function, which transforms the
+          output value into a probability (a number between 0 and 1).
+        </p>
+      </div>
+    </div>
+
+    <div id="neuron1Text" class="scene bg-grey upperLayer">
+      <div class="text left">
+        <h3>
+          From Biological to Artificial
+        </h3>
+        <hr>
+        <p>An <strong>artificial neuron</strong> models a biological neuron in a simplified manner.  <br>
+          Here, the previous biological nerve system is represented by an artificial neuron with two inputs and a output.
+        </p>
+      </div>
+    </div>
+
+    <div id="neuron2Text" class="scene bg-grey upperLayer">
+      <div class="text left">
+        <p>Between two neurons, the biological axon-to-dendrite connection is simplified to an <strong>edge</strong>, and
+           signals transmitted are represented with <strong>numbers</strong>.
+        </p>
+
+        <p>The input on top is connected to the central neuron with a <strong>thick</strong> edge,
+          thus the signal is amplified by a factor of 2 when it reaches the neuron.
+        </p>
+
+      </div>
+    </div>
+
+    <div id="neuron3Text" class="scene bg-grey upperLayer">
+      <div class="text left">
+        <p>The input at the bottom, however, has a <strong>thinner</strong> connection to the neuron,
+          thus the signal is reduced to 2, resulting in a final signal of <strong>2 + 2 = 4</strong> received, instead of
+          3 + 2 = 5.
+        </p>
+        <p>
+          The thickness of the edge is called <strong>weight</strong> in machine learning.
+        </p>
+      </div>
+    </div>
+
+    <div id="neuron4Text" class="scene bg-grey upperLayer">
+      <div class="text left">
+        <p>Next, the neuron processes the signal by shaking itself. In this case, doing so incremented the signal by 1.
+        </p>
+        <p>
+          The “shakiness” of a neuron is called <strong>bias</strong>, which can both increase or decrease the value of the signal by any set amount.
+        </p>
+      </div>
+    </div>
+
+    <div id="neuron5Text" class="scene bg-grey upperLayer">
+      <div class="text left">
+        <p>Finally, an <strong>activation function</strong> is used to simulate how "fired" the neuron is.</p>
+        <p>
+          <strong>ReLU</strong>, a type of activation functions, is used here. It preserves the signal value if it is 0 or greater.
+        </p>
+        <p>
+          In our case, a positive signal would fully fire the neuron, so the value 5 is preserved and becomes the final output of the neuron.
+        </p>
+      </div>
+    </div>
+
+    <div id="appanana1Text" class="scene topLayer bg-white">
+      <div class="text right">
+        <h3>
+          Apple? Banana?
+        </h3>
+        <hr>
+        <p>
+          Using an artificial neuron with two inputs, we can build the simplest neural network: <strong> perceptron</strong>.
+        </p>
+        <p>
+          We are going to use it to distinguish between apple and banana.  To put it more formally, perceptron can do
+          <strong>binary classification</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div id="appanana2Text" class="scene topLayer bg-white">
+      <div class="text right">
+        <p>
+          To simplify the matter, let’s assume that only two characteristics differs between apple and banana: <strong>color and shape</strong>.
+        </p>
+        <p>
+          Apple is red and spherical, and banana is yellow and cylindrical.
+        </p>
+      </div>
+    </div>
+
+    <div id="appanana3Text" class="scene topLayer bg-white">
+      <div class="text right">
+        <p>
+          The perceptron here receives two signals. The input on top receives a <strong>"sphere"</strong> signal,
+          and the one at the bottom receives a <strong>"red"</strong> signal.
+        </p>
+        <p>
+          These signals are sent to the artificial neuron in the center to be processed.
+        </p>
+
+      </div>
+    </div>
+
+    <div id="appanana4Text" class="scene topLayer bg-white">
+      <div class="text right">
+        <p>
+          The artificial neuron shakes itself and processes the signal.  It then outputs the signal to show the final result:
+          an <strong>apple</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div id="appanana5Text" class="scene topLayer bg-white">
+      <div class="text right">
+        <p>
+          Similarly, a combination of <strong>"cylinder"</strong> and <strong>"yellow"</strong> signals are being input into the perceptron.
+        </p>
+        <p>
+          These signals are again sent to the artificial neuron in the center to be processed.
+        </p>
+
+      </div>
+    </div>
+
+    <div id="appanana6Text" class="scene topLayer bg-white">
+      <div class="text right">
+        <p>
+          The result of this combination of signal is a <strong>banana</strong>!
+        </p>
+        <p>
+          In the next chapter, we are going to take a look at <strong>how perceptrons can learn and distinguish</strong> between
+          appple and banana behind the scenes.
+        </p>
+      </div>
+    </div>
+
+    <div id="lottie" class="animation animLeft"></div>
+
+
+
+
+  <!-- Boostrap JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/DrawSVGPlugin.min.js"></script>
+  <script type="text/javascript" src="js/GSDevTools.min.js"></script>
+  <script type="text/javascript" src="js/Draggable.min.js"></script>
+  <script type="text/javascript" src="js/MorphSVGPlugin.min.js"></script>
+  <script type="text/javascript" src="js/lottie.js"></script>
+
+  <!-- ScrollMagic JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
+
+  <script type="text/javascript" src="js/demo.js"></script>
+
+  </body>
+</html>

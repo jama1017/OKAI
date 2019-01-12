@@ -1,0 +1,372 @@
+body {
+  background-color:#FFF;
+  text-align:center;
+
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Oxygen', sans-serif;
+  /* font-family: 'Rubik', sans-serif; */
+  /* font-family: 'Hind Madurai', sans-serif; */
+  /* font-family: 'Gudea', sans-serif; */
+  font-size: 23px;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  width:100%;
+  height:100%;
+}
+
+/* The progress bar (scroll indicator) */
+.scrollBar {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  height: 6px;
+  background: #3BB9FF;
+  width: 0%;
+  opacity: 0.5;
+}
+
+.animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: auto 0;
+  width: 60%;
+  height: auto;
+  /* z-index: -1; */
+}
+
+.animLeft {
+  transform: translate(-85%, -50%);
+}
+
+.animRight {
+  transform: translate(-17%, -50%);
+}
+
+.scene {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.firstScene {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.text {
+  width: 30%;
+  position: absolute;
+  text-align: left;
+  line-height: 1.5;
+  top: 50%;
+}
+
+.left {
+  left: 0%;
+  transform: translate(30%, -50%);
+}
+
+.right {
+  left: 70%;
+  transform: translate(-30%, -50%);
+}
+
+.bg-grey {
+  background-color: #f1f1f1;
+}
+
+.upperLayer {
+  z-index: 1;
+}
+
+.topLayer {
+  z-index: 2;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+/* ------------------------brain nerve stuff-------------------------- */
+
+.body {
+  fill:#fcd0dd;
+}
+
+.neuronBG {
+  opacity:0.29;
+}
+
+.coreSurr {
+  fill:#B6D2FC;
+}
+
+.core {
+  fill:#92FFF7;
+}
+
+#face {
+  fill-rule:evenodd;
+  clip-rule:evenodd;
+  fill:none;stroke:#D1D1D1;
+  stroke-width:7;
+  stroke-miterlimit:10;
+}
+
+#brain {
+  fill-rule:evenodd;
+  clip-rule:evenodd;
+  fill:#FFBFAE;
+}
+
+
+/* neuron animation stuff */
+#neuron {
+  fill: none;
+  stroke: #3fa9f5;
+  stroke-width: 11px;
+}
+
+.input {
+  fill: none;
+  stroke: #3fd7f5;
+  stroke-width: 11px;
+}
+
+.output {
+  fill: none;
+  stroke: #0b51dc;
+  stroke-width: 11px;
+}
+
+.axon {
+  fill:none;
+  stroke: #0b74dc;
+  stroke-width: 13px;
+}
+
+
+.dendrites {
+  stroke: #3fa9f5;
+}
+
+#dendrites1 {
+  stroke-width: 15px;
+}
+
+#dendrites2 {
+  stroke-width: 11px;
+}
+
+.inTransit {
+  stroke: #3fa9f5;
+  stroke-width: 20px;
+}
+
+.signal {
+  fill: #3fa9f5;
+}
+
+#cenSig{
+  fill: #3f8bf5;
+}
+
+#cenSig3 {
+  fill: #326fc4;
+}
+
+#outSig {
+  fill: #3f6cf5;
+}
+
+.num{
+  fill: white;
+}
+
+#num4, #numBig3, #numBig5{
+  visibility: hidden;
+}
+
+#ReLU{
+  fill: #d0eafd;
+}
+
+/* ----------------------appanana breakdown stuff------------ */
+
+.line-black {
+  fill:none;
+  stroke:#000000;
+  stroke-width:2
+}
+
+.line-black-round {
+  fill:none;stroke:#000000;
+  stroke-width:2;
+  stroke-linecap:round;
+}
+
+.dashed {
+  fill:none;
+  stroke:#000000;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-dasharray:13.4166,13.4166;
+}
+
+.yellow {
+  fill:#FCD462;
+  stroke:#F2F2F2;
+  stroke-width:4;
+}
+
+.red {
+  fill:#FD6568;
+  stroke:#F2F2F2;
+  stroke-width:6;
+}
+
+.dashed2 {
+  fill:none;
+  stroke:#000000;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-dasharray:7.2839,7.2839;}
+
+.bana_bot {
+  fill:#F6C358;
+}
+
+.bana_green {
+  fill:#3EA69B;
+}
+
+.bana_top {
+  fill:#FCD462;
+}
+
+.bana_green_dark {
+  fill:#44C4A1;
+}
+
+.app_branch {
+  fill:#C79175;
+}
+
+.app_red {
+  fill:#FD6568;
+}
+
+.app_red_dark {
+  fill:#E04F56;
+}
+
+.app_leaf {
+  fill:#9DDA74;
+}
+
+.app_stem {
+  fill:#81B256;
+}
+
+.vert_bar {
+  fill:none;
+  stroke:#CCCCCC;
+  stroke-width:3;
+  stroke-linecap:round;
+}
+
+.and {
+  fill:#CCCCCC;
+}
+
+/* ----------------------apple perceptron stuff------------ */
+
+.red_s {
+  fill:#FD6568;
+  stroke:#F2F2F2;
+  stroke-width:2;
+}
+
+#question, #question_2{
+  fill: white;
+  stroke: white;
+}
+
+.line-white {
+  fill:none;
+  stroke:#fff;
+  stroke-width:2
+}
+
+.line-white-round {
+  fill:none;
+  stroke:#fff;
+  stroke-width:2;
+  stroke-linecap:round;
+}
+
+.dashed3 {
+  fill:none;
+  stroke:#fff;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-dasharray:8.7703,8.7703;
+}
+
+/* ----------------------banana perceptron stuff-------------- */
+.yellow_s {
+  fill:#FCD462;
+  stroke:#F2F2F2;
+  stroke-width:2;
+}
+
+.dashed4 {
+  fill:none;
+  stroke:#fff;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-dasharray:2.854,2.854;
+}
+
+
+/* ----------------------perceptron_base stuff-------------- */
+.appanana_transit {
+  fill:none;
+  stroke:#c0f7f4;
+  stroke-width:12;
+}
+
+#appanana_topSig, #appanana_botSig, #appanana_cenSig, #appanana_outSig,
+#appanana_topSig_2, #appanana_botSig_2, #appanana_cenSig_2, #appanana_outSig_2 {
+  fill: #7bede7;
+}
+
+#appanana_topTransit, #appanana_botTransit, #appanana_outTransit,
+#appanana_topTransit_2, #appanana_botTransit_2, #appanana_outTransit_2 {
+  fill:none;
+  stroke:#c0f7f4;
+  stroke-width:30px;
+}
+
+#appanana_topNeuron, #appanana_botNeuron, #appanana_cenNeuron, #appanana_outNeuron,
+#appanana_topNeuron_2, #appanana_botNeuron_2, #appanana_cenNeuron_2, #appanana_outNeuron_2 {
+  fill:#c0f7f4;
+}
+
+/* relu white */
+.white {
+  fill:#FFFFFF;
+}

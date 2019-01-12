@@ -1,0 +1,87 @@
+body {
+  background-color:#FFF;
+  /* overflow: hidden; */
+  text-align:center;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top: 0px;
+  left: 0px;
+}
+
+#neuron {
+  fill: none;
+  stroke: #3fa9f5;
+  stroke-width: 11px;
+}
+
+.input {
+  fill: none;
+  stroke: #3fd7f5;
+  stroke-width: 11px;
+}
+
+.output {
+  fill: none;
+  stroke: #3f8bf5;
+  stroke-width: 11px;
+}
+
+.axon {
+  fill:none;
+  stroke: #3fa9f5;
+  stroke-width: 11px;
+}
+
+
+.dendrites {
+  stroke: #3fa9f5;
+}
+
+#dendrites1 {
+  stroke-width: 15px;
+}
+
+#dendrites2 {
+  stroke-width: 11px;
+}
+
+.inTransit {
+  stroke: #3fa9f5;
+  stroke-width: 20px;
+}
+
+.signal {
+  fill: #3fa9f5;
+}
+
+#cenSig{
+  fill: #3f8bf5;
+}
+
+#cenSig3 {
+  fill: #326fc4;
+}
+
+#outSig {
+  fill: #3f6df5;
+}
+
+.num{
+  fill: white;
+}
+
+#num4, #numBig3, #numBig5{
+  visibility: hidden;
+}
