@@ -96,6 +96,10 @@ svg {
   z-index: 2;
 }
 
+.threeLayer{
+  z-index: 3;
+}
+
 .bg-white {
   background-color: #fff;
 }
