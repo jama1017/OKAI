@@ -50,7 +50,7 @@ var animationWindow = select('#lottie'),
   loop: false,
   prerender: true,
   autoplay: false,
-  path: './data.json',
+  path: './ch3_neuron.json',
 };
 
 var animationWindow2 = select('#lottie2');
@@ -65,13 +65,10 @@ var animData2 = {
 
 var anim = bodymovin.loadAnimation(animData);
 anim.addEventListener('DOMLoaded', onDOMLoaded);
-anim.setSpeed(1);
 
 var anim2 = bodymovin.loadAnimation(animData2);
 anim2.addEventListener('DOMLoaded', onDOMLoaded2);
-anim2.setSpeed(1);
 
-var infoHolder = document.getElementById("information");
 var mytl = new TimelineMax();
 var mytl2 = new TimelineMax();
 
@@ -129,7 +126,7 @@ let sigmoidScene2 = new ScrollMagic.Scene({triggerElement: "#neuron1Text",
                                         toggleAnimation(animationWindow, false)
                                      })
                                     .on("leave", function() {
-                                      toggleAnimation(animationWindow, true)
+                                        toggleAnimation(animationWindow, true)
                                     })
                                     .setPin("#lottie2")
                                     .addIndicators({name: "2sigmoidLottie"})
