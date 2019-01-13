@@ -1,67 +1,41 @@
+/* color palette:
+#F29800
+#EF7D40
+#E61E7B */
+
 .bg-3grey {
   background-color: #c9cbca;
-}
-/* ------------------------brain nerve stuff-------------------------- */
-
-.body {
-  fill:#fcd0dd;
-}
-
-.neuronBG {
-  opacity:0.29;
-}
-
-.coreSurr {
-  fill:#B6D2FC;
-}
-
-.core {
-  fill:#92FFF7;
-}
-
-#face {
-  fill-rule:evenodd;
-  clip-rule:evenodd;
-  fill:none;stroke:#D1D1D1;
-  stroke-width:7;
-  stroke-miterlimit:10;
-}
-
-#brain {
-  fill-rule:evenodd;
-  clip-rule:evenodd;
-  fill:#FFBFAE;
 }
 
 
 /* neuron animation stuff */
 #neuron {
   fill: none;
-  stroke: #3fa9f5;
+  stroke: #EF7D40;
   stroke-width: 11px;
 }
 
 .input {
   fill: none;
-  stroke: #3fd7f5;
+  stroke: #F29800;
   stroke-width: 11px;
 }
 
 .output {
   fill: none;
-  stroke: #0b51dc;
+  stroke: #ff5900;
   stroke-width: 11px;
 }
 
 .axon {
   fill:none;
-  stroke: #0b74dc;
+  stroke: #ff5900;
   stroke-width: 13px;
 }
 
 
 .dendrites {
-  stroke: #3fa9f5;
+  stroke: #F29800;
 }
 
 #dendrites1 {
@@ -73,24 +47,24 @@
 }
 
 .inTransit {
-  stroke: #3fa9f5;
+  stroke: #F29800;
   stroke-width: 20px;
 }
 
 .signal {
-  fill: #3fa9f5;
+  fill: #EF7D40;
 }
 
 #cenSig{
-  fill: #3f8bf5;
+  fill: #e75959;
 }
 
 #cenSig3 {
-  fill: #326fc4;
+  fill: #e75959;
 }
 
 #outSig {
-  fill: #3f6cf5;
+  fill: #E61E7B;
 }
 
 .num{
@@ -102,7 +76,7 @@
 }
 
 #ReLU{
-  fill: #d0eafd;
+  fill: white;
 }
 
 /* ----------------------appanana breakdown stuff------------ */
