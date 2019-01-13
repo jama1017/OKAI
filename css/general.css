@@ -1,0 +1,101 @@
+body {
+  background-color:#FFF;
+  text-align:center;
+
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Oxygen', sans-serif;
+  /* font-family: 'Rubik', sans-serif; */
+  /* font-family: 'Hind Madurai', sans-serif; */
+  /* font-family: 'Gudea', sans-serif; */
+  font-size: 23px;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  width:100%;
+  height:100%;
+}
+
+/* The progress bar (scroll indicator) */
+.scrollBar {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  height: 6px;
+  background: #3BB9FF;
+  width: 0%;
+  opacity: 0.5;
+}
+
+.animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: auto 0;
+  width: 60%;
+  height: auto;
+  /* z-index: -1; */
+}
+
+.animLeft {
+  transform: translate(-85%, -50%);
+}
+
+.animRight {
+  transform: translate(-17%, -50%);
+}
+
+.scene {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.firstScene {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.text {
+  width: 30%;
+  position: absolute;
+  text-align: left;
+  line-height: 1.5;
+  top: 50%;
+}
+
+.left {
+  left: 0%;
+  transform: translate(30%, -50%);
+}
+
+.right {
+  left: 70%;
+  transform: translate(-30%, -50%);
+}
+
+.bg-grey {
+  background-color: #f1f1f1;
+}
+
+.upperLayer {
+  z-index: 1;
+}
+
+.topLayer {
+  z-index: 2;
+}
+
+.bg-white {
+  background-color: #fff;
+}
