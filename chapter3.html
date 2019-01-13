@@ -49,18 +49,30 @@
     <div id="neuron1Text" class="scene bg-grey upperLayer">
       <div class="text left">
         <h3>
-          From Biological to Artificial
+          From Neuron to Perceptron
         </h3>
         <hr>
-        <p>An <strong>artificial neuron</strong> models a biological neuron in a simplified manner.  <br>
-          Here, the previous biological nerve system is represented by an artificial neuron with two inputs and a output.
-        </p>
+        <p>The perceptron, similarly, also has 3 major parts:</p>
+        <ul>
+          <li><p>Inputs [Dendrites]: inputs take in values from an arbitrary number
+            of sources and pass it to the perceptron.</p></li>
+          <li><p>Perceptron [Soma]: the perceptron algorithm takes in the inputs
+            and assigns a weight to each input. It then calculates the weighted
+            sum of all inputs (the sum of all weight * input), then adds a bias on to of that.</p></li>
+          <li><p>
+            Output [Axon]t: the output of the perceptron spits out the result of the calculation.
+          </p></li>
+        </ul>
+
+
+
+</p>
       </div>
     </div>
 
     <div id="neuron2Text" class="scene bg-grey upperLayer">
       <div class="text left">
-        <p>Between two neurons, the biological axon-to-dendrite connection is simplified to an <strong>edge</strong>, and
+        <p>Between [two neurons], the biological axon-to-dendrite connection is simplified to an <strong>edge</strong>, and
            signals transmitted are represented with <strong>numbers</strong>.
         </p>
 
@@ -108,15 +120,19 @@
     <div id="appanana1Text" class="scene topLayer bg-white">
       <div class="text right">
         <h3>
-          Apple? Banana?
+          Activation Functions
         </h3>
         <hr>
         <p>
-          Using an artificial neuron with two inputs, we can build the simplest neural network: <strong> perceptron</strong>.
+          Early researchers use these perceptrons to model how human beings think.
+          In spite of early successes, they quickly ran into a problem.
+          When a researcher wants to predict how likely an animal with 2 legs
+          and 2 arms is a human, the probability the model gives back would often
+          be <strong>above 100% or below 0%</strong>.
         </p>
         <p>
-          We are going to use it to distinguish between apple and banana.  To put it more formally, perceptron can do
-          <strong>binary classification</strong>.
+          Intuitively, this isn’t possible, but to the machine, it is just trying
+          to estimate a number, and it does not know if that number is meaningful.
         </p>
       </div>
     </div>
@@ -124,10 +140,14 @@
     <div id="appanana2Text" class="scene topLayer bg-white">
       <div class="text right">
         <p>
-          To simplify the matter, let’s assume that only two characteristics differs between apple and banana: <strong>color and shape</strong>.
+          To tackle such problems, the researchers put an <strong>activation function</strong>
+          behind the output of the perceptron, which can control the output range of that perceptron.
         </p>
         <p>
-          Apple is red and spherical, and banana is yellow and cylindrical.
+          For example, <strong>ReLu</strong> and <strong>Sigmoid</strong> are
+          functions that are commonly used. These functions allow the perceptron
+          to limit its output to a specific range so that it would not spit out
+          invalid outputs.
         </p>
       </div>
     </div>
@@ -135,21 +155,24 @@
     <div id="appanana3Text" class="scene topLayer bg-white">
       <div class="text right">
         <p>
-          The perceptron here receives two signals. The input on top receives a <strong>"sphere"</strong> signal,
-          and the one at the bottom receives a <strong>"red"</strong> signal.
+          <strong>ReLu</strong>, which we have already seen, makes the final output value non-negative.
+          It preserves the value of the output as long as it is greater than 0.
+          If the output is equal to or below 0, it would simply output 0. This
+          function is by far <strong>the most popular</strong> activation function, and you can
+          find it being used in areas like <strong>Computer Vision</strong> and
+          <strong>Speech Recognition</strong>.
         </p>
-        <p>
-          These signals are sent to the artificial neuron in the center to be processed.
-        </p>
-
       </div>
     </div>
 
     <div id="appanana4Text" class="scene topLayer bg-white">
       <div class="text right">
         <p>
-          The artificial neuron shakes itself and processes the signal.  It then outputs the signal to show the final result:
-          an <strong>apple</strong>.
+          <strong>Sigmoid</strong> calculates the probability of two things, for example, if you
+          want to classify if an image is a cat or isn’t a cat (this is called
+          <strong>binary classification</strong>), you would want to use a
+          sigmoid activation function, which transforms
+          the output value into a probability (a number between 0 and 1).
         </p>
       </div>
     </div>

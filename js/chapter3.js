@@ -174,16 +174,17 @@ let numBig5 = select('#numBig5');
 //neuron appearance timeline
 let appearanceTL = new TimelineMax();
 appearanceTL.set(num2, {y: -3});
-appearanceTL.from(neuron, 1, {scale: 0,
+appearanceTL.from([input1, input2], 1, {scale: 0,
+                            transformOrigin: '50%, 50%',
+                            ease: Elastic.easeOut})
+            .from(neuron, 1, {scale: 0,
                              transformOrigin: '50%, 50%',
                              ease: Elastic.easeOut})
            .from(output, 1, {scale: 0,
                              transformOrigin: '50%, 50%',
                              ease: Elastic.easeOut}, "outputShow")
            .fromTo(axon, 1, {drawSVG: '100%, 100%'}, {drawSVG: '0%, 100%'}, "outputShow")
-           .from([input1, input2], 1, {scale: 0,
-                                       transformOrigin: '50%, 50%',
-                                       ease: Elastic.easeOut})
+
 
 //top signal comming into the center neuron timeline
 let topSigInTL = new TimelineMax();
