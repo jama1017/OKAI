@@ -344,7 +344,7 @@ let humanDetectorScene = new ScrollMagic.Scene({triggerElement: "#appanana1Text"
                                     .on("leave", function () {
                                         toggleAnimation(neuronAnimation, true)
                                     })
-                                    .addIndicators({name: "activation"})
+                                    // .addIndicators({name: "activation"})
                                     .setPin("#appanananAnimation")
                                     .addTo(controller);
 
@@ -354,7 +354,7 @@ let appananaBreakdownScene = new ScrollMagic.Scene({triggerElement: "#appanana2T
                                     .on("enter", function (){
                                       keepAppanana()
                                     })
-                                    .addIndicators({name: "graphs"})
+                                    // .addIndicators({name: "graphs"})
                                     .setPin("#neuronAnimation")
                                     .addTo(controller);
 
