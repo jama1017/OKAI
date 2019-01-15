@@ -8,6 +8,7 @@ body {
   /* font-family: 'Hind Madurai', sans-serif; */
   /* font-family: 'Gudea', sans-serif; */
   font-size: 23px;
+  overflow-x: hidden;
 }
 
 body,
@@ -102,4 +103,47 @@ svg {
 
 .bg-white {
   background-color: #fff;
+}
+
+/* 992px is medium sreen size */
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  .animation {
+    /* background-color: red; */
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    margin: auto 0;
+    width: 100%;
+    height: auto;
+    /* z-index: -1; */
+  }
+
+  .animLeft {
+    transform: translate(-50%, 0%);
+  }
+
+  .animRight {
+    transform: translate(-50%, 0%);
+  }
+
+  .text {
+    /* background-color: red; */
+    top: auto;
+    width: 80%;
+    position: absolute;
+    text-align: left;
+    line-height: 1.2;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+
+  .left {}
+
+  .right {}
+
+  p {
+    font-size: 2rem;
+  }
+
 }
