@@ -1,0 +1,18 @@
+body {
+  background-color:#FFF;
+  text-align:center;
+  /* overflow: hidden; */
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.filterLayer {
+  /* visibility: hidden; */
+  filter: url('#goo');
+}
