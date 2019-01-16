@@ -28,7 +28,7 @@ svg {
 .scrollBar {
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 10;
   height: 6px;
   background: #3BB9FF;
   width: 0%;
@@ -143,7 +143,7 @@ svg {
   .right {}
 
   p {
-    font-size: 2rem;
+    font-size: 1.1rem;
   }
 
 }
