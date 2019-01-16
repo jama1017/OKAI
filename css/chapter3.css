@@ -7,6 +7,19 @@
   background-color: #c9cbca;
 }
 
+/* animation background colors */
+#neuronBG path{
+  fill: #c9cbca;
+}
+
+#perceptronBG {
+  fill: f1f1f1;
+}
+
+#activationsBG path{
+  fill: white;
+  /* fill: transparent; */
+}
 
 /* neuron animation stuff */
 #neuron {
