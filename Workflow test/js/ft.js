@@ -9,7 +9,7 @@ var animationWindow = select('#lottie'),
   loop: true,
   prerender: true,
   autoplay: true,
-  path: './filterTest.json',
+  path: './ch5_fnn.json',
 };
 
 var anim = bodymovin.loadAnimation(animData);

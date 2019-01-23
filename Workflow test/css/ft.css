@@ -12,7 +12,7 @@ html {
   padding: 0;
 }
 
-.filterLayer {
+.gooLayer {
   /* visibility: hidden; */
   filter: url('#goo');
 }
