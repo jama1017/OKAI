@@ -296,8 +296,12 @@ let neuronAppearScene = new ScrollMagic.Scene({triggerElement: "#neuron1Text",
                                         toggleAnimation(perceptronAnimation, true)
                                         toggleAnimation(activationAnimWindow, false)
                                       })
-                                    .on("leave", function () {
-                                        // toggleAnimation(brainNerveAnimation, true)
+                                    .on("start", function (event) {
+                                      var direction = event.scrollDirection;
+                                      if (direction == "REVERSE") {
+                                        toggleAnimation(neuronAnimWindow, true)
+                                        toggleAnimation(perceptronAnimation, false)
+                                      }
                                     })
                                     .setPin("#perceptronAnimation")
                                     .addTo(controller);
@@ -347,8 +351,12 @@ let humanDetectorScene = new ScrollMagic.Scene({triggerElement: "#appanana1Text"
                                         toggleAnimation(perceptronAnimation, false)
                                         toggleAnimation(activationAnimWindow, true)
                                       })
-                                    .on("leave", function () {
+                                    .on("start", function (event) {
+                                      var direction = event.scrollDirection;
+                                      if (direction == "REVERSE") {
                                         toggleAnimation(perceptronAnimation, true)
+                                        toggleAnimation(activationAnimWindow, false)
+                                      }
                                     })
                                     // .addIndicators({name: "activation"})
                                     .setPin("#appanananAnimation")
