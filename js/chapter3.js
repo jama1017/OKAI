@@ -89,7 +89,8 @@ var openingAnimWindow = select('#openingLottie'),
     loop: true,
     prerender: true,
     autoplay: true,
-    path: './json/sushi_fitness.json',
+    // path: './json/sushi_fitness.json',
+    path: './json/ch2_nestedPerc.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
@@ -601,7 +602,7 @@ let applePerceptronSigOutScene = new ScrollMagic.Scene({
 //-------------------------------------------------
 let endingScene = new ScrollMagic.Scene({
     triggerElement: "#endingText",
-    duration: '100%'
+    duration: '10%'
   })
   .on("enter", function() {
     offAnimation()
