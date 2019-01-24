@@ -171,6 +171,12 @@ ul ul a {
   /* z-index: -1; */
 }
 
+#openingText {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
 .animLeft {
   transform: translate(-85%, -50%);
 }
@@ -244,6 +250,15 @@ ul ul a {
     height: auto;
     /* z-index: -1; */
   }
+
+  /* .openingAnimation {
+    top: 50%;
+    right: auto;
+    margin: auto 0;
+    width: 100%;
+    height: auto;
+    transform: translate(0%, 50%);
+  } */
 
   .animLeft {
     transform: translate(-50%, 0%);
