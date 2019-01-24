@@ -24,6 +24,10 @@
   /* fill: transparent; */
 }
 
+.gooFilterLayer {
+  filter: url("#goo")
+}
+
 /* ---------------------neuron animation stuff ------------------------------*/
 #neuron {
   fill: none;
