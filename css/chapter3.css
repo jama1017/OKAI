@@ -3,6 +3,8 @@
 #EF7D40
 #E61E7B */
 
+
+/* --------------------------------- animaiton backgrounds ---------------------- */
 .bg-3grey {
   background-color: #c9cbca;
 }
@@ -21,7 +23,7 @@
   /* fill: transparent; */
 }
 
-/* neuron animation stuff */
+/* ---------------------neuron animation stuff ------------------------------*/
 #neuron {
   fill: none;
   stroke: #EF7D40;
