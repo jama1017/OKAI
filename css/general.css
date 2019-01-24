@@ -1,12 +1,6 @@
 body {
   background-color:#FFF;
   text-align:center;
-
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: 'Oxygen', sans-serif; */
-  /* font-family: 'Rubik', sans-serif; */
-  /* font-family: 'Hind Madurai', sans-serif; */
-  /* font-family: 'Gudea', sans-serif; */
   /* font-size: 23px; */
   font-family: 'Nunito', sans-serif;
   overflow-x: hidden;
@@ -41,7 +35,6 @@ svg {
     color: #000;
     transition: all 0.3s;
     overflow-y: scroll;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 #sidebar.active {
@@ -275,7 +268,15 @@ ul ul a {
   .right {}
 
   p {
+    font-size: 0.7rem;
+  }
+
+  h2 {
     font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
   }
 
 }
