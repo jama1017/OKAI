@@ -177,6 +177,14 @@ ul ul a {
   margin: 0;
 }
 
+#endingText {
+  /* height: 100vh;
+  width: 100%; */
+  margin: 0;
+  padding: 0;
+  background-color: #cecece;
+}
+
 .animLeft {
   transform: translate(-85%, -50%);
 }
@@ -232,6 +240,10 @@ ul ul a {
 
 .threeLayer {
   z-index: 3;
+}
+
+.fourLayer {
+  z-index: 4;
 }
 
 .bg-white {
