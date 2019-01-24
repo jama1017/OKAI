@@ -30,6 +30,12 @@ let keepPerceptron = function() {
   toggleAnimation(activationAnimWindow, false)
 }
 
+let offAnimation = function() {
+  toggleAnimation(neuronAnimWindow, false)
+  toggleAnimation(perceptronAnimation, false)
+  toggleAnimation(activationAnimWindow, false)
+}
+
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {
   myFunction()
@@ -93,11 +99,22 @@ var openingAnim = bodymovin.loadAnimation(openingAnimData);
 //----------------------------------------------------------------------------
 //-----------------------------timelines--------------------------------------
 //----------------------------------------------------------------------------
+var neuronBeginTL = new TimelineMax();
 var neuronTL = new TimelineMax();
 
 function onNeuronDOMLoaded(e) {
-  neuronTL.to({
+  neuronBeginTL.to({
     frame: 0
+  }, 3, {
+    frame: 28,
+    onUpdate: function() {
+      neuronAnim.goToAndStop(Math.round(this.target.frame), true)
+    },
+    ease: Linear.easeNone
+  })
+
+  neuronTL.to({
+    frame: 28
   }, 3, {
     frame: neuronAnim.totalFrames - 1,
     onUpdate: function() {
@@ -418,29 +435,34 @@ let openingAnimScene = new ScrollMagic.Scene({
   .on("end", function(event) {
     var direction = event.scrollDirection;
     if (direction == "FORWARD") {
-      toggleAnimation(openingAnimWindow, false)
       toggleAnimation(neuronAnimWindow, true)
     } else {
-      toggleAnimation(openingAnimWindow, true)
       toggleAnimation(neuronAnimWindow, false)
     }
   })
-  .addIndicators({name: "opening"})
+  // .addIndicators({name: "opening"})
   .addTo(controller);
 
 //-------------------------------------------------
 //--------- NEURON - BRAIN Animations -------------
 //-------------------------------------------------
+let nerveBeginScene = new ScrollMagic.Scene({
+  triggerElement: "#brainText",
+  duration: '100%'
+})
+  .setTween(neuronBeginTL)
+  .addTo(controller);
+
 let nerveAnimScene = new ScrollMagic.Scene({
     triggerElement: "#nerveText",
     duration: '100%'
   })
   .setTween(neuronTL)
-  .on("enter", function() {
-    toggleAnimation(neuronAnimWindow, true)
-    toggleAnimation(perceptronAnimation, false)
-    toggleAnimation(activationAnimWindow, false)
-  })
+  // .on("enter", function() {
+  //   toggleAnimation(neuronAnimWindow, true)
+  //   toggleAnimation(perceptronAnimation, false)
+  //   toggleAnimation(activationAnimWindow, false)
+  // })
   // .on("start", function(event) {
   //   var direction = event.scrollDirection;
   //   if (direction == "REVERSE") {
@@ -448,7 +470,7 @@ let nerveAnimScene = new ScrollMagic.Scene({
   //     toggleAnimation(neuronAnimWindow, false)
   //   }
   // })
-  .setPin("#brainNerveAnimation")
+  // .setPin("#brainNerveAnimation")
   // .addIndicators({name: "nerveAnim"})
   .addTo(controller);
 
@@ -461,9 +483,7 @@ let neuronAppearScene = new ScrollMagic.Scene({
   })
   .setTween(appearanceTL)
   .on("enter", function() {
-    toggleAnimation(neuronAnimWindow, false)
-    toggleAnimation(perceptronAnimation, true)
-    toggleAnimation(activationAnimWindow, false)
+    keepPerceptron()
   })
   .on("start", function(event) {
     var direction = event.scrollDirection;
@@ -472,7 +492,7 @@ let neuronAppearScene = new ScrollMagic.Scene({
       toggleAnimation(perceptronAnimation, false)
     }
   })
-  .setPin("#perceptronAnimation")
+  // .setPin("#perceptronAnimation")
   .addTo(controller);
 
 let neuronTopSigScene = new ScrollMagic.Scene({
@@ -483,7 +503,7 @@ let neuronTopSigScene = new ScrollMagic.Scene({
   .on("enter", function() {
     keepPerceptron()
   })
-  .setPin("#perceptronAnimation")
+  // .setPin("#perceptronAnimation")
   .addTo(controller);
 
 let neuronBotSigScene = new ScrollMagic.Scene({
@@ -494,7 +514,7 @@ let neuronBotSigScene = new ScrollMagic.Scene({
   .on("enter", function() {
     keepPerceptron()
   })
-  .setPin("#perceptronAnimation")
+  // .setPin("#perceptronAnimation")
   .addTo(controller);
 
 let neuronBiasScene = new ScrollMagic.Scene({
@@ -505,7 +525,7 @@ let neuronBiasScene = new ScrollMagic.Scene({
   .on("enter", function() {
     keepPerceptron()
   })
-  .setPin("#perceptronAnimation")
+  // .setPin("#perceptronAnimation")
   .addTo(controller);
 
 let neuronSigOutScene = new ScrollMagic.Scene({
@@ -516,19 +536,19 @@ let neuronSigOutScene = new ScrollMagic.Scene({
   .on("enter", function() {
     keepPerceptron()
   })
-  .setPin("#perceptronAnimation")
+  // .setPin("#perceptronAnimation")
   .addTo(controller);
 
-//ACTIVATIONS ANIMATIONS
+//-------------------------------------------------
+//----------- ACTIVATIONS ANIMATIONS ---------------
+//-------------------------------------------------
 let humanDetectorScene = new ScrollMagic.Scene({
     triggerElement: "#appanana1Text",
     duration: '100%'
   })
   .setTween(activationsTL)
   .on("enter", function() {
-    toggleAnimation(neuronAnimWindow, false)
-    toggleAnimation(perceptronAnimation, false)
-    toggleAnimation(activationAnimWindow, true)
+    keepActivation()
   })
   .on("start", function(event) {
     var direction = event.scrollDirection;
@@ -538,7 +558,7 @@ let humanDetectorScene = new ScrollMagic.Scene({
     }
   })
   // .addIndicators({name: "activation"})
-  .setPin("#appanananAnimation")
+  // .setPin("#appanananAnimation")
   .addTo(controller);
 
 let appananaBreakdownScene = new ScrollMagic.Scene({
@@ -550,7 +570,7 @@ let appananaBreakdownScene = new ScrollMagic.Scene({
     keepActivation()
   })
   // .addIndicators({name: "graphs"})
-  .setPin("#perceptronAnimation")
+  // .setPin("#perceptronAnimation")
   .addTo(controller);
 
 let applePerceptronSigInScene = new ScrollMagic.Scene({
@@ -561,7 +581,7 @@ let applePerceptronSigInScene = new ScrollMagic.Scene({
   .on("enter", function() {
     keepActivation()
   })
-  .setPin("#perceptronAnimation")
+  // .setPin("#perceptronAnimation")
   .addTo(controller);
 
 let applePerceptronSigOutScene = new ScrollMagic.Scene({
@@ -572,5 +592,25 @@ let applePerceptronSigOutScene = new ScrollMagic.Scene({
   .on("enter", function() {
     keepActivation()
   })
-  .setPin("#perceptronAnimation")
+  // .setPin("#perceptronAnimation")
+  .addIndicators({name: "sigmoid"})
+  .addTo(controller);
+
+//-------------------------------------------------
+//----------- ENDING SECTION ---------------
+//-------------------------------------------------
+let endingScene = new ScrollMagic.Scene({
+    triggerElement: "#endingText",
+    duration: '100%'
+  })
+  .on("enter", function() {
+    offAnimation()
+  })
+  .on("start", function(event) {
+    var direction = event.scrollDirection;
+    if (direction == "REVERSE") {
+      toggleAnimation(activationAnimWindow, true)
+    }
+  })
+  .addIndicators({name: "ending"})
   .addTo(controller);
