@@ -79,6 +79,8 @@ svg {
 }
 
 .overlay.active {
+    top:0;
+    left:0;
     display: block;
     opacity: 1;
 }
@@ -141,11 +143,17 @@ ul ul a {
     z-index: 10;
 }
 
+.navbar button {
+  /* background-color: rgba(255,255,255, 0.5); */
+  background-color: transparent;
+}
+/*
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
     border: none;
-}
+    background: none;
+} */
 
 
 /* -------------- The progress bar (scroll indicator) ----------------------*/
