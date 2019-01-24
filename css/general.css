@@ -19,7 +19,9 @@ svg {
   height:100%;
 }
 
-
+p {
+  font-size: 1.3rem;
+}
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -190,6 +192,7 @@ ul ul a {
   width: 100%;
   position: relative;
   text-align: center;
+  /* background-color: red; */
 }
 
 .text {
@@ -268,15 +271,15 @@ ul ul a {
   .right {}
 
   p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   h2 {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
 
   h3 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
 }
