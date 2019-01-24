@@ -593,7 +593,7 @@ let applePerceptronSigOutScene = new ScrollMagic.Scene({
     keepActivation()
   })
   // .setPin("#perceptronAnimation")
-  .addIndicators({name: "sigmoid"})
+  // .addIndicators({name: "sigmoid"})
   .addTo(controller);
 
 //-------------------------------------------------
@@ -612,5 +612,5 @@ let endingScene = new ScrollMagic.Scene({
       toggleAnimation(activationAnimWindow, true)
     }
   })
-  .addIndicators({name: "ending"})
+  // .addIndicators({name: "ending"})
   .addTo(controller);
