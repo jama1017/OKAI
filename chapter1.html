@@ -21,7 +21,7 @@
   <!-- My stylesheet -->
   <link rel="stylesheet" href="css/general.css">
   <!-- change to own stylesheet -->
-  <link rel="stylesheet" href="css/.css">
+  <link rel="stylesheet" href="css/chapter1.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122864673-1"></script>
@@ -33,7 +33,7 @@
       gtag('config', 'UA-122864673-1');
     </script>
 
-  <title>Chapter 3 Demo - OKAI</title>
+  <title>Chapter 1 - OKAI</title>
 
 </head>
 
@@ -109,8 +109,8 @@
   <div id="openingText" class="row align-items-center justify-content-around">
     <div class="col-10 col-md-4 order-2 order-md-1 text-center">
       <div class="text-left">
-        <p>Chapter</p>
-        <h2>Title</h2>
+        <p>Chapter 1</p>
+        <h2>AI Is Around You</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores
           debitis incidunt distinctio omnis ad, tempore recusandae asperiores provident
           dignissimos.</p>
@@ -124,173 +124,187 @@
 
   <!-- ######## Animation & text beginning ######## -->
   <!-- animation divs -->
-  <div id="neuronLottie" class="animation animLeft upperLayer"></div>
-  <div id="activationLottie" class="animation animLeft threeLayer"></div>
+  <div id="seedLottie" class="animation animLeft upperLayer"></div>
+  <div id="robotLottie" class="animation animRight topLayer"></div>
+  <div id="agiLottie" class="animation animLeft threeLayer"></div>
+  <div id="dataLottie" class="animation animRight fourLayer"></div>
+  <div id="wordsLottie" class="animation animLeft fiveLayer"></div>
 
   <!-- text begins -->
+
+  <!-- seed animation text section -->
   <div id="text1" class="bg-3grey scene">
     <div class="text right">
-      <p>Early deep learning researchers in the 1970s took inspiration from a
-        neuron, the building block of our brain, to create an algorithm called
-        a perceptron.</p>
-      <p>Therefore, to understand what a perceptron is, let’s first take a look at a neuron. </p>
+      <p>Firstly emerged around 1956, AI has made significant progress in the recent years.
+      </p>
+      <!-- <p>Therefore, to understand what a perceptron is, let’s first take a look at a neuron. </p> -->
     </div>
   </div>
 
-  <div id="nerveText" class="bg-3grey scene">
+  <div id="text2" class="bg-3grey scene">
     <div class="text right">
-      <p>A neuron is made up of 3 main parts:</p>
-      <ul>
-        <li>
-          <p>Dendrites: Spread out receivers of the neuron that
-            takes in some stimulus from other neurons.</p>
-        </li>
-        <li>
-          <p>Soma: The “core” of the cell where the nucleus is situated
-            at, and it decides if a signal will be sent to other neurons.</p>
-        </li>
-        <li>
-          <p>Axon: Long extending neck of the neuron that passes
-            a signal to all connected neurons. </p>
-        </li>
-      </ul>
+      <p>From autonomous driving cars, to smart supermarkets with no cashier.
+        From Go-playing algorithm that defeats human champions across the world,
+        to an AI-generated painting that has been sold for $432,500 -- nearly 45
+        times its high estimate (cite). </p>
     </div>
   </div>
 
-  <div id="neuron1Text" class="scene bg-grey upperLayer">
+  <div id="text3" class="scene bg-3grey">
+    <div class="text right">
+      <p>Like how the Industrial Revolution has changed the world, AI will bring
+        a revolution that changesaffect the wayplace we live in an equally significant way,
+        if not more. </p>
+    </div>
+  </div>
+
+
+  <!-- robot animation text section -->
+  <div id="text4" class="scene bg-grey upperLayer">
+    <div class="text left">
+      <p>Unlike what is depicted in Hollywood movies and science fictions, AI is
+        not big scary robots taking over the world but are actually all around you.
+        AI applications can be subtle things that we use every day.
+      </p>
+    </div>
+  </div>
+
+  <div id="text5" class="scene bg-grey upperLayer">
+    <div class="text left">
+      <p>To put it in concise words, AI is digitalization of human intelligence.
+        If you are still picturing a robot in your head, then think of AI as the
+        brain of that robot, not the physical hardware. Just as steam engines
+        salvage humans from intense repetitive physical labor, AI is freeing
+        us from low-level tedious brain labor.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- agi animation text section -->
+  <div id="text6" class="scene bg-white topLayer">
+    <div class="text right">
+      <p>Today’s AI is still what scientists described as Artificial Narrow Intelligence
+        (ANI), as the majority of them can only perform a certain set of tasks -
+        like driving, face detection, recommendation, etc. </p>
+    </div>
+  </div>
+
+  <div id="text7" class="scene bg-white topLayer">
+    <div class="text right">
+      <p>Scientists and researchers are working towards the ultimate goal of AI -
+        Artificial General Intelligence (AGI), where it could complete a variety
+        of tasks as good as humans.<p>
+    </div>
+  </div>
+
+
+  <!-- data animation text section-->
+  <div id="text8" class="scene threeLayer bg-grey">
     <div class="text left">
       <h3>
-        From Neuron to Perceptron
-      </h3>
-      <hr>
-      <p>The perceptron, similarly, also has 3 major parts:</p>
-      <ul>
-        <li>
-          <p>Inputs [Dendrites]: inputs take in values from an arbitrary number
-            of sources and pass it to the perceptron.</p>
-        </li>
-        <li>
-          <p>Perceptron [Soma]: the perceptron algorithm takes in the inputs
-            and assigns a weight to each input. It then calculates the sum of all weight * input), then adds a bias on to of that.</p>
-        </li>
-        <li>
-          <p>
-            Output [Axon]: the output of the perceptron spits out the result of the calculation.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="neuron2Text" class="scene bg-grey upperLayer">
-    <div class="text left">
-      <p>Between [two neurons], the biological axon-to-dendrite connection is simplified to an <strong>edge</strong>, and
-        signals transmitted are represented with <strong>numbers</strong>.
-      </p>
-
-      <p>The input on top is connected to the central neuron with a <strong>thick</strong> edge,
-        thus the signal is amplified by a factor of 2 when it reaches the neuron.
-      </p>
-
-    </div>
-  </div>
-
-  <div id="neuron3Text" class="scene bg-grey upperLayer">
-    <div class="text left">
-      <p>The input at the bottom, however, has a <strong>thinner</strong> connection to the neuron,
-        thus the signal is reduced to 2, resulting in a final signal of <strong>2 + 2 = 4</strong> received, instead of
-        3 + 2 = 5.
-      </p>
-      <p>
-        The thickness of the edge is called <strong>weight</strong> in machine learning.
-      </p>
-    </div>
-  </div>
-
-  <div id="neuron4Text" class="scene bg-grey upperLayer">
-    <div class="text left">
-      <p>Next, the neuron processes the signal by shaking itself. In this case, doing so incremented the signal by 1.
-      </p>
-      <p>
-        The “shakiness” of a neuron is called <strong>bias</strong>, which can both increase or decrease the value of the signal by any set amount.
-      </p>
-    </div>
-  </div>
-
-  <div id="neuron5Text" class="scene bg-grey upperLayer">
-    <div class="text left">
-      <p>Finally, an <strong>activation function</strong> is used to simulate how "fired" the neuron is.</p>
-      <p>
-        <strong>ReLU</strong>, a type of activation functions, is used here. It preserves the signal value if it is 0 or greater.
-      </p>
-      <p>
-        In our case, a positive signal would fully fire the neuron, so the value 5 is preserved and becomes the final output of the neuron.
-      </p>
-    </div>
-  </div>
-
-  <div id="appanana1Text" class="scene topLayer bg-white">
-    <div class="text right">
-      <h3>
-        Activation Functions
+        Some Numbers
       </h3>
       <hr>
       <p>
-        Early researchers use these perceptrons to model how human beings think.
-        In spite of early successes, they quickly ran into a problem.
-        When a researcher wants to predict how likely an animal with 2 legs
-        and 2 arms is a human, the probability the model gives back would often
-        be <strong>above 100% or below 0%</strong>.
-      </p>
-      <p>
-        Intuitively, this isn’t possible, but to the machine, it is just trying
-        to estimate a number, and it does not know if that number is meaningful.
+        number of AI companies listed on Crunchbase
       </p>
     </div>
   </div>
 
-  <div id="appanana2Text" class="scene topLayer bg-white">
-    <div class="text right">
+  <div id="text9" class="scene threeLayer bg-grey">
+    <div class="text left">
+      <h3>
+        Some Numbers
+      </h3>
+      <hr>
       <p>
-        To tackle such problems, the researchers put an <strong>activation function</strong>
-        behind the output of the perceptron, which can control the output range of that perceptron.
-      </p>
-      <p>
-        For example, <strong>ReLu</strong> and <strong>Sigmoid</strong> are
-        functions that are commonly used. These functions allow the perceptron
-        to limit its output to a specific range so that it would not spit out
-        invalid outputs.
+        number of devices with smart voice assistants built in
       </p>
     </div>
   </div>
 
-  <div id="appanana3Text" class="scene topLayer bg-white">
-    <div class="text right">
+  <div id="text10" class="scene threeLayer bg-grey">
+    <div class="text left">
+      <h3>
+        Some Numbers
+      </h3>
+      <hr>
       <p>
-        <strong>ReLu</strong>, which we have already seen, makes the final output value non-negative.
-        It preserves the value of the output as long as it is greater than 0.
-        If the output is equal to or below 0, it would simply output 0. This
-        function is by far <strong>the most popular</strong> activation function, and you can
-        find it being used in areas like <strong>Computer Vision</strong> and
-        <strong>Speech Recognition</strong>.
+        amount of venture capital firms invested in AI-related firms in 2017
       </p>
     </div>
   </div>
 
-  <div id="appanana4Text" class="scene topLayer bg-white">
-    <div class="text right">
+  <div id="text11" class="scene threeLayer bg-grey">
+    <div class="text left">
+      <h3>
+        Some Numbers
+      </h3>
+      <hr>
       <p>
-        <strong>Sigmoid</strong> calculates the probability of two things, for example, if you
-        want to classify if an image is a cat or isn’t a cat (this is called
-        <strong>binary classification</strong>), you would want to use a
-        sigmoid activation function, which transforms
-        the output value into a probability (a number between 0 and 1).
+        an estimated amount of total spending in AI by 2025
       </p>
     </div>
   </div>
+
+
+  <!-- words animation text section -->
+  <div id="text12" class="scene fourLayer bg-3grey">
+    <div class="text right">
+      <h3>
+        ML
+      </h3>
+      <hr>
+      <p>
+        ML - Machine Learning is a specific area of AI. As described by its name,
+        machine learning aims to train a machine to learn based on data rather
+        than pre-defined rules. Mainstream method today is to show a machine a
+        lot of data and teach it what the desired behavior is. Once the machine is
+        trained, some new, unseen data would be fed into the machine and, hopefully,
+        the machine can make the right choices based on what it has learnt.
+      </p>
+    </div>
+  </div>
+
+  <div id="text13" class="scene fourLayer bg-3grey">
+    <div class="text right">
+      <h3>
+        DL
+      </h3>
+      <hr>
+      <p>
+        Deep Learning is a branch of Machine Learning that are centered around
+        artificial neural networks - algorithms inspired by the human brain. This
+        is the focus of our site. Deep learning algorithms relying on being fed
+        a large amount of data so that it can adjust how each layer in the network
+        interacts with the next. Once learned, these neural networks can complete
+        some very sophisticated tasks like recognizing human faces, or playing
+        Go well enough to beat human champions!
+      </p>
+    </div>
+  </div>
+
+  <div id="text14" class="scene fourLayer bg-3grey">
+    <div class="text right">
+      <h3>
+        Algorithm
+      </h3>
+      <hr>
+      <p>
+        An algorithm is very much like a cooking recipe. It is a set of clear
+        instructions that you or a machine can follow to achieve a certain purpose.
+        Since computers do not understand vague high-level instructions that humans
+        are used to, algorithms, sets of instructions that machines can follow that
+        achieves higher-level tasks, are the sole reason why computers and phones are
+        working as intended.
+      </p>
+    </div>
+  </div>
+
 
   <!-- ending section -->
-  <div id="endingText" class="scene row align-items-center justify-content-around fourLayer">
+  <div id="endingText" class="scene row align-items-center justify-content-around fiveLayer">
     <div class="col-12 col-md-10">
       <div class="row justify-content-around">
 
@@ -315,11 +329,11 @@
             </p>
           </div>
         </div>
-      <!-- end of inner row -->
+        <!-- end of inner row -->
       </div>
       <!-- end of outer col-10 -->
     </div>
-  <!-- end of ending section -->
+    <!-- end of ending section -->
   </div>
   <!-- end of text area -->
 
@@ -359,7 +373,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
 
   <!-- change to own js files -->
-  <script type="text/javascript" src="js/template.js"></script>
+  <script type="text/javascript" src="js/chapter1.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function() {
