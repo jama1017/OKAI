@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="css/general.css">
+  <!-- change to own stylesheet -->
+  <link rel="stylesheet" href="css/.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122864673-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122864673-1');
+    </script>
+
+  <title>Chapter 3 Demo - OKAI</title>
+
+</head>
+
+<body>
+
+  <!-- scrollbar -->
+  <div class="scrollBar" id="myBar"></div>
+
+  <!-- navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <button type="button" id="sidebarCollapse" class="btn">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+    <div id="dismiss">
+      <i class="fas fa-times fa-sm"></i>
+    </div>
+
+    <div class="sidebar-header">
+      <h4>OKAI</h4>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+          Chapters
+          <i class="fas fa-ellipsis-v" style="position: absolute; right: 25px;
+          top: 50%; transform: translateY(-50%);"></i>
+        </a>
+        <ul class="collapse list-unstyled" id="pageSubmenu">
+          <li>
+            <a href="#">00 title</a>
+          </li>
+          <li>
+            <a href="#">01 title</a>
+          </li>
+          <li>
+            <a href="#">02 title</a>
+          </li>
+          <li>
+            <a href="#">03 title</a>
+          </li>
+          <li>
+            <a href="#">04 title</a>
+          </li>
+          <li>
+            <a href="#">05 title</a>
+          </li>
+          <li>
+            <a href="#">06 title</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ######################### -->
+  <!-- Chapter content beginning -->
+  <!-- ######################### -->
+
+  <!-- landing section -->
+  <div id="openingText" class="row align-items-center justify-content-around">
+    <div class="col-10 col-md-4 order-2 order-md-1 text-center">
+      <div class="text-left">
+        <p>Chapter</p>
+        <h2>Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores
+          debitis incidunt distinctio omnis ad, tempore recusandae asperiores provident
+          dignissimos.</p>
+      </div>
+    </div>
+    <div class="col-md-6 order-1 order-md-2 text-center">
+      <div id="openingLottie" class="openingAnimation"></div>
+    </div>
+  </div>
+
+  <div id="neuronLottie" class="animation animLeft upperLayer"></div>
+  <div id="activationLottie" class="animation animLeft threeLayer"></div>
+
+  <!-- text begins -->
+  <div id="text1" class="bg-3grey scene">
+    <div class="text right">
+      <p>Early deep learning researchers in the 1970s took inspiration from a
+        neuron, the building block of our brain, to create an algorithm called
+        a perceptron.</p>
+      <p>Therefore, to understand what a perceptron is, let’s first take a look at a neuron. </p>
+    </div>
+  </div>
+
+  <div id="nerveText" class="bg-3grey scene">
+    <div class="text right">
+      <p>A neuron is made up of 3 main parts:</p>
+      <ul>
+        <li>
+          <p>Dendrites: Spread out receivers of the neuron that
+            takes in some stimulus from other neurons.</p>
+        </li>
+        <li>
+          <p>Soma: The “core” of the cell where the nucleus is situated
+            at, and it decides if a signal will be sent to other neurons.</p>
+        </li>
+        <li>
+          <p>Axon: Long extending neck of the neuron that passes
+            a signal to all connected neurons. </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="neuron1Text" class="scene bg-grey upperLayer">
+    <div class="text left">
+      <h3>
+        From Neuron to Perceptron
+      </h3>
+      <hr>
+      <p>The perceptron, similarly, also has 3 major parts:</p>
+      <ul>
+        <li>
+          <p>Inputs [Dendrites]: inputs take in values from an arbitrary number
+            of sources and pass it to the perceptron.</p>
+        </li>
+        <li>
+          <p>Perceptron [Soma]: the perceptron algorithm takes in the inputs
+            and assigns a weight to each input. It then calculates the sum of all weight * input), then adds a bias on to of that.</p>
+        </li>
+        <li>
+          <p>
+            Output [Axon]: the output of the perceptron spits out the result of the calculation.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="neuron2Text" class="scene bg-grey upperLayer">
+    <div class="text left">
+      <p>Between [two neurons], the biological axon-to-dendrite connection is simplified to an <strong>edge</strong>, and
+        signals transmitted are represented with <strong>numbers</strong>.
+      </p>
+
+      <p>The input on top is connected to the central neuron with a <strong>thick</strong> edge,
+        thus the signal is amplified by a factor of 2 when it reaches the neuron.
+      </p>
+
+    </div>
+  </div>
+
+  <div id="neuron3Text" class="scene bg-grey upperLayer">
+    <div class="text left">
+      <p>The input at the bottom, however, has a <strong>thinner</strong> connection to the neuron,
+        thus the signal is reduced to 2, resulting in a final signal of <strong>2 + 2 = 4</strong> received, instead of
+        3 + 2 = 5.
+      </p>
+      <p>
+        The thickness of the edge is called <strong>weight</strong> in machine learning.
+      </p>
+    </div>
+  </div>
+
+  <div id="neuron4Text" class="scene bg-grey upperLayer">
+    <div class="text left">
+      <p>Next, the neuron processes the signal by shaking itself. In this case, doing so incremented the signal by 1.
+      </p>
+      <p>
+        The “shakiness” of a neuron is called <strong>bias</strong>, which can both increase or decrease the value of the signal by any set amount.
+      </p>
+    </div>
+  </div>
+
+  <div id="neuron5Text" class="scene bg-grey upperLayer">
+    <div class="text left">
+      <p>Finally, an <strong>activation function</strong> is used to simulate how "fired" the neuron is.</p>
+      <p>
+        <strong>ReLU</strong>, a type of activation functions, is used here. It preserves the signal value if it is 0 or greater.
+      </p>
+      <p>
+        In our case, a positive signal would fully fire the neuron, so the value 5 is preserved and becomes the final output of the neuron.
+      </p>
+    </div>
+  </div>
+
+  <div id="appanana1Text" class="scene topLayer bg-white">
+    <div class="text right">
+      <h3>
+        Activation Functions
+      </h3>
+      <hr>
+      <p>
+        Early researchers use these perceptrons to model how human beings think.
+        In spite of early successes, they quickly ran into a problem.
+        When a researcher wants to predict how likely an animal with 2 legs
+        and 2 arms is a human, the probability the model gives back would often
+        be <strong>above 100% or below 0%</strong>.
+      </p>
+      <p>
+        Intuitively, this isn’t possible, but to the machine, it is just trying
+        to estimate a number, and it does not know if that number is meaningful.
+      </p>
+    </div>
+  </div>
+
+  <div id="appanana2Text" class="scene topLayer bg-white">
+    <div class="text right">
+      <p>
+        To tackle such problems, the researchers put an <strong>activation function</strong>
+        behind the output of the perceptron, which can control the output range of that perceptron.
+      </p>
+      <p>
+        For example, <strong>ReLu</strong> and <strong>Sigmoid</strong> are
+        functions that are commonly used. These functions allow the perceptron
+        to limit its output to a specific range so that it would not spit out
+        invalid outputs.
+      </p>
+    </div>
+  </div>
+
+  <div id="appanana3Text" class="scene topLayer bg-white">
+    <div class="text right">
+      <p>
+        <strong>ReLu</strong>, which we have already seen, makes the final output value non-negative.
+        It preserves the value of the output as long as it is greater than 0.
+        If the output is equal to or below 0, it would simply output 0. This
+        function is by far <strong>the most popular</strong> activation function, and you can
+        find it being used in areas like <strong>Computer Vision</strong> and
+        <strong>Speech Recognition</strong>.
+      </p>
+    </div>
+  </div>
+
+  <div id="appanana4Text" class="scene topLayer bg-white">
+    <div class="text right">
+      <p>
+        <strong>Sigmoid</strong> calculates the probability of two things, for example, if you
+        want to classify if an image is a cat or isn’t a cat (this is called
+        <strong>binary classification</strong>), you would want to use a
+        sigmoid activation function, which transforms
+        the output value into a probability (a number between 0 and 1).
+      </p>
+    </div>
+  </div>
+
+  <!-- ending section -->
+  <div id="endingText" class="scene row align-items-center justify-content-around fourLayer">
+    <div class="col-12 col-md-10">
+      <div class="row justify-content-around">
+
+        <div class="col-10 col-md-5 fourLayer align-self-start">
+          <div class="text-left align-self-start">
+            <h3><strong>Summary</strong></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+              animi, enim possimus aliquam nostrum sequi distinctio esse! Reiciendis, recusandae, vero.
+            </p>
+
+            <h3><strong>Further Reading</strong></h3>
+            <p>link <br> link <br> link</p>
+          </div>
+        </div>
+
+        <div class="col-10 col-md-5 fourLayer align-self-start">
+          <div class="text-left">
+            <h3><strong>Glossary</strong></h3>
+            <p><strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, laudantium.<br><br>
+              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br><br>
+              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+      <!-- end of inner row -->
+      </div>
+      <!-- end of outer col-10 -->
+    </div>
+  <!-- end of ending section -->
+  </div>
+  <!-- end of text area -->
+
+  <div class="overlay"></div>
+
+
+  <!-- svg goo filter DO NOT DELETE-->
+  <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="height: 0; width: 0; position: absolute; top: -9999px; left: -99990px">
+    <defs>
+      <filter color-interpolation-filters="sRGB" id="goo2">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
+        <feBlend />
+      </filter>
+    </defs>
+  </svg> -->
+
+  <!-- Boostrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <!-- GSAP -->
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/DrawSVGPlugin.min.js"></script>
+  <script type="text/javascript" src="js/MorphSVGPlugin.min.js"></script>
+
+  <!-- Lottie -->
+  <script type="text/javascript" src="js/lottie.js"></script>
+
+  <!-- ScrollMagic JavaScript -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
+
+  <!-- change to own js files -->
+  <script type="text/javascript" src="js/template.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#dismiss, .overlay').on('click', function() {
+        $('#sidebar').removeClass('active');
+        $('.overlay').removeClass('active');
+      });
+
+      $('#sidebarCollapse').on('click', function() {
+        $('#sidebar').addClass('active');
+        $('.overlay').addClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
