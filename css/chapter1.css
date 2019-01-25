@@ -1,21 +1,30 @@
 
 /* --------------------------------- animaiton backgrounds ---------------------- */
-.bg-3grey {
+/* .bg-3grey {
   background-color: #c9cbca;
   /* background-color: red; */
-}
+/* } */
 
 /* animation background colors */
-#neuronBG path{
-  fill: #c9cbca;
+#seedBG path{
+  fill: #E8E8E8;
 }
 
-#perceptronBG {
-  fill: f1f1f1;
+#robotBG path{
+  fill: #DCDCDC;
 }
+
+#agiBG path{
+  fill: #D3D3D3;
+}
+
+#dataBG path{
+  fill: #C8C8C8;
+}
+
 
 #wordsBG path{
-  fill: #c9cbca;
+  fill: #C0C0C0;
   /* fill: transparent; */
 }
 

@@ -43,11 +43,12 @@ var openingAnimWindow = select('#openingLottie'),
     prerender: true,
     autoplay: true,
     // path: './json/sushi_fitness.json',
-    path: './json/ch2_nestedPerc.json'
+    path: './json/ch1_opening.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
-// openingAnim.addEventListener('DOMLoaded', onNeuronDOMLoaded);
+openingAnim.addEventListener('DOMLoaded', onOpeningDOMLoaded);
+openingAnim.setSpeed(1);
 
 //---------------seed animation
 var seedAnimWindow = select('#seedLottie'),
@@ -127,6 +128,23 @@ wordsAnim.addEventListener('DOMLoaded', onWordsDOMLoaded);
 //----------------------------------------------------------------------------
 //-----------------------------timelines--------------------------------------
 //----------------------------------------------------------------------------
+
+//----------opening TLs---------
+var openingTL = new TimelineMax();
+
+function onOpeningDOMLoaded(e) {
+  openingTL.to({
+    frame: 0
+  }, 1, {
+    frame: openingAnim.totalFrames - 1,
+    onUpdate: function() {
+      openingAnim.goToAndStop(Math.round(this.target.frame), true)
+    },
+    repeat: -1,
+    yoyo: true,
+    ease: Linear.easeNone
+  })
+}
 
 // --------seed TLs-------------
 var seedTL = new TimelineMax();
@@ -328,6 +346,7 @@ $(".scene").each(function() {
 toggleAnimation(seedAnimWindow, false);
 toggleAnimation(robotAnimWindow, false);
 toggleAnimation(agiAnimWindow, false);
+toggleAnimation(dataAnimWindow, false);
 toggleAnimation(wordsAnimWindow, false);
 
 
