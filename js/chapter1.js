@@ -529,7 +529,7 @@ let algoScene = new ScrollMagic.Scene({
 //-------------------------------------------------
 let endingScene = new ScrollMagic.Scene({
     triggerElement: "#endingText",
-    duration: '10%'
+    duration: '100%'
   })
   .on("start", function(event) {
     var direction = event.scrollDirection;
