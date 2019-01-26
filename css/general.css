@@ -179,10 +179,35 @@ ul ul a {
   /* z-index: -1; */
 }
 
+/* ----------------------------- icon styling ------------------------------- */
+.iconHeight {
+  line-height: 8%;
+  color: #bebebe;
+}
+
+.arrowIcon {
+  color: #bebebe;
+}
+
+#scrollIcon {
+  font-size: 90%;
+}
+
+.arrowIcon a {
+  color: inherit;
+}
+
+.arrowIcon a:hover {
+  color: #9d9d9d;
+}
+
+
 #openingText {
   height: 100vh;
   width: 100%;
   margin: 0;
+  position: relative;
+  overflow-x: hidden;
 }
 
 #endingText {
@@ -314,6 +339,14 @@ ul ul a {
 
   p {
     font-size: 0.8rem;
+  }
+
+  #scrollIcon {
+    font-size: 0.6rem;
+  }
+
+  .iconHeight {
+    line-height: 1%;
   }
 
   h2 {
