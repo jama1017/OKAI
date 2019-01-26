@@ -94,12 +94,31 @@ var openingAnimWindow = select('#openingLottie'),
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
-// openingAnim.addEventListener('DOMLoaded', onNeuronDOMLoaded);
+openingAnim.addEventListener('DOMLoaded', onOpeningDOMLoaded);
+openingAnim.setSpeed(1);
 
 
 //----------------------------------------------------------------------------
 //-----------------------------timelines--------------------------------------
 //----------------------------------------------------------------------------
+
+//----------opening TLs---------
+var openingTL = new TimelineMax();
+
+function onOpeningDOMLoaded(e) {
+  openingTL.to({
+    frame: 0
+  }, 3, {
+    frame: openingAnim.totalFrames - 1,
+    onUpdate: function() {
+      openingAnim.goToAndStop(Math.round(this.target.frame), true)
+    },
+    repeat: -1,
+    yoyo: true,
+    ease: Linear.easeNone
+  })
+}
+
 var neuronBeginTL = new TimelineMax();
 var neuronTL = new TimelineMax();
 
