@@ -1,0 +1,27 @@
+
+/* --------------------------------- animaiton backgrounds ---------------------- */
+/* .bg-3grey {
+  background-color: #c9cbca;
+  /* background-color: red; */
+/* } */
+
+/* animation background colors */
+#neuralBG path{
+  fill: #E8E8E8;
+}
+
+#andXorBG path{
+  fill: #DCDCDC;
+}
+
+#fnnBG path{
+  fill: #D3D3D3;
+}
+
+#dlBG path{
+  fill: #C8C8C8;
+}
+
+.gooFilterLayer {
+  filter: url("#goo")
+}
