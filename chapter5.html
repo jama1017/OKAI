@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="css/general.css">
+  <!-- change to own stylesheet -->
+  <link rel="stylesheet" href="css/chapter5.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122864673-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122864673-1');
+    </script>
+
+  <title>Chapter 5 Demo - OKAI</title>
+
+</head>
+
+<body>
+
+  <!-- scrollbar -->
+  <div class="scrollBar" id="myBar"></div>
+
+  <!-- navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <button type="button" id="sidebarCollapse" class="btn">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+    <div id="dismiss">
+      <i class="fas fa-times fa-sm"></i>
+    </div>
+
+    <div class="sidebar-header">
+      <h4>OKAI</h4>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+          Chapters
+          <i class="fas fa-ellipsis-v" style="position: absolute; right: 25px;
+          top: 50%; transform: translateY(-50%);"></i>
+        </a>
+        <ul class="collapse list-unstyled" id="pageSubmenu">
+          <li>
+            <a href="#">00 title</a>
+          </li>
+          <li>
+            <a href="#">01 title</a>
+          </li>
+          <li>
+            <a href="#">02 title</a>
+          </li>
+          <li>
+            <a href="#">03 title</a>
+          </li>
+          <li>
+            <a href="#">04 title</a>
+          </li>
+          <li>
+            <a href="#">05 title</a>
+          </li>
+          <li>
+            <a href="#">06 title</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ######################### -->
+  <!-- Chapter content beginning -->
+  <!-- ######################### -->
+
+  <!-- landing section -->
+  <div id="openingText" class="d-flex align-items-center justify-content-center">
+    <!-- start of row 1 -->
+    <div class="row align-items-center justify-content-center">
+      <!-- col 1 -->
+      <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
+        <a href="chapter4.html"><i class="fas fa-caret-left fa-2x"></i></a>
+      </div>
+
+      <!-- col 2 -->
+      <div class="col-10 col-md-4 order-2 order-md-1 text-center">
+        <div class="text-left">
+          <p>Chapter 5</p>
+          <h2>Introduction to Feed-forward Neural Networks</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores
+            debitis incidunt distinctio omnis ad, tempore recusandae asperiores provident
+            dignissimos.</p>
+        </div>
+      </div>
+
+      <!-- col 3 -->
+      <div class="col-md-5 order-1 order-md-2">
+        <div id="openingLottie" class="openingAnimation mx-auto"></div>
+      </div>
+
+      <!-- col-4 -->
+      <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
+        <a href="chapter6.html"><i class="fas fa-caret-right fa-2x"></i></a>
+      </div>
+    </div>
+    <!-- end of row 1 -->
+
+    <!-- start of row 2 -->
+    <div class="" style="position: absolute; bottom: 20px;">
+      <div>
+        <p class="iconHeight" id="scrollIcon">Scroll</p>
+        <i class="iconHeight fas fa-caret-down fa-2x"></i>
+      </div>
+      <!-- end of row 2 -->
+    </div>
+  </div>
+  <!-- end of landing section -->
+
+
+  <!-- ######## Animation & text beginning ######## -->
+  <!-- animation divs -->
+  <div id="fnnLottie" class="animation animLeft upperLayer"></div>
+  <div id="tempLottie" class="animation animRight topLayer"></div>
+  <div id="complexLottie" class="animation animLeft threeLayer"></div>
+
+  <!-- text begins -->
+
+  <!-- fnn animation text section -->
+  <div id="text1" class="bg-1grey scene">
+    <div class="text right">
+      <p>You may have noticed, to this point, we have only discussed models with a
+        single perceptron. These perceptron algorithms are not particularly powerful,
+        as they are slow to learn, and cannot learn complex concepts. To learn more complex
+        concepts, we need to stack perceptrons together so that they can form a more complex model.
+      </p>
+    </div>
+  </div>
+
+  <div id="text2" class="bg-1grey scene">
+    <div class="text right">
+      <p>In a graph of a network, the first layer is known as the input layer,
+        and all the layers in the middle are called hidden layers.
+      </p>
+    </div>
+  </div>
+
+  <div id="text3" class="bg-1grey scene">
+    <div class="text right">
+      <p>The last layer is called an output layer.  We say that a network has
+        n layers when there are n layers that perform calculations, that is,
+        there are n-1 hidden layers and 1 output layer. </p>
+    </div>
+  </div>
+
+
+  <!-- temp animation text section -->
+  <div id="text4" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>[Work on transition language ]Let’s say we want to predict the temperature
+        of the next day given the temperature of the previous day.
+        [Explain max and min temp range]
+      </p>
+    </div>
+  </div>
+
+  <div id="text5" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>[+ Given the temp range of today as input]This network is a simple
+        two-layer perceptron network where the 2 inputs
+      </p>
+    </div>
+  </div>
+
+  <div id="text6" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>are split into 4 perceptrons in the first layer, and then the outputs
+      of the first layer is is fed into the 2 perceptrons in the second layer.</p>
+    </div>
+  </div>
+
+  <div id="text7" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>In this structure, all of the nodes in the first layer has a ReLU
+        activation function, while the second is a linear layer
+        (Meaning that it has no activation function). So why do we need activation
+        functions when we don’t need to control the range of output? And what
+        exactly is a ReLU function?
+      <p>
+    </div>
+  </div>
+
+  <div id="text8" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>
+        It turns out, that if we have consecutive linear layers, the network will
+        behave exactly the same as a network with a single linear layer.
+        To make the extra layer count, we need to introduce non-linearity.
+        If you are interested in the mathematical reason behind this, this is
+        a good artical to read.
+
+        One of the most popular activation functions to break linearity is ReLU.
+        ReLU stands for rectified Linear Unit, and maintains the value if the
+        input is bigger than 0, and if the input is negative, it forces everything
+        to be zero. In other words, it takes the maximum of 0 and the input.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- complex animation text section-->
+  <div id="text9" class="scene topLayer bg-3grey">
+    <div class="text right">
+      <p>
+        With these activation functions, we can stack more layers together so
+        they can learn to perform more complex tasks, for example recognizing
+        numbers as showcased in the introduction.
+      </p>
+    </div>
+  </div>
+
+  <div id="text10" class="scene topLayer bg-3grey">
+    <div class="text right">
+      <p>
+        [Change wording] Now that we understood the basics of how neural networks work, we can get
+        our hands a little dirty and look at how we can train a model to classify
+        human-written numbers.
+      </p>
+    </div>
+  </div>
+
+  <!-- ending section -->
+  <div id="endingText" class="scene row align-items-center justify-content-around fiveLayer">
+    <div class="col-12 col-md-10">
+      <div class="row justify-content-around">
+
+        <div class="col-10 col-md-5 fourLayer align-self-start">
+          <div class="text-left align-self-start">
+            <h3><strong>Summary</strong></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+              animi, enim possimus aliquam nostrum sequi distinctio esse! Reiciendis, recusandae, vero.
+            </p>
+
+            <h3><strong>Further Reading</strong></h3>
+            <p>link <br> link <br> link</p>
+          </div>
+        </div>
+
+        <div class="col-10 col-md-5 fourLayer align-self-start">
+          <div class="text-left">
+            <h3><strong>Glossary</strong></h3>
+            <p><strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, laudantium.<br><br>
+              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br><br>
+              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+        <!-- end of inner row -->
+      </div>
+      <!-- end of outer col-10 -->
+    </div>
+    <!-- end of ending section -->
+  </div>
+  <!-- end of text area -->
+
+  <div class="overlay"></div>
+
+
+  <!-- svg goo filter DO NOT DELETE-->
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="height: 0; width: 0; position: absolute; top: -9999px; left: -99990px">
+    <defs>
+      <filter color-interpolation-filters="sRGB" id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
+        <feBlend />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Boostrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <!-- GSAP -->
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/DrawSVGPlugin.min.js"></script>
+  <script type="text/javascript" src="js/MorphSVGPlugin.min.js"></script>
+
+  <!-- Lottie -->
+  <script type="text/javascript" src="js/lottie.js"></script>
+
+  <!-- ScrollMagic JavaScript -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
+
+  <!-- change to own js files -->
+  <script type="text/javascript" src="js/chapter5.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#dismiss, .overlay').on('click', function() {
+        $('#sidebar').removeClass('active');
+        $('.overlay').removeClass('active');
+      });
+
+      $('#sidebarCollapse').on('click', function() {
+        $('#sidebar').addClass('active');
+        $('.overlay').addClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      $('[data-toggle="tooltip"]').tooltip({
+        placement: "top"
+      });
+    });
+  </script>
+
+</body>
+
+</html>
