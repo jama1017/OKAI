@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="css/general.css">
+  <!-- change to own stylesheet -->
+  <link rel="stylesheet" href="css/chapter4.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122864673-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122864673-1');
+    </script>
+
+  <title>Template - OKAI</title>
+
+</head>
+
+<body>
+
+  <!-- scrollbar -->
+  <div class="scrollBar" id="myBar"></div>
+
+  <!-- navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <button type="button" id="sidebarCollapse" class="btn">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+    <div id="dismiss">
+      <i class="fas fa-times fa-sm"></i>
+    </div>
+
+    <div class="sidebar-header">
+      <h4>OKAI</h4>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+          Chapters
+          <i class="fas fa-ellipsis-v" style="position: absolute; right: 25px;
+          top: 50%; transform: translateY(-50%);"></i>
+        </a>
+        <ul class="collapse list-unstyled" id="pageSubmenu">
+          <li>
+            <a href="#">00 title</a>
+          </li>
+          <li>
+            <a href="#">01 title</a>
+          </li>
+          <li>
+            <a href="#">02 title</a>
+          </li>
+          <li>
+            <a href="#">03 title</a>
+          </li>
+          <li>
+            <a href="#">04 title</a>
+          </li>
+          <li>
+            <a href="#">05 title</a>
+          </li>
+          <li>
+            <a href="#">06 title</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ######################### -->
+  <!-- Chapter content beginning -->
+  <!-- ######################### -->
+
+  <!-- landing section -->
+  <div id="openingText" class="d-flex align-items-center justify-content-center">
+    <!-- start of row 1 -->
+    <div class="row align-items-center justify-content-center">
+      <!-- col 1 -->
+      <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
+        <a href="chapter3.html"><i class="fas fa-caret-left fa-2x"></i></a>
+      </div>
+
+      <!-- col 2 -->
+      <div class="col-10 col-md-4 order-2 order-md-1 text-center">
+        <div class="text-left">
+          <p>Chapter 4</p>
+          <h2>Perceptro Learning</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores
+            debitis incidunt distinctio omnis ad, tempore recusandae asperiores provident
+            dignissimos.</p>
+        </div>
+      </div>
+
+      <!-- col 3 -->
+      <div class="col-md-5 order-1 order-md-2">
+        <div id="openingLottie" class="openingAnimation mx-auto"></div>
+      </div>
+
+      <!-- col-4 -->
+      <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
+        <a href="chapter5.html"><i class="fas fa-caret-right fa-2x"></i></a>
+      </div>
+    </div>
+    <!-- end of row 1 -->
+
+    <!-- start of row 2 -->
+    <div class="" style="position: absolute; bottom: 20px;">
+      <div>
+        <p class="iconHeight" id="scrollIcon">Scroll</p>
+        <i class="iconHeight fas fa-caret-down fa-2x"></i>
+      </div>
+      <!-- end of row 2 -->
+    </div>
+  </div>
+  <!-- end of landing section -->
+
+
+  <!-- ######## Animation & text beginning ######## -->
+  <!-- animation divs -->
+  <div id="seedLottie" class="animation animLeft upperLayer"></div>
+  <div id="robotLottie" class="animation animRight topLayer"></div>
+  <div id="agiLottie" class="animation animLeft threeLayer"></div>
+  <div id="dataLottie" class="animation animRight fourLayer"></div>
+  <div id="wordsLottie" class="animation animLeft fiveLayer"></div>
+
+  <!-- text begins -->
+
+  <!-- seed animation text section -->
+  <div id="text1" class="bg-1grey scene">
+    <div class="text right">
+      <p>[Shorten]Now that we have a perceptron, we need to train the perceptron so that it would
+        resemble the real world it is trying to model. To do so, we need to feed
+        some data to the model to see what comes out at the other end. Even though
+        we don’t know what the model that most resembles the real world is, we know
+        the output it should generate, and we would nudge our model to behave more
+        like the real world by changing weights and biases inside of our model.
+      </p>
+    </div>
+  </div>
+
+  <div id="text2" class="bg-1grey scene">
+    <div class="text right">
+      <p>From autonomous driving cars, to smart supermarkets with no cashier.
+        From Go-playing algorithm that defeats human champions across the world,
+        to an AI-generated painting that has been sold for $432,500 -- nearly 45
+        times its high estimate (cite). </p>
+    </div>
+  </div>
+
+  <div id="text3" class="bg-1grey scene">
+    <div class="text right">
+      <p>Like how the Industrial Revolution has changed the world, AI will bring
+        a revolution that changesaffect the wayplace we live in an equally significant way,
+        if not more. </p>
+    </div>
+  </div>
+
+
+  <!-- robot animation text section -->
+  <div id="text4" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>Unlike what is depicted in Hollywood movies and science fictions, AI is
+        not big scary robots taking over the world but are actually all around you.
+        AI applications can be subtle things that we use every day.
+      </p>
+    </div>
+  </div>
+
+  <div id="text5" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>To put it in concise words, AI is digitalization of human intelligence.
+        If you are still picturing a robot in your head, then think of AI as the
+        brain of that robot, not the physical hardware. Just as steam engines
+        salvage humans from intense repetitive physical labor, AI is freeing
+        us from low-level tedious brain labor.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- agi animation text section -->
+  <div id="text6" class="scene bg-3grey topLayer">
+    <div class="text right">
+      <p>Today’s AI is still what scientists described as Artificial Narrow Intelligence
+        (ANI), as the majority of them can only perform a certain set of tasks -
+        like driving, face detection, recommendation, etc. </p>
+    </div>
+  </div>
+
+  <div id="text7" class="scene bg-3grey topLayer">
+    <div class="text right">
+      <p>Scientists and researchers are working towards the ultimate goal of AI -
+        Artificial General Intelligence (AGI), where it could complete a variety
+        of tasks as good as humans.<p>
+    </div>
+  </div>
+
+
+  <!-- data animation text section-->
+  <div id="text8" class="scene threeLayer bg-4grey">
+    <div class="text left">
+      <h3>
+        Some Numbers
+      </h3>
+      <hr>
+      <p>
+        number of AI companies listed on Crunchbase
+      </p>
+    </div>
+  </div>
+
+  <div id="text9" class="scene threeLayer bg-4grey">
+    <div class="text left">
+      <h3>
+        Some Numbers
+      </h3>
+      <hr>
+      <p>
+        number of devices with smart voice assistants built in
+      </p>
+    </div>
+  </div>
+
+  <div id="text10" class="scene threeLayer bg-4grey">
+    <div class="text left">
+      <h3>
+        Some Numbers
+      </h3>
+      <hr>
+      <p>
+        amount of venture capital firms invested in AI-related firms in 2017
+      </p>
+    </div>
+  </div>
+
+  <div id="text11" class="scene threeLayer bg-4grey">
+    <div class="text left">
+      <h3>
+        Some Numbers
+      </h3>
+      <hr>
+      <p>
+        an estimated amount of total spending in AI by 2025
+      </p>
+    </div>
+  </div>
+
+
+  <!-- words animation text section -->
+  <div id="text12" class="scene fourLayer bg-5grey">
+    <div class="text right">
+      <h3>
+        ML
+      </h3>
+      <hr>
+      <p>
+        ML - Machine Learning is a specific area of AI. As described by its name,
+        machine learning aims to train a machine to learn based on data rather
+        than pre-defined rules. Mainstream method today is to show a machine a
+        lot of data and teach it what the desired behavior is. Once the machine is
+        trained, some new, unseen data would be fed into the machine and, hopefully,
+        the machine can make the right choices based on what it has learnt.
+      </p>
+    </div>
+  </div>
+
+  <div id="text13" class="scene fourLayer bg-5grey">
+    <div class="text right">
+      <h3>
+        DL
+      </h3>
+      <hr>
+      <p>
+        Deep Learning is a branch of Machine Learning that are centered around
+        artificial neural networks - algorithms inspired by the human brain. This
+        is the focus of our site. Deep learning algorithms relying on being fed
+        a large amount of data so that it can adjust how each layer in the network
+        interacts with the next. Once learned, these neural networks can complete
+        some very sophisticated tasks like recognizing human faces, or playing
+        Go well enough to beat human champions!
+      </p>
+    </div>
+  </div>
+
+  <div id="text14" class="scene fourLayer bg-5grey">
+    <div class="text right">
+      <h3>
+        Algorithm
+      </h3>
+      <hr>
+      <p>
+        An algorithm is very much like a cooking recipe. It is a set of clear
+        instructions that you or a machine can follow to achieve a certain purpose.
+        Since computers do not understand vague high-level instructions that humans
+        are used to, algorithms, sets of instructions that machines can follow that
+        achieves higher-level tasks, are the sole reason why computers and phones are
+        working as intended.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- ending section -->
+  <div id="endingText" class="scene row align-items-center justify-content-around fiveLayer">
+    <div class="col-12 col-md-10">
+      <div class="row justify-content-around">
+
+        <div class="col-10 col-md-5 fourLayer align-self-start">
+          <div class="text-left align-self-start">
+            <h3><strong>Summary</strong></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+              animi, enim possimus aliquam nostrum sequi distinctio esse! Reiciendis, recusandae, vero.
+            </p>
+
+            <h3><strong>Further Reading</strong></h3>
+            <p>link <br> link <br> link</p>
+          </div>
+        </div>
+
+        <div class="col-10 col-md-5 fourLayer align-self-start">
+          <div class="text-left">
+            <h3><strong>Glossary</strong></h3>
+            <p><strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, laudantium.<br><br>
+              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br><br>
+              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+        <!-- end of inner row -->
+      </div>
+      <!-- end of outer col-10 -->
+    </div>
+    <!-- end of ending section -->
+  </div>
+  <!-- end of text area -->
+
+  <div class="overlay"></div>
+
+
+  <!-- svg goo filter DO NOT DELETE-->
+  <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="height: 0; width: 0; position: absolute; top: -9999px; left: -99990px">
+    <defs>
+      <filter color-interpolation-filters="sRGB" id="goo2">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
+        <feBlend />
+      </filter>
+    </defs>
+  </svg> -->
+
+  <!-- Boostrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <!-- GSAP -->
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/DrawSVGPlugin.min.js"></script>
+  <script type="text/javascript" src="js/MorphSVGPlugin.min.js"></script>
+
+  <!-- Lottie -->
+  <script type="text/javascript" src="js/lottie.js"></script>
+
+  <!-- ScrollMagic JavaScript -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
+
+  <!-- change to own js files -->
+  <script type="text/javascript" src="js/chapter4.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#dismiss, .overlay').on('click', function() {
+        $('#sidebar').removeClass('active');
+        $('.overlay').removeClass('active');
+      });
+
+      $('#sidebarCollapse').on('click', function() {
+        $('#sidebar').addClass('active');
+        $('.overlay').addClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      $('[data-toggle="tooltip"]').tooltip({
+        placement: "top"
+      });
+    });
+  </script>
+
+</body>
+
+</html>
