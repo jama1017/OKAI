@@ -162,9 +162,9 @@
   <!-- seed animation text section -->
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
-      <p>Firstly emerged around 1956, AI has made significant progress in the recent years.
+      <p>Firstly emerged around 1956, <strong data-toggle="tooltip" title="Artificial Intelligence">AI</strong>
+        has made significant progress in the recent years.
       </p>
-      <!-- <p>Therefore, to understand what a perceptron is, let’s first take a look at a neuron. </p> -->
     </div>
   </div>
 
@@ -418,6 +418,10 @@
         $('.overlay').addClass('active');
         $('.collapse.in').toggleClass('in');
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      $('[data-toggle="tooltip"]').tooltip({
+        placement: "top"
       });
     });
   </script>

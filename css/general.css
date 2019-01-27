@@ -201,6 +201,21 @@ ul ul a {
   color: #9d9d9d;
 }
 
+/* ----------------------------- Tooltip styling ------------------------------- */
+/* Tooltip */
+.tooltip .tooltip-inner {
+  background-color: #EBCE26;
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Tooltip on top */
+.bs-tooltip-auto.arrow::before, .bs-tooltip-top .arrow::before {
+  border-top-color: #EBCE26;
+}
 
 #openingText {
   height: 100vh;
@@ -359,5 +374,11 @@ ul ul a {
 
   #endingText ul {
     line-height: 20%;
+  }
+
+  /* Tooltip */
+  .tooltip .tooltip-inner {
+    padding: 9px;
+    font-size: 10px;
   }
 }
