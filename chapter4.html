@@ -33,7 +33,7 @@
       gtag('config', 'UA-122864673-1');
     </script>
 
-  <title>Template - OKAI</title>
+  <title>Chapter 4 Demo - OKAI</title>
 
 </head>
 
@@ -118,7 +118,7 @@
       <div class="col-10 col-md-4 order-2 order-md-1 text-center">
         <div class="text-left">
           <p>Chapter 4</p>
-          <h2>Perceptro Learning</h2>
+          <h2>Perceptron Learning</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores
             debitis incidunt distinctio omnis ad, tempore recusandae asperiores provident
             dignissimos.</p>
@@ -152,28 +152,27 @@
   <!-- ######## Animation & text beginning ######## -->
   <!-- animation divs -->
   <div id="functionLottie" class="animation animLeft upperLayer"></div>
-  <div id="robotLottie" class="animation animRight topLayer"></div>
-  <div id="agiLottie" class="animation animLeft threeLayer"></div>
-  <div id="dataLottie" class="animation animRight fourLayer"></div>
-  <div id="wordsLottie" class="animation animLeft fiveLayer"></div>
+  <div id="lossLottie" class="animation animRight topLayer"></div>
+  <div id="gradientLottie" class="animation animLeft threeLayer"></div>
 
   <!-- text begins -->
 
   <!-- function animation text section -->
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
-      <p>Perceptrons can be seen as a mathematical function, taking in some inputs,
-        some weights, a bias, and mixes them up mathematically to generate an output.
+      <p>[Change wording for transition] Now that we have a perceptron that can
+        take in some input and spit out a
+        valid output, how can we make the perceptron learn?
+        To understand this, we must first discuss what a perceptron is [abstractly].
       </p>
     </div>
   </div>
 
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
-      <p>From autonomous driving cars, to smart supermarkets with no cashier.
-        From Go-playing algorithm that defeats human champions across the world,
-        to an AI-generated painting that has been sold for $432,500 -- nearly 45
-        times its high estimate (cite). </p>
+      <p>Perceptrons can be seen as a mathematical function, taking in some inputs,
+        some weights, a bias, and mixes them up mathematically to generate an output.
+      </p>
     </div>
   </div>
 
@@ -187,145 +186,59 @@
   </div>
 
 
-  <!-- robot animation text section -->
+  <!-- loss animation text section -->
   <div id="text4" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Unlike what is depicted in Hollywood movies and science fictions, AI is
-        not big scary robots taking over the world but are actually all around you.
-        AI applications can be subtle things that we use every day.
-      </p>
+      <p>A commonly used loss function is called cross entropy. This loss function
+        has its roots in information theory, and calculates the loss between probabilities.
+        For example, if we want to estimate the probability that something is a cat,
+        a dog or a pig, we need to use cross-entropy loss. [The order is reversed, so we should change
+        wording]</p>
     </div>
   </div>
 
   <div id="text5" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>To put it in concise words, AI is digitalization of human intelligence.
-        If you are still picturing a robot in your head, then think of AI as the
-        brain of that robot, not the physical hardware. Just as steam engines
-        salvage humans from intense repetitive physical labor, AI is freeing
-        us from low-level tedious brain labor.
+      <p>The core of “teaching” a perceptron is to let it  understand how far
+        its actions or predictions are from the ground truth or optimum. To evaluate
+        this, we need a loss function that measures how far from optimal a model
+        is based on some data.
       </p>
     </div>
   </div>
 
-
-  <!-- agi animation text section -->
-  <div id="text6" class="scene bg-3grey topLayer">
-    <div class="text right">
-      <p>Today’s AI is still what scientists described as Artificial Narrow Intelligence
-        (ANI), as the majority of them can only perform a certain set of tasks -
-        like driving, face detection, recommendation, etc. </p>
+  <div id="text6" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>There are many other loss functions, but all loss functions share a common
+        behavior: the further off the prediction is from the ground truth, the
+        bigger the output of the loss function is. This way, we can try to minimize
+        the loss by changing the weights and biases, and the model will gradually
+        improve until it reaches its capacity.
+      </p>
     </div>
   </div>
 
+  <!-- gradient animation text section-->
   <div id="text7" class="scene bg-3grey topLayer">
     <div class="text right">
-      <p>Scientists and researchers are working towards the ultimate goal of AI -
-        Artificial General Intelligence (AGI), where it could complete a variety
-        of tasks as good as humans.<p>
-    </div>
-  </div>
-
-
-  <!-- data animation text section-->
-  <div id="text8" class="scene threeLayer bg-4grey">
-    <div class="text left">
-      <h3>
-        Some Numbers
-      </h3>
-      <hr>
+      <p>[Change this to go with animation more]To minimize loss, we use an
+        optimizer called Gradient Descent, which,
+        you can think of as walking down the loss function until all points around
+        it are bigger or has the same value. . To walk “downward” you would find
+        the steepest direction, and take a step in that direction, until you have
+        slid all the way from high up on a hill to the lowest point in a valley.
       <p>
-        number of AI companies listed on Crunchbase
-      </p>
     </div>
   </div>
 
-  <div id="text9" class="scene threeLayer bg-4grey">
-    <div class="text left">
-      <h3>
-        Some Numbers
-      </h3>
-      <hr>
-      <p>
-        number of devices with smart voice assistants built in
-      </p>
-    </div>
-  </div>
-
-  <div id="text10" class="scene threeLayer bg-4grey">
-    <div class="text left">
-      <h3>
-        Some Numbers
-      </h3>
-      <hr>
-      <p>
-        amount of venture capital firms invested in AI-related firms in 2017
-      </p>
-    </div>
-  </div>
-
-  <div id="text11" class="scene threeLayer bg-4grey">
-    <div class="text left">
-      <h3>
-        Some Numbers
-      </h3>
-      <hr>
-      <p>
-        an estimated amount of total spending in AI by 2025
-      </p>
-    </div>
-  </div>
-
-
-  <!-- words animation text section -->
-  <div id="text12" class="scene fourLayer bg-5grey">
+  <div id="text8" class="scene bg-3grey topLayer">
     <div class="text right">
-      <h3>
-        ML
-      </h3>
-      <hr>
       <p>
-        ML - Machine Learning is a specific area of AI. As described by its name,
-        machine learning aims to train a machine to learn based on data rather
-        than pre-defined rules. Mainstream method today is to show a machine a
-        lot of data and teach it what the desired behavior is. Once the machine is
-        trained, some new, unseen data would be fed into the machine and, hopefully,
-        the machine can make the right choices based on what it has learnt.
-      </p>
-    </div>
-  </div>
-
-  <div id="text13" class="scene fourLayer bg-5grey">
-    <div class="text right">
-      <h3>
-        DL
-      </h3>
-      <hr>
-      <p>
-        Deep Learning is a branch of Machine Learning that are centered around
-        artificial neural networks - algorithms inspired by the human brain. This
-        is the focus of our site. Deep learning algorithms relying on being fed
-        a large amount of data so that it can adjust how each layer in the network
-        interacts with the next. Once learned, these neural networks can complete
-        some very sophisticated tasks like recognizing human faces, or playing
-        Go well enough to beat human champions!
-      </p>
-    </div>
-  </div>
-
-  <div id="text14" class="scene fourLayer bg-5grey">
-    <div class="text right">
-      <h3>
-        Algorithm
-      </h3>
-      <hr>
-      <p>
-        An algorithm is very much like a cooking recipe. It is a set of clear
-        instructions that you or a machine can follow to achieve a certain purpose.
-        Since computers do not understand vague high-level instructions that humans
-        are used to, algorithms, sets of instructions that machines can follow that
-        achieves higher-level tasks, are the sole reason why computers and phones are
-        working as intended.
+        [Talking more about taking step step down & learning rate and reaching
+        valley]
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim
+        consequatur aspernatur. Recusandae, aliquam corporis commodi consectetur,
+        sunt distinctio! Enim!
       </p>
     </div>
   </div>
@@ -339,8 +252,10 @@
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left align-self-start">
             <h3><strong>Summary</strong></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
-              animi, enim possimus aliquam nostrum sequi distinctio esse! Reiciendis, recusandae, vero.
+            <p>Now that we know how perceptrons learn, let’s venture into more
+              complex neural network structures. One of the most commonly seen
+              structure is called a “feed-forward” neural network. We will discuss
+              how we can adapt single perceptrons to multi-layered networks.
             </p>
 
             <h3><strong>Further Reading</strong></h3>

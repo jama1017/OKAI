@@ -6,26 +6,16 @@
 /* } */
 
 /* animation background colors */
-#seedBG path{
+#functionBG path{
   fill: #E8E8E8;
 }
 
-#robotBG path{
+#lossBG path{
   fill: #DCDCDC;
 }
 
-#agiBG path{
+#gradientBG path{
   fill: #D3D3D3;
-}
-
-#dataBG path{
-  fill: #C8C8C8;
-}
-
-
-#wordsBG path{
-  fill: #C0C0C0;
-  /* fill: transparent; */
 }
 
 /* .gooFilterLayer {
