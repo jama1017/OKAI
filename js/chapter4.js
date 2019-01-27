@@ -43,87 +43,57 @@ var openingAnimWindow = select('#openingLottie'),
     prerender: true,
     autoplay: true,
     // path: './json/sushi_fitness.json',
-    path: './json/ch1_opening.json'
+    path: './json/ch4_opening.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
 openingAnim.addEventListener('DOMLoaded', onOpeningDOMLoaded);
 openingAnim.setSpeed(1);
 
-//---------------seed animation
-var seedAnimWindow = select('#seedLottie'),
-  seedAnimData = {
-    wrapper: seedAnimWindow,
+//---------------function animation
+var functionAnimWindow = select('#functionLottie'),
+  functionAnimData = {
+    wrapper: functionAnimWindow,
     animType: 'svg',
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_seed.json',
+    path: './json/ch4_function.json',
     // path: './json/ch3_activationGroup.json',
   };
 
-var seedAnim = bodymovin.loadAnimation(seedAnimData);
-seedAnim.addEventListener('DOMLoaded', onSeedDOMLoaded);
+var functionAnim = bodymovin.loadAnimation(functionAnimData);
+functionAnim.addEventListener('DOMLoaded', onFunctionDOMLoaded);
 
 
-//--------------robot animations
-var robotAnimWindow = select('#robotLottie'),
-  robotAnimData = {
-    wrapper: robotAnimWindow,
+//--------------loss animations
+var lossAnimWindow = select('#lossLottie'),
+  lossAnimData = {
+    wrapper: lossAnimWindow,
     animType: 'svg',
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_robot.json',
+    path: './json/ch4_loss.json',
   };
 
-var robotAnim = bodymovin.loadAnimation(robotAnimData);
-robotAnim.addEventListener('DOMLoaded', onRobotDOMLoaded);
+var lossAnim = bodymovin.loadAnimation(lossAnimData);
+lossAnim.addEventListener('DOMLoaded', onLossDOMLoaded);
 
 
-//--------------agi animations
-var agiAnimWindow = select('#agiLottie'),
-  agiAnimData = {
-    wrapper: agiAnimWindow,
+//--------------gradient animations
+var gradientAnimWindow = select('#gradientLottie'),
+  gradientAnimData = {
+    wrapper: gradientAnimWindow,
     animType: 'svg',
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_agi.json',
+    path: './json/ch4_gradient.json',
   };
 
-var agiAnim = bodymovin.loadAnimation(agiAnimData);
-agiAnim.addEventListener('DOMLoaded', onAgiDOMLoaded);
-
-
-//--------------data animations
-var dataAnimWindow = select('#dataLottie'),
-  dataAnimData = {
-    wrapper: dataAnimWindow,
-    animType: 'svg',
-    loop: false,
-    prerender: true,
-    autoplay: false,
-    path: './json/ch1_data.json',
-  };
-
-var dataAnim = bodymovin.loadAnimation(dataAnimData);
-dataAnim.addEventListener('DOMLoaded', onDataDOMLoaded);
-
-
-//--------------words animations
-var wordsAnimWindow = select('#wordsLottie'),
-  wordsAnimData = {
-    wrapper: wordsAnimWindow,
-    animType: 'svg',
-    loop: false,
-    prerender: true,
-    autoplay: false,
-    path: './json/ch1_words.json',
-  };
-
-var wordsAnim = bodymovin.loadAnimation(wordsAnimData);
-wordsAnim.addEventListener('DOMLoaded', onWordsDOMLoaded);
+var gradientAnim = bodymovin.loadAnimation(gradientAnimData);
+gradientAnim.addEventListener('DOMLoaded', onGradientDOMLoaded);
 
 //----------------------------------------------------------------------------
 //-----------------------------timelines--------------------------------------
@@ -135,7 +105,7 @@ var openingTL = new TimelineMax();
 function onOpeningDOMLoaded(e) {
   openingTL.to({
     frame: 0
-  }, 1, {
+  }, 3, {
     frame: openingAnim.totalFrames - 1,
     onUpdate: function() {
       openingAnim.goToAndStop(Math.round(this.target.frame), true)
@@ -146,178 +116,101 @@ function onOpeningDOMLoaded(e) {
   })
 }
 
-// --------seed TLs-------------
-var seedTL = new TimelineMax();
-var carTL = new TimelineMax();
-var moreTL = new TimelineMax();
+// --------function TLs-------------
+var abstractTL = new TimelineMax();
+var machineTL = new TimelineMax();
+var adjustTL = new TimelineMax();
 
-function onSeedDOMLoaded(e) {
-  seedTL.to({
+function onFunctionDOMLoaded(e) {
+  abstractTL.to({
     frame: 0
   }, 3, {
-    frame: 76,
+    frame: 29,
     onUpdate: function() {
-      seedAnim.goToAndStop(Math.round(this.target.frame), true)
+      functionAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 
-  carTL.to({
-    frame: 76
+  machineTL.to({
+    frame: 29
   }, 3, {
-    frame: 214,
+    frame: 85,
     onUpdate: function() {
-      seedAnim.goToAndStop(Math.round(this.target.frame), true)
+      functionAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 
-  moreTL.to({
-    frame: 214
+  adjustTL.to({
+    frame: 85
   }, 3, {
-    frame: seedAnim.totalFrames - 1,
+    frame: functionAnim.totalFrames - 1,
     onUpdate: function() {
-      seedAnim.goToAndStop(Math.round(this.target.frame), true)
+      functionAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 }
 
-// --------robot TLs-------------
-var notRobotTL = new TimelineMax();
-var robotBrainTL = new TimelineMax();
+// --------loss TLs-------------
+var crossTL = new TimelineMax();
+var differTL = new TimelineMax();
+var miniTL = new TimelineMax();
 
-function onRobotDOMLoaded(e) {
-  notRobotTL.to({
-    frame: 0
-  }, 3, {
-    frame: 76,
-    onUpdate: function() {
-      robotAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-
-  robotBrainTL.to({
-    frame: 76
-  }, 3, {
-    frame: robotAnim.totalFrames - 1,
-    onUpdate: function() {
-      robotAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-}
-
-//--------agi TLs------------
-var aniTL = new TimelineMax();
-var agiTL = new TimelineMax();
-
-function onAgiDOMLoaded(e) {
-  aniTL.to({
-    frame: 0
-  }, 3, {
-    frame: 37,
-    onUpdate: function() {
-      agiAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-
-  agiTL.to({
-    frame: 37
-  }, 3, {
-    frame: agiAnim.totalFrames - 1,
-    onUpdate: function() {
-      agiAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-}
-
-
-//--------data TLs------------
-var data1TL = new TimelineMax();
-var data2TL = new TimelineMax();
-var data3TL = new TimelineMax();
-var data4TL = new TimelineMax();
-
-function onDataDOMLoaded(e) {
-  data1TL.to({
-    frame: 0
-  }, 3, {
-    frame: 76,
-    onUpdate: function() {
-      dataAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-
-  data2TL.to({
-    frame: 76
-  }, 3, {
-    frame: 152,
-    onUpdate: function() {
-      dataAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-
-  data3TL.to({
-    frame: 152
-  }, 3, {
-    frame: 229,
-    onUpdate: function() {
-      dataAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-
-  data4TL.to({
-    frame: 229
-  }, 3, {
-    frame: dataAnim.totalFrames - 1,
-    onUpdate: function() {
-      dataAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-}
-
-
-
-//--------words TLs------------
-var mlTL = new TimelineMax();
-var dlTL = new TimelineMax();
-var algoTL = new TimelineMax();
-
-function onWordsDOMLoaded(e) {
-  mlTL.to({
+function onLossDOMLoaded(e) {
+  crossTL.to({
     frame: 0
   }, 3, {
     frame: 75,
     onUpdate: function() {
-      wordsAnim.goToAndStop(Math.round(this.target.frame), true)
+      lossAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 
-  dlTL.to({
+  differTL.to({
     frame: 75
   }, 3, {
-    frame: 142,
+    frame: 276,
     onUpdate: function() {
-      wordsAnim.goToAndStop(Math.round(this.target.frame), true)
+      lossAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 
-  algoTL.to({
-    frame: 142
+  miniTL.to({
+    frame: 276
   }, 3, {
-    frame: wordsAnim.totalFrames - 1,
+    frame: lossAnim.totalFrames - 1,
     onUpdate: function() {
-      wordsAnim.goToAndStop(Math.round(this.target.frame), true)
+      lossAnim.goToAndStop(Math.round(this.target.frame), true)
+    },
+    ease: Linear.easeNone
+  })
+}
+
+//--------gradient TLs------------
+var gdTL = new TimelineMax();
+var stepTL = new TimelineMax();
+
+function onGradientDOMLoaded(e) {
+  gdTL.to({
+    frame: 0
+  }, 3, {
+    frame: 75,
+    onUpdate: function() {
+      gradientAnim.goToAndStop(Math.round(this.target.frame), true)
+    },
+    ease: Linear.easeNone
+  })
+
+  stepTL.to({
+    frame: 75
+  }, 3, {
+    frame: gradientAnim.totalFrames - 1,
+    onUpdate: function() {
+      gradientAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
@@ -343,11 +236,9 @@ $(".scene").each(function() {
 });
 
 
-toggleAnimation(seedAnimWindow, false);
-toggleAnimation(robotAnimWindow, false);
-toggleAnimation(agiAnimWindow, false);
-toggleAnimation(dataAnimWindow, false);
-toggleAnimation(wordsAnimWindow, false);
+toggleAnimation(functionAnimWindow, false);
+toggleAnimation(lossAnimWindow, false);
+toggleAnimation(gradientAnimWindow, false);
 
 
 //-------------------------------------------------
@@ -361,53 +252,53 @@ let openingAnimScene = new ScrollMagic.Scene({
   .on("end", function(event) {
     var direction = event.scrollDirection;
     if (direction == "FORWARD") {
-      toggleAnimation(seedAnimWindow, true)
+      toggleAnimation(functionAnimWindow, true)
     } else {
-      toggleAnimation(seedAnimWindow, false)
+      toggleAnimation(functionAnimWindow, false)
     }
   })
   .addTo(controller);
 
 //-------------------------------------------------
-//--------- SEED Animations -------------
+//--------- function Animations -------------
 //-------------------------------------------------
 let seedScene = new ScrollMagic.Scene({
   triggerElement: "#text1",
   duration: '100%'
 })
-  .setTween(seedTL)
+  .setTween(abstractTL)
   .addTo(controller);
 
 let carScene = new ScrollMagic.Scene({
     triggerElement: "#text2",
     duration: '100%'
   })
-  .setTween(carTL)
+  .setTween(machineTL)
   .addTo(controller);
 
 let moreScene = new ScrollMagic.Scene({
     triggerElement: "#text3",
     duration: '100%'
   })
-  .setTween(moreTL)
+  .setTween(adjustTL)
   .addTo(controller);
 
 //-------------------------------------------------
-//----------- Robot ANIMATIONS ---------------
+//----------- loss ANIMATIONS ---------------
 //-------------------------------------------------
 let notRobotScene = new ScrollMagic.Scene({
     triggerElement: "#text4",
     duration: '100%'
   })
-  .setTween(notRobotTL)
+  .setTween(crossTL)
   .on("start", function(event) {
     var direction = event.scrollDirection;
     if (direction == "REVERSE") {
-      toggleAnimation(seedAnimWindow, true)
-      toggleAnimation(robotAnimWindow, false)
+      toggleAnimation(functionAnimWindow, true)
+      toggleAnimation(lossAnimWindow, false)
     } else {
-      toggleAnimation(seedAnimWindow, false)
-      toggleAnimation(robotAnimWindow, true)
+      toggleAnimation(functionAnimWindow, false)
+      toggleAnimation(lossAnimWindow, true)
     }
   })
   .addTo(controller);
@@ -416,111 +307,42 @@ let robotBrainScene = new ScrollMagic.Scene({
     triggerElement: "#text5",
     duration: '100%'
   })
-  .setTween(robotBrainTL)
+  .setTween(differTL)
   .addTo(controller);
 
-//-------------------------------------------------
-//----------- AGI ANIMATIONS ---------------
-//-------------------------------------------------
-let aniScene = new ScrollMagic.Scene({
+let adjustScene = new ScrollMagic.Scene({
     triggerElement: "#text6",
     duration: '100%'
   })
-  .setTween(aniTL)
+  .setTween(miniTL)
+  .addTo(controller);
+
+
+//-------------------------------------------------
+//----------- gradient ANIMATIONS ---------------
+//-------------------------------------------------
+let aniScene = new ScrollMagic.Scene({
+    triggerElement: "#text7",
+    duration: '100%'
+  })
+  .setTween(gdTL)
   .on("start", function(event) {
     var direction = event.scrollDirection;
     if (direction == "REVERSE") {
-      toggleAnimation(robotAnimWindow, true)
-      toggleAnimation(agiAnimWindow, false)
+      toggleAnimation(lossAnimWindow, true)
+      toggleAnimation(gradientAnimWindow, false)
     } else {
-      toggleAnimation(robotAnimWindow, false)
-      toggleAnimation(agiAnimWindow, true)
+      toggleAnimation(lossAnimWindow, false)
+      toggleAnimation(gradientAnimWindow, true)
     }
   })
   .addTo(controller);
 
 let agiScene = new ScrollMagic.Scene({
-    triggerElement: "#text7",
-    duration: '100%'
-  })
-  .setTween(agiTL)
-  .addTo(controller);
-
-
-//-------------------------------------------------
-//----------- DATA ANIMATIONS ---------------
-//-------------------------------------------------
-let data1Scene = new ScrollMagic.Scene({
     triggerElement: "#text8",
     duration: '100%'
   })
-  .setTween(data1TL)
-  .on("start", function(event) {
-    var direction = event.scrollDirection;
-    if (direction == "REVERSE") {
-      toggleAnimation(agiAnimWindow, true)
-      toggleAnimation(dataAnimWindow, false)
-    } else {
-      toggleAnimation(agiAnimWindow, false)
-      toggleAnimation(dataAnimWindow, true)
-    }
-  })
-  .addTo(controller);
-
-let data2Scene = new ScrollMagic.Scene({
-    triggerElement: "#text9",
-    duration: '100%'
-  })
-  .setTween(data2TL)
-  .addTo(controller);
-
-let data3Scene = new ScrollMagic.Scene({
-    triggerElement: "#text10",
-    duration: '100%'
-  })
-  .setTween(data3TL)
-  .addTo(controller);
-
-let data4Scene = new ScrollMagic.Scene({
-    triggerElement: "#text11",
-    duration: '100%'
-  })
-  .setTween(data4TL)
-  .addTo(controller);
-
-
-//-------------------------------------------------
-//----------- WORDS ANIMATIONS ---------------
-//-------------------------------------------------
-let mlScene = new ScrollMagic.Scene({
-    triggerElement: "#text12",
-    duration: '100%'
-  })
-  .setTween(mlTL)
-  .on("start", function(event) {
-    var direction = event.scrollDirection;
-    if (direction == "REVERSE") {
-      toggleAnimation(dataAnimWindow, true)
-      toggleAnimation(wordsAnimWindow, false)
-    } else {
-      toggleAnimation(dataAnimWindow, false)
-      toggleAnimation(wordsAnimWindow, true)
-    }
-  })
-  .addTo(controller);
-
-let dlScene = new ScrollMagic.Scene({
-    triggerElement: "#text13",
-    duration: '100%'
-  })
-  .setTween(dlTL)
-  .addTo(controller);
-
-let algoScene = new ScrollMagic.Scene({
-    triggerElement: "#text14",
-    duration: '100%'
-  })
-  .setTween(algoTL)
+  .setTween(stepTL)
   .addTo(controller);
 
 
@@ -534,9 +356,9 @@ let endingScene = new ScrollMagic.Scene({
   .on("start", function(event) {
     var direction = event.scrollDirection;
     if (direction == "REVERSE") {
-      toggleAnimation(wordsAnimWindow, true)
+      toggleAnimation(gradientAnimWindow, true)
     } else {
-      toggleAnimation(wordsAnimWindow, false)
+      toggleAnimation(gradientAnimWindow, false)
     }
   })
   // .addIndicators({name: "ending"})
