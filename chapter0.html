@@ -20,7 +20,7 @@
   <!-- My stylesheet -->
   <link rel="stylesheet" href="css/general.css">
   <!-- change to own stylesheet -->
-  <link rel="stylesheet" href="css/chapter1.css">
+  <link rel="stylesheet" href="css/chapter0.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122864673-1"></script>
@@ -35,40 +35,90 @@
     gtag('config', 'UA-122864673-1');
   </script>
 
-  <!-- to be replaced -->
-  <script type="text/javascript" src="./Neural Net for Handwritten Digit Recognition in JavaScript_files/jquery.min.js.download"></script>
-  <script type="text/javascript" src="./Neural Net for Handwritten Digit Recognition in JavaScript_files/bootstrap.min.js.download"></script>
-
   <title>Chapter 0 Demo - OKAI</title>
 
 </head>
 
 <body>
-  <div class="container bs-docs-container">
-    <div id="dbgOutput">
+
+  <!-- landing section -->
+  <div id="openingText" class="d-flex align-items-center justify-content-center">
+    <!-- start of row 1 -->
+    <div class="row align-items-center justify-content-center">
+      <!-- col 1 -->
+      <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
+        <a href="chapter0.html"><i class="fas fa-caret-left fa-2x"></i></a>
+      </div>
+
+      <!-- col 2 -->
+      <div class="col-10 col-md-4 order-2 order-md-1 text-center">
+        <div class="text-left">
+          <p>Chapter 0</p>
+          <h2>MNIST Demo</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores
+            debitis incidunt distinctio omnis ad, tempore recusandae asperiores provident
+            dignissimos.</p>
+        </div>
+      </div>
+
+      <!-- col 3 -->
+      <div class="col-md-5 order-1 order-md-2">
+        <div id="openingLottie" class="openingAnimation mx-auto"></div>
+      </div>
+
+      <!-- col-4 -->
+      <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
+        <a href="chapter1.html"><i class="fas fa-caret-right fa-2x"></i></a>
+      </div>
     </div>
-    <h1>Neural Net for Handwritten Digit Recognition in JavaScript</h1>
+    <!-- end of row 1 -->
+
+    <!-- start of row 2 -->
+    <div class="" style="position: absolute; bottom: 20px;">
+      <div>
+        <p class="iconHeight" id="scrollIcon">Scroll</p>
+        <i class="iconHeight fas fa-caret-down fa-2x"></i>
+      </div>
+      <!-- end of row 2 -->
+    </div>
+  </div>
+  <!-- end of landing section -->
+
+  <!-- interactive demo section -->
+  <div id="demo" class="d-flex align-items-center justify-content-center">
+    <h1>Handwritten Digit Recognition</h1>
+
     <div class="container">
+      <div>
+        <canvas id="can" width="280" height="280" style="top:10%;left:10%;border:2px solid;"></canvas>
+      </div>
       <div>
         <p>Draw a digit in the box below and click the "recognize" button.</p>
       </div>
       <div class="container" style="float:left;">
-        <div>
-          <canvas id="can" width="280" height="280" style="top:10%;left:10%;border:2px solid;"></canvas>
-        </div>
+
         <div class="container">
           <div style="padding-bottom:5px;"><input type="checkbox" id="preprocessing"><span style="margin-left:5px;">Display Preprocessing</span></div>
           <div style="padding-bottom:5px;"><input type="checkbox" id="scaleStrokeWidth" checked="true"><span style="margin-left:5px;">Scale Stroke Width</span></div>
+
+          <!-- buttons -->
           <div style="float:left;padding-right:10px;"><input type="button" value="clear" id="clr" size="23" onclick="erase()"></div>
           <div style="float:left;"><input type="button" value="recognize" id="recognize" size="23" onclick="recognize()"></div>
           <div id="nnInput"></div>
+          <div style="float:left;font-size:200px;margin-left:80px;" id="nnOut"></div>
         </div>
       </div>
-      <div style="float:left;font-size:200px;margin-left:80px;" id="nnOut"></div>
+
     </div>
 
-    <div style="margin-bottom:10px;"></div>
-    <script type="text/javascript" src="./Neural Net for Handwritten Digit Recognition in JavaScript_files/jquery.flot.js.download"></script>
+    <div>
+      <p>The network was trained on the <a href="http://yann.lecun.com/exdb/mnist/">MNIST dataset</a> in MATLAB
+        using stochastic gradient descent and an L2 term for weight regularization to counteract overfitting.
+        The recognition error on the test data set is 1.92% (9808/10000 digits classified correctly).</p>
+    </div>
+
+  </div>
+    <!-- <script type="text/javascript" src="./Neural Net for Handwritten Digit Recognition in JavaScript_files/jquery.flot.js.download"></script> -->
 
     <!-- BEGIN WEIGHTS -->
     <script type="text/javascript">
@@ -8039,7 +8089,7 @@
       ];
       var bias3 = [-0.0972961, 0.0300511, -0.0173903, -0.00445253, 0.0983954, -0.211495, -0.157007, 0.113646, 0.259432, -0.0774153];
 
-      // END WEIGHTS
+      //END WEIGHTS
       //neural net with one hidden layer; sigmoid for hidden, softmax for output
       function nn(data, w12, bias2, w23, bias3) {
         // just some incomplete sanity checks to find the most obvious errors
@@ -8374,16 +8424,49 @@
       }
       init();
     </script>
-    <div id="errorDiv" style="color:#FF0000;"></div>
+    <!-- END WEIGHTS -->
 
-    <div>
-      <p>The network was trained on the <a href="http://yann.lecun.com/exdb/mnist/">MNIST dataset</a> in MATLAB
-        using stochastic gradient descent and an L2 term for weight regularization to counteract overfitting.
-        The recognition error on the test data set is 1.92% (9808/10000 digits classified correctly).</p>
-    </div>
-    <div>
-    </div>
-  </div>
+    <!-- Boostrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- GSAP -->
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+
+    <!-- Lottie -->
+    <script type="text/javascript" src="js/lottie.js"></script>
+
+    <!-- change to own js files -->
+    <script type="text/javascript" src="js/chapter0.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#sidebar").mCustomScrollbar({
+          theme: "minimal"
+        });
+
+        $('#dismiss, .overlay').on('click', function() {
+          $('#sidebar').removeClass('active');
+          $('.overlay').removeClass('active');
+        });
+
+        $('#sidebarCollapse').on('click', function() {
+          $('#sidebar').addClass('active');
+          $('.overlay').addClass('active');
+          $('.collapse.in').toggleClass('in');
+          $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+
+        $('[data-toggle="tooltip"]').tooltip({
+          placement: "top"
+        });
+      });
+    </script>
+
 
 </body>
 
