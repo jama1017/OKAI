@@ -43,87 +43,87 @@ var openingAnimWindow = select('#openingLottie'),
     prerender: true,
     autoplay: true,
     // path: './json/sushi_fitness.json',
-    path: './json/ch1_opening.json'
+    path: './json/ch6_opening.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
 openingAnim.addEventListener('DOMLoaded', onOpeningDOMLoaded);
 openingAnim.setSpeed(1);
 
-//---------------seed animation
-var seedAnimWindow = select('#seedLottie'),
-  seedAnimData = {
-    wrapper: seedAnimWindow,
+//---------------mnist animation
+var mnistAnimWindow = select('#mnistLottie'),
+  mnistAnimData = {
+    wrapper: mnistAnimWindow,
     animType: 'svg',
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_seed.json',
+    path: './json/ch6_mnist.json',
     // path: './json/ch3_activationGroup.json',
   };
 
-var seedAnim = bodymovin.loadAnimation(seedAnimData);
-seedAnim.addEventListener('DOMLoaded', onSeedDOMLoaded);
+var mnistAnim = bodymovin.loadAnimation(mnistAnimData);
+mnistAnim.addEventListener('DOMLoaded', onMnistDOMLoaded);
 
 
-//--------------robot animations
-var robotAnimWindow = select('#robotLottie'),
-  robotAnimData = {
-    wrapper: robotAnimWindow,
+//--------------mnistOutput animations
+var mnistOutputAnimWindow = select('#mnistOutputLottie'),
+  mnistOutputAnimData = {
+    wrapper: mnistOutputAnimWindow,
     animType: 'svg',
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_robot.json',
+    path: './json/ch6_mnistOutput.json',
   };
 
-var robotAnim = bodymovin.loadAnimation(robotAnimData);
-robotAnim.addEventListener('DOMLoaded', onRobotDOMLoaded);
+var mnistOutputAnim = bodymovin.loadAnimation(mnistOutputAnimData);
+mnistOutputAnim.addEventListener('DOMLoaded', onMnistOutputDOMLoaded);
 
 
-//--------------agi animations
-var agiAnimWindow = select('#agiLottie'),
-  agiAnimData = {
-    wrapper: agiAnimWindow,
+//--------------prop animations
+var propAnimWindow = select('#propLottie'),
+  propAnimData = {
+    wrapper: propAnimWindow,
     animType: 'svg',
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_agi.json',
+    path: './json/ch6_prop.json',
   };
 
-var agiAnim = bodymovin.loadAnimation(agiAnimData);
-agiAnim.addEventListener('DOMLoaded', onAgiDOMLoaded);
+var propAnim = bodymovin.loadAnimation(propAnimData);
+propAnim.addEventListener('DOMLoaded', onPropDOMLoaded);
 
 
-//--------------data animations
-var dataAnimWindow = select('#dataLottie'),
-  dataAnimData = {
-    wrapper: dataAnimWindow,
+//--------------repeat animations
+var repeatAnimWindow = select('#repeatLottie'),
+  repeatAnimData = {
+    wrapper: repeatAnimWindow,
     animType: 'svg',
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_data.json',
+    path: './json/ch6_repeat.json',
   };
 
-var dataAnim = bodymovin.loadAnimation(dataAnimData);
-dataAnim.addEventListener('DOMLoaded', onDataDOMLoaded);
+var repeatAnim = bodymovin.loadAnimation(repeatAnimData);
+repeatAnim.addEventListener('DOMLoaded', onRepeatDOMLoaded);
 
 
-//--------------words animations
-var wordsAnimWindow = select('#wordsLottie'),
-  wordsAnimData = {
-    wrapper: wordsAnimWindow,
+//--------------coding animations
+var codingAnimWindow = select('#codingLottie'),
+  codingAnimData = {
+    wrapper: codingAnimWindow,
     animType: 'svg',
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_words.json',
+    path: './json/ch6_coding.json',
   };
 
-var wordsAnim = bodymovin.loadAnimation(wordsAnimData);
-wordsAnim.addEventListener('DOMLoaded', onWordsDOMLoaded);
+var codingAnim = bodymovin.loadAnimation(codingAnimData);
+codingAnim.addEventListener('DOMLoaded', onCodingDOMLoaded);
 
 //----------------------------------------------------------------------------
 //-----------------------------timelines--------------------------------------
@@ -146,178 +146,166 @@ function onOpeningDOMLoaded(e) {
   })
 }
 
-// --------seed TLs-------------
-var seedTL = new TimelineMax();
-var carTL = new TimelineMax();
-var moreTL = new TimelineMax();
+// --------mnist TLs-------------
+var baseTL = new TimelineMax();
+var pixelTL = new TimelineMax();
+var greyTL = new TimelineMax();
+var fiveTL = new TimelineMax();
+var softTL = new TimelineMax();
 
-function onSeedDOMLoaded(e) {
-  seedTL.to({
+function onMnistDOMLoaded(e) {
+  baseTL.to({
     frame: 0
   }, 3, {
-    frame: 76,
+    frame: 79,
     onUpdate: function() {
-      seedAnim.goToAndStop(Math.round(this.target.frame), true)
+      mnistAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 
-  carTL.to({
-    frame: 76
+  pixelTL.to({
+    frame: 79
   }, 3, {
-    frame: 214,
+    frame: 120,
     onUpdate: function() {
-      seedAnim.goToAndStop(Math.round(this.target.frame), true)
+      mnistAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 
-  moreTL.to({
-    frame: 214
+  greyTL.to({
+    frame: 120
   }, 3, {
-    frame: seedAnim.totalFrames - 1,
+    frame: 277,
     onUpdate: function() {
-      seedAnim.goToAndStop(Math.round(this.target.frame), true)
+      mnistAnim.goToAndStop(Math.round(this.target.frame), true)
+    },
+    ease: Linear.easeNone
+  })
+
+  fiveTL.to({
+    frame: 277
+  }, 3, {
+    frame: 352,
+    onUpdate: function() {
+      mnistAnim.goToAndStop(Math.round(this.target.frame), true)
+    },
+    ease: Linear.easeNone
+  })
+
+  softTL.to({
+    frame: 352
+  }, 3, {
+    frame: mnistAnim.totalFrames - 1,
+    onUpdate: function() {
+      mnistAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 }
 
-// --------robot TLs-------------
-var notRobotTL = new TimelineMax();
-var robotBrainTL = new TimelineMax();
+// --------mnistOutput TLs-------------
+var tenTL = new TimelineMax();
+var classTL = new TimelineMax();
 
-function onRobotDOMLoaded(e) {
-  notRobotTL.to({
+function onMnistOutputDOMLoaded(e) {
+  tenTL.to({
     frame: 0
   }, 3, {
-    frame: 76,
+    frame: 61,
     onUpdate: function() {
-      robotAnim.goToAndStop(Math.round(this.target.frame), true)
+      mnistOutputAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 
-  robotBrainTL.to({
-    frame: 76
+  classTL.to({
+    frame: 61
   }, 3, {
-    frame: robotAnim.totalFrames - 1,
+    frame: mnistOutputAnim.totalFrames - 1,
     onUpdate: function() {
-      robotAnim.goToAndStop(Math.round(this.target.frame), true)
+      mnistOutputAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 }
 
-//--------agi TLs------------
-var aniTL = new TimelineMax();
-var agiTL = new TimelineMax();
+//--------prop TLs------------
+var forTL = new TimelineMax();
+var backTL = new TimelineMax();
 
-function onAgiDOMLoaded(e) {
-  aniTL.to({
+function onPropDOMLoaded(e) {
+  forTL.to({
     frame: 0
   }, 3, {
-    frame: 37,
+    frame: 68,
     onUpdate: function() {
-      agiAnim.goToAndStop(Math.round(this.target.frame), true)
+      propAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 
-  agiTL.to({
-    frame: 37
+  backTL.to({
+    frame: 68
   }, 3, {
-    frame: agiAnim.totalFrames - 1,
+    frame: propAnim.totalFrames - 1,
     onUpdate: function() {
-      agiAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-}
-
-
-//--------data TLs------------
-var data1TL = new TimelineMax();
-var data2TL = new TimelineMax();
-var data3TL = new TimelineMax();
-var data4TL = new TimelineMax();
-
-function onDataDOMLoaded(e) {
-  data1TL.to({
-    frame: 0
-  }, 3, {
-    frame: 76,
-    onUpdate: function() {
-      dataAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-
-  data2TL.to({
-    frame: 76
-  }, 3, {
-    frame: 152,
-    onUpdate: function() {
-      dataAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-
-  data3TL.to({
-    frame: 152
-  }, 3, {
-    frame: 229,
-    onUpdate: function() {
-      dataAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-
-  data4TL.to({
-    frame: 229
-  }, 3, {
-    frame: dataAnim.totalFrames - 1,
-    onUpdate: function() {
-      dataAnim.goToAndStop(Math.round(this.target.frame), true)
+      propAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 }
 
 
+//--------repeat TLs------------
+var clusterTL = new TimelineMax();
+var gradientTL = new TimelineMax();
+var overTL = new TimelineMax();
 
-//--------words TLs------------
-var mlTL = new TimelineMax();
-var dlTL = new TimelineMax();
-var algoTL = new TimelineMax();
-
-function onWordsDOMLoaded(e) {
-  mlTL.to({
+function onRepeatDOMLoaded(e) {
+  clusterTL.to({
     frame: 0
   }, 3, {
-    frame: 75,
+    frame: 141,
     onUpdate: function() {
-      wordsAnim.goToAndStop(Math.round(this.target.frame), true)
+      repeatAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 
-  dlTL.to({
-    frame: 75
+  gradientTL.to({
+    frame: 141
   }, 3, {
-    frame: 142,
+    frame: 291,
     onUpdate: function() {
-      wordsAnim.goToAndStop(Math.round(this.target.frame), true)
+      repeatAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
 
-  algoTL.to({
-    frame: 142
+  overTL.to({
+    frame: 291
   }, 3, {
-    frame: wordsAnim.totalFrames - 1,
+    frame: repeatAnim.totalFrames - 1,
     onUpdate: function() {
-      wordsAnim.goToAndStop(Math.round(this.target.frame), true)
+      repeatAnim.goToAndStop(Math.round(this.target.frame), true)
+    },
+    ease: Linear.easeNone
+  })
+}
+
+//--------coding TLs------------
+var codingTL = new TimelineMax();
+
+function onCodingDOMLoaded(e) {
+
+  codingTL.to({
+    frame: 0
+  }, 3, {
+    frame: codingAnim.totalFrames - 1,
+    onUpdate: function() {
+      codingAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     ease: Linear.easeNone
   })
@@ -343,11 +331,11 @@ $(".scene").each(function() {
 });
 
 
-toggleAnimation(seedAnimWindow, false);
-toggleAnimation(robotAnimWindow, false);
-toggleAnimation(agiAnimWindow, false);
-toggleAnimation(dataAnimWindow, false);
-toggleAnimation(wordsAnimWindow, false);
+toggleAnimation(mnistAnimWindow, false);
+toggleAnimation(mnistOutputAnimWindow, false);
+toggleAnimation(propAnimWindow, false);
+toggleAnimation(repeatAnimWindow, false);
+toggleAnimation(codingAnimWindow, false);
 
 
 //-------------------------------------------------
@@ -361,168 +349,159 @@ let openingAnimScene = new ScrollMagic.Scene({
   .on("end", function(event) {
     var direction = event.scrollDirection;
     if (direction == "FORWARD") {
-      toggleAnimation(seedAnimWindow, true)
+      toggleAnimation(mnistAnimWindow, true)
     } else {
-      toggleAnimation(seedAnimWindow, false)
+      toggleAnimation(mnistAnimWindow, false)
     }
   })
   .addTo(controller);
 
 //-------------------------------------------------
-//--------- SEED Animations -------------
+//--------- mnist Animations -------------
 //-------------------------------------------------
-let seedScene = new ScrollMagic.Scene({
-  triggerElement: "#text1",
-  duration: '100%'
-})
-  .setTween(seedTL)
+let baseScene = new ScrollMagic.Scene({
+    triggerElement: "#text1",
+    duration: '100%'
+  })
+  .setTween(baseTL)
   .addTo(controller);
 
-let carScene = new ScrollMagic.Scene({
+let pixelScene = new ScrollMagic.Scene({
     triggerElement: "#text2",
     duration: '100%'
   })
-  .setTween(carTL)
+  .setTween(pixelTL)
   .addTo(controller);
 
-let moreScene = new ScrollMagic.Scene({
+let greyScene = new ScrollMagic.Scene({
     triggerElement: "#text3",
     duration: '100%'
   })
-  .setTween(moreTL)
+  .setTween(greyTL)
   .addTo(controller);
 
-//-------------------------------------------------
-//----------- Robot ANIMATIONS ---------------
-//-------------------------------------------------
-let notRobotScene = new ScrollMagic.Scene({
+let fiveScene = new ScrollMagic.Scene({
     triggerElement: "#text4",
     duration: '100%'
   })
-  .setTween(notRobotTL)
-  .on("start", function(event) {
-    var direction = event.scrollDirection;
-    if (direction == "REVERSE") {
-      toggleAnimation(seedAnimWindow, true)
-      toggleAnimation(robotAnimWindow, false)
-    } else {
-      toggleAnimation(seedAnimWindow, false)
-      toggleAnimation(robotAnimWindow, true)
-    }
-  })
+  .setTween(fiveTL)
   .addTo(controller);
 
-let robotBrainScene = new ScrollMagic.Scene({
+let softScene = new ScrollMagic.Scene({
     triggerElement: "#text5",
     duration: '100%'
   })
-  .setTween(robotBrainTL)
+  .setTween(softTL)
   .addTo(controller);
 
 //-------------------------------------------------
-//----------- AGI ANIMATIONS ---------------
+//----------- mnistOutput ANIMATIONS ---------------
 //-------------------------------------------------
-let aniScene = new ScrollMagic.Scene({
+let tenScene = new ScrollMagic.Scene({
     triggerElement: "#text6",
     duration: '100%'
   })
-  .setTween(aniTL)
+  .setTween(tenTL)
   .on("start", function(event) {
     var direction = event.scrollDirection;
     if (direction == "REVERSE") {
-      toggleAnimation(robotAnimWindow, true)
-      toggleAnimation(agiAnimWindow, false)
+      toggleAnimation(mnistAnimWindow, true)
+      toggleAnimation(mnistOutputAnimWindow, false)
     } else {
-      toggleAnimation(robotAnimWindow, false)
-      toggleAnimation(agiAnimWindow, true)
+      toggleAnimation(mnistAnimWindow, false)
+      toggleAnimation(mnistOutputAnimWindow, true)
     }
   })
   .addTo(controller);
 
-let agiScene = new ScrollMagic.Scene({
+let classScene = new ScrollMagic.Scene({
     triggerElement: "#text7",
     duration: '100%'
   })
-  .setTween(agiTL)
+  .setTween(classTL)
   .addTo(controller);
 
-
 //-------------------------------------------------
-//----------- DATA ANIMATIONS ---------------
+//----------- prop ANIMATIONS ---------------
 //-------------------------------------------------
-let data1Scene = new ScrollMagic.Scene({
+let forScene = new ScrollMagic.Scene({
     triggerElement: "#text8",
     duration: '100%'
   })
-  .setTween(data1TL)
+  .setTween(forTL)
   .on("start", function(event) {
     var direction = event.scrollDirection;
     if (direction == "REVERSE") {
-      toggleAnimation(agiAnimWindow, true)
-      toggleAnimation(dataAnimWindow, false)
+      toggleAnimation(mnistOutputAnimWindow, true)
+      toggleAnimation(propAnimWindow, false)
     } else {
-      toggleAnimation(agiAnimWindow, false)
-      toggleAnimation(dataAnimWindow, true)
+      toggleAnimation(mnistOutputAnimWindow, false)
+      toggleAnimation(propAnimWindow, true)
     }
   })
   .addTo(controller);
 
-let data2Scene = new ScrollMagic.Scene({
+let backScene = new ScrollMagic.Scene({
     triggerElement: "#text9",
     duration: '100%'
   })
-  .setTween(data2TL)
+  .setTween(backTL)
   .addTo(controller);
 
-let data3Scene = new ScrollMagic.Scene({
+
+//-------------------------------------------------
+//----------- repeat ANIMATIONS ---------------
+//-------------------------------------------------
+let clusterScene = new ScrollMagic.Scene({
     triggerElement: "#text10",
     duration: '100%'
   })
-  .setTween(data3TL)
+  .setTween(clusterTL)
+  .on("start", function(event) {
+    var direction = event.scrollDirection;
+    if (direction == "REVERSE") {
+      toggleAnimation(propAnimWindow, true)
+      toggleAnimation(repeatAnimWindow, false)
+    } else {
+      toggleAnimation(propAnimWindow, false)
+      toggleAnimation(repeatAnimWindow, true)
+    }
+  })
   .addTo(controller);
 
-let data4Scene = new ScrollMagic.Scene({
+let gradientScene = new ScrollMagic.Scene({
     triggerElement: "#text11",
     duration: '100%'
   })
-  .setTween(data4TL)
+  .setTween(gradientTL)
   .addTo(controller);
 
+let overScene = new ScrollMagic.Scene({
+    triggerElement: "#text12",
+    duration: '100%'
+  })
+  .setTween(overTL)
+  .addTo(controller);
 
 //-------------------------------------------------
 //----------- WORDS ANIMATIONS ---------------
 //-------------------------------------------------
-let mlScene = new ScrollMagic.Scene({
-    triggerElement: "#text12",
-    duration: '100%'
-  })
-  .setTween(mlTL)
-  .on("start", function(event) {
-    var direction = event.scrollDirection;
-    if (direction == "REVERSE") {
-      toggleAnimation(dataAnimWindow, true)
-      toggleAnimation(wordsAnimWindow, false)
-    } else {
-      toggleAnimation(dataAnimWindow, false)
-      toggleAnimation(wordsAnimWindow, true)
-    }
-  })
-  .addTo(controller);
-
-let dlScene = new ScrollMagic.Scene({
+let codingScene = new ScrollMagic.Scene({
     triggerElement: "#text13",
     duration: '100%'
   })
-  .setTween(dlTL)
-  .addTo(controller);
-
-let algoScene = new ScrollMagic.Scene({
-    triggerElement: "#text14",
-    duration: '100%'
+  .setTween(codingTL)
+  .on("start", function(event) {
+    var direction = event.scrollDirection;
+    if (direction == "REVERSE") {
+      toggleAnimation(repeatAnimWindow, true)
+      toggleAnimation(codingAnimWindow, false)
+    } else {
+      toggleAnimation(repeatAnimWindow, false)
+      toggleAnimation(codingAnimWindow, true)
+    }
   })
-  .setTween(algoTL)
   .addTo(controller);
-
 
 //-------------------------------------------------
 //----------- ENDING SECTION ---------------
@@ -534,9 +513,9 @@ let endingScene = new ScrollMagic.Scene({
   .on("start", function(event) {
     var direction = event.scrollDirection;
     if (direction == "REVERSE") {
-      toggleAnimation(wordsAnimWindow, true)
+      toggleAnimation(codingAnimWindow, true)
     } else {
-      toggleAnimation(wordsAnimWindow, false)
+      toggleAnimation(codingAnimWindow, false)
     }
   })
   // .addIndicators({name: "ending"})

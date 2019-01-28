@@ -152,10 +152,10 @@
   <!-- ######## Animation & text beginning ######## -->
   <!-- animation divs -->
   <div id="mnistLottie" class="animation animLeft upperLayer"></div>
-  <div id="robotLottie" class="animation animRight topLayer"></div>
-  <div id="agiLottie" class="animation animLeft threeLayer"></div>
-  <div id="dataLottie" class="animation animRight fourLayer"></div>
-  <div id="wordsLottie" class="animation animLeft fiveLayer"></div>
+  <div id="mnistOutputLottie" class="animation animRight topLayer"></div>
+  <div id="propLottie" class="animation animLeft threeLayer"></div>
+  <div id="repeatLottie" class="animation animRight fourLayer"></div>
+  <div id="codingLottie" class="animation animLeft fiveLayer"></div>
 
   <!-- text begins -->
 
@@ -176,13 +176,20 @@
     <div class="text right">
       <p>
         In the input, we flattened our 28 x 28 MNIST image to an array of 784 pixels.
+      </p>
+    </div>
+  </div>
+
+  <div id="text3" class="bg-1grey scene">
+    <div class="text right">
+      <p>
         Each pixel has a value from 0 to 1 indicating how black that pixel is. 0
         is white, 1 is black, and anywhere between them is a shade of gray.
       </p>
     </div>
   </div>
 
-  <div id="text3" class="bg-1grey scene">
+  <div id="text4" class="bg-1grey scene">
     <div class="text right">
       <p>The first layer takes in the input of size 784 and transforms it into an
         array of size 500, so we have 500 numbers that will represent a transformation
@@ -194,7 +201,7 @@
     </div>
   </div>
 
-  <div id="text4" class="bg-1grey scene">
+  <div id="text5" class="bg-1grey scene">
     <div class="text right">
       <p>Since we are working with classification, we would need to use cross-entropy
         loss. This would require us to input probabilities for each class,
@@ -209,133 +216,88 @@
   </div>
 
   <!-- mnistOutput animation text section -->
-  <div id="text5" class="scene bg-2grey upperLayer">
+  <div id="text6" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>Then we take the array of 500 values and transform that into an array of
-        10 values, each corresponding to digits “0” to “9”. The value that is
-        highest, signaling the one that the model thinks is most probable, will be our prediction.
+        10 values, each corresponding to digits “0” to “9”.
       </p>
     </div>
   </div>
 
-
-  <!-- agi animation text section -->
-  <div id="text6" class="scene bg-3grey topLayer">
-    <div class="text right">
-      <p>Today’s AI is still what scientists described as Artificial Narrow Intelligence
-        (ANI), as the majority of them can only perform a certain set of tasks -
-        like driving, face detection, recommendation, etc. </p>
-    </div>
-  </div>
-
-  <div id="text7" class="scene bg-3grey topLayer">
-    <div class="text right">
-      <p>Scientists and researchers are working towards the ultimate goal of AI -
-        Artificial General Intelligence (AGI), where it could complete a variety
-        of tasks as good as humans.<p>
-    </div>
-  </div>
-
-
-  <!-- data animation text section-->
-  <div id="text8" class="scene threeLayer bg-4grey">
+  <div id="text7" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <h3>
-        Some Numbers
-      </h3>
-      <hr>
-      <p>
-        number of AI companies listed on Crunchbase
+      <p>The value that is highest, signaling the one that the model thinks is most
+        probable, will be our prediction.
       </p>
     </div>
   </div>
 
-  <div id="text9" class="scene threeLayer bg-4grey">
-    <div class="text left">
-      <h3>
-        Some Numbers
-      </h3>
-      <hr>
-      <p>
-        number of devices with smart voice assistants built in
+  <!-- prop animation text section -->
+  <div id="text8" class="scene bg-3grey topLayer">
+    <div class="text right">
+      <p>We then split them by batches of 100 and feed them into the model for
+        training. During training, the model uses existing parameters to generate
+        a tentative answer (this is usually called forward propagation).
       </p>
     </div>
   </div>
 
+  <div id="text9" class="scene bg-3grey topLayer">
+    <div class="text right">
+      <p>Then, after seeing the answer and computing the loss (how different am
+        I from the real answer), it goes back into the network and updates the
+        parameters to get even closer to the real answer (this is usually called backpropagation).
+      <p>
+    </div>
+  </div>
+
+  <!-- repeat animation text section-->
   <div id="text10" class="scene threeLayer bg-4grey">
     <div class="text left">
-      <h3>
-        Some Numbers
-      </h3>
-      <hr>
       <p>
-        amount of venture capital firms invested in AI-related firms in 2017
+        To train the model, we would need to first initialize the values inside
+        the model. In this particular case, we will initialize them to something
+        random clustered around 0, which is usually a good starting point.
       </p>
     </div>
   </div>
 
   <div id="text11" class="scene threeLayer bg-4grey">
     <div class="text left">
-      <h3>
-        Some Numbers
-      </h3>
-      <hr>
       <p>
-        an estimated amount of total spending in AI by 2025
+        To train it, we are using SGD (stochastic gradient descent) as introduced before,
+        with a learning rate of 0.7. This learning rate is chosen by experiment,
+        as it seems to work best for our model. Usually, you should try out a few
+        different values (depending on the data and the loss function, the learning
+        rate is usually under 1, and bigger than 0.0001) before settling on a reasonable one.
+      </p>
+    </div>
+  </div>
+
+  <div id="text12" class="scene threeLayer bg-4grey">
+    <div class="text left">
+      <p>
+        After going over the dataset 2 to 3 times (epochs), our model is good
+        enough to be used.
+        In our model, we would be able to achieve around 97% accuracy with only
+        2 runs over the dataset, and on an average laptop, it would run in under
+        a minute (excluding the time downloading the dataset).
       </p>
     </div>
   </div>
 
 
-  <!-- words animation text section -->
-  <div id="text12" class="scene fourLayer bg-5grey">
-    <div class="text right">
-      <h3>
-        ML
-      </h3>
-      <hr>
-      <p>
-        ML - Machine Learning is a specific area of AI. As described by its name,
-        machine learning aims to train a machine to learn based on data rather
-        than pre-defined rules. Mainstream method today is to show a machine a
-        lot of data and teach it what the desired behavior is. Once the machine is
-        trained, some new, unseen data would be fed into the machine and, hopefully,
-        the machine can make the right choices based on what it has learnt.
-      </p>
-    </div>
-  </div>
-
+  <!-- coding animation text section -->
   <div id="text13" class="scene fourLayer bg-5grey">
     <div class="text right">
-      <h3>
-        DL
-      </h3>
-      <hr>
       <p>
-        Deep Learning is a branch of Machine Learning that are centered around
-        artificial neural networks - algorithms inspired by the human brain. This
-        is the focus of our site. Deep learning algorithms relying on being fed
-        a large amount of data so that it can adjust how each layer in the network
-        interacts with the next. Once learned, these neural networks can complete
-        some very sophisticated tasks like recognizing human faces, or playing
-        Go well enough to beat human champions!
-      </p>
-    </div>
-  </div>
+        In our demo, we used a similar neural network structure, and we allowed
+        you to play with it interactively. If you now flip back to the demo again,
+        you would be able to see all that we have explained at work.
 
-  <div id="text14" class="scene fourLayer bg-5grey">
-    <div class="text right">
-      <h3>
-        Algorithm
-      </h3>
-      <hr>
-      <p>
-        An algorithm is very much like a cooking recipe. It is a set of clear
-        instructions that you or a machine can follow to achieve a certain purpose.
-        Since computers do not understand vague high-level instructions that humans
-        are used to, algorithms, sets of instructions that machines can follow that
-        achieves higher-level tasks, are the sole reason why computers and phones are
-        working as intended.
+        For those who want to experiment with the model more in depth, we have
+        written an easy-to-understand code that you can experiment with online.
+        COLAB [Link]
       </p>
     </div>
   </div>
