@@ -6,10 +6,6 @@ let select = function(s) {
   return document.querySelector(s);
 };
 
-let selectAll = function(s) {
-  return document.querySelectorAll(s);
-};
-
 //----------------------------------------------------------
 //--------------------Lottie Animations---------------------
 //----------------------------------------------------------

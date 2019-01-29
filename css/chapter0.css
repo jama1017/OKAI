@@ -2,37 +2,48 @@
   height: 100vh;
   width: 100%;
   margin: 0;
-  /* position: relative; */
-}
-/* --------------------------------- animaiton backgrounds ---------------------- */
-/* .bg-3grey {
-  background-color: #c9cbca;
-  /* background-color: red; */
-/* } */
-
-/* animation background colors */
-#seedBG path{
-  fill: #E8E8E8;
+  overflow-x: hidden;
 }
 
-#robotBG path{
-  fill: #DCDCDC;
+#can {
+  /* border:2px solid black; */
+  border-radius: 25px;
+  width: 250px;
+  height: 250px;
+  background-color: white
 }
 
-#agiBG path{
-  fill: #D3D3D3;
+#nnOut {
+  border-radius: 25px;
+  /* border:2px solid; */
+  font-size:200px;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  background-color: lightGrey;
+  margin-right: 0;
 }
 
-#dataBG path{
-  fill: #C8C8C8;
+/* 992px is medium sreen size */
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  #can {
+    background-color: white;
+    border-radius: 25px;
+    width: 180px;
+    height: 180px;
+    touch-action: none;
+  }
+
+  #nnOut {
+    border-radius: 25px;
+    font-size:160px;
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    background-color: lightGrey;
+  }
+
+  #demo h2 {
+    font-weight: bold;
+  }
 }
-
-
-#wordsBG path{
-  fill: #C0C0C0;
-  /* fill: transparent; */
-}
-
-/* .gooFilterLayer {
-  filter: url("#goo")
-} */
