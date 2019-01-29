@@ -8391,23 +8391,6 @@
         canvas = document.getElementById('can');
         ctx = canvas.getContext("2d");
 
-        // Prevent scrolling when touching the canvas
-        document.body.addEventListener("touchstart", function (e) {
-          if (e.target == canvas) {
-            e.preventDefault();
-          }
-        }, false);
-        document.body.addEventListener("touchend", function (e) {
-          if (e.target == canvas) {
-            e.preventDefault();
-          }
-        }, false);
-        document.body.addEventListener("touchmove", function (e) {
-          if (e.target == canvas) {
-            e.preventDefault();
-          }
-        }, false);
-
         canvas.addEventListener("mousemove", function(e) {
           findxy('move', e)
         }, false);
@@ -8423,37 +8406,42 @@
 
         // Set up touch events for mobile, etc
         canvas.addEventListener("touchstart", function (e) {
-                mousePos = getTouchPos(canvas, e);
-          var touch = e.touches[0];
-          var mouseEvent = new MouseEvent("mousedown", {
-            clientX: touch.clientX,
-            clientY: touch.clientY
-          });
-          canvas.dispatchEvent(mouseEvent);
-        }, false);
-        canvas.addEventListener("touchend", function (e) {
-          var mouseEvent = new MouseEvent("mouseup", {});
-          canvas.dispatchEvent(mouseEvent);
-        }, false);
-        canvas.addEventListener("touchmove", function (e) {
-          var touch = e.touches[0];
-          var mouseEvent = new MouseEvent("mousemove", {
-            clientX: touch.clientX,
-            clientY: touch.clientY
-          });
-          canvas.dispatchEvent(mouseEvent);
+          findxy('start', e)
+          // mousePos = getTouchPos(canvas, e);
+          // var touch = e.touches[0];
+          // var mouseEvent = new MouseEvent("mousedown", {
+          //   clientX: touch.clientX,
+          //   clientY: touch.clientY
+          // });
+          // canvas.dispatchEvent(mouseEvent);
+
         }, false);
 
-        // Get the position of a touch relative to the canvas
-        function getTouchPos(canvasDom, touchEvent) {
-          var rect = canvasDom.getBoundingClientRect();
-          return {
-            x: touchEvent.touches[0].clientX - rect.left,
-            y: touchEvent.touches[0].clientY - rect.top
-          };
-        }
+        canvas.addEventListener("touchend", function (e) {
+          findxy('end', e)
+          // var mouseEvent = new MouseEvent("mouseup", {});
+          // canvas.dispatchEvent(mouseEvent);
+        }, false);
+
+        canvas.addEventListener("touchmove", function (e) {
+          findxy('touchMove', e)
+          // var touch = e.touches[0];
+          // var mouseEvent = new MouseEvent("mousemove", {
+          //   clientX: touch.clientX,
+          //   clientY: touch.clientY
+          // });
+          // canvas.dispatchEvent(mouseEvent);
+        }, false);
       }
 
+      // Get the position of a touch relative to the canvas
+      function getTouchPos(canvasDom, touchEvent) {
+        var rect = canvasDom.getBoundingClientRect();
+        return {
+          x: touchEvent.touches[0].clientX - rect.left,
+          y: touchEvent.touches[0].clientY - rect.top
+        };
+      }
 
       // draws a line from (x1, y1) to (x2, y2) with nice rounded caps
       function draw(ctx, color, lineWidth, x1, y1, x2, y2) {
@@ -8474,8 +8462,7 @@
       }
 
       function findxy(res, e) {
-        // let isTouchDevice = 'ontouchstart' in document.documentElement;
-
+        //for mouse events
         if (res == 'down') {
           if (clearBeforeDraw == true) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -8484,15 +8471,8 @@
             paths = [];
             clearBeforeDraw = false;
           }
-          //
-          // if (isTouchDevice == true) {
-          //   console.log("TouchDevice");
-          // } else {
-          //   console.log("notTouchDevice");
-          // }
 
           let bound = canvas.getBoundingClientRect();
-
           currX = event.clientX - bound.left - canvas.clientLeft;
           currY = event.clientY - bound.top - canvas.clientTop;
 
@@ -8534,6 +8514,64 @@
             draw(ctx, color, lineWidth, prevX, prevY, currX, currY);
           }
         }
+
+        //for touch events
+        if (res == 'start') {
+          if (clearBeforeDraw == true) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            document.getElementById('nnInput').innerHTML = '';
+            document.getElementById('nnOut').innerHTML = '';
+            paths = [];
+            clearBeforeDraw = false;
+          }
+
+          var touch = e.touches[0];
+          let bound = canvas.getBoundingClientRect();
+          currX = touch.clientX - bound.left - canvas.clientLeft;
+          currY = touch.clientY - bound.top - canvas.clientTop;
+
+          //draw a circle
+          ctx.beginPath();
+          ctx.lineWidth = 1;
+          ctx.arc(currX, currY, lineWidth / 2, 0, 2 * Math.PI);
+          ctx.stroke();
+          ctx.closePath();
+          ctx.fill();
+
+          paths.push([
+            [currX],
+            [currY]
+          ]);
+          paintFlag = true;
+          event.preventDefault();
+        }
+
+        if (res == 'end') {
+          paintFlag = false;
+          //console.log(paths);
+          event.preventDefault();
+        }
+
+        if (res == 'touchMove') {
+          if (paintFlag) {
+            // draw a line to previous point
+            prevX = currX;
+            prevY = currY;
+
+            var touch = e.touches[0];
+            let bound = canvas.getBoundingClientRect();
+            currX = touch.clientX - bound.left - canvas.clientLeft;
+            currY = touch.clientY - bound.top - canvas.clientTop;
+
+            currPath = paths[paths.length - 1];
+            currPath[0].push(currX);
+            currPath[1].push(currY);
+            paths[paths.length - 1] = currPath;
+            draw(ctx, color, lineWidth, prevX, prevY, currX, currY);
+            event.preventDefault();
+          }
+        }
+
       }
       init();
     </script>
