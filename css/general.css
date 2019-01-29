@@ -201,6 +201,10 @@ ul ul a {
   color: #9d9d9d;
 }
 
+.highlight {
+  /* color: #EBCE26; */
+}
+
 /* ----------------------------- Tooltip styling ------------------------------- */
 /* Tooltip */
 .tooltip .tooltip-inner {
