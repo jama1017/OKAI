@@ -8387,6 +8387,7 @@
       }
 
       function init() {
+
         canvas = document.getElementById('can');
         ctx = canvas.getContext("2d");
 
@@ -8419,7 +8420,40 @@
         canvas.addEventListener("mouseout", function(e) {
           findxy('out', e)
         }, false);
+
+        // Set up touch events for mobile, etc
+        canvas.addEventListener("touchstart", function (e) {
+                mousePos = getTouchPos(canvas, e);
+          var touch = e.touches[0];
+          var mouseEvent = new MouseEvent("mousedown", {
+            clientX: touch.clientX,
+            clientY: touch.clientY
+          });
+          canvas.dispatchEvent(mouseEvent);
+        }, false);
+        canvas.addEventListener("touchend", function (e) {
+          var mouseEvent = new MouseEvent("mouseup", {});
+          canvas.dispatchEvent(mouseEvent);
+        }, false);
+        canvas.addEventListener("touchmove", function (e) {
+          var touch = e.touches[0];
+          var mouseEvent = new MouseEvent("mousemove", {
+            clientX: touch.clientX,
+            clientY: touch.clientY
+          });
+          canvas.dispatchEvent(mouseEvent);
+        }, false);
+
+        // Get the position of a touch relative to the canvas
+        function getTouchPos(canvasDom, touchEvent) {
+          var rect = canvasDom.getBoundingClientRect();
+          return {
+            x: touchEvent.touches[0].clientX - rect.left,
+            y: touchEvent.touches[0].clientY - rect.top
+          };
+        }
       }
+
 
       // draws a line from (x1, y1) to (x2, y2) with nice rounded caps
       function draw(ctx, color, lineWidth, x1, y1, x2, y2) {
@@ -8440,6 +8474,7 @@
       }
 
       function findxy(res, e) {
+        // let isTouchDevice = 'ontouchstart' in document.documentElement;
 
         if (res == 'down') {
           if (clearBeforeDraw == true) {
@@ -8449,21 +8484,17 @@
             paths = [];
             clearBeforeDraw = false;
           }
+          //
+          // if (isTouchDevice == true) {
+          //   console.log("TouchDevice");
+          // } else {
+          //   console.log("notTouchDevice");
+          // }
 
-          if (e.pageX != undefined && e.pageY != undefined) {
-            let bound = canvas.getBoundingClientRect();
+          let bound = canvas.getBoundingClientRect();
 
-            currX = event.clientX - bound.left - canvas.clientLeft;
-            currY = event.clientY - bound.top - canvas.clientTop;
-
-          } else {
-            currX = e.clientX + document.body.scrollLeft +
-              document.documentElement.scrollLeft -
-              canvas.offsetLeft;
-            currY = e.clientY + document.body.scrollTop +
-              document.documentElement.scrollTop -
-              canvas.offsetTop;
-          }
+          currX = event.clientX - bound.left - canvas.clientLeft;
+          currY = event.clientY - bound.top - canvas.clientTop;
 
           //draw a circle
           ctx.beginPath();
@@ -8479,6 +8510,7 @@
           ]);
           paintFlag = true;
         }
+
         if (res == 'up' || res == "out") {
           paintFlag = false;
           //console.log(paths);
@@ -8489,19 +8521,12 @@
             // draw a line to previous point
             prevX = currX;
             prevY = currY;
-            if (e.pageX != undefined && e.pageY != undefined) {
-              let bound = canvas.getBoundingClientRect();
 
-              currX = event.clientX - bound.left - canvas.clientLeft;
-              currY = event.clientY - bound.top - canvas.clientTop;
-            } else {
-              currX = e.clientX + document.body.scrollLeft +
-                document.documentElement.scrollLeft -
-                canvas.offsetLeft;
-              currY = e.clientY + document.body.scrollTop +
-                document.documentElement.scrollTop -
-                canvas.offsetTop;
-            }
+            let bound = canvas.getBoundingClientRect();
+
+            currX = event.clientX - bound.left - canvas.clientLeft;
+            currY = event.clientY - bound.top - canvas.clientTop;
+
             currPath = paths[paths.length - 1];
             currPath[0].push(currX);
             currPath[1].push(currY);
