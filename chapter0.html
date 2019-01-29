@@ -72,25 +72,25 @@
         </a>
         <ul class="collapse list-unstyled" id="pageSubmenu">
           <li>
-            <a href="#">00 title</a>
+            <a href="./chapter0.html">00 title</a>
           </li>
           <li>
-            <a href="#">01 title</a>
+            <a href="./chapter1.html">01 title</a>
           </li>
           <li>
-            <a href="#">02 title</a>
+            <a href="./chapter2.html">02 title</a>
           </li>
           <li>
-            <a href="#">03 title</a>
+            <a href="./chapter3.html">03 title</a>
           </li>
           <li>
-            <a href="#">04 title</a>
+            <a href="./chapter4.html">04 title</a>
           </li>
           <li>
-            <a href="#">05 title</a>
+            <a href="./chapter5.html">05 title</a>
           </li>
           <li>
-            <a href="#">06 title</a>
+            <a href="./chapter6.html">06 title</a>
           </li>
         </ul>
       </li>
@@ -108,7 +108,7 @@
     <div class="row align-items-center justify-content-center">
       <!-- col 1 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-        <a href="chapter0.html"><i class="fas fa-caret-left fa-2x"></i></a>
+        <a href="home.html"><i class="fas fa-caret-left fa-2x"></i></a>
       </div>
 
       <!-- col 2 -->
@@ -116,9 +116,8 @@
         <div class="text-left">
           <p>Chapter 0</p>
           <h2>A Taste of AI</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores
-            debitis incidunt distinctio omnis ad, tempore recusandae asperiores provident
-            dignissimos.</p>
+          <p>Wondering what AI can do? Below is a simple interactive module in which
+          AI can recognize the digit you write!</p>
         </div>
       </div>
 
@@ -129,7 +128,7 @@
 
       <!-- col-4 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-        <a href="chapter2.html"><i class="fas fa-caret-right fa-2x"></i></a>
+        <a href="chapter1.html"><i class="fas fa-caret-right fa-2x"></i></a>
       </div>
     </div>
     <!-- end of row 1 -->
@@ -157,7 +156,7 @@
       <div class="col-8 col-md-4 text-center">
         <div class="text-left p-3">
           <h2>Handwritten Digit Recognition</h1>
-          <p>Draw a digit in the box below and <br>click the "recognize" button.</p>
+          <p>Draw a digit in the white box below and click the "recognize" button.</p>
         </div>
       </div>
 
@@ -8529,8 +8528,8 @@
 
           var touch = e.touches[0];
           let bound = canvas.getBoundingClientRect();
-          currX = touch.clientX - bound.left - canvas.clientLeft + 2*touch.target.offsetLeft;
-          currY = touch.clientY - bound.top - canvas.clientTop + 2*touch.target.offsetTop;
+          currX = touch.pageX - bound.left - canvas.clientLeft + 1.5*touch.target.offsetLeft;
+          currY = touch.clientY - bound.top - canvas.clientTop + 1.5*touch.target.offsetTop;
 
           //draw a circle
           ctx.beginPath();
@@ -8562,8 +8561,8 @@
 
             var touch = e.touches[0];
             let bound = canvas.getBoundingClientRect();
-            currX = touch.clientX - bound.left - canvas.clientLeft + 2*touch.target.offsetLeft;
-            currY = touch.clientY - bound.top - canvas.clientTop + 2*touch.target.offsetTop;
+            currX = touch.clientX - bound.left - canvas.clientLeft + 1.5*touch.target.offsetLeft;
+            currY = touch.clientY - bound.top - canvas.clientTop + 1.5*touch.target.offsetTop;
 
             currPath = paths[paths.length - 1];
             currPath[0].push(currX);
