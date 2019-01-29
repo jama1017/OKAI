@@ -25,6 +25,11 @@
   vertical-align: middle;
 }
 
+/* animation background colors */
+#mnistBG path {
+  fill: transparent;
+}
+
 /* 992px is medium sreen size */
 @media screen and (max-width: 992px) and (orientation: portrait) {
   #can {
