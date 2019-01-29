@@ -173,7 +173,7 @@
           </div>
 
           <div class="order-1 order-md-2 col-10 col-md-5 py-3">
-            <div id="nnOut"></div>
+            <div id="nnOut" class="d-flex justify-content-center align-items-center"></div>
           </div>
 
         </div>
@@ -8380,7 +8380,7 @@
           } else return p;
         });
         console.log('maxIndex: ' + maxIndex);
-        document.getElementById('nnOut').innerHTML = maxIndex;
+        document.getElementById('nnOut').innerHTML = "<div>" + maxIndex + "</div>";
         clearBeforeDraw = true;
         var dt = new Date() - t1;
         console.log('recognize time: ' + dt + 'ms');
@@ -8458,7 +8458,9 @@
 
       function erase() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        document.getElementById('nnInput').innerHTML = '';
         document.getElementById('nnOut').innerHTML = '';
+        paths = [];
       }
 
       function findxy(res, e) {
