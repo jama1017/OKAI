@@ -164,7 +164,7 @@
       <div class="col-8 col-md-6 text-center">
         <div class="row align-items-start justify-content-around">
 
-          <div class="order-2 order-md-1 col-10 col-md-5">
+          <div class="order-2 order-md-1 col-10 col-md-5 text-left py-3">
             <canvas id="can" width="250px" height="250px"></canvas>
             <!-- buttons -->
             <button type="button" id="recognize" onclick="recognize()" class="btn btn-light mt-3">Recognize</button>
@@ -172,11 +172,7 @@
             <div id="nnInput"></div>
           </div>
 
-          <div class="order-1 order-md-2 d-none d-md-block col-10 col-md-5">
-            <div id="nnOut"></div>
-          </div>
-
-          <div class="order-1 d-block d-md-none col-10 col-md-5 mb-4">
+          <div class="order-1 order-md-2 col-10 col-md-5 py-3">
             <div id="nnOut"></div>
           </div>
 
@@ -8394,6 +8390,23 @@
         canvas = document.getElementById('can');
         ctx = canvas.getContext("2d");
 
+        // Prevent scrolling when touching the canvas
+        document.body.addEventListener("touchstart", function (e) {
+          if (e.target == canvas) {
+            e.preventDefault();
+          }
+        }, false);
+        document.body.addEventListener("touchend", function (e) {
+          if (e.target == canvas) {
+            e.preventDefault();
+          }
+        }, false);
+        document.body.addEventListener("touchmove", function (e) {
+          if (e.target == canvas) {
+            e.preventDefault();
+          }
+        }, false);
+
         canvas.addEventListener("mousemove", function(e) {
           findxy('move', e)
         }, false);
@@ -8427,6 +8440,7 @@
       }
 
       function findxy(res, e) {
+
         if (res == 'down') {
           if (clearBeforeDraw == true) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
