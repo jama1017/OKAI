@@ -41,6 +41,67 @@
 
 <body>
 
+  <!-- navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <button type="button" id="sidebarCollapse" class="btn">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+    <div id="dismiss">
+      <i class="fas fa-times fa-sm"></i>
+    </div>
+
+    <div class="sidebar-header">
+      <h4>OKAI</h4>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+          Chapters
+          <i class="fas fa-ellipsis-v" style="position: absolute; right: 25px;
+          top: 50%; transform: translateY(-50%);"></i>
+        </a>
+        <ul class="collapse list-unstyled" id="pageSubmenu">
+          <li>
+            <a href="#">00 title</a>
+          </li>
+          <li>
+            <a href="#">01 title</a>
+          </li>
+          <li>
+            <a href="#">02 title</a>
+          </li>
+          <li>
+            <a href="#">03 title</a>
+          </li>
+          <li>
+            <a href="#">04 title</a>
+          </li>
+          <li>
+            <a href="#">05 title</a>
+          </li>
+          <li>
+            <a href="#">06 title</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="overlay"></div>
+
   <!-- landing section -->
   <div id="openingText" class="d-flex align-items-center justify-content-center">
     <!-- start of row 1 -->
@@ -54,7 +115,7 @@
       <div class="col-10 col-md-4 order-2 order-md-1 text-center">
         <div class="text-left">
           <p>Chapter 0</p>
-          <h2>MNIST Demo</h2>
+          <h2>A Taste of AI</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores
             debitis incidunt distinctio omnis ad, tempore recusandae asperiores provident
             dignissimos.</p>
@@ -68,7 +129,7 @@
 
       <!-- col-4 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-        <a href="chapter1.html"><i class="fas fa-caret-right fa-2x"></i></a>
+        <a href="chapter2.html"><i class="fas fa-caret-right fa-2x"></i></a>
       </div>
     </div>
     <!-- end of row 1 -->
@@ -81,44 +142,51 @@
       </div>
       <!-- end of row 2 -->
     </div>
+
   </div>
   <!-- end of landing section -->
 
+
+  <!-- ############################# -->
   <!-- interactive demo section -->
-  <div id="demo" class="d-flex align-items-center justify-content-center">
-    <h1>Handwritten Digit Recognition</h1>
+  <!-- ############################# -->
+  <div id="demo" class="d-flex align-items-center justify-content-around bg-1grey">
+    <!-- start of row 1 -->
+    <div class="row align-items-center justify-content-center">
 
-    <div class="container">
-      <div>
-        <canvas id="can" width="280" height="280" style="top:10%;left:10%;border:2px solid;"></canvas>
+      <div class="col-8 col-md-4 text-center">
+        <div class="text-left p-3">
+          <h2>Handwritten Digit Recognition</h1>
+          <p>Draw a digit in the box below and <br>click the "recognize" button.</p>
+        </div>
       </div>
-      <div>
-        <p>Draw a digit in the box below and click the "recognize" button.</p>
-      </div>
-      <div class="container" style="float:left;">
 
-        <div class="container">
-          <div style="padding-bottom:5px;"><input type="checkbox" id="preprocessing"><span style="margin-left:5px;">Display Preprocessing</span></div>
-          <div style="padding-bottom:5px;"><input type="checkbox" id="scaleStrokeWidth" checked="true"><span style="margin-left:5px;">Scale Stroke Width</span></div>
+      <div class="col-8 col-md-6 text-center">
+        <div class="row align-items-start justify-content-around">
 
-          <!-- buttons -->
-          <div style="float:left;padding-right:10px;"><input type="button" value="clear" id="clr" size="23" onclick="erase()"></div>
-          <div style="float:left;"><input type="button" value="recognize" id="recognize" size="23" onclick="recognize()"></div>
-          <div id="nnInput"></div>
-          <div style="float:left;font-size:200px;margin-left:80px;" id="nnOut"></div>
+          <div class="order-2 order-md-1 col-10 col-md-5">
+            <canvas id="can" width="250px" height="250px"></canvas>
+            <!-- buttons -->
+            <button type="button" id="recognize" onclick="recognize()" class="btn btn-light mt-3">Recognize</button>
+            <button type="button" id="clr" onclick="erase()" class="btn btn-light mt-3">Erase</button>
+            <div id="nnInput"></div>
+          </div>
+
+          <div class="order-1 order-md-2 d-none d-md-block col-10 col-md-5">
+            <div id="nnOut"></div>
+          </div>
+
+          <div class="order-1 d-block d-md-none col-10 col-md-5 mb-4">
+            <div id="nnOut"></div>
+          </div>
+
         </div>
       </div>
 
     </div>
-
-    <div>
-      <p>The network was trained on the <a href="http://yann.lecun.com/exdb/mnist/">MNIST dataset</a> in MATLAB
-        using stochastic gradient descent and an L2 term for weight regularization to counteract overfitting.
-        The recognition error on the test data set is 1.92% (9808/10000 digits classified correctly).</p>
-    </div>
-
+    <!-- end of row -->
   </div>
-    <!-- <script type="text/javascript" src="./Neural Net for Handwritten Digit Recognition in JavaScript_files/jquery.flot.js.download"></script> -->
+  <!-- end of interactive demo section -->
 
     <!-- BEGIN WEIGHTS -->
     <script type="text/javascript">
@@ -8248,24 +8316,24 @@
         // translate to center of mass
         copyCtx.translate(trans.transX, trans.transY);
 
-        if (document.getElementById('scaleStrokeWidth').checked == true) {
-          // redraw the image with a scaled lineWidth first.
-          // not this is a bit buggy; the bounding box we computed above (which contributed to "scaling") is not valid anymore because
-          // the line width has changed. This is mostly a problem for extreme cases (very small digits) where the rescaled digit will
-          // be smaller than the bounding box. I could change this but it'd screw up the code.
-          for (var p = 0; p < paths.length; p++) {
-            for (var i = 0; i < paths[p][0].length - 1; i++) {
-              var x1 = paths[p][0][i];
-              var y1 = paths[p][1][i];
-              var x2 = paths[p][0][i + 1];
-              var y2 = paths[p][1][i + 1];
-              draw(copyCtx, color, lineWidth / scaling, x1, y1, x2, y2);
-            }
+        // if (document.getElementById('scaleStrokeWidth').checked == true) {
+        //   // redraw the image with a scaled lineWidth first.
+        //   // not this is a bit buggy; the bounding box we computed above (which contributed to "scaling") is not valid anymore because
+        //   // the line width has changed. This is mostly a problem for extreme cases (very small digits) where the rescaled digit will
+        //   // be smaller than the bounding box. I could change this but it'd screw up the code.
+        for (var p = 0; p < paths.length; p++) {
+          for (var i = 0; i < paths[p][0].length - 1; i++) {
+            var x1 = paths[p][0][i];
+            var y1 = paths[p][1][i];
+            var x2 = paths[p][0][i + 1];
+            var y2 = paths[p][1][i + 1];
+            draw(copyCtx, color, lineWidth / scaling, x1, y1, x2, y2);
           }
-        } else {
-          // default take image from original canvas
-          copyCtx.drawImage(ctx.canvas, 0, 0);
         }
+        // } else {
+        // default take image from original canvas
+        // copyCtx.drawImage(ctx.canvas, 0, 0);
+        // }
 
 
         // now bin image into 10x10 blocks (giving a 28x28 image)
@@ -8286,23 +8354,23 @@
         }
 
         // for visualization/debugging: paint the input to the neural net.
-        if (document.getElementById('preprocessing').checked == true) {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.drawImage(copyCtx.canvas, 0, 0);
-          for (var y = 0; y < 28; y++) {
-            for (var x = 0; x < 28; x++) {
-              var block = ctx.getImageData(x * 10, y * 10, 10, 10);
-              var newVal = 255 * (0.5 - nnInput[x * 28 + y] / 2);
-              for (var i = 0; i < 4 * 10 * 10; i += 4) {
-                block.data[i] = newVal;
-                block.data[i + 1] = newVal;
-                block.data[i + 2] = newVal;
-                block.data[i + 3] = 255;
-              }
-              ctx.putImageData(block, x * 10, y * 10);
+        // if (document.getElementById('preprocessing').checked == true) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(copyCtx.canvas, 0, 0);
+        for (var y = 0; y < 28; y++) {
+          for (var x = 0; x < 28; x++) {
+            var block = ctx.getImageData(x * 10, y * 10, 10, 10);
+            var newVal = 255 * (0.5 - nnInput[x * 28 + y] / 2);
+            for (var i = 0; i < 4 * 10 * 10; i += 4) {
+              block.data[i] = newVal;
+              block.data[i + 1] = newVal;
+              block.data[i + 2] = newVal;
+              block.data[i + 3] = 255;
             }
+            ctx.putImageData(block, x * 10, y * 10);
           }
         }
+        // }
 
         //for copy & pasting the digit into matlab
         //document.getElementById('nnInput').innerHTML=JSON.stringify(nnInput)+';<br><br><br><br>';
@@ -8369,8 +8437,11 @@
           }
 
           if (e.pageX != undefined && e.pageY != undefined) {
-            currX = e.pageX - canvas.offsetLeft;
-            currY = e.pageY - canvas.offsetTop;
+            let bound = canvas.getBoundingClientRect();
+
+            currX = event.clientX - bound.left - canvas.clientLeft;
+            currY = event.clientY - bound.top - canvas.clientTop;
+
           } else {
             currX = e.clientX + document.body.scrollLeft +
               document.documentElement.scrollLeft -
@@ -8379,6 +8450,7 @@
               document.documentElement.scrollTop -
               canvas.offsetTop;
           }
+
           //draw a circle
           ctx.beginPath();
           ctx.lineWidth = 1;
@@ -8404,8 +8476,10 @@
             prevX = currX;
             prevY = currY;
             if (e.pageX != undefined && e.pageY != undefined) {
-              currX = e.pageX - canvas.offsetLeft;
-              currY = e.pageY - canvas.offsetTop;
+              let bound = canvas.getBoundingClientRect();
+
+              currX = event.clientX - bound.left - canvas.clientLeft;
+              currY = event.clientY - bound.top - canvas.clientTop;
             } else {
               currX = e.clientX + document.body.scrollLeft +
                 document.documentElement.scrollLeft -
