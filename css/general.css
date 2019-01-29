@@ -201,8 +201,18 @@ ul ul a {
   color: #9d9d9d;
 }
 
+p a {
+  color: inherit;
+}
+
+p a:hover{
+  color: #9d9d9d;
+  text-decoration: none;
+}
+
 .highlight {
   /* color: #EBCE26; */
+  cursor: pointer;
 }
 
 /* ----------------------------- Tooltip styling ------------------------------- */

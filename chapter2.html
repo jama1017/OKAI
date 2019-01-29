@@ -162,8 +162,8 @@
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
       <p>To understand how deep learning has progressed, we may first look at its
-        inspiration: the neuron. While exploringThrough answering this question,
-        we may get a glimpse of how artificial intelligence extract valuable
+        inspiration: the <strong>neuron</strong>. While exploring this question,
+        we may get a glimpse of how AI extracts valuable
         sensory experiences from this chaotic world and solidify them into
         algorithms that are “smart”.
       </p>
@@ -174,14 +174,14 @@
     <div class="text right">
       <p>A neuron is the building block of the human brains. Neurons are nervous
         cells that take in some stimuli from other neurons, and when enough stimuli
-        are received, it fires a signal (stimulus) to other connected neurons.
+        are received, it fires a signal [stimulus] to other connected neurons.
       </p>
     </div>
   </div>
 
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
-      <p>Inspired by neurons, computer scientists create perceptrons that take in
+      <p>Inspired by neurons, computer scientists create <strong>perceptrons</strong> that take in
         many stimuli, or inputs, and outputs one value.
         We will go more in-depth about perceptrons in the next chapter.
       </p>
@@ -193,19 +193,24 @@
   <div id="text4" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>It turns out that perceptrons are far from enough to learn complicated concepts.
-        [Explain binary AND gate here] Lorem ipsum dolor sit amet, consectetur adipisicing
-        elit. Dignissimos, nulla.
+         Simpler concepts, such as logical <strong data-toggle="tooltip"
+         title="A and B is True (1) only if both A and B are True (1), otherwise it’s False (0)"
+         class="highlight">AND</strong>,
+         can be learned by a perceptron. The model can find a way to cut a line
+         in the space so that it can correctly produce the result of a logical and,
+         as shown in the animation.
       </p>
     </div>
   </div>
 
   <div id="text5" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>[Change wording transition here] There is a simple logic in math called
-        “xor”, which gives the value false
-        if both of its inputs are the same, and gives the value true if one is true
-        and the other is false. This simple concept, as it turns out, cannot be
-        learned by a single perceptron.
+      <p>More complex concepts, such as <strong data-toggle="tooltip"
+        title="A and B is True (1) if A is different from B, otherwise it’s False(0)"
+        class="highlight">XOR</strong>,
+        cannot be learned by a simple perceptron. This is due to the “non-linearity”
+        of the concept, or in simple terms, we cannot find a straight line to
+        divide the circle in two homogeneous groups.
       </p>
     </div>
   </div>
@@ -215,18 +220,18 @@
   <div id="text6" class="scene bg-3grey topLayer">
     <div class="text right">
       <p>To solve this problem, computer scientists turn to more complicated
-        “simulations” of the brain. A feed-forward neural network is a network
+        “simulations” of the brain. A <strong>Feed-forward Neural Network</strong> is a network
         of perceptrons that are organized into layers. In theory, these simple
-        neural networks, are very capable, and if trained long enough on a good
+        neural networks, if trained long enough on a good
         set of data, can learn everything from classifying images to predicting
-        income
+        income.
       </p>
     </div>
   </div>
 
   <div id="text7" class="scene bg-3grey topLayer">
     <div class="text right">
-      <p>Simple feed-forward neural networks sound very nice, but they have their
+      <p>Simple Feed-forward Neural Networks sound very nice, but they have their
         own problems. Smaller networks bottlenecks quickly on complex problems,
         while larger (deeper) networks need a lot more computation power. This
         time, computer scientists looked at higher level human learning mechanisms for inspirations.
@@ -242,8 +247,8 @@
         One such inspiration is that we humans conceptualize fundamental building
         blocks of things, and combine them to create more complex concepts.
         We recognize a dog as having a nose, two ears, and four legs.
-        This behavior inspired computer scientists to create Convolutional
-        Neural Networks (CNN), which transforms images into
+        This behavior inspired computer scientists to create <strong>Convolutional
+        Neural Networks</strong> (CNN), which transforms images into
         more fundamental constructs, such as basic shapes.
       </p>
     </div>
@@ -252,12 +257,11 @@
   <div id="text9" class="scene threeLayer bg-4grey">
     <div class="text left">
       <p>
-        [Change to talk about how DL performs better]Computer scientists use
-        these ideas of human learning to create deep
-        learning algorithms that attempt to grab hold of concepts that, in
-        traditional machine learning algorithms, are very hard for computers
-        to learn. For example, these new algorithms are widely and successfully
-        used to translate text, recognize speech, and identifying human faces.
+        The power of Deep Learning made traditional some machine learning techniques went out of fashion.
+        With enough data and computation power, Deep Learning is able to achieve
+        a level of performance traditional algorithms could never hope for. With
+         recent developments in computer hardware, and the abundance of data,
+         we are finally able to apply Deep Learning to the <strong>real world</strong>.
     </div>
   </div>
 
@@ -272,21 +276,25 @@
             <p>Now, that you have a general idea of the inspirations behind some
               of the most important concepts in Deep Learning, you are prepared
               to get in to the details of how things work. In the next chapter,
-              we will discuss Perceptrons, the idea that is behind all of deep
-              learning.
+              we will discuss Perceptrons, the idea that is behind all of Deep
+              Learning.
             </p>
 
             <h3><strong>Further Reading</strong></h3>
-            <p>link <br> link <br> link</p>
+            <p><a href="https://towardsdatascience.com/what-the-hell-is-perceptron-626217814f53" target="_blank">
+              What the Hell is Perceptron?</a>
+              <br> link
+              <br> link
+            </p>
           </div>
         </div>
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
             <h3><strong>Glossary</strong></h3>
-            <p><strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, laudantium.<br><br>
-              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br><br>
-              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet.
+            <p><strong>Perceptron</strong>: An algorithm inspired by neurons. Takes in many inputs to generate an output.<br><br>
+              <strong>Feed-forward Neural Networks</strong>: Many perceptrons arranged into layer. Can perform more complex tasks than Perceptrons.<br><br>
+              <strong>Convolutional Neural Networks</strong>: A type of Artificial Neural Networks that is designed to classify images.
             </p>
           </div>
         </div>
@@ -352,6 +360,10 @@
         $('.overlay').addClass('active');
         $('.collapse.in').toggleClass('in');
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      $('[data-toggle="tooltip"]').tooltip({
+        placement: "top"
       });
     });
   </script>
