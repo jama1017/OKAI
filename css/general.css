@@ -224,6 +224,8 @@ p a:hover{
   padding: 10px;
   font-size: 16px;
   font-family: 'Nunito', sans-serif;
+  text-align: left;
+  z-index: 900;
 }
 
 /* Tooltip on top */
