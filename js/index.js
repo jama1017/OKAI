@@ -31,7 +31,7 @@ var openingAnimWindow = select('#openingLottie'),
     prerender: true,
     autoplay: true,
     // path: './json/sushi_fitness.json',
-    path: './json/ch1_opening.json'
+    path: './json/homepage.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
@@ -49,13 +49,13 @@ var openingTL = new TimelineMax();
 function onOpeningDOMLoaded(e) {
   openingTL.to({
     frame: 0
-  }, 1, {
+  }, 10, {
     frame: openingAnim.totalFrames - 1,
     onUpdate: function() {
       openingAnim.goToAndStop(Math.round(this.target.frame), true)
     },
     repeat: -1,
-    yoyo: true,
+    // yoyo: true,
     ease: Linear.easeNone
   })
 }
