@@ -5,12 +5,10 @@
 }
 
 /* --------------------------------- animaiton backgrounds ---------------------- */
-
-#seedBG path{
+#seedBG path {
   fill: #E8E8E8;
 }
 
-
-/* .gooFilterLayer {
+.gooFilterLayer {
   filter: url("#goo")
-} */
+}
