@@ -159,17 +159,16 @@
   <!-- function animation text section -->
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
-      <p>[Change wording for transition] Now that we have a perceptron that can
-        take in some input and spit out a
-        valid output, how can we make the perceptron learn?
-        To understand this, we must first discuss what a perceptron is [abstractly].
+      <p>In the last chapter, we learned that a perceptron can
+        take in some input and spit out a valid output. How can we make the perceptron learn to perform tasks?
+        To understand this, we will first discuss what a perceptron is abstractly.
       </p>
     </div>
   </div>
 
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
-      <p>Perceptrons can be seen as a mathematical function, taking in some inputs,
+      <p>On a high level, a perceptron can be seen as a <strong>mathematical function</strong>, taking in some inputs,
         some weights, a bias, and mixes them up mathematically to generate an output.
       </p>
     </div>
@@ -177,8 +176,9 @@
 
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
-      <p>Since we have no control over the inputs (we can’t change the data we are learning from),
-        we will try to change weights and balances so that the perceptron function
+      <p>Since we have <strong data-toggle="tooltip" class="highlight"
+        title="We can't and shouldn't change the data we are learning from">no control</strong> over the inputs,
+        we will try to change weights and bias so that the perceptron function
         will give out a good output for all of the input we stuff into it.
       </p>
     </div>
@@ -189,9 +189,11 @@
   <div id="text4" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>The core of “teaching” a perceptron is to let it understand how far
-        its actions or predictions are from the ground truth or optimum.
-        To achieve this, we use loss functions to measure the performance of our model.
-        A commonly used loss function for classifying images is called cross entropy.
+        its actions or predictions are from <strong data-toggle="tooltip"
+        class="highlight" title="desired result">the ground truth</strong>.
+        To achieve this, we use <strong>loss functions</strong> to measure the
+        performance of our perceptron. A commonly used loss function is called
+        cross entropy, which is very good at tasks like classifying images.
       </p>
     </div>
   </div>
@@ -199,10 +201,9 @@
   <div id="text5" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>
-        We want the model to be as accurate as possible, so in other words, we want the cross
-        entropy loss to be as close to 0 as possible.
-        In other words, we want our predictions to be as close to reality as possible.
-        To achieve this, the loss of the model would decrease as we train the model over and over again.
+        Here, the cross entropy loss is visualized as the difference between the input (rectangle)
+        and the output (triangle). To <strong>train</strong> the perceptron can be considered as the process of
+        decreasing this difference. Once the loss is decreased to its minimum, the perceptron completes its learning.
       </p>
     </div>
   </div>
@@ -211,8 +212,8 @@
     <div class="text left">
       <p>There are many other loss functions, but all loss functions share a common
         behavior: the further off the prediction is from the ground truth, the
-        bigger the output of the loss function is. This way, we can try to minimize
-        the loss by changing the weights and biases, and the model will gradually
+        bigger the output of the loss function is. This way, we can try to <strong>minimize
+        the loss</strong> by changing the weights and biases, and our perceptron will gradually
         improve until it reaches its capacity.
       </p>
     </div>
@@ -221,12 +222,18 @@
   <!-- gradient animation text section-->
   <div id="text7" class="scene bg-3grey topLayer">
     <div class="text right">
-      <p>[Change this to go with animation more]To minimize loss, we use an
-        optimizer called Gradient Descent, which,
-        you can think of as walking down the loss function until all points around
-        it are bigger or has the same value. . To walk “downward” you would find
-        the steepest direction, and take a step in that direction, until you have
-        slid all the way from high up on a hill to the lowest point in a valley.
+      <p>To minimize loss, we use an <strong data-toggle="tooltip" class="highlight"
+        title="A technique to minimize loss">optimizer</strong> called
+        <strong data-toggle="tooltip" class="highlight" title="In practice,
+        Gradient Descent is quite inefficient, and we use a slightly
+        more complex variant called the Stochastic Gradient Descent, or SGD.">
+        Gradient Descent</strong>.
+
+        The "hill" here depicts the relationship
+        between weights and bias of a perceptron and the loss. The higher upon the hill we are,
+        the greater the loss is.
+        Gradient Descent is a technique that directs us walking “downhill”,
+        where the optimizer finds the steepest way downwards.
       <p>
     </div>
   </div>
@@ -234,11 +241,12 @@
   <div id="text8" class="scene bg-3grey topLayer">
     <div class="text right">
       <p>
-        [Talking more about taking step step down & learning rate and reaching
-        valley]
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim
-        consequatur aspernatur. Recusandae, aliquam corporis commodi consectetur,
-        sunt distinctio! Enim!
+        First, the Gradient Descent optimizer would look at the "hill" in respect
+        to the data, and generates <strong>gradients</strong>, a group of numbers indicating which
+        direction would be the “steepest” way downhill. Then, the optimizer uses a
+        <strong>learning rate</strong> to decide how far to walk before stopping and redetermining
+        the gradients. Through a long repetition of this, we will slip our
+        way down until we reach a minimum loss.
       </p>
     </div>
   </div>
@@ -252,10 +260,10 @@
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left align-self-start">
             <h3><strong>Summary</strong></h3>
-            <p>Now that we know how perceptrons learn, let’s venture into more
-              complex neural network structures. One of the most commonly seen
-              structure is called a “feed-forward” neural network. We will discuss
-              how we can adapt single perceptrons to multi-layered networks.
+            <p>By now, we have learned what it means for the perptron to learn, and
+              how we can train the perptron. Let’s venture into more
+              complex neural network structures. We will discuss how we can adapt
+              single perceptrons to multi-layered networks called Feed-Forward Neural Network.
             </p>
 
             <h3><strong>Further Reading</strong></h3>
@@ -266,9 +274,10 @@
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
             <h3><strong>Glossary</strong></h3>
-            <p><strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, laudantium.<br><br>
-              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br><br>
-              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet.
+            <p>
+              <strong>Loss</strong>: A value that represents how far the output predictions are from the ground truth.<br><br>
+              <strong>Gradient</strong>: A group of numbers indicating which direction would be the “steepest” way to minimize loss (downhill).<br><br>
+              <strong>Gradient Descent</strong>: An optimizer that uses gradients to adjust weights and bias to minimize loss.<br><br>
             </p>
           </div>
         </div>
