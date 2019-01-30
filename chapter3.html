@@ -117,7 +117,7 @@
           <p>Chapter 3</p>
           <h2>The Building Block of Deep Learning</h2>
           <p>A complex algorithm like Deep Learning is built from many individual components.
-          In this chapter, we are taking a look at what consistutes a neural network.</p>
+          In this chapter, we are taking a look at Perceptron, which constitutes a neural network.</p>
         </div>
       </div>
 
@@ -152,7 +152,7 @@
     <div class="text right">
       <p>Early deep learning researchers in the 1970s took inspiration from a
         neuron, the building block of our brain, to create an algorithm called
-        a perceptron.</p>
+        a <strong>perceptron</strong>.</p>
       <p>Therefore, to understand what a perceptron is, let’s first take a look at a neuron. </p>
     </div>
   </div>
@@ -160,43 +160,24 @@
   <div id="nerveText" class="bg-1grey scene">
     <div class="text right">
       <p>A neuron is made up of 3 main parts:</p>
-      <ul>
-        <li>
-          <p>Dendrites: Spread out receivers of the neuron that
-            takes in some stimulus from other neurons.</p>
-        </li>
-        <li>
-          <p>Soma: The “core” of the cell where the nucleus is situated
-            at, and it decides if a signal will be sent to other neurons.</p>
-        </li>
-        <li>
-          <p>Axon: Long extending neck of the neuron that passes
-            a signal to all connected neurons. </p>
-        </li>
-      </ul>
+      <p><strong>Dendrites</strong>: Spread out receivers of the neuron that
+        takes in some stimulus from other neurons.</p>
+      <p><strong>Soma</strong>: The “core” of the cell where the nucleus is situated
+        at, and it decides if a signal will be sent to other neurons.</p>
+      <p><strong>Axon</strong>: Long extending neck of the neuron that passes
+        a signal to all connected neurons. </p>
     </div>
   </div>
 
   <div id="neuron1Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <h3>
-        From Neuron to Perceptron
-      </h3>
-      <hr>
       <p>The perceptron, similarly, also has 3 major parts:</p>
-      <ul>
-        <li>
-          <p>Inputs [Dendrites]: inputs take in values from an arbitrary number
-            of sources and pass it to the perceptron.</p>
-        </li>
-        <li>
-          <p>Perceptron [Soma]: the perceptron algorithm takes in the inputs
-            and assigns a weight to each input. It then calculates the sum of all weight * input), then adds a bias on to of that.</p>
-        </li>
-        <li>
-          <p>
-            Output [Axon]: the output of the perceptron spits out the result of the calculation.
-          </p>
+      <p><strong>Inputs</strong>: inputs take in values from an arbitrary number
+        of sources and pass it to the perceptron.</p>
+      <p><strong>Perceptron</strong>: the perceptron takes in the inputs and conducts some calculations on them.</p>
+      <p>
+        <strong>Output</strong>: the output of the perceptron spits out the result of the calculations.
+      </p>
         </li>
       </ul>
     </div>
@@ -204,11 +185,9 @@
 
   <div id="neuron2Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Between [two neurons], the biological axon-to-dendrite connection is simplified to an <strong>edge</strong>, and
+      <p>Between inputs and perceptrons, the axon-to-dendrite connection is simplified to an <strong>edge</strong>, and
         signals transmitted are represented with <strong>numbers</strong>.
-      </p>
-
-      <p>The input on top is connected to the central neuron with a <strong>thick</strong> edge,
+        <br>The input on top is connected to the central neuron with a <strong>thick</strong> edge,
         thus the signal is amplified by a factor of 2 when it reaches the neuron.
       </p>
 
@@ -220,9 +199,8 @@
       <p>The input at the bottom, however, has a <strong>thinner</strong> connection to the neuron,
         thus the signal is reduced to 2, resulting in a final signal of <strong>2 + 2 = 4</strong> received, instead of
         3 + 2 = 5.
-      </p>
-      <p>
-        The thickness of the edge is called <strong>weight</strong> in machine learning.
+        <br>
+        The thickness of the edge is called <strong>weight</strong>.
       </p>
     </div>
   </div>
@@ -230,8 +208,7 @@
   <div id="neuron4Text" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>Next, the neuron processes the signal by shaking itself. In this case, doing so incremented the signal by 1.
-      </p>
-      <p>
+      <br>
         The “shakiness” of a neuron is called <strong>bias</strong>, which can both increase or decrease the value of the signal by any set amount.
       </p>
     </div>
@@ -239,12 +216,10 @@
 
   <div id="neuron5Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Finally, an <strong>activation function</strong> is used to simulate how "fired" the neuron is.</p>
+      <p>Finally, an <strong>activation function</strong> is used to simulate how "fired" the neuron is. More on this soon!</p>
       <p>
-        <strong>ReLU</strong>, a type of activation functions, is used here. It preserves the signal value if it is 0 or greater.
-      </p>
-      <p>
-        In our case, a positive signal would fully fire the neuron, so the value 5 is preserved and becomes the final output of the neuron.
+        <strong>Sigmoid</strong>, a type of activation functions, is used here. It maps the signal value into the range of 0-1.
+        In our case, 5 is being mapped to 0.99, which becomes the final output.
       </p>
     </div>
   </div>
@@ -264,10 +239,10 @@
         and 2 arms is a human, the probability the model gives back would often
         be <strong>above 100% or below 0%</strong>.
       </p>
-      <p>
+      <!-- <p>
         Intuitively, this isn’t possible, but to the machine, it is just trying
         to estimate a number, and it does not know if that number is meaningful.
-      </p>
+      </p> -->
     </div>
   </div>
 
@@ -276,12 +251,8 @@
       <p>
         To tackle such problems, the researchers put an <strong>activation function</strong>
         behind the output of the perceptron, which can control the output range of that perceptron.
-      </p>
-      <p>
-        For example, <strong>ReLu</strong> and <strong>Sigmoid</strong> are
-        functions that are commonly used. These functions allow the perceptron
-        to limit its output to a specific range so that it would not spit out
-        invalid outputs.
+        <strong>ReLu</strong> and <strong>Sigmoid</strong> are examples of activation
+        functions that are commonly used.
       </p>
     </div>
   </div>
@@ -289,12 +260,11 @@
   <div id="appanana3Text" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        <strong>ReLu</strong>, which we have already seen, makes the final output value non-negative.
-        It preserves the value of the output as long as it is greater than 0.
-        If the output is equal to or below 0, it would simply output 0. This
-        function is by far <strong>the most popular</strong> activation function, and you can
-        find it being used in areas like <strong>Computer Vision</strong> and
-        <strong>Speech Recognition</strong>.
+        <strong>Sigmoid</strong> calculates the probability of two things, for example, if you
+        want to classify if an image is a cat or isn’t a cat (this is called
+        <strong>binary classification</strong>), you would want to use a
+        sigmoid activation function, which transforms
+        the output value into a probability (a number between 0 and 1).
       </p>
     </div>
   </div>
@@ -302,11 +272,13 @@
   <div id="appanana4Text" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        <strong>Sigmoid</strong> calculates the probability of two things, for example, if you
-        want to classify if an image is a cat or isn’t a cat (this is called
-        <strong>binary classification</strong>), you would want to use a
-        sigmoid activation function, which transforms
-        the output value into a probability (a number between 0 and 1).
+        <strong>ReLu</strong> makes sure that the <strong data-toggle="tooltip" class="highlight"
+        title="It preserves the value of the output as long as it is greater than 0.
+        If the output is equal to or below 0, it simply output 0.">final output is non-negative</strong>.
+        ReLU is commonly used in multilayer networks.
+        Unlike sigmoid, whose main purpose is to limit output range, ReLU is used
+        to break linearity so that multilayer networks can learn more complex concepts.
+        We will talk about this more in depth in Chapter 5.
       </p>
     </div>
   </div>
@@ -319,7 +291,8 @@
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left align-self-start">
             <h3><strong>Summary</strong></h3>
-            <p>Now that we know what a perceptron is made of, in the next chapter,
+            <p>Up to this point, we have looked at how neurons inspired the perceptron algorithm,
+              and what are the components of a perceptron. In the next chapter,
               we will discuss how data can be used to teach perceptrons and other more complex neural networks.
             </p>
 
@@ -331,9 +304,11 @@
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
             <h3><strong>Glossary</strong></h3>
-            <p><strong>Perceptron</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, laudantium.<br><br>
-              <strong>Bias</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br><br>
-              <strong>Weight</strong>: Lorem ipsum dolor sit amet.
+            <p>
+              <strong>Perceptron</strong>: A neuron-inspired algorithm that is the building block of more complex neural networks.<br><br>
+              <strong>Weight</strong>: A numeric value associated with an edge. It can either amplify or reduce signals.<br><br>
+              <strong>Bias</strong>: A numeric value being added onto the weighted sum of all input signals.<br><br>
+              <strong>Activation Function</strong>: a function that is used to control the final output of a perceptron.
             </p>
           </div>
         </div>
@@ -457,35 +432,80 @@
         </g>
 
         <g class="num">
-          <path id="numOut5" d="M437.6,298c1.1,0.7,2,1.5,2.7,2.7c0.7,1.1,1,2.4,1,3.8c0,1.4-0.4,2.8-1.2,4c-0.8,1.2-1.9,2.2-3.2,2.9
-            c-1.3,0.7-2.8,1.1-4.4,1.1c-0.8,0-1.7-0.1-2.6-0.4c-0.9-0.3-1.6-0.6-2.2-1.1c-0.3-0.2-0.5-0.5-0.6-0.9c-0.2-0.4-0.3-0.7-0.3-1.1
-            c0-0.4,0.2-0.7,0.5-1c0.3-0.3,0.8-0.5,1.3-0.5c0.4,0,0.9,0.2,1.4,0.6c0.9,0.6,1.7,0.8,2.4,0.8c0.9,0,1.7-0.2,2.5-0.6
-            c0.8-0.4,1.4-0.9,1.8-1.6c0.5-0.7,0.7-1.4,0.7-2.2c0-1.2-0.4-2.1-1.2-2.8c-0.8-0.7-1.7-1.1-2.8-1.1c-0.5,0-0.9,0.1-1.3,0.2
-            s-0.8,0.3-1.4,0.6c-0.4,0.2-0.7,0.3-0.9,0.4c-0.2,0.1-0.5,0.1-0.7,0.1c-0.8,0-1.4-0.2-1.8-0.7c-0.4-0.4-0.5-1-0.5-1.6
-            c0-0.2,0-0.4,0-0.4l1-7.9c0.1-0.4,0.3-0.8,0.7-1.1c0.4-0.3,0.8-0.4,1.3-0.4h9.2c0.5,0,0.9,0.2,1.3,0.5c0.3,0.3,0.5,0.8,0.5,1.3
-            c0,0.5-0.2,0.9-0.5,1.2c-0.3,0.3-0.8,0.5-1.3,0.5H431l-0.6,4.6c0.4-0.2,0.9-0.4,1.5-0.6c0.6-0.1,1.2-0.2,1.8-0.2
-            C435.1,297,436.4,297.3,437.6,298z" />
+          <g id="numOut5">
+          	<path d="M418.8,309.5c-0.26-0.26-0.39-0.63-0.39-1.11v-0.43c0-0.48,0.13-0.85,0.39-1.11c0.26-0.26,0.63-0.39,1.11-0.39h0.33
+          		c0.48,0,0.85,0.13,1.11,0.39c0.26,0.26,0.39,0.63,0.39,1.11v0.43c0,0.48-0.13,0.85-0.39,1.11c-0.26,0.26-0.63,0.39-1.11,0.39h-0.33
+          		C419.43,309.89,419.06,309.76,418.8,309.5z"/>
+          	<path d="M433.09,293.05c0.9,0.64,1.59,1.48,2.07,2.52s0.73,2.15,0.73,3.34c0,1.22-0.21,2.55-0.64,4.01s-1.2,2.84-2.33,4.14
+          		c-1.13,1.3-2.65,2.23-4.59,2.77c-0.2,0.05-0.39,0.08-0.58,0.08c-0.43,0-0.79-0.11-1.08-0.34s-0.42-0.58-0.42-1.06
+          		c0-0.37,0.12-0.69,0.36-0.96c0.24-0.28,0.56-0.47,0.96-0.59c1.05-0.3,2.02-0.83,2.91-1.6s1.55-1.68,1.96-2.75
+          		c-0.83,0.72-1.78,1.07-2.85,1.07c-0.87,0-1.72-0.26-2.56-0.79c-0.84-0.52-1.53-1.23-2.06-2.13c-0.53-0.89-0.8-1.85-0.8-2.89
+          		c0-1.05,0.26-2.02,0.79-2.91c0.53-0.89,1.23-1.6,2.11-2.11c0.88-0.52,1.86-0.78,2.92-0.78
+          		C431.16,292.09,432.19,292.41,433.09,293.05z M432.02,300.06c0.54-0.58,0.81-1.31,0.81-2.17s-0.27-1.59-0.81-2.18
+          		c-0.54-0.58-1.21-0.88-2.01-0.88c-0.78,0-1.45,0.29-2,0.88c-0.55,0.58-0.83,1.31-0.83,2.18s0.28,1.59,0.83,2.17
+          		c0.55,0.58,1.22,0.88,2,0.88C430.81,300.94,431.48,300.65,432.02,300.06z"/>
+          	<path d="M446.79,293.05c0.9,0.64,1.59,1.48,2.07,2.52s0.73,2.15,0.73,3.34c0,1.22-0.21,2.55-0.64,4.01s-1.2,2.84-2.33,4.14
+          		c-1.13,1.3-2.65,2.23-4.59,2.77c-0.2,0.05-0.39,0.08-0.58,0.08c-0.43,0-0.79-0.11-1.08-0.34s-0.42-0.58-0.42-1.06
+          		c0-0.37,0.12-0.69,0.36-0.96c0.24-0.28,0.56-0.47,0.96-0.59c1.05-0.3,2.02-0.83,2.91-1.6s1.55-1.68,1.96-2.75
+          		c-0.83,0.72-1.78,1.07-2.85,1.07c-0.87,0-1.72-0.26-2.56-0.79c-0.84-0.52-1.53-1.23-2.06-2.13c-0.53-0.89-0.8-1.85-0.8-2.89
+          		c0-1.05,0.26-2.02,0.79-2.91c0.53-0.89,1.23-1.6,2.11-2.11c0.88-0.52,1.86-0.78,2.92-0.78
+          		C444.86,292.09,445.89,292.41,446.79,293.05z M445.73,300.06c0.54-0.58,0.81-1.31,0.81-2.17s-0.27-1.59-0.81-2.18
+          		c-0.54-0.58-1.21-0.88-2.01-0.88c-0.78,0-1.45,0.29-2,0.88c-0.55,0.58-0.83,1.31-0.83,2.18s0.28,1.59,0.83,2.17
+          		c0.55,0.58,1.22,0.88,2,0.88C444.51,300.94,445.18,300.65,445.73,300.06z"/>
+          </g>
         </g>
 
         <g id="ReLU">
-          <path d="M359.7,301v3.7H358v-9.4h2.9c0.6,0,1.2,0.1,1.6,0.2c0.5,0.1,0.8,0.3,1.1,0.6c0.3,0.2,0.5,0.5,0.6,0.9
-        		c0.1,0.3,0.2,0.7,0.2,1.1c0,0.3,0,0.6-0.1,0.9c-0.1,0.3-0.2,0.5-0.4,0.8c-0.2,0.2-0.4,0.4-0.6,0.6c-0.3,0.2-0.6,0.3-0.9,0.4
-        		c0.2,0.1,0.4,0.3,0.6,0.5l2.4,3.5h-1.6c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.2-0.1-0.3-0.3l-2-3c-0.1-0.1-0.2-0.2-0.2-0.2
-        		c-0.1,0-0.2-0.1-0.4-0.1H359.7z M359.7,299.7h1.1c0.3,0,0.6,0,0.9-0.1c0.2-0.1,0.4-0.2,0.6-0.3c0.2-0.1,0.3-0.3,0.4-0.5
-        		c0.1-0.2,0.1-0.4,0.1-0.7c0-0.5-0.2-0.8-0.5-1.1c-0.3-0.3-0.8-0.4-1.4-0.4h-1.1V299.7z" />
-          <path d="M369.5,297.9c0.4,0,0.8,0.1,1.2,0.2c0.4,0.1,0.7,0.3,0.9,0.6c0.3,0.3,0.5,0.6,0.6,0.9s0.2,0.8,0.2,1.3
-        		c0,0.1,0,0.2,0,0.3c0,0.1,0,0.1-0.1,0.2c0,0-0.1,0.1-0.1,0.1s-0.1,0-0.2,0h-4.1c0,0.7,0.2,1.2,0.6,1.5c0.3,0.3,0.7,0.5,1.3,0.5
-        		c0.3,0,0.5,0,0.7-0.1c0.2-0.1,0.4-0.1,0.5-0.2s0.3-0.1,0.4-0.2c0.1-0.1,0.2-0.1,0.3-0.1c0.1,0,0.1,0,0.2,0c0,0,0.1,0.1,0.1,0.1
-        		l0.5,0.6c-0.2,0.2-0.4,0.4-0.6,0.5c-0.2,0.1-0.5,0.3-0.7,0.3c-0.2,0.1-0.5,0.1-0.7,0.2c-0.2,0-0.5,0.1-0.7,0.1
-        		c-0.5,0-0.9-0.1-1.3-0.2c-0.4-0.2-0.7-0.4-1-0.7c-0.3-0.3-0.5-0.7-0.7-1.1c-0.2-0.4-0.3-1-0.3-1.5c0-0.5,0.1-0.9,0.2-1.3
-        		c0.1-0.4,0.4-0.8,0.6-1c0.3-0.3,0.6-0.5,1-0.7C368.6,298,369,297.9,369.5,297.9z M369.6,299c-0.5,0-0.8,0.1-1.1,0.4
-        		c-0.3,0.3-0.4,0.6-0.5,1.1h3c0-0.2,0-0.4-0.1-0.6c-0.1-0.2-0.1-0.3-0.3-0.5c-0.1-0.1-0.3-0.2-0.4-0.3
-        		C370,299.1,369.8,299,369.6,299z" />
-          <path d="M375.9,303.2h3.8v1.4h-5.5v-9.4h1.7V303.2z" />
-          <path d="M385.1,303.2c0.3,0,0.6-0.1,0.9-0.2s0.5-0.3,0.7-0.5c0.2-0.2,0.3-0.5,0.4-0.7c0.1-0.3,0.1-0.6,0.1-1v-5.6h1.7
-        		v5.6c0,0.6-0.1,1.1-0.3,1.6s-0.4,0.9-0.8,1.2c-0.3,0.3-0.7,0.6-1.2,0.8c-0.5,0.2-1,0.3-1.6,0.3c-0.6,0-1.1-0.1-1.6-0.3
-        		c-0.5-0.2-0.9-0.5-1.2-0.8c-0.3-0.3-0.6-0.8-0.8-1.2c-0.2-0.5-0.3-1-0.3-1.6v-5.6h1.7v5.6c0,0.4,0,0.7,0.1,1
-        		c0.1,0.3,0.2,0.5,0.4,0.7c0.2,0.2,0.4,0.4,0.7,0.5C384.5,303.2,384.8,303.2,385.1,303.2z" />
+        	<path class="st0" d="M354.65,302.81c-0.5-0.15-0.91-0.35-1.23-0.61c-0.17-0.13-0.25-0.3-0.25-0.53c0-0.15,0.04-0.29,0.14-0.4
+        		s0.2-0.17,0.33-0.17c0.13,0,0.28,0.05,0.45,0.15c0.32,0.23,0.65,0.39,0.99,0.5s0.73,0.15,1.14,0.15c0.54,0,0.95-0.09,1.23-0.28
+        		s0.43-0.46,0.43-0.82c0-0.28-0.13-0.49-0.4-0.64s-0.71-0.3-1.34-0.43c-0.65-0.14-1.17-0.3-1.57-0.48c-0.4-0.18-0.71-0.42-0.91-0.7
+        		s-0.31-0.65-0.31-1.09c0-0.46,0.13-0.86,0.38-1.22s0.61-0.64,1.07-0.84s0.97-0.3,1.55-0.3c1.05,0,1.9,0.28,2.56,0.84
+        		c0.1,0.08,0.16,0.16,0.2,0.24c0.04,0.08,0.06,0.17,0.06,0.29c0,0.15-0.05,0.29-0.14,0.4s-0.2,0.17-0.32,0.17
+        		c-0.07,0-0.14-0.01-0.2-0.03s-0.14-0.06-0.25-0.12c-0.3-0.22-0.59-0.38-0.88-0.49c-0.28-0.11-0.63-0.16-1.04-0.16
+        		c-0.5,0-0.89,0.1-1.18,0.3s-0.43,0.48-0.43,0.84c0,0.3,0.13,0.53,0.38,0.69c0.26,0.16,0.69,0.31,1.31,0.45
+        		c0.65,0.15,1.18,0.31,1.59,0.49c0.41,0.18,0.72,0.41,0.94,0.69c0.22,0.28,0.32,0.63,0.32,1.04c0,0.45-0.13,0.86-0.38,1.2
+        		c-0.25,0.35-0.61,0.62-1.07,0.81c-0.46,0.19-0.98,0.29-1.58,0.29C355.69,303.03,355.15,302.96,354.65,302.81z"/>
+        	<path class="st0" d="M360.55,296.26c-0.15-0.14-0.22-0.31-0.22-0.53c0-0.22,0.07-0.4,0.22-0.53c0.15-0.13,0.34-0.2,0.59-0.2
+        		c0.24,0,0.44,0.07,0.59,0.2c0.15,0.13,0.23,0.31,0.23,0.53c0,0.22-0.07,0.4-0.22,0.53c-0.15,0.14-0.34,0.2-0.59,0.2
+        		C360.9,296.46,360.7,296.4,360.55,296.26z M360.66,302.83c-0.13-0.11-0.19-0.28-0.19-0.49v-4.25c0-0.21,0.06-0.37,0.19-0.48
+        		c0.13-0.11,0.29-0.16,0.49-0.16c0.2,0,0.36,0.05,0.49,0.16c0.13,0.11,0.2,0.27,0.2,0.48v4.25c0,0.21-0.07,0.38-0.2,0.49
+        		c-0.13,0.11-0.3,0.17-0.49,0.17C360.95,303,360.79,302.94,360.66,302.83z"/>
+        	<path class="st0" d="M368.31,297.62c0.13,0.12,0.19,0.27,0.19,0.47v4.34c0,0.84-0.24,1.48-0.7,1.91c-0.47,0.43-1.16,0.65-2.08,0.65
+        		c-0.8,0-1.47-0.15-2-0.45c-0.27-0.16-0.41-0.36-0.41-0.58c0-0.16,0.04-0.29,0.12-0.39c0.08-0.1,0.18-0.14,0.3-0.14
+        		c0.07,0,0.15,0.02,0.24,0.05c0.1,0.03,0.19,0.07,0.3,0.12c0.26,0.11,0.5,0.19,0.71,0.25s0.45,0.09,0.72,0.09
+        		c0.96,0,1.44-0.47,1.44-1.41v-0.7c-0.16,0.3-0.4,0.53-0.7,0.7c-0.31,0.17-0.66,0.25-1.06,0.25c-0.47,0-0.89-0.11-1.25-0.34
+        		c-0.36-0.22-0.65-0.54-0.85-0.94c-0.21-0.4-0.31-0.87-0.31-1.4c0-0.53,0.1-1,0.3-1.4c0.2-0.41,0.49-0.72,0.85-0.95
+        		c0.37-0.22,0.78-0.34,1.25-0.34c0.4,0,0.75,0.08,1.06,0.25c0.31,0.17,0.54,0.4,0.7,0.7v-0.29c0-0.19,0.06-0.34,0.19-0.46
+        		c0.12-0.12,0.29-0.18,0.49-0.18C368.02,297.44,368.18,297.5,368.31,297.62z M366.76,301.28c0.25-0.29,0.37-0.68,0.37-1.18
+        		c0-0.51-0.12-0.9-0.37-1.19c-0.25-0.29-0.59-0.43-1.03-0.43c-0.43,0-0.77,0.14-1.02,0.43c-0.25,0.29-0.37,0.68-0.37,1.19
+        		c0,0.5,0.13,0.89,0.37,1.18s0.59,0.43,1.02,0.43C366.17,301.71,366.52,301.57,366.76,301.28z"/>
+        	<path class="st0" d="M377.65,297.94c0.31,0.35,0.47,0.91,0.47,1.69v2.71c0,0.21-0.06,0.38-0.19,0.49s-0.29,0.17-0.5,0.17
+        		c-0.2,0-0.36-0.06-0.49-0.17c-0.13-0.11-0.19-0.28-0.19-0.49v-2.71c0-0.4-0.07-0.69-0.21-0.86c-0.14-0.17-0.36-0.26-0.65-0.26
+        		c-0.36,0-0.65,0.12-0.86,0.37c-0.21,0.25-0.32,0.58-0.32,1.01v2.45c0,0.21-0.06,0.38-0.19,0.49c-0.13,0.11-0.29,0.17-0.49,0.17
+        		c-0.2,0-0.36-0.06-0.5-0.17s-0.2-0.28-0.2-0.49v-2.71c0-0.4-0.07-0.69-0.21-0.86c-0.14-0.17-0.36-0.26-0.65-0.26
+        		c-0.36,0-0.64,0.12-0.85,0.37c-0.21,0.25-0.31,0.58-0.31,1.01v2.45c0,0.21-0.07,0.38-0.2,0.49c-0.13,0.11-0.3,0.17-0.49,0.17
+        		c-0.2,0-0.36-0.06-0.49-0.17c-0.13-0.11-0.19-0.28-0.19-0.49v-4.26c0-0.21,0.07-0.36,0.2-0.47c0.13-0.11,0.3-0.16,0.5-0.16
+        		c0.19,0,0.35,0.05,0.47,0.16c0.12,0.11,0.18,0.26,0.18,0.46v0.26c0.17-0.29,0.39-0.52,0.68-0.67c0.28-0.15,0.61-0.23,0.97-0.23
+        		c0.81,0,1.35,0.34,1.62,1.01c0.16-0.31,0.4-0.55,0.71-0.74c0.32-0.18,0.67-0.28,1.07-0.28
+        		C376.89,297.42,377.34,297.59,377.65,297.94z"/>
+        	<path class="st0" d="M380.52,302.68c-0.42-0.23-0.74-0.55-0.96-0.98s-0.34-0.92-0.34-1.48c0-0.56,0.11-1.06,0.34-1.48
+        		c0.23-0.42,0.55-0.75,0.96-0.97c0.41-0.23,0.9-0.34,1.45-0.34s1.03,0.11,1.45,0.34s0.73,0.55,0.96,0.97
+        		c0.22,0.42,0.34,0.91,0.34,1.48c0,0.56-0.11,1.06-0.34,1.48s-0.54,0.75-0.96,0.98c-0.41,0.23-0.9,0.34-1.45,0.34
+        		S380.94,302.91,380.52,302.68z M382.98,301.51c0.24-0.29,0.35-0.73,0.35-1.3c0-0.56-0.12-1-0.35-1.29
+        		c-0.23-0.3-0.57-0.45-1.01-0.45s-0.78,0.15-1.02,0.45c-0.24,0.3-0.36,0.73-0.36,1.29c0,0.57,0.12,1,0.35,1.3
+        		c0.24,0.29,0.57,0.44,1.01,0.44C382.41,301.95,382.75,301.81,382.98,301.51z"/>
+        	<path class="st0" d="M385.93,296.26c-0.15-0.14-0.22-0.31-0.22-0.53c0-0.22,0.07-0.4,0.22-0.53c0.15-0.13,0.34-0.2,0.59-0.2
+        		c0.24,0,0.44,0.07,0.59,0.2c0.15,0.13,0.23,0.31,0.23,0.53c0,0.22-0.07,0.4-0.22,0.53c-0.15,0.14-0.34,0.2-0.59,0.2
+        		C386.27,296.46,386.08,296.4,385.93,296.26z M386.03,302.83c-0.13-0.11-0.19-0.28-0.19-0.49v-4.25c0-0.21,0.06-0.37,0.19-0.48
+        		c0.13-0.11,0.29-0.16,0.49-0.16c0.2,0,0.36,0.05,0.49,0.16c0.13,0.11,0.2,0.27,0.2,0.48v4.25c0,0.21-0.07,0.38-0.2,0.49
+        		c-0.13,0.11-0.3,0.17-0.49,0.17C386.33,303,386.16,302.94,386.03,302.83z"/>
+        	<path class="st0" d="M393.63,295.3c0.13,0.12,0.2,0.27,0.2,0.46v6.58c0,0.2-0.06,0.36-0.19,0.47c-0.12,0.12-0.29,0.18-0.5,0.18
+        		c-0.21,0-0.37-0.06-0.49-0.18c-0.13-0.12-0.19-0.27-0.19-0.47v-0.27c-0.16,0.3-0.39,0.54-0.7,0.7c-0.3,0.17-0.65,0.25-1.04,0.25
+        		c-0.46,0-0.87-0.12-1.24-0.35c-0.36-0.23-0.65-0.57-0.85-1c-0.2-0.43-0.3-0.92-0.3-1.48c0-0.56,0.1-1.05,0.3-1.46
+        		c0.2-0.42,0.48-0.74,0.84-0.97s0.77-0.34,1.24-0.34c0.39,0,0.73,0.08,1.03,0.24c0.3,0.16,0.53,0.39,0.69,0.68v-2.61
+        		c0-0.18,0.06-0.33,0.18-0.45c0.12-0.11,0.28-0.17,0.49-0.17S393.5,295.18,393.63,295.3z M392.11,301.5
+        		c0.24-0.3,0.36-0.73,0.36-1.29c0-0.56-0.12-0.98-0.36-1.28s-0.57-0.45-1.01-0.45c-0.44,0-0.78,0.15-1.02,0.44s-0.36,0.71-0.36,1.27
+        		c0,0.56,0.12,0.99,0.36,1.3s0.58,0.46,1.01,0.46C391.53,301.95,391.87,301.8,392.11,301.5z"/>
         </g>
     </svg>
 
