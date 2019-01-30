@@ -150,7 +150,7 @@ function onNeuralDOMLoaded(e) {
   neuronTL.to({
     frame: 9
   }, 3, {
-    frame: 88,
+    frame: 60,
     onUpdate: function() {
       neuralAnim.goToAndStop(Math.round(this.target.frame), true)
     },
@@ -158,7 +158,7 @@ function onNeuralDOMLoaded(e) {
   })
 
   perceptronTL.to({
-    frame: 88
+    frame: 60
   }, 3, {
     frame: neuralAnim.totalFrames - 1,
     onUpdate: function() {
@@ -295,9 +295,9 @@ let openingAnimScene = new ScrollMagic.Scene({
 //--------- neural Animations -------------
 //-------------------------------------------------
 let brainScene = new ScrollMagic.Scene({
-  triggerElement: "#text1",
-  duration: '100%'
-})
+    triggerElement: "#text1",
+    duration: '100%'
+  })
   .setTween(brainTL)
   .addTo(controller);
 
