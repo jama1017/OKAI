@@ -160,25 +160,26 @@
   <!-- fnn animation text section -->
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
-      <p>You may have noticed, to this point, we have only discussed models with a
+      <p>To this point, we have only discussed networks with a
         single perceptron. These perceptron algorithms are not particularly powerful,
-        as they are slow to learn, and cannot learn complex concepts. To learn more complex
-        concepts, we need to stack perceptrons together so that they can form a more complex model.
+        as they are slow to learn, and cannot learn complex concepts. To improve them,
+        we need to <strong>stack perceptrons together</strong> so that they can form a more complex model.
       </p>
     </div>
   </div>
 
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
-      <p>In a graph of a network, the first layer is known as the input layer,
-        and all the layers in the middle are called hidden layers.
+      <p>When we use multiple perceptrons to form Feed-forward Neural Networks (FNN), instead of
+        just having several input nodes, we now have an input layer. The layers that comes after
+        this first layer, excluding the last layer, are called <strong>hidden layers</strong>.
       </p>
     </div>
   </div>
 
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
-      <p>The last layer is called an output layer.  We say that a network has
+      <p>The last layer is called an <strong>output layer</strong>. We say that a network has
         n layers when there are n layers that perform calculations, that is,
         there are n-1 hidden layers and 1 output layer. </p>
     </div>
@@ -188,31 +189,33 @@
   <!-- temp animation text section -->
   <div id="text4" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>[Work on transition language ]Let’s say we want to predict the temperature
-        of the next day given the temperature of the previous day.
-        [Explain max and min temp range]
+      <p>As an exmample, let’s say we want to predict the temperature
+        range of tomorrow, meaning that we would like to use an already trained FNN to predict the
+        max and min temperatures.
+        </thead>
       </p>
     </div>
   </div>
 
   <div id="text5" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>[+ Given the temp range of today as input]This network is a simple
-        two-layer perceptron network where the 2 inputs
+      <p>We will use the max and min temperature of today to use as inputs. The network
+        that we are using is a simple two-layer perceptron network that takes in two inputs.
       </p>
     </div>
   </div>
 
   <div id="text6" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>are split into 4 perceptrons in the first layer, and then the outputs
-      of the first layer is is fed into the 2 perceptrons in the second layer.</p>
+      <p>These two inputs in the input layer are then are split into 4 perceptrons in
+        the hiddent layer, and then the outputs of the hidden layer is is fed into
+        the 2 perceptrons in the output layer.</p>
     </div>
   </div>
 
   <div id="text7" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>In this structure, all of the nodes in the first layer has a ReLU
+      <p>In this structure, all of the nodes in the hidden layer has a ReLU
         activation function, while the second is a linear layer
         (Meaning that it has no activation function). So why do we need activation
         functions when we don’t need to control the range of output? And what
