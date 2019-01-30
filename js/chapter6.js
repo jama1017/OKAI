@@ -207,6 +207,7 @@ function onMnistDOMLoaded(e) {
 
 // --------mnistOutput TLs-------------
 var tenTL = new TimelineMax();
+var probTL = new TimelineMax();
 var classTL = new TimelineMax();
 
 function onMnistOutputDOMLoaded(e) {
@@ -220,8 +221,18 @@ function onMnistOutputDOMLoaded(e) {
     ease: Linear.easeNone
   })
 
-  classTL.to({
+  probTL.to({
     frame: 61
+  }, 3, {
+    frame: 100,
+    onUpdate: function() {
+      mnistOutputAnim.goToAndStop(Math.round(this.target.frame), true)
+    },
+    ease: Linear.easeNone
+  })
+
+  classTL.to({
+    frame: 100
   }, 3, {
     frame: mnistOutputAnim.totalFrames - 1,
     onUpdate: function() {
@@ -414,8 +425,15 @@ let tenScene = new ScrollMagic.Scene({
   })
   .addTo(controller);
 
-let classScene = new ScrollMagic.Scene({
+let probScene = new ScrollMagic.Scene({
     triggerElement: "#text7",
+    duration: '100%'
+  })
+  .setTween(probTL)
+  .addTo(controller);
+
+let classScene = new ScrollMagic.Scene({
+    triggerElement: "#text8",
     duration: '100%'
   })
   .setTween(classTL)
@@ -425,7 +443,7 @@ let classScene = new ScrollMagic.Scene({
 //----------- prop ANIMATIONS ---------------
 //-------------------------------------------------
 let forScene = new ScrollMagic.Scene({
-    triggerElement: "#text8",
+    triggerElement: "#text9",
     duration: '100%'
   })
   .setTween(forTL)
@@ -442,7 +460,7 @@ let forScene = new ScrollMagic.Scene({
   .addTo(controller);
 
 let backScene = new ScrollMagic.Scene({
-    triggerElement: "#text9",
+    triggerElement: "#text10",
     duration: '100%'
   })
   .setTween(backTL)
@@ -453,7 +471,7 @@ let backScene = new ScrollMagic.Scene({
 //----------- repeat ANIMATIONS ---------------
 //-------------------------------------------------
 let clusterScene = new ScrollMagic.Scene({
-    triggerElement: "#text10",
+    triggerElement: "#text11",
     duration: '100%'
   })
   .setTween(clusterTL)
@@ -470,14 +488,14 @@ let clusterScene = new ScrollMagic.Scene({
   .addTo(controller);
 
 let gradientScene = new ScrollMagic.Scene({
-    triggerElement: "#text11",
+    triggerElement: "#text12",
     duration: '100%'
   })
   .setTween(gradientTL)
   .addTo(controller);
 
 let overScene = new ScrollMagic.Scene({
-    triggerElement: "#text12",
+    triggerElement: "#text13",
     duration: '100%'
   })
   .setTween(overTL)
@@ -487,7 +505,7 @@ let overScene = new ScrollMagic.Scene({
 //----------- WORDS ANIMATIONS ---------------
 //-------------------------------------------------
 let codingScene = new ScrollMagic.Scene({
-    triggerElement: "#text13",
+    triggerElement: "#text14",
     duration: '100%'
   })
   .setTween(codingTL)
