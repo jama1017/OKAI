@@ -1,0 +1,16 @@
+#start {
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+/* --------------------------------- animaiton backgrounds ---------------------- */
+
+#seedBG path{
+  fill: #E8E8E8;
+}
+
+
+/* .gooFilterLayer {
+  filter: url("#goo")
+} */
