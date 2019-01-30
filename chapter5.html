@@ -209,16 +209,18 @@
     <div class="text left">
       <p>These two inputs in the input layer are then are split into 4 perceptrons in
         the hiddent layer, and then the outputs of the hidden layer is is fed into
-        the 2 perceptrons in the output layer.</p>
+        the 2 perceptrons in the output layer, which generates the max and min temperature
+        of tomorrow.</p>
     </div>
   </div>
 
   <div id="text7" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>In this structure, all of the nodes in the hidden layer has a ReLU
-        activation function, while the second is a linear layer
-        (Meaning that it has no activation function). So why do we need activation
-        functions when we don’t need to control the range of output? And what
+      <p>In this network, all of the <strong data-toggle="tooltip" class="highlight"
+        title="Refer to perceptrons">nodes</strong> in the hidden layer has a ReLU
+        activation function, while the second is a <strong data-toggle="tooltip"
+        class="highlight" title="Meaning that it has no activation function">linear layer</strong>.
+        But why do we need activation functions when we don’t need to control the range of output here? And what
         exactly is a ReLU function?
       <p>
     </div>
@@ -227,16 +229,15 @@
   <div id="text8" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>
-        It turns out, that if we have consecutive linear layers, the network will
-        behave exactly the same as a network with a single linear layer.
+        It turns out that, if we have consecutive linear layers, the network will
+        behave exactly the same as a network with <strong data-toggle="tooltip"
+        class="highlight" title="Recall the AND and XOR example in Chapter 2">a single linear layer</strong>.
         To make the extra layer count, we need to introduce non-linearity.
-        If you are interested in the mathematical reason behind this, this is
-        a good artical to read.
 
-        One of the most popular activation functions to break linearity is ReLU.
-        ReLU stands for rectified Linear Unit, and maintains the value if the
-        input is bigger than 0, and if the input is negative, it forces everything
-        to be zero. In other words, it takes the maximum of 0 and the input.
+        One of the most popular choices to break linearity is <strong data-toggle="tooltip"
+        class="highlight" title="ReLU stands for Rectified Linear Unit">ReLU</strong>,
+        it maintains the value if the input is bigger than 0, and if the input is negative,
+        it forces everything to be zero.
       </p>
     </div>
   </div>
@@ -247,8 +248,8 @@
     <div class="text right">
       <p>
         With these activation functions, we can stack more layers together so
-        they can learn to perform more complex tasks, for example recognizing
-        numbers as showcased in the introduction.
+        they can learn to perform more complex tasks, such as <strong>recognizing
+        handwritten digits</strong> as showcased in Chapter 0.
       </p>
     </div>
   </div>
@@ -256,9 +257,9 @@
   <div id="text10" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        [Change wording] Now that we understood the basics of how neural networks work, we can get
+        Now that we have understood the basics of how feed-forward neural networks work, we can get
         our hands a little dirty and look at how we can train a model to classify
-        human-written numbers.
+        handwritten digits.
       </p>
     </div>
   </div>
@@ -271,9 +272,10 @@
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left align-self-start">
             <h3><strong>Summary</strong></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
-              animi, enim possimus aliquam nostrum sequi distinctio esse! Reiciendis, recusandae, vero.
-            </p>
+            <p>In this chapter, we have examined how each component of FNN works together
+            to build this powerful algorithm. Our interactive module in Chapter 0 is
+            powered by such algorithm. In the next chapter, we are breaking down the FNN we
+            used in Chapter 0.</p>
 
             <h3><strong>Further Reading</strong></h3>
             <p>link <br> link <br> link</p>
@@ -283,9 +285,9 @@
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
             <h3><strong>Glossary</strong></h3>
-            <p><strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, laudantium.<br><br>
-              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br><br>
-              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet.
+            <p><strong>Feed-forward Neural Networks</strong>: FNN. Also referred to as Multilayer Perceptron. This is the simplest type of Artificial Neural Networks.<br><br>
+              <strong>Hidden Layer</strong>: The middle layers of FNN that actually performs calculations.<br><br>
+              <strong>ReLu</strong>: Rectified Linear Unit. A type of activation functions to break linearity.
             </p>
           </div>
         </div>
