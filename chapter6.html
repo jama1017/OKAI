@@ -162,12 +162,12 @@
   <!-- mnist animation text section -->
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
-      <p>In this chapter, we will explain how to make a practical model that will
-        recognize hand-written digits, just like the one in Chapter 0.
-
-        We will be using the MNIST dataset, a dataset of hand-written images compiled
-        by researcher Yann LeCun. We will be splitting 80% off the dataset to use for
-        training and the other 20% for checking our accuracy.
+      <p>In this chapter, we will explain how to make a practical network that will
+        recognize handwritten digits, just like the one in Chapter 0. We will be
+        using the <strong>MNIST</strong> dataset, a dataset of hand-written images compiled
+        by researcher Yann LeCun.
+        <!-- We will be splitting 80% off the dataset to use for -->
+        <!-- training and the other 20% for checking our accuracy. -->
       </p>
     </div>
   </div>
@@ -175,7 +175,9 @@
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
       <p>
-        In the input, we flattened our 28 x 28 MNIST image to an array of 784 pixels.
+        Each of the images from the MNIST dataset is a 28 pixel by 28 pixel image.
+        These images will be used as training data to teach our FNN how to recognize
+        digits.
       </p>
     </div>
   </div>
@@ -183,17 +185,17 @@
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
       <p>
-        Each pixel has a value from 0 to 1 indicating how black that pixel is. 0
-        is white, 1 is black, and anywhere between them is a shade of gray.
+        Each pixel has a value from 0 to 1 indicating how white that pixel is. 0
+        is black, 1 is white, and anywhere between them is a shade of gray. These 28 &times;
+        28 = 784 pixels are flattened into a single array to be fed into the input layer.
       </p>
     </div>
   </div>
 
   <div id="text4" class="bg-1grey scene">
     <div class="text right">
-      <p>The first layer takes in the input of size 784 and transforms it into an
-        array of size 500, so we have 500 numbers that will represent a transformation
-        of the original image.
+      <p>The input layer then transforms it into the first hidden layer of size <strong>500</strong>,
+        so we have 500 numbers that will represent a transformation of the original image.
 
         For a multi-layered network to work well, we need to break linearity,
         thus we use ReLU as an activation function to achieve that.
@@ -203,14 +205,15 @@
 
   <div id="text5" class="bg-1grey scene">
     <div class="text right">
-      <p>Since we are working with classification, we would need to use cross-entropy
-        loss. This would require us to input probabilities for each class,
-        rather than an arbitrary value.
+      <p>
+        These 500 nodes are then feeding into another layer of 10 nodes.
+        Since we are working with classification, this would require us to
+        transform the output of these 10 nodes into probabilities.
 
-        To do this, we use a softmax activation function in the end. Softmax is a
-        hyped up version of sigmoid wherein it generates not only probability of
-        one thing, but multiple things. This way, we will get the probability of
-        each digit we can use to calculate loss.
+        To do this, we use <strong data-toggle="tooltip" class="highlight"
+        title="A hyped-up version of Sigmoid where it generates the probability
+        of multiple things.">Softmax</strong> activation function.
+        This way, we will get the probability of each digit that we can use to calculate loss.
       </p>
     </div>
   </div>
@@ -218,41 +221,50 @@
   <!-- mnistOutput animation text section -->
   <div id="text6" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Then we take the array of 500 values and transform that into an array of
-        10 values, each corresponding to digits “0” to “9”.
+      <p>Finally, the output layer will also have 10 nodes, each corresponding to
+        a digit from 0 to 9.
       </p>
     </div>
   </div>
 
   <div id="text7" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>The value that is highest, signaling the one that the model thinks is most
-        probable, will be our prediction.
+      <p>Because of Softmax, each final output node contains a probability that represents
+        how likely the FNN thinks the input images represents the corresponding digit.
+      </p>
+    </div>
+  </div>
+
+  <div id="text8" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>The probability that is the highest, signaling the one that the model thinks is most
+        probable, will be our final output classification of input handwritten digit.
       </p>
     </div>
   </div>
 
   <!-- prop animation text section -->
-  <div id="text8" class="scene bg-3grey topLayer">
+  <div id="text9" class="scene bg-3grey topLayer">
     <div class="text right">
-      <p>We then split them by batches of 100 and feed them into the model for
+      <p>We then split images from MNIST by batches of 100 and feed them into the FNN for
         training. During training, the model uses existing parameters to generate
-        a tentative answer (this is usually called forward propagation).
+        a tentative answer. This process is called <strong>forward propagation</strong>.
       </p>
     </div>
   </div>
 
-  <div id="text9" class="scene bg-3grey topLayer">
+  <div id="text10" class="scene bg-3grey topLayer">
     <div class="text right">
-      <p>Then, after seeing the answer and computing the loss (how different am
-        I from the real answer), it goes back into the network and updates the
-        parameters to get even closer to the real answer (this is usually called backpropagation).
+      <p>Then, after seeing the answer and computing the loss, it goes back into
+        the network and updates the <strong data-toggle="tooltip" class="highlight"
+        title="Refers to weights and biases">parameters</strong> to get even closer to the desired answer.
+        This process is called <strong>backpropagation</strong>.
       <p>
     </div>
   </div>
 
   <!-- repeat animation text section-->
-  <div id="text10" class="scene threeLayer bg-4grey">
+  <div id="text11" class="scene threeLayer bg-4grey">
     <div class="text left">
       <p>
         To train the model, we would need to first initialize the values inside
@@ -262,42 +274,41 @@
     </div>
   </div>
 
-  <div id="text11" class="scene threeLayer bg-4grey">
+  <div id="text12" class="scene threeLayer bg-4grey">
     <div class="text left">
       <p>
-        To train it, we are using SGD (stochastic gradient descent) as introduced before,
+        To train it, we are using <strong data-toggle="tooltip" class="highlight"
+        title="Stochastic Gradient Descent">SGD</strong> as introduced before,
         with a learning rate of 0.7. This learning rate is chosen by experiment,
         as it seems to work best for our model. Usually, you should try out a few
-        different values (depending on the data and the loss function, the learning
-        rate is usually under 1, and bigger than 0.0001) before settling on a reasonable one.
+        different values before settling on a reasonable one.
       </p>
     </div>
   </div>
 
-  <div id="text12" class="scene threeLayer bg-4grey">
+  <div id="text13" class="scene threeLayer bg-4grey">
     <div class="text left">
       <p>
-        After going over the dataset 2 to 3 times (epochs), our model is good
+        After going over the dataset 2 to 3 <strong data-toggle="tooltip" class="highlight"
+        title="Epoch is a more technical term for time">times</strong>, our model is good
         enough to be used.
-        In our model, we would be able to achieve around 97% accuracy with only
+        In our model, we would be able to achieve around <strong>97% accuracy</strong> with only
         2 runs over the dataset, and on an average laptop, it would run in under
-        a minute (excluding the time downloading the dataset).
+        a minute.
       </p>
     </div>
   </div>
 
 
   <!-- coding animation text section -->
-  <div id="text13" class="scene fourLayer bg-5grey">
+  <div id="text14" class="scene fourLayer bg-5grey">
     <div class="text right">
       <p>
-        In our demo, we used a similar neural network structure, and we allowed
-        you to play with it interactively. If you now flip back to the demo again,
-        you would be able to see all that we have explained at work.
+        This is the FNN we used in our interactive module in Chapter 0.
 
         For those who want to experiment with the model more in depth, we have
         written an easy-to-understand code that you can experiment with online.
-        COLAB [Link]
+        Here is the portal to it! COLAB [Link]
       </p>
     </div>
   </div>
@@ -311,21 +322,27 @@
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left align-self-start">
             <h3><strong>Summary</strong></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
-              animi, enim possimus aliquam nostrum sequi distinctio esse! Reiciendis, recusandae, vero.
+            <p>We have now understood how to apply the things we have learned so far
+              to build a functional neural network that can recognize handwritten digits.
+              There are much more powerful things that AI can do. Hope these chapters can server
+              as a starting point for you to explore more in the world of AI!
             </p>
 
             <h3><strong>Further Reading</strong></h3>
-            <p>link <br> link <br> link</p>
+            <p><a href="http://yann.lecun.com/exdb/mnist/" target="_blank">
+              MNIST Dataset</a>
+              <br> link
+              <br> link
+            </p>
           </div>
         </div>
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
             <h3><strong>Glossary</strong></h3>
-            <p><strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, laudantium.<br><br>
-              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br><br>
-              <strong>Lorem.</strong>: Lorem ipsum dolor sit amet.
+            <p><strong>Softmax</strong>: A hyped-up version of Sigmoid where it generates the probability of multiple things.<br><br>
+              <strong>Forward Propagation</strong>: The process of making the neural network generate a prediction based on input <br><br>
+              <strong>backpropagation</strong>: The process of adjusting parameters to improve the performance of neural networks.
             </p>
           </div>
         </div>
