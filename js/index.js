@@ -49,7 +49,7 @@ var openingTL = new TimelineMax();
 function onOpeningDOMLoaded(e) {
   openingTL.to({
     frame: 0
-  }, 10, {
+  }, 12, {
     frame: openingAnim.totalFrames - 1,
     onUpdate: function() {
       openingAnim.goToAndStop(Math.round(this.target.frame), true)
