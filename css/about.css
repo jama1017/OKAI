@@ -22,6 +22,11 @@
   font-size: 3.5em;
 }
 
+#aboutText {
+  /* border: solid 1px grey;
+  border-radius: 20px;  */
+}
+
 .card {
   border-radius: 20px;
 }
