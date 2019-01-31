@@ -1,0 +1,75 @@
+#start {
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+#openingText h1 {
+  font-weight: bold;
+  font-size: 3.5em;
+}
+
+#team {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#team h1 {
+  font-weight: bold;
+  font-size: 3.5em;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.card h2 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.card-footer {
+  background-color: transparent;
+}
+
+.card-footer a {
+  color: inherit;
+}
+
+.card-footer a:hover {
+  color: black;
+}
+
+.card-body a {
+  color: inherit;
+}
+
+.card-body a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+/* --------------------------------- animaiton backgrounds ---------------------- */
+#seedBG path {
+  fill: #E8E8E8;
+}
+
+.gooFilterLayer {
+  filter: url("#goo")
+}
+
+/* 992px is medium sreen size */
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  #openingText h1 {
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  #team h1 {
+    font-weight: bold;
+    font-size: 2em;
+  }
+}
