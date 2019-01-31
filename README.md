@@ -4,7 +4,7 @@
 
 ## Project Demo
 OKAI is currently in the phase of development. You can take a look at a demo chapter here:
-http://majiaju.io/SynGap_demo/chapter0.html
+http://majiaju.io/SynGap_demo/index.html
 
 ## Project Goal
 OKAI aims to **demystify** and **introduce** concepts in **AI** to a broader audience other than people with backgrounds in related fields, such as computer science, applied math, and physics.
