@@ -164,9 +164,9 @@ ul ul a {
   top: 0;
   z-index: 10;
   height: 6px;
-  background: #3BB9FF;
+  background: #f5c246;
   width: 0%;
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .animation {
@@ -375,6 +375,10 @@ p a:hover{
   .right {}
 
   p {
+    font-size: 0.9rem;
+  }
+
+  #endingText p {
     font-size: 0.8rem;
   }
 
