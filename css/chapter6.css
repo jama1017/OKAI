@@ -1,3 +1,8 @@
+#colabButton {
+  border-radius: 20px;
+  font-weight: bold;
+}
+
 /* --------------------------------- animaiton backgrounds ---------------------- */
 /* .bg-3grey {
   background-color: #c9cbca;
@@ -28,3 +33,11 @@
 /* .gooFilterLayer {
   filter: url("#goo")
 } */
+
+/* 992px is medium sreen size */
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  #colabButton {
+    font-size: 0.8rem;
+    /* font-weight: bold; */
+  }
+}
