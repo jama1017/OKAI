@@ -25,6 +25,11 @@
   vertical-align: middle;
 }
 
+#credit {
+  color: gray;
+  text-decoration: underline;
+}
+
 /* animation background colors */
 #mnistBG path {
   fill: transparent;
