@@ -287,15 +287,25 @@ function onDataDOMLoaded(e) {
 
 
 //--------words TLs------------
+var algoTL = new TimelineMax();
 var mlTL = new TimelineMax();
 var dlTL = new TimelineMax();
-var algoTL = new TimelineMax();
 
 function onWordsDOMLoaded(e) {
-  mlTL.to({
+  algoTL.to({
     frame: 0
   }, 3, {
-    frame: 75,
+    frame: 72,
+    onUpdate: function() {
+      wordsAnim.goToAndStop(Math.round(this.target.frame), true)
+    },
+    ease: Linear.easeNone
+  })
+
+  mlTL.to({
+    frame: 72
+  }, 3, {
+    frame: 150,
     onUpdate: function() {
       wordsAnim.goToAndStop(Math.round(this.target.frame), true)
     },
@@ -303,19 +313,9 @@ function onWordsDOMLoaded(e) {
   })
 
   dlTL.to({
-    frame: 75
+    frame: 150
   }, 3, {
-    frame: 142,
-    onUpdate: function() {
-      wordsAnim.goToAndStop(Math.round(this.target.frame), true)
-    },
-    ease: Linear.easeNone
-  })
-
-  algoTL.to({
-    frame: 142
-  }, 3, {
-    frame: wordsAnim.totalFrames - 1,
+    frame: wordsAnim.totalFrames - 2,
     onUpdate: function() {
       wordsAnim.goToAndStop(Math.round(this.target.frame), true)
     },
@@ -496,7 +496,7 @@ let mlScene = new ScrollMagic.Scene({
     triggerElement: "#text12",
     duration: '100%'
   })
-  .setTween(mlTL)
+  .setTween(algoTL)
   .on("start", function(event) {
     var direction = event.scrollDirection;
     if (direction == "REVERSE") {
@@ -513,14 +513,14 @@ let dlScene = new ScrollMagic.Scene({
     triggerElement: "#text13",
     duration: '100%'
   })
-  .setTween(dlTL)
+  .setTween(mlTL)
   .addTo(controller);
 
 let algoScene = new ScrollMagic.Scene({
     triggerElement: "#text14",
     duration: '100%'
   })
-  .setTween(algoTL)
+  .setTween(dlTL)
   .addTo(controller);
 
 
