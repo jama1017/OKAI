@@ -163,7 +163,7 @@
       <p>To this point, we have only discussed networks with a
         single perceptron. These perceptron algorithms are not particularly powerful,
         as they are slow to learn, and cannot learn complex concepts. To improve them,
-        we need to <strong>stack perceptrons together</strong> so that they can form a more complex model.
+        we need to stack perceptrons together so that they can form a more complex model.
       </p>
     </div>
   </div>
@@ -172,15 +172,17 @@
     <div class="text right">
       <p>When we use multiple perceptrons to form Feed-forward Neural Networks (FNN), instead of
         just having several input nodes, we now have an input layer. The layers that comes after
-        this first layer, excluding the last layer, are called <strong>hidden layers</strong>.
+        this first layer, excluding the last layer, are called <strong class="highlight"
+        data-toggle="tooltip"title="The middle layers
+        of FNN that performs computations.">hidden layers</strong>.
       </p>
     </div>
   </div>
 
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
-      <p>The last layer is called an <strong>output layer</strong>. We say that a network has
-        n layers when there are n layers that perform calculations, that is,
+      <p>The last layer is called an output layer. We say that a network has
+        n layers when there are n layers that perform computations, that is,
         there are n-1 hidden layers and 1 output layer. </p>
     </div>
   </div>
@@ -217,9 +219,8 @@
   <div id="text7" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>In this network, all of the <strong data-toggle="tooltip" class="highlight"
-        title="Refer to perceptrons">nodes</strong> in the hidden layer has a ReLU
-        activation function, while the second is a <strong data-toggle="tooltip"
-        class="highlight" title="Meaning that it has no activation function">linear layer</strong>.
+        title="Refer to perceptrons">nodes</strong> in the hidden layer has a ReLU function, while the second is a
+        linear layer (Meaning that it has no activation function).
         But why do we need activation functions when we don’t need to control the range of output here? And what
         exactly is a ReLU function?
       <p>
@@ -230,14 +231,13 @@
     <div class="text left">
       <p>
         It turns out that, if we have consecutive linear layers, the network will
-        behave exactly the same as a network with <strong data-toggle="tooltip"
-        class="highlight" title="Recall the AND and XOR example in Chapter 2">a single linear layer</strong>.
+        behave exactly the same as a network with a single linear layer (Recall the AND and XOR example in Chapter 2).
         To make the extra layer count, we need to introduce non-linearity.
 
         One of the most popular choices to break linearity is <strong data-toggle="tooltip"
-        class="highlight" title="ReLU stands for Rectified Linear Unit">ReLU</strong>,
-        it maintains the value if the input is bigger than 0, and if the input is negative,
-        it forces everything to be zero.
+        class="highlight" title="ReLU stands for Rectified Linear Unit. It maintains the value if the input is bigger than 0, and if the input is negative,
+        it forces everything to be zero.">ReLU</strong>,
+
       </p>
     </div>
   </div>
@@ -248,8 +248,8 @@
     <div class="text right">
       <p>
         With these activation functions, we can stack more layers together so
-        they can learn to perform more complex tasks, such as <strong>recognizing
-        handwritten digits</strong> as showcased in Chapter 0.
+        they can learn to perform more complex tasks, such as recognizing
+        handwritten digits as showcased in Chapter 0.
       </p>
     </div>
   </div>
@@ -298,9 +298,10 @@
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
             <h3><strong>Glossary</strong></h3>
-            <p><strong>Feed-forward Neural Networks</strong>: FNN. Also referred to as Multilayer Perceptron. This is the simplest type of Artificial Neural Networks.<br><br>
-              <strong>Hidden Layer</strong>: The middle layers of FNN that actually performs calculations.<br><br>
-              <strong>ReLu</strong>: Rectified Linear Unit. A type of activation functions to break linearity.
+            <p>
+              <strong>Hidden Layer</strong>: The middle layers of FNN that performs computations.<br><br>
+              <strong>Node</strong>: In more complex neural network, each perceptron is abstracted as a node.<br><br>
+              <strong>ReLu</strong>: Rectified Linear Unit. A type of activation functions most commonly used to break linearity.
             </p>
           </div>
         </div>
@@ -318,7 +319,7 @@
     <!-- end of ending section -->
   </div>
 
-  
+
   <!-- end of text area -->
 
   <div class="overlay"></div>
