@@ -152,7 +152,7 @@
     <div class="text right">
       <p>Early deep learning researchers in the 1970s took inspiration from a
         neuron, the building block of our brain, to create an algorithm called
-        a <strong>perceptron</strong>.</p>
+        a perceptron.</p>
       <p>Therefore, to understand what a perceptron is, let’s first take a look at a neuron. </p>
     </div>
   </div>
@@ -185,9 +185,9 @@
 
   <div id="neuron2Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Between inputs and perceptrons, the axon-to-dendrite connection is simplified to an <strong>edge</strong>, and
-        signals transmitted are represented with <strong>numbers</strong>.
-        <br>The input on top is connected to the central neuron with a <strong>thick</strong> edge,
+      <p>Between inputs and perceptrons, the axon-to-dendrite connection is simplified to an edge, and
+        signals transmitted are represented with numbers.
+        <br>The input on top is connected to the central neuron with a thicker edge,
         thus the signal is amplified by a factor of 2 when it reaches the neuron.
       </p>
 
@@ -196,11 +196,13 @@
 
   <div id="neuron3Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>The input at the bottom, however, has a <strong>thinner</strong> connection to the neuron,
-        thus the signal is reduced to 2, resulting in a final signal of <strong>2 + 2 = 4</strong> received, instead of
+      <p>The input at the bottom, however, has a thinner connection to the neuron,
+        thus the signal is reduced to 2, resulting in a final signal of 2 + 2 = 4 received, instead of
         3 + 2 = 5.
         <br>
-        The thickness of the edge is called <strong>weight</strong>.
+        The thickness of the edge is called <strong class="highlight" data-toggle="tooltip"
+        title="A numeric value associated with an edge.
+        It can either amplify or reduce signals.">weight</strong>.
       </p>
     </div>
   </div>
@@ -209,16 +211,20 @@
     <div class="text left">
       <p>Next, the neuron processes the signal by shaking itself. In this case, doing so incremented the signal by 1.
       <br>
-        The “shakiness” of a neuron is called <strong>bias</strong>, which can both increase or decrease the value of the signal by any set amount.
+        The “shakiness” of a neuron is called <strong class="highlight" data-toggle="tooltip"
+        title="A numeric value being added onto the weighted sum of all input signals.">bias</strong>,
+        which can both increase or decrease the value of the signal by any set amount.
       </p>
     </div>
   </div>
 
   <div id="neuron5Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Finally, an <strong>activation function</strong> is used to simulate how "fired" the neuron is. More on this soon!</p>
+      <p>Finally, an <strong class="highlight" data-toggle="tooltip"
+        title="A function that is used to control the final output of a perceptron.">
+        activation function</strong> is used to simulate how "fired" the neuron is. More on this soon!</p>
       <p>
-        <strong>Sigmoid</strong>, a type of activation functions, is used here. It maps the signal value into the range of 0-1.
+        Sigmoid, a type of activation functions, is used here. It maps the signal value into the range of 0-1.
         In our case, 5 is being mapped to 0.99, which becomes the final output.
       </p>
     </div>
@@ -237,7 +243,7 @@
         In spite of early successes, they quickly ran into a problem.
         When a researcher wants to predict how likely an animal with 2 legs
         and 2 arms is a human, the probability the model gives back would often
-        be <strong>above 100% or below 0%</strong>.
+        be above 100% or below 0%.
       </p>
       <!-- <p>
         Intuitively, this isn’t possible, but to the machine, it is just trying
@@ -249,9 +255,9 @@
   <div id="appanana2Text" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        To tackle such problems, the researchers put an <strong>activation function</strong>
+        To tackle such problems, the researchers put an activation function
         behind the output of the perceptron, which can control the output range of that perceptron.
-        <strong>ReLu</strong> and <strong>Sigmoid</strong> are examples of activation
+        ReLu and Sigmoid are examples of activation
         functions that are commonly used.
       </p>
     </div>
@@ -260,9 +266,8 @@
   <div id="appanana3Text" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        <strong>Sigmoid</strong> calculates the probability of two things, for example, if you
-        want to classify if an image is a cat or isn’t a cat (this is called
-        <strong>binary classification</strong>), you would want to use a
+        Sigmoid calculates the probability of two things, for example, if you
+        want to classify if an image is a cat or isn’t a cat, you would want to use a
         sigmoid activation function, which transforms
         the output value into a probability (a number between 0 and 1).
       </p>
@@ -272,7 +277,7 @@
   <div id="appanana4Text" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        <strong>ReLu</strong> makes sure that the final output is non-negative.
+        ReLU makes sure that the final output is non-negative.
         ReLU is commonly used in multilayer networks.
         Unlike sigmoid, whose main purpose is to limit output range, ReLU is used
         to break linearity so that multilayer networks can learn more complex concepts.
