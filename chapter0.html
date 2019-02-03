@@ -163,7 +163,12 @@
       <div class="col-8 col-md-4 text-center">
         <div class="text-left p-3">
           <h2>Handwritten Digit Recognition</h1>
-          <p>Draw a single digit (0-9) in the white box below and click the "recognize" button.</p>
+          <p>Draw a single digit (0-9) in the white box below and click the "recognize" button.
+            <br>
+            <small id="credit" data-toggle="tooltip" title="This module is based on Hubert Eichner's
+            JavaScript implementation of a neural net for handwritten digit recognition, with some
+            bugs fixed and optimized for mobile. Source code is available in OKAI's github">credit</small>
+          </p>
         </div>
       </div>
 
@@ -8626,7 +8631,7 @@
         });
 
         $('[data-toggle="tooltip"]').tooltip({
-          placement: "top"
+          placement: "bottom"
         });
       });
     </script>
