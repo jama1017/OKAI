@@ -219,7 +219,7 @@ p a:hover{
 .highlight {
   /* color: #EBCE26; */
   cursor: pointer;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 /* ----------------------------- Tooltip styling ------------------------------- */
