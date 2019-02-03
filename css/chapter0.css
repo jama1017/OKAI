@@ -28,6 +28,29 @@
 #credit {
   color: gray;
   text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Tooltip */
+.tooltip .tooltip-inner {
+  background-color: white;
+  color: #000;
+  font-weight: inherit;
+  padding: 10px;
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  text-align: left;
+  z-index: 900;
+}
+
+/* Tooltip on top */
+.bs-tooltip-auto.arrow::before, .bs-tooltip-top .arrow::before {
+  border-top-color: white;
+}
+
+/* Tooltip on bottom */
+.bs-tooltip-auto.arrow::before, .bs-tooltip-bottom .arrow::before {
+  border-bottom-color: white;
 }
 
 /* animation background colors */
