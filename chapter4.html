@@ -168,7 +168,7 @@
 
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
-      <p>On a high level, a perceptron can be seen as a <strong>mathematical function</strong>, taking in some inputs,
+      <p>On a high level, a perceptron can be seen as a mathematical function, taking in some inputs,
         some weights, a bias, and mixes them up mathematically to generate an output.
       </p>
     </div>
@@ -176,8 +176,7 @@
 
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
-      <p>Since we have <strong data-toggle="tooltip" class="highlight"
-        title="We can't and shouldn't change the data we are learning from">no control</strong> over the inputs,
+      <p>Since we have no control over the inputs (we cannot change the data we are learning from),
         we will try to change weights and bias so that the perceptron function
         will give out a good output for all of the input we stuff into it.
       </p>
@@ -189,9 +188,10 @@
   <div id="text4" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>The core of “teaching” a perceptron is to let it understand how far
-        its actions or predictions are from <strong data-toggle="tooltip"
-        class="highlight" title="desired result">the ground truth</strong>.
-        To achieve this, we use <strong>loss functions</strong> to measure the
+        its actions or predictions are from the ground truth (desired results).
+        To achieve this, we use a <strong class="highlight" data-toggle="tooltip"
+        title="A function that determines the loss, a value representing how far
+        the output predictions are from the ground truth.">loss function</strong> to measure the
         performance of our perceptron. A commonly used loss function is called
         cross entropy, which is very good at tasks like classifying images.
       </p>
@@ -202,7 +202,7 @@
     <div class="text left">
       <p>
         Here, the cross entropy loss is visualized as the difference between the input (rectangle)
-        and the output (triangle). To <strong>train</strong> the perceptron can be considered as the process of
+        and the output (triangle). To train the perceptron can be considered as the process of
         decreasing this difference. Once the loss is decreased to its minimum, the perceptron completes its learning.
       </p>
     </div>
@@ -212,8 +212,8 @@
     <div class="text left">
       <p>There are many other loss functions, but all loss functions share a common
         behavior: the further off the prediction is from the ground truth, the
-        bigger the output of the loss function is. This way, we can try to <strong>minimize
-        the loss</strong> by changing the weights and biases, and our perceptron will gradually
+        bigger the output of the loss function is. This way, we can try to minimize
+        the loss by changing the weights and biases, and our perceptron will gradually
         improve until it reaches its capacity.
       </p>
     </div>
@@ -224,9 +224,8 @@
     <div class="text right">
       <p>To minimize loss, we use an <strong data-toggle="tooltip" class="highlight"
         title="A technique to minimize loss">optimizer</strong> called
-        <strong data-toggle="tooltip" class="highlight" title="In practice,
-        Gradient Descent is quite inefficient, and we use a slightly
-        more complex variant called the Stochastic Gradient Descent, or SGD.">
+        <strong data-toggle="tooltip" class="highlight" title="Gradient Descent is
+        quite inefficient in practice, so a variant called the Stochastic Gradient Descent (SGD) is used.">
         Gradient Descent</strong>.
 
         The "hill" here depicts the relationship
@@ -242,9 +241,11 @@
     <div class="text right">
       <p>
         First, the Gradient Descent optimizer would look at the "hill" in respect
-        to the data, and generates <strong>gradients</strong>, a group of numbers indicating which
-        direction would be the “steepest” way downhill. Then, the optimizer uses a
-        <strong>learning rate</strong> to decide how far to walk before stopping and redetermining
+        to the data, and generates <strong data-toggle="tooltip" class="highlight"
+          title="A group of numbers indicating which
+        direction would be the “steepest” way downhill.">gradients</strong>, providing
+        a direction downhill. Then, the optimizer uses a
+        learning rate to decide how far to walk before stopping and redetermining
         the gradients. Through a long repetition of this, we will slip our
         way down until we reach a minimum loss.
       </p>
@@ -288,7 +289,7 @@
           <div class="text-left">
             <h3><strong>Glossary</strong></h3>
             <p>
-              <strong>Loss</strong>: A value that represents how far the output predictions are from the ground truth.<br><br>
+              <strong>Loss Function</strong>: A function that determines the loss, a value representing how far the output predictions are from the ground truth.<br><br>
               <strong>Gradient</strong>: A group of numbers indicating which direction would be the “steepest” way to minimize loss (downhill).<br><br>
               <strong>Gradient Descent</strong>: An optimizer that uses gradients to adjust weights and bias to minimize loss.<br><br>
             </p>
@@ -303,7 +304,7 @@
     <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
       <a href="chapter5.html"><i class="fas fa-caret-right fa-2x"></i></a>
     </div>
-    
+
     <!-- end of ending section -->
   </div>
 
