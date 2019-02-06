@@ -266,6 +266,24 @@ p a:hover{
   line-height: 80%;
 }
 
+#endingText p a {
+  border-bottom: 0.5px solid #000;
+  padding-bottom: 1px.
+}
+
+#endingText p a::before {
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  content: "\f0c1";
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 15px;
+}
+
 .animLeft {
   transform: translate(-95%, -50%);
 }
@@ -406,6 +424,10 @@ p a:hover{
 
   #endingText ul {
     line-height: 20%;
+  }
+
+  #endingText p a::before {
+    font-size: 10px;
   }
 
   /* Tooltip */
