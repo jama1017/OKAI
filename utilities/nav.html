@@ -1,0 +1,58 @@
+<!-- navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <button type="button" id="sidebarCollapse" class="btn">
+      <i class="fas fa-bars fa-lg"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Sidebar  -->
+<nav id="sidebar">
+  <div id="dismiss">
+    <i class="fas fa-times fa-sm"></i>
+  </div>
+
+  <div class="sidebar-header d-flex justify-content-around align-items-center">
+    <img id="logo" src="./img/logo_text.svg" alt="logo">
+  </div>
+
+  <ul class="mt-5 list-unstyled components">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+        Chapters
+        <i class="fas fa-ellipsis-v" style="position: absolute; right: 25px;
+        top: 50%; transform: translateY(-50%);"></i>
+      </a>
+      <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+          <a href="./chapter0.html">0.</a>
+        </li>
+        <li>
+          <a href="./chapter1.html">1.</a>
+        </li>
+        <li>
+          <a href="./chapter2.html">2.</a>
+        </li>
+        <li>
+          <a href="./chapter3.html">3.</a>
+        </li>
+        <li>
+          <a href="./chapter4.html">4.</a>
+        </li>
+        <li>
+          <a href="./chapter5.html">5.</a>
+        </li>
+        <li>
+          <a href="./chapter6.html">6.</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="./about.html">About</a>
+    </li>
+  </ul>
+</nav>
