@@ -38,8 +38,8 @@
 
 <body>
 
+  <!-- scrollbar -->
   <div class="scrollBar" id="myBar"></div>
-
 
   <!-- navbar place holder -->
   <div id="nav-placeholder" ></div>
@@ -517,9 +517,11 @@
   <script type="text/javascript" src="js/chapter3.js"></script>
 
   <script type="text/javascript">
-    $(document).ready(function() {
-      $('[data-toggle="tooltip"]').tooltip();
-    });
+      $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip({
+          placement: "top"
+        });
+      });
   </script>
 
 </body>
