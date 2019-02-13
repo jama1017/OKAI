@@ -42,64 +42,8 @@
   <!-- scrollbar -->
   <div class="scrollBar" id="myBar"></div>
 
-  <!-- navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-      <button type="button" id="sidebarCollapse" class="btn">
-        <i class="fas fa-bars fa-lg"></i>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Sidebar  -->
-  <nav id="sidebar">
-    <div id="dismiss">
-      <i class="fas fa-times fa-sm"></i>
-    </div>
-
-    <div class="sidebar-header d-flex justify-content-around align-items-center">
-      <img id="logo" src="./img/logo_text.svg" alt="logo">
-    </div>
-
-    <ul class="list-unstyled components">
-      <li>
-        <a href="index.html">Home</a>
-      </li>
-      <li>
-        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
-          Chapters
-          <i class="fas fa-ellipsis-v" style="position: absolute; right: 25px;
-          top: 50%; transform: translateY(-50%);"></i>
-        </a>
-        <ul class="collapse list-unstyled" id="pageSubmenu">
-          <li>
-            <a href="./chapter0.html">0.</a>
-          </li>
-          <li>
-            <a href="./chapter1.html">1.</a>
-          </li>
-          <li>
-            <a href="./chapter2.html">2.</a>
-          </li>
-          <li>
-            <a href="./chapter3.html">3.</a>
-          </li>
-          <li>
-            <a href="./chapter4.html">4.</a>
-          </li>
-          <li>
-            <a href="./chapter5.html">5.</a>
-          </li>
-          <li>
-            <a href="./chapter6.html">6.</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="./about.html">About</a>
-      </li>
-    </ul>
-  </nav>
+  <!-- navbar place holder -->
+  <div id="nav-placeholder" ></div>
 
   <!-- ######################### -->
   <!-- Chapter content beginning -->
@@ -342,7 +286,7 @@
   </svg>
 
   <!-- Boostrap JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
@@ -362,27 +306,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
 
+  <script type="text/javascript" src="js/main.js"></script>
+
   <!-- change to own js files -->
   <script type="text/javascript" src="js/chapter2.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function() {
-      $("#sidebar").mCustomScrollbar({
-        theme: "minimal"
-      });
-
-      $('#dismiss, .overlay').on('click', function() {
-        $('#sidebar').removeClass('active');
-        $('.overlay').removeClass('active');
-      });
-
-      $('#sidebarCollapse').on('click', function() {
-        $('#sidebar').addClass('active');
-        $('.overlay').addClass('active');
-        $('.collapse.in').toggleClass('in');
-        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-      });
-
       $('[data-toggle="tooltip"]').tooltip({
         placement: "top"
       });
