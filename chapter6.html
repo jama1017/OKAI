@@ -62,9 +62,9 @@
       <div class="col-10 col-md-4 order-2 order-md-1 text-center">
         <div class="text-left">
           <p>Chapter 6</p>
-          <h2>Feed-forward Neural Networks in Action</h2>
-          <p>Wondering how the module in chapter 0 actually works? Harnessing the knowledge
-          you have acquired so far, let's take a look at how you can build such network to recognize
+          <h2>Feedforward Neural Networks in Action</h2>
+          <p>Wondering how the module in chapter 0 works? Harness the knowledge
+          you have acquired so far and let's take a look at how you can build a network to recognize
           handwritten digits!</p>
         </div>
       </div>
@@ -109,8 +109,8 @@
     <div class="text right">
       <p>In this chapter, we will explain how to make a practical network that will
         recognize handwritten digits, just like the one in Chapter 0. We will be
-        using the MNIST dataset, a dataset of hand-written images compiled
-        by researcher Yann LeCun.
+        using the MNIST dataset, a dataset of hand-written images from Computer
+        Scientist Yann LeCun's website.
         <!-- We will be splitting 80% off the dataset to use for -->
         <!-- training and the other 20% for checking our accuracy. -->
       </p>
@@ -122,7 +122,7 @@
       <p>
         Each of the images from the MNIST dataset is a 28 pixel by 28 pixel image.
         These images will be used as training data to teach our FNN how to recognize
-        digits.
+        handwritten digits.
       </p>
     </div>
   </div>
@@ -130,7 +130,7 @@
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
       <p>
-        Each pixel has a value from 0 to 1 indicating how white that pixel is. 0
+        Each pixel has a value from 0 to 1 to indicate how white the pixel is. 0
         is black, 1 is white, and anywhere between them is a shade of gray. These 28 &times;
         28 = 784 pixels are flattened into a single array to be fed into the input layer.
       </p>
@@ -142,8 +142,8 @@
       <p>The input layer then transforms it into the first hidden layer of size 500,
         so we have 500 numbers that will represent a transformation of the original image.
 
-        For a multi-layered network to work well, we need to break linearity,
-        thus we use ReLU as an activation function to achieve that.
+        For a multilayer network to work well, we need to break linearity,
+        and thus we use ReLU as an activation function to achieve that.
       </p>
     </div>
   </div>
@@ -156,9 +156,9 @@
         transform the output of these 10 nodes into probabilities.
 
         To do this, we use <strong data-toggle="tooltip" class="highlight"
-        title="A hyped-up version of Sigmoid where it generates the probability
+        title="A hyped-up version of sigmoid where it generates the probability
         of multiple things.">Softmax</strong> activation function.
-        This way, we will get the probability of each digit that we can use to calculate loss.
+        In this way, we will get the probability associated with each digit that we can use to calculate loss.
       </p>
     </div>
   </div>
@@ -174,16 +174,16 @@
 
   <div id="text7" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Because of Softmax, each final output node contains a probability that represents
-        how likely the FNN thinks the input images represents the corresponding digit.
+      <p>Because of softmax, each final output node now contains a probability value that represents
+        how likely the FNN thinks the input image represents the corresponding digit.
       </p>
     </div>
   </div>
 
   <div id="text8" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>The probability that is the highest, signaling the one that the model thinks is most
-        probable, will be our final output classification of input handwritten digit.
+      <p>The highest probability, signaling the digit that the model thinks is the most
+        probable, will be our final output classification of the input handwritten digit.
       </p>
     </div>
   </div>
@@ -216,8 +216,8 @@
     <div class="text left">
       <p>
         To train the model, we would need to first initialize the values inside
-        the model. In this particular case, we will initialize them to something
-        random clustered around 0, which is usually a good starting point.
+        the model. In this particular case, we will initialize them to
+        random values clustered around 0, which is usually a good starting point.
       </p>
     </div>
   </div>
@@ -279,7 +279,7 @@
             <h3><strong>Summary</strong></h3>
             <p>We have now understood how to apply the things we have learned so far
               to build a functional neural network that can recognize handwritten digits.
-              There are much more powerful things that AI can do. Hope these chapters can server
+              There are much more powerful things that AI can do. Hope these chapters can serve
               as a starting point for you to explore more in the world of AI!
             </p>
 
@@ -298,7 +298,7 @@
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
             <h3><strong>Glossary</strong></h3>
-            <p><strong>Softmax</strong>: A hyped-up version of Sigmoid where it generates the probability of multiple things.<br><br>
+            <p><strong>Softmax</strong>: A hyped-up version of sigmoid where it generates the probability of multiple things.<br><br>
               <strong>Forward Propagation</strong>: The process of making the neural network generate a prediction based on input. <br><br>
               <strong>Backpropagation</strong>: The process of adjusting parameters to improve the performance of neural networks.
             </p>
