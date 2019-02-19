@@ -106,9 +106,8 @@
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
       <p>To understand how deep learning has progressed, we may first look at its
-        inspiration: the neuron. While exploring this question,
-        we may get a glimpse of how AI extracts valuable
-        sensory experiences from this chaotic world and solidify them into
+        inspiration, the neuron, to get a glimpse of how AI extracts valuable
+        sensory experiences from this chaotic world and solidifies them into
         algorithms that are “smart”.
       </p>
     </div>
@@ -116,9 +115,9 @@
 
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
-      <p>A neuron is the building block of the human brains. Neurons are nervous
-        cells that take in some stimuli from other neurons, and when enough stimuli
-        are received, it fires a signal (stimulus) to other connected neurons.
+      <p>A neuron is the building block of the human brain. Neurons are nerve
+        cells that take in some stimuli from other neurons. When enough stimuli
+        are received, these neurons fire signals (stimuli) to other connected neurons.
       </p>
     </div>
   </div>
@@ -139,12 +138,12 @@
   <div id="text4" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>It turns out that perceptrons are far from enough to learn complicated concepts.
-         Simpler concepts, such as logical <strong data-toggle="tooltip"
+         Some simple concepts, such as the logical <strong data-toggle="tooltip"
          title="A and B is True (1) only if both A and B are True (1), otherwise it’s False (0)"
          class="highlight">AND</strong>,
-         can be learned by a perceptron. The model can find a way to cut a line
-         in the space so that it can correctly produce the result of a logical and,
-         as shown in the animation.
+         can be learned by a perceptron. The model can compute the logical AND of its inputs.
+         This computation is visualized in the animation as drawing a line to divide the possible outcomes
+         of the logical AND into two groups, each composed of the same type of circles.
       </p>
     </div>
   </div>
@@ -156,7 +155,7 @@
         class="highlight">XOR</strong>,
         cannot be learned by a simple perceptron. This is due to the “non-linearity”
         of the concept, or in simple terms, we cannot find a straight line to
-        divide the circle in two homogeneous groups.
+        divide the filled circles from the open ones
       </p>
     </div>
   </div>
@@ -167,8 +166,8 @@
     <div class="text right">
       <p>To solve this problem, computer scientists turn to more complicated
         “simulations” of the brain. A <strong data-toggle="tooltip" class="highlight"
-        title="The first and simplest type of artificial neural network">Feed-forward Neural Network</strong> is a network
-        of perceptrons that are organized into layers. In theory, these simple
+        title="The first and simplest type of artificial neural network">Feedforward Neural Network</strong> is
+        a generalization of a network of perceptrons that are organized into layers. In theory, these simple
         neural networks, if trained long enough on a good
         set of data, can learn everything from classifying images to predicting
         income.
@@ -178,8 +177,8 @@
 
   <div id="text7" class="scene bg-3grey topLayer">
     <div class="text right">
-      <p>Simple Feed-forward Neural Networks sound very nice, but they have their
-        own problems. Smaller networks bottlenecks quickly on complex problems,
+      <p>Simple Feedforward Neural Networks sound very nice, but they have their
+        own problems. Smaller networks do not have the capacity to take on complex problems,
         while deeper networks need a lot more computation power. This
         time, computer scientists looked at higher level human learning mechanisms for inspirations.
       <p>
@@ -195,9 +194,9 @@
         blocks of things, and combine them to create more complex concepts.
         We recognize a dog as having a nose, two ears, and four legs.
         This behavior inspired computer scientists to create <strong class="highlight"
-        data-toggle="tooltip" title="A type of artificial neural networks that is mainly used to analyzing and classifying images.">Convolutional
-        Neural Networks</strong> (CNN), which transforms images into
-        more fundamental constructs, such as basic shapes.
+        data-toggle="tooltip" title="A type of artificial neural networks that is mainly used to analyze and classify images.">Convolutional
+        Neural Networks</strong> (CNN), which are constructed from reusable groups
+        of units that learn to recognize visual patterns like basic shapes.
       </p>
     </div>
   </div>
@@ -205,7 +204,7 @@
   <div id="text9" class="scene threeLayer bg-4grey">
     <div class="text left">
       <p>
-        The power of Deep Learning made traditional some machine learning techniques went out of fashion.
+        The power of Deep Learning made some traditional machine learning techniques go out of fashion.
         With enough data and computation power, Deep Learning is able to achieve
         a level of performance traditional algorithms could never hope for. With
          recent developments in computer hardware, and the abundance of data,
@@ -251,8 +250,8 @@
             <h3><strong>Glossary</strong></h3>
             <p><strong>Perceptron</strong>: An algorithm inspired by neurons. A single layer neural network that performs binary classification
             on input data.<br><br>
-              <strong>Feed-forward Neural Networks</strong>: The first and simplest type of artificial neural network. Many perceptrons arranged into layers. Can perform more complex tasks than perceptrons.<br><br>
-              <strong>Convolutional Neural Networks</strong>: A type of artificial neural networks that is mainly used to analyzing and classifying images.
+              <strong>Feedforward Neural Networks</strong>: The first and simplest type of artificial neural network. Many perceptrons arranged into layers. Can perform more complex tasks than perceptrons.<br><br>
+              <strong>Convolutional Neural Networks</strong>: A type of artificial neural networks that is mainly used to analyze and classify images.
             </p>
           </div>
         </div>
