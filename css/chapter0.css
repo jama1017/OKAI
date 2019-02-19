@@ -32,7 +32,7 @@
 }
 
 /* Tooltip */
-.tooltip .tooltip-inner {
+.tooltip > .tooltip-inner {
   background-color: white;
   color: #000;
   font-weight: inherit;
@@ -43,9 +43,20 @@
   z-index: 900;
 }
 
+.bs-tooltip-top .tooltip-inner {
+    background-color: #EBCE26;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+    z-index: 900;
+}
+
 /* Tooltip on top */
 .bs-tooltip-auto.arrow::before, .bs-tooltip-top .arrow::before {
-  border-top-color: white;
+  border-top-color: #EBCE26;
 }
 
 /* Tooltip on bottom */
