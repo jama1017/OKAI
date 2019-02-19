@@ -63,7 +63,7 @@
         <div class="text-left">
           <p>Chapter 4</p>
           <h2>Perceptron Learning</h2>
-          <p>How we make a perceptron to learn to perform certain tasks? In this chapter,
+          <p>How do we make a perceptron learn to perform certain tasks? In this chapter,
           we are going behind the scenes of “Perceptron Learning Institute”.</p>
         </div>
       </div>
@@ -104,15 +104,15 @@
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
       <p>In the last chapter, we learned that a perceptron can
-        take in some input and spit out a valid output. How can we make the perceptron learn to perform tasks?
-        To understand this, we will first discuss what a perceptron is abstractly.
+        take in some inputs and spit out a valid output. How can we make it learn to perform tasks?
+        To understand this, we will first discuss what the perceptron is abstractly.
       </p>
     </div>
   </div>
 
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
-      <p>On a high level, a perceptron can be seen as a mathematical function, taking in some inputs,
+      <p>On a high level, the perceptron can be seen as a mathematical function, taking in some inputs,
         some weights, a bias, and mixes them up mathematically to generate an output.
       </p>
     </div>
@@ -122,7 +122,7 @@
     <div class="text right">
       <p>Since we have no control over the inputs (we cannot change the data we are learning from),
         we will try to change weights and bias so that the perceptron function
-        will give out a good output for all of the input we stuff into it.
+        will give out a good output for all the input we stuff into it.
       </p>
     </div>
   </div>
@@ -156,7 +156,7 @@
     <div class="text left">
       <p>There are many other loss functions, but all loss functions share a common
         behavior: the further off the prediction is from the ground truth, the
-        bigger the output of the loss function is. This way, we can try to minimize
+        bigger the output of the loss function is. In this way, we can try to minimize
         the loss by changing the weights and biases, and our perceptron will gradually
         improve until it reaches its capacity.
       </p>
@@ -173,10 +173,10 @@
         Gradient Descent</strong>.
 
         The "hill" here depicts the relationship
-        between weights and bias of a perceptron and the loss. The higher upon the hill we are,
+        between the weights and bias of a perceptron and the loss. The higher upon the hill we are,
         the greater the loss is.
         Gradient Descent is a technique that directs us walking “downhill”,
-        where the optimizer finds the steepest way downwards.
+        with the optimizer finding the steepest way downwards.
       <p>
     </div>
   </div>
@@ -184,14 +184,14 @@
   <div id="text8" class="scene bg-3grey topLayer">
     <div class="text right">
       <p>
-        First, the Gradient Descent optimizer would look at the "hill" in respect
+        First, the Gradient Descent optimizer would look at the "hill" with respect
         to the data, and generates <strong data-toggle="tooltip" class="highlight"
           title="A group of numbers indicating which
         direction would be the “steepest” way downhill.">gradients</strong>, providing
-        a direction downhill. Then, the optimizer uses a
+        a direction downhill. Then, the optimizer picks a
         learning rate to decide how far to walk before stopping and redetermining
-        the gradients. Through a long repetition of this, we will slip our
-        way down until we reach a minimum loss.
+        the gradients. After many repetitions, we will slip our
+        way down to reach a minimum loss.
       </p>
     </div>
   </div>
@@ -214,7 +214,7 @@
             <p>By now, we have learned what it means for the perptron to learn, and
               how we can train the perptron. Let’s venture into more
               complex neural network structures. We will discuss how we can adapt
-              single perceptrons to multi-layered networks called Feed-Forward Neural Network.
+               perceptrons to a type of multilayer networks called the Feedforward Neural Network.
             </p>
 
             <h3><strong>Further Reading</strong></h3>
@@ -235,7 +235,7 @@
             <p>
               <strong>Loss Function</strong>: A function that determines the loss, a value representing how far the output predictions are from the ground truth.<br><br>
               <strong>Gradient</strong>: A group of numbers indicating which direction would be the “steepest” way to minimize loss (downhill).<br><br>
-              <strong>Gradient Descent</strong>: An optimizer that uses gradients to adjust weights and bias to minimize loss.<br><br>
+              <strong>Gradient Descent</strong>: An optimizer that uses gradients to adjust the weights and bias to minimize loss.<br><br>
             </p>
           </div>
         </div>
