@@ -3,7 +3,9 @@
 #EF7D40
 #E61E7B */
 
-
+#perceptronAnimation {
+    visibility: hidden;
+}
 /* --------------------------------- animaiton backgrounds ---------------------- */
 
 /* animation background colors */
