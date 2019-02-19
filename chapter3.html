@@ -61,8 +61,8 @@
         <div class="text-left">
           <p>Chapter 3</p>
           <h2>The Building Block of Deep Learning</h2>
-          <p>A complex algorithm like Deep Learning is built from many individual components.
-          In this chapter, we are taking a look at Perceptron, which constitutes a neural network.</p>
+          <p>Complex algorithms, like the ones in deep learning, are built from many individual components.
+          In this chapter, we are taking a look at the perceptron, which constitutes a neural network.</p>
         </div>
       </div>
 
@@ -95,20 +95,20 @@
   <!-- text begins -->
   <div id="brainText" class="bg-1grey scene">
     <div class="text right">
-      <p>Early deep learning researchers in the 1970s took inspiration from a
+      <p>Early deep learning researchers in the 1970s took inspirations from a
         neuron, the building block of our brain, to create an algorithm called
-        a perceptron.</p>
+        the perceptron.</p>
       <p>Therefore, to understand what a perceptron is, let’s first take a look at a neuron. </p>
     </div>
   </div>
 
   <div id="nerveText" class="bg-1grey scene">
     <div class="text right">
-      <p>A neuron is made up of 3 main parts:</p>
-      <p>Dendrites: Spread out receivers of the neuron that
-        takes in some stimulus from other neurons.</p>
-      <p>Soma: The “core” of the cell where the nucleus is situated
-        at, and it decides if a signal will be sent to other neurons.</p>
+      <p>A neuron is composed of 3 main parts:</p>
+      <p>Dendrites: Spread out receivers of a neuron that
+        takes in stimuli from other neurons.</p>
+      <p>Soma: The “core” of a neuron where the nucleus is located in,
+          and it decides if a signal will be sent to other neurons.</p>
       <p>Axon: Long extending neck of the neuron that passes
         a signal to all connected neurons. </p>
     </div>
@@ -117,8 +117,7 @@
   <div id="neuron1Text" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>The perceptron, similarly, also has 3 major parts:</p>
-      <p>Inputs: inputs take in values from an arbitrary number
-        of sources and pass it to the perceptron.</p>
+      <p>Inputs: inputs take in signals in the form of numbers and pass them to the perceptron.</p>
       <p>Perceptron: the perceptron takes in the inputs and conducts some calculations on them.</p>
       <p>
         Output: the output of the perceptron spits out the result of the calculations.
@@ -132,7 +131,7 @@
     <div class="text left">
       <p>Between inputs and perceptrons, the axon-to-dendrite connection is simplified to an edge, and
         signals transmitted are represented with numbers.
-        <br>The input on top is connected to the central neuron with a thicker edge,
+        <br>The input on top here is connected to the perceptron with a thicker edge,
         thus the signal is amplified by a factor of 2 when it reaches the neuron.
       </p>
 
@@ -141,8 +140,8 @@
 
   <div id="neuron3Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>The input at the bottom, however, has a thinner connection to the neuron,
-        thus the signal is reduced to 2, resulting in a final signal of 2 + 2 = 4 received, instead of
+      <p>The input at the bottom, however, has a thinner connection to the neuron, and
+          thus the signal is reduced to 2, resulting in a final signal of 2 + 2 = 4 received, instead of
         3 + 2 = 5.
         <br>
         The thickness of the edge is called <strong class="highlight" data-toggle="tooltip"
@@ -154,9 +153,9 @@
 
   <div id="neuron4Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Next, the neuron processes the signal by shaking itself. In this case, doing so incremented the signal by 1.
+      <p>Next, the perceptron processes the signal by shaking itself. In this case, doing so incremented the signal by 1.
       <br>
-        The “shakiness” of a neuron is called <strong class="highlight" data-toggle="tooltip"
+        The “shakiness” of a perceptron is called <strong class="highlight" data-toggle="tooltip"
         title="A numeric value being added onto the weighted sum of all input signals.">bias</strong>,
         which can both increase or decrease the value of the signal by any set amount.
       </p>
@@ -167,7 +166,7 @@
     <div class="text left">
       <p>Finally, an <strong class="highlight" data-toggle="tooltip"
         title="A function that is used to control the final output of a perceptron.">
-        activation function</strong> is used to simulate how "fired" the neuron is. More on this soon!</p>
+        activation function</strong> is used to simulate how "fired" the perceptron is. More on this soon!</p>
       <p>
         Sigmoid, a type of activation functions, is used here. It maps the signal value into the range of 0-1.
         In our case, 5 is being mapped to 0.99, which becomes the final output.
@@ -184,10 +183,10 @@
       </h3>
       <hr>
       <p>
-        Early researchers use these perceptrons to model how human beings think.
+        Early researchers used these perceptrons to model how human beings think.
         In spite of early successes, they quickly ran into a problem.
-        When a researcher wants to predict how likely an animal with 2 legs
-        and 2 arms is a human, the probability the model gives back would often
+        When a researcher wanted to predict how likely an animal with 2 legs
+        and 2 arms is a human, the probability that the model gave back would often
         be above 100% or below 0%.
       </p>
       <!-- <p>
@@ -202,7 +201,7 @@
       <p>
         To tackle such problems, the researchers put an activation function
         behind the output of the perceptron, which can control the output range of that perceptron.
-        ReLu and Sigmoid are examples of activation
+        ReLU and Sigmoid are examples of activation
         functions that are commonly used.
       </p>
     </div>
@@ -212,7 +211,7 @@
     <div class="text right">
       <p>
         Sigmoid calculates the probability of two things, for example, if you
-        want to classify if an image is a cat or isn’t a cat, you would want to use a
+        want to classify if an image is a cat or is not a cat, you would use a
         sigmoid activation function, which transforms
         the output value into a probability (a number between 0 and 1).
       </p>
@@ -222,11 +221,10 @@
   <div id="appanana4Text" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        ReLU makes sure that the final output is non-negative.
-        ReLU is commonly used in multilayer networks.
+        ReLU makes sure that the final output is non-negative, and is commonly used in multilayer networks.
         Unlike sigmoid, whose main purpose is to limit output range, ReLU is used
         to break linearity so that multilayer networks can learn more complex concepts.
-        We will talk about this more in depth in Chapter 5.
+        We will talk about this in depth in Chapter 5.
       </p>
     </div>
   </div>
@@ -246,7 +244,7 @@
           <div class="text-left align-self-start">
             <h3><strong>Summary</strong></h3>
             <p>Up to this point, we have looked at how neurons inspired the perceptron algorithm,
-              and what are the components of a perceptron. In the next chapter,
+              and what are the components of the perceptron. In the next chapter,
               we will discuss how data can be used to teach perceptrons and other more complex neural networks.
             </p>
 
@@ -269,7 +267,7 @@
               <strong>Perceptron</strong>: A neuron-inspired algorithm that is the building block of more complex neural networks.<br><br>
               <strong>Weight</strong>: A numeric value associated with an edge. It can either amplify or reduce signals.<br><br>
               <strong>Bias</strong>: A numeric value being added onto the weighted sum of all input signals.<br><br>
-              <strong>Activation Function</strong>: a function that is used to control the final output of a perceptron.
+              <strong>Activation Function</strong>: A function that is used to control the final output of a perceptron.
             </p>
           </div>
         </div>
