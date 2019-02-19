@@ -61,8 +61,8 @@
       <div class="col-10 col-md-4 order-2 order-md-1 text-center">
         <div class="text-left">
           <p>Chapter 5</p>
-          <h2>Introduction to Feed-forward Neural Networks</h2>
-          <p>Building upon perceptrons, Feed-forward Neural Networks (FNN) can complete far
+          <h2>Introduction to Feedforward Neural Networks</h2>
+          <p>Building upon perceptrons, Feedforward Neural Networks (FNN) can complete far
           more powerful tasks. This chapter presents an anatomy of this simplest type of
           artificial nerual networks.</p>
         </div>
@@ -106,16 +106,16 @@
       <p>To this point, we have only discussed networks with a
         single perceptron. These perceptron algorithms are not particularly powerful,
         as they are slow to learn, and cannot learn complex concepts. To improve them,
-        we need to stack perceptrons together so that they can form a more complex model.
+        we need to "stack" perceptrons together so that they can form a more complex model.
       </p>
     </div>
   </div>
 
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
-      <p>When we use multiple perceptrons to form Feed-forward Neural Networks (FNN), instead of
-        just having several input nodes, we now have an input layer. The layers that comes after
-        this first layer, excluding the last layer, are called <strong class="highlight"
+      <p>"Stacking" multiple perceptrons together give us a Feed-forward Neural Networks (FNN). Now, instead of
+        only having several inputs, we now have an input layer. The layers that comes after
+        this first layer and exclude the last layer, are called <strong class="highlight"
         data-toggle="tooltip"title="The middle layers
         of FNN that performs computations.">hidden layers</strong>.
       </p>
@@ -124,8 +124,8 @@
 
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
-      <p>The last layer is called an output layer. We say that a network has
-        n layers when there are n layers that perform computations, that is,
+      <p>The last layer is called the output layer. We say that a network has
+        n layers when there are n layers that perform computations. That is,
         there are n-1 hidden layers and 1 output layer. </p>
     </div>
   </div>
@@ -145,7 +145,7 @@
   <div id="text5" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>We will use the max and min temperature of today to use as inputs. The network
-        that we are using is a simple two-layer perceptron network that takes in two inputs.
+        that we are using is a simple two-layer FNN that takes in two inputs.
       </p>
     </div>
   </div>
@@ -154,7 +154,7 @@
     <div class="text left">
       <p>These two inputs in the input layer are then are split into 4 perceptrons in
         the hiddent layer, and then the outputs of the hidden layer is is fed into
-        the 2 perceptrons in the output layer, which generates the max and min temperature
+        the 2 outputs in the output layer, which generates the max and min temperature
         of tomorrow.</p>
     </div>
   </div>
@@ -162,7 +162,7 @@
   <div id="text7" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>In this network, all of the <strong data-toggle="tooltip" class="highlight"
-        title="Refer to perceptrons">nodes</strong> in the hidden layer has a ReLU function, while the second is a
+        title="Refer to perceptrons">nodes</strong> in the hidden layer has a ReLU function, while the last layer is a
         linear layer (Meaning that it has no activation function).
         But why do we need activation functions when we don’t need to control the range of output here? And what
         exactly is a ReLU function?
@@ -175,7 +175,7 @@
       <p>
         It turns out that, if we have consecutive linear layers, the network will
         behave exactly the same as a network with a single linear layer (Recall the AND and XOR example in Chapter 2).
-        To make the extra layer count, we need to introduce non-linearity.
+        To make the extra layers count, we need to introduce non-linearity.
 
         One of the most popular choices to break linearity is <strong data-toggle="tooltip"
         class="highlight" title="ReLU stands for Rectified Linear Unit. It maintains the value if the input is bigger than 0, and if the input is negative,
@@ -200,7 +200,7 @@
   <div id="text10" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        Now that we have understood the basics of how feed-forward neural networks work, we can get
+        Now that we have understood the basics of how feedforward neural networks work, we can get
         our hands a little dirty and look at how we can train a model to classify
         handwritten digits.
       </p>
@@ -221,7 +221,7 @@
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left align-self-start">
             <h3><strong>Summary</strong></h3>
-            <p>In this chapter, we have examined how each component of FNN works together
+            <p>In this chapter, we have examined how each component of a FNN works together
             to build this powerful algorithm. Our interactive module in Chapter 0 is
             powered by such algorithm. In the next chapter, we are breaking down the FNN we
             used in Chapter 0.</p>
@@ -242,7 +242,7 @@
           <div class="text-left">
             <h3><strong>Glossary</strong></h3>
             <p>
-              <strong>Hidden Layer</strong>: The middle layers of FNN that performs computations.<br><br>
+              <strong>Hidden Layer</strong>: The middle layers of a FNN that performs computations.<br><br>
               <strong>Node</strong>: In more complex neural networks, each perceptron is abstracted as a node.<br><br>
               <strong>ReLU</strong>: Rectified Linear Unit. A type of activation functions most commonly used to break linearity.
             </p>
