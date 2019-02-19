@@ -1,12 +1,31 @@
-#start {
+#start, #start2 {
   border-radius: 20px;
   font-weight: bold;
   color: white;
 }
 
+#closeMyModal {
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+}
+
 #openingText h1 {
   font-weight: bold;
   font-size: 3.5em;
+}
+
+#modalLink {
+    cursor: pointer;
+}
+
+#tipsLink {
+    font-size: 90%;
+    text-decoration: underline;
+}
+
+#tipsText p{
+    font-size: 1.1rem;
 }
 
 /* --------------------------------- animaiton backgrounds ---------------------- */
@@ -23,5 +42,10 @@
   #openingText h1 {
     font-weight: bold;
     font-size: 2em;
+  }
+
+
+  #tipsText p{
+      font-size: 0.9rem;
   }
 }
