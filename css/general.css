@@ -191,12 +191,16 @@ ul ul a {
 }
 
 .arrowIcon {
-  color: #797979;
-  font-size: 120%;
+  color: #999999;
+  font-size: 110%;
+}
+
+#scrollIcon, .fa-caret-down {
+  color: #494949;
 }
 
 #scrollIcon {
-  font-size: 90%;
+  font-size: 110%;
 }
 
 .arrowIcon a {
@@ -408,6 +412,7 @@ p a:hover{
 
   #scrollIcon {
     font-size: 0.6rem;
+    display: none;
   }
 
   .iconHeight {
