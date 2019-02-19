@@ -44,7 +44,7 @@
 }
 
 .bs-tooltip-top .tooltip-inner {
-    background-color: #EBCE26;
+    background-color: #ffc107;
     color: #000;
     font-weight: bold;
     padding: 10px;
@@ -56,7 +56,7 @@
 
 /* Tooltip on top */
 .bs-tooltip-auto.arrow::before, .bs-tooltip-top .arrow::before {
-  border-top-color: #EBCE26;
+  border-top-color: #ffc107;
 }
 
 /* Tooltip on bottom */
