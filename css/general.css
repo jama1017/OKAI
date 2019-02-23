@@ -210,8 +210,12 @@ ul ul a {
     color: white;
 }
 
-#tipsTextNav p{
+#tipsTextNav p {
     font-size: 1.1rem;
+}
+
+#navModalTooltip {
+    cursor: pointer;
 }
 
 /* ----------------------------- icon styling ------------------------------- */
@@ -486,6 +490,10 @@ p a:hover{
 
   #sideItems, #tinyLinks {
       margin-left: 40px;
+  }
+
+  .text-left ol {
+      font-size: 80%;
   }
 
   #navSocial {
