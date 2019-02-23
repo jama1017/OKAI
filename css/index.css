@@ -34,7 +34,8 @@
 }
 
 .gooFilterLayer {
-  filter: url("#goo")
+  -webkit-filter: url("#goo");
+          filter: url("#goo")
 }
 
 /* 992px is medium sreen size */
