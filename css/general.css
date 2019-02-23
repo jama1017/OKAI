@@ -40,16 +40,24 @@ p {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 #sidebar {
-  width: 300px;
+  width: 400px;
   position: fixed;
   top: 0;
-  left: -300px;
+  left: -400px;
   height: 100vh;
   z-index: 999;
   background: #fff;
   color: #000;
   transition: all 0.3s;
   overflow-y: scroll;
+}
+
+#sideItems {
+    margin-left: 70px;
+}
+
+#navLogo {
+    margin-left: 60px;
 }
 
 #sidebar.active {
@@ -440,5 +448,18 @@ p a:hover{
   .tooltip .tooltip-inner {
     padding: 9px;
     font-size: 10px;
+  }
+
+  #sidebar {
+    width: 300px;
+    left: -300px;
+  }
+
+  #sideItems {
+      margin-left: 40px;
+  }
+
+  #navLogo {
+      margin-left: 30px;
   }
 }
