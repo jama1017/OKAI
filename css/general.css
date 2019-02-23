@@ -56,6 +56,15 @@ p {
     margin-left: 70px;
 }
 
+#navSocial {
+    margin-left: 80px;
+}
+
+#tinyLinks {
+    margin-left: 70px;
+    font-size: 12px;
+}
+
 #navLogo {
     margin-left: 60px;
 }
@@ -455,8 +464,12 @@ p a:hover{
     left: -300px;
   }
 
-  #sideItems {
+  #sideItems, #tinyLinks {
       margin-left: 40px;
+  }
+
+  #navSocial {
+      margin-left: 50px;
   }
 
   #navLogo {
