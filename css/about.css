@@ -76,4 +76,8 @@
     font-weight: bold;
     font-size: 2em;
   }
+
+  #privacy p {
+    font-size: 0.9rem;
+  }
 }
