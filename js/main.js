@@ -3,6 +3,10 @@ $(document).ready(function() {
         $("#sidebar").mCustomScrollbar({
           theme: "minimal"
         });
+
+        $('#navModalTooltip').tooltip({
+          placement: "top"
+        });
     });
 
     $(document).on('click', '#dismiss, .overlay', function() {

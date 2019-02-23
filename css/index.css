@@ -19,6 +19,10 @@
     cursor: pointer;
 }
 
+#modalTooltip {
+    cursor: pointer;
+}
+
 #tipsLink {
     font-size: 90%;
     text-decoration: underline;
