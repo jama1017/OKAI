@@ -8437,8 +8437,8 @@
           }
 
           let bound = canvas.getBoundingClientRect();
-          currX = event.clientX - bound.left - canvas.clientLeft;
-          currY = event.clientY - bound.top - canvas.clientTop;
+          currX = e.clientX - bound.left - canvas.clientLeft;
+          currY = e.clientY - bound.top - canvas.clientTop;
 
           //draw a circle
           ctx.beginPath();
@@ -8468,8 +8468,8 @@
 
             let bound = canvas.getBoundingClientRect();
 
-            currX = event.clientX - bound.left - canvas.clientLeft;
-            currY = event.clientY - bound.top - canvas.clientTop;
+            currX = e.clientX - bound.left - canvas.clientLeft;
+            currY = e.clientY - bound.top - canvas.clientTop;
 
             currPath = paths[paths.length - 1];
             currPath[0].push(currX);
@@ -8507,13 +8507,13 @@
             [currY]
           ]);
           paintFlag = true;
-          event.preventDefault();
+          e.preventDefault();
         }
 
         if (res == 'end') {
           paintFlag = false;
           //console.log(paths);
-          event.preventDefault();
+          e.preventDefault();
         }
 
         if (res == 'touchMove') {
@@ -8532,7 +8532,7 @@
             currPath[1].push(currY);
             paths[paths.length - 1] = currPath;
             draw(ctx, color, lineWidth, prevX, prevY, currX, currY);
-            event.preventDefault();
+            e.preventDefault();
           }
         }
 
