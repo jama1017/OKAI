@@ -71,8 +71,42 @@
 
   <div class="text-left mt-3" id="tinyLinks">
       <ul class="list-unstyled">
-          <li><a href="#" class="d-block text-muted">Usage Tips</a></li>
-          <li><a href="#" class="d-block text-muted">Privacy Statement</a></li>
+          <li>
+              <a class="text-muted d-block" data-toggle="modal" data-target="#adviceModalNav"
+              style="cursor: pointer">Usage Tips</a>
+          </li>
+          <li><a href="./about.html#privacy" class="d-block text-muted">Privacy Statement</a></li>
       </ul>
   </div>
 </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="adviceModalNav" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitleNav">Usage Tips</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body text-center">
+        <div id="tipsTextNav" class="text-left">
+            <p>Hi! Welcome to Project OKAI! Here are some usage tips for the optimal experience:</p>
+            <ul>
+                <li><p>For browsers, Chrome and Safari work the best!</p></li>
+                <li><p>Once you get to a chapter, keep scrolling down to view the content, and click on the left or right arrow icon
+                to switch between chapters and pages.</p></li>
+                <li><p>Whenever you see <strong data-toggle="tooltip" title="You got it!">bold texts
+                </strong>, hover over them to view additional information and explanation.</p></li>
+                <li><p>For quick navigation, click on the hamburger icon on the top left corner to open the side menu.</p></li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <button id="closeMyModalNav" type="button" class="btn btn-grey" data-dismiss="modal">Got it</button>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
+</div>

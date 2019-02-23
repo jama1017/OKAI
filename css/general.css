@@ -201,6 +201,17 @@ ul ul a {
   /* z-index: -1; */
 }
 
+/* ------------------------------modal styling ------------------------------ */
+#closeMyModalNav {
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+#tipsTextNav p{
+    font-size: 1.1rem;
+}
+
 /* ----------------------------- icon styling ------------------------------- */
 .iconHeight {
   line-height: 8%;
@@ -474,5 +485,9 @@ p a:hover{
 
   #navLogo {
       margin-left: 30px;
+  }
+
+  #tipsTextNav p{
+      font-size: 0.9rem;
   }
 }
