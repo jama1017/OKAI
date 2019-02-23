@@ -23,7 +23,8 @@
 }
 
 .gooFilterLayer {
-  filter: url("#goo")
+  -webkit-filter: url("#goo");
+          filter: url("#goo")
 }
 
 /* ---------------------neuron animation stuff ------------------------------*/

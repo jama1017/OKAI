@@ -76,7 +76,8 @@
     border-radius: 25px;
     width: 180px;
     height: 180px;
-    touch-action: none;
+    -ms-touch-action: none;
+        touch-action: none;
   }
 
   #nnOut {

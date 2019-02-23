@@ -48,6 +48,7 @@ p {
   z-index: 999;
   background: #fff;
   color: #000;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   overflow-y: scroll;
 }
@@ -83,7 +84,6 @@ p {
   right: 10px;
   cursor: pointer;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -100,6 +100,7 @@ p {
   background: rgba(0, 0, 0, 0.7);
   z-index: 998;
   opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
@@ -151,7 +152,8 @@ a[data-toggle="collapse"] {
   position: absolute;
   top: 50%;
   right: 20px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 ul ul a {
@@ -318,11 +320,13 @@ p a:hover{
 }
 
 .animLeft {
-  transform: translate(-95%, -50%);
+  -webkit-transform: translate(-95%, -50%);
+          transform: translate(-95%, -50%);
 }
 
 .animRight {
-  transform: translate(-5%, -50%);
+  -webkit-transform: translate(-5%, -50%);
+          transform: translate(-5%, -50%);
 }
 
 .scene {
@@ -354,12 +358,14 @@ p a:hover{
 
 .left {
   left: 0%;
-  transform: translate(30%, -50%);
+  -webkit-transform: translate(30%, -50%);
+          transform: translate(30%, -50%);
 }
 
 .right {
   left: 70%;
-  transform: translate(-30%, -50%);
+  -webkit-transform: translate(-30%, -50%);
+          transform: translate(-30%, -50%);
 }
 
 /*
@@ -408,11 +414,13 @@ p a:hover{
   }
 
   .animLeft {
-    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
   }
 
   .animRight {
-    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
   }
 
   .text {
@@ -424,7 +432,8 @@ p a:hover{
     line-height: 1.1;
     bottom: 10%;
     left: 50%;
-    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
   }
 
   .left {}
