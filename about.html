@@ -256,7 +256,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
   <!-- fullPage.js -->
-  <script type="text/javascript" src="./js/fullpage.extensions.min.js"></script>
+  <script>
+    if (screen && screen.width > 992) {
+        document.write('<script type="text/javascript" src="./js/fullpage.extensions.min.js"><\/script>');
+    }
+  </script>
+
 
   <script type="text/javascript" src="./js/main.js"></script>
 
@@ -265,16 +270,14 @@
         $('[data-toggle="tooltip"]').tooltip({
             placement: "top"
         });
-
-        $('#fullPage').fullpage({
-            //options here
-            licenseKey: '1276B73C-02C24806-A6911BB1-45426E2F',
-            navigation: true,
-        	navigationPosition: 'right',
-        	navigationTooltips: ['About', 'The Team', 'Privacy Statement'],
-        });
-
-
+        if (screen && screen.width > 992) {
+            $('#fullPage').fullpage({
+                licenseKey: '1276B73C-02C24806-A6911BB1-45426E2F',
+                navigation: true,
+            	navigationPosition: 'right',
+            	navigationTooltips: ['About', 'The Team', 'Privacy Statement'],
+            });
+        }
     });
   </script>
 
