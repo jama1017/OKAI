@@ -26,6 +26,10 @@
     font-size: 18px;
 }
 
+#fp-nav ul li .fp-tooltip {
+    color: #000;
+}
+
 .card {
   border-radius: 20px;
 }
