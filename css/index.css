@@ -17,6 +17,8 @@
 
 #modalLink {
     cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
 #modalTooltip {
