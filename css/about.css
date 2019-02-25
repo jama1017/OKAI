@@ -9,7 +9,7 @@
   font-size: 3.5em;
 }
 
-#team, #award, #privacy {
+#team, #award, #privacy, #reference {
   min-height: 100vh;
   width: 100%;
   margin: 0;
@@ -17,12 +17,12 @@
   overflow-x: hidden;
 }
 
-#team h1, #award h1, #privacy h1 {
+#team h1, #award h1, #privacy h1, #reference h1 {
   font-weight: bold;
   font-size: 3.5em;
 }
 
-#privacy p {
+#privacy p, #reference p {
     font-size: 18px;
 }
 
@@ -77,12 +77,12 @@
     font-size: 2em;
   }
 
-  #team h1, #award h1, #privacy h1 {
+  #team h1, #award h1, #privacy h1, #reference h1 {
     font-weight: bold;
     font-size: 2em;
   }
 
-  #privacy p {
+  #privacy p, #reference p {
     font-size: 0.9rem;
   }
 }
