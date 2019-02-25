@@ -187,10 +187,11 @@ ul ul a {
   position: fixed;
   top: 0;
   z-index: 10;
-  height: 6px;
+  height: 12px;
   background: #f5c246;
   width: 0%;
-  opacity: 0.9;
+  opacity: 1.0;
+  border-radius: 6px;
 }
 
 .animation {
