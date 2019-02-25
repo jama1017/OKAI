@@ -229,8 +229,12 @@ ul ul a {
   font-size: 110%;
 }
 
-#scrollIcon, .fa-caret-down {
-  color: #494949;
+#scrollIcon, .fa-angle-down {
+  color: #585858;
+}
+
+.iconHeight.fa-angle-down {
+    font-size: 1.8rem;
 }
 
 #scrollIcon {
@@ -506,5 +510,9 @@ p a:hover{
 
   #tipsTextNav p{
       font-size: 0.9rem;
+  }
+
+  .iconHeight.fa-angle-down {
+      font-size: 1.4rem;
   }
 }
