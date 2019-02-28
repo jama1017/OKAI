@@ -71,7 +71,7 @@
 }
 
 /* 992px is medium sreen size */
-@media screen and (max-width: 992px) and (orientation: portrait) {
+@media screen and (max-width: 767px) and (orientation: portrait) {
   #openingText h1 {
     font-weight: bold;
     font-size: 2em;
