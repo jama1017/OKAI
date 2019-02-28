@@ -302,7 +302,7 @@ p a:hover{
   overflow-x: hidden;
   line-height: 1.4;
   margin: 0;
-  padding: 0;
+  padding: 20px 0;
   background-color: #e9e9e9;
 }
 
