@@ -29,7 +29,7 @@ $(document).ready(function() {
     $(".lastScene").each(function() {
       new ScrollMagic.Scene({
           triggerElement: this,
-          duration: '10%'
+          duration: '1%'
         })
         .setPin(this)
         // .addIndicators({name: "text"})
