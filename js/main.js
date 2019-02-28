@@ -25,4 +25,14 @@ $(document).ready(function() {
         $('#sidebar').removeClass('active');
         $('.overlay').removeClass('active');
     });
+
+    $(".lastScene").each(function() {
+      new ScrollMagic.Scene({
+          triggerElement: this,
+          duration: '10%'
+        })
+        .setPin(this)
+        // .addIndicators({name: "text"})
+        .addTo(controller);
+    });
 });
