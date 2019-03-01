@@ -16,3 +16,12 @@ OKAI is in the format of a **website**, with each webpage functioning similar to
 
 ## Project Page
 You can learn more about this project at http://majiaju.io/syngap.html
+
+## License
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) <br>
+The project, except the motion graphics, is licensed under GNU GPL v3.
+
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/) <br>
+The motion graphics, in the format of .json (located in /json directory), are licensed under Creative Commons Attribution-ShareAlike 4.0 International. To reuse our graphics, please embed the following html snippet into your webpage.
+
+> <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">OKAI</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://okai.brown.edu/" property="cc:attributionName" rel="cc:attributionURL">Jiaju Ma, Yimei Hu, Michael Mao</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/jama1017/OKAI" rel="dct:source">https://github.com/jama1017/OKAI</a>.
