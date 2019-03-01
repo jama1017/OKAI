@@ -26,6 +26,12 @@
     font-size: 18px;
 }
 
+#avatarCredit {
+    font-size: 15px !important;
+    margin-left: 40px;
+    color: grey;
+}
+
 #fp-nav ul li .fp-tooltip {
     color: #000;
 }
@@ -84,5 +90,9 @@
 
   #privacy p, #reference p {
     font-size: 0.9rem;
+  }
+
+  #avatarCredit {
+      font-size: 12px !important;
   }
 }
