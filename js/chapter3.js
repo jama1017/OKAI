@@ -75,7 +75,7 @@ var activationAnimWindow = select('#activationLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch3_activationGroup.json',
+    path: './json/ch3_activationGroup2.json',
   };
 
 var activationAnim = bodymovin.loadAnimation(activationAnimData);
