@@ -181,6 +181,52 @@
       </div>
       <!-- end of team section -->
 
+      <!-- acknowledgment section -->
+      <div class="section">
+          <section id="acknowledge" class="d-flex align-items-center justify-content-center py-5">
+            <!-- start of row 1 -->
+            <div class="row align-items-center justify-content-center" style="width:100%">
+
+              <!-- col 2 title col -->
+              <div class="col-10 col-md-3 text-center mt-5 mt-md-0 mb-5 mb-md-0 mr-md-3">
+                <div class="text-left">
+                  <h1>Support & Media</h1>
+                </div>
+              </div>
+
+              <!-- col 3 content col-->
+              <div class="col-10 col-md-7 text-center">
+                  <!-- Support row -->
+                  <div class="row">
+                      <div class="col-12 text-left">
+                          <p>Project OKAI is funded by Brown Science Center and Brown Arts Initiative Student Grants.</p>
+                          <p>Special thanks to the following people who have supported Project OKAI:</p>
+                          <p>
+                              <a href="https://www.brown.edu/academics/college/people/detail/Oludurotimi_Adetunji" target="_blank">Dean Oludurotimi Adetunji (Brown)</a><br>
+                              <a href="http://cs.brown.edu/~mlittman/" target="_blank">Professor Michael Littman (Brown)</a><br>
+                              <a href="https://www.linkedin.com/in/stephanie-castilla-95647711/" target="_blank">Professor Stephanie Castilla (RISD)</a>
+                          </p>
+                      </div>
+                  <!-- end of support row -->
+                  </div>
+
+                  <!-- media row -->
+                  <div class="row">
+                      <div class="col-12 text-left">
+                          <img class="mediaLogo p-3" src="./img/logo_sci.jpg" alt="Brown Science Center">
+                          <a href="https://arts.brown.edu/student-grants" target="_blank">
+                              <img class="mediaLogo p-3" src="./img/logo_bai.jpg" alt="Brown Arts Initiative">
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+            </div>
+            <!-- end of row 1 -->
+          </section>
+      </div>
+      <!-- end of acknowledgment section -->
+
 
       <!-- contribute section -->
       <div class="section">
@@ -200,23 +246,24 @@
                 <div class="text-left">
                     <p>
                         Hello! We hope that you have enjoyed OKAI! We want to
-                        keep improving and expanding this project. If you spot
-                        any typos or content mistakes, or have any suggestions,
+                        keep improving this project. If you spot
+                        any typos or mistakes, or have any suggestions,
                         feel free to shoot us an email at
                         <a href="mailto:projectokai@gmail.com" target="_blank">
-                            projectokai@gmail.com</a>.
+                            <i class="far fa-envelope fa-sm"></i> projectokai@gmail.com</a>.
                         <br><br>
                         If you want to
                         translate OKAI into your language so that more people can read it,
                         please let us know!
-                        <br><br>
+
                         Moreover, if you are a designer, animator, AI enthusiast,
                         etc, and want to contribute to this project, contact us!
-                        We would love to collaborate
-                        and create more content in the realm of AI!
+                        We would love to collaborate!
                         <br><br>
                         Feel free to also build your own project based on OKAI. Visit our
-                        <a href="https://github.com/jama1017/OKAI" target="_blank">GitHub repo </a>
+                        <a href="https://github.com/jama1017/OKAI" target="_blank">
+                            <i class="fab fa-github-alt fa-sm"></i> GitHub repo
+                        </a>
                         to fork or view license information!
                     </p>
                 </div>
@@ -287,8 +334,8 @@
               <div class="col-10 col-md-7 text-center">
                 <div class="text-left">
 
-                  <p>This website uses <a href="https://analytics.google.com/" target="_blank"
-                      style="text-decoration: underline">Google Analytics</a> to help analyze how visitors use this site.
+                  <p>This website uses <a href="https://analytics.google.com/" target="_blank">Google Analytics</a>
+                      to help analyze how visitors use this site.
                       Google Analytics uses “cookies”, which are small text files placed on your computer,
                       to collect standard internet log information and visitor behaviour information in
                       an anonymous form. Note the deliberate emphasis of anonymous, as no personally
@@ -306,8 +353,7 @@
 
                   <p>
                       If you wish to <strong>opt out of Google Analytics</strong>, please
-                      click <a href="https://tools.google.com/dlpage/gaoptout" target="_blank"
-                      style="text-decoration: underline">here</a>.
+                      click <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">here</a>.
                   </p>
 
                 </div>
@@ -351,10 +397,10 @@
         if (screen && screen.width > 767) {
             $('#fullPage').fullpage({
                 licenseKey: '1276B73C-02C24806-A6911BB1-45426E2F',
-                anchors: ['about-okai', 'the-team', 'contribute', 'references', 'privacy-statement'],
+                anchors: ['about-okai', 'the-team', 'support-media','contribute', 'references', 'privacy-statement'],
                 navigation: true,
             	navigationPosition: 'right',
-            	navigationTooltips: ['About', 'The Team', 'Contribute', 'References', 'Privacy Statement'],
+            	navigationTooltips: ['About', 'The Team', 'Support & Media', 'Contribute', 'References', 'Privacy Statement'],
             });
         }
     });

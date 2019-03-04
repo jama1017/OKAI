@@ -9,7 +9,7 @@
   font-size: 3.5em;
 }
 
-#team, #award, #privacy, #reference, #contribution {
+#team, #award, #privacy, #reference, #contribution, #acknowledge {
   min-height: 100vh;
   width: 100%;
   margin: 0;
@@ -17,7 +17,7 @@
   overflow-x: hidden;
 }
 
-#team h1, #award h1, #privacy h1, #reference h1, #contribution h1 {
+#team h1, #award h1, #privacy h1, #reference h1, #contribution h1, #acknowledge h1 {
   font-weight: bold;
   font-size: 3.5em;
 }
@@ -35,6 +35,22 @@
 #fp-nav ul li .fp-tooltip {
     color: #000;
 }
+
+.mediaLogo {
+    height: auto;
+    width: auto;
+    max-width: 170px;
+    max-height: 170px;
+    -webkit-filter: grayscale(100%) contrast(1.4);
+            filter: grayscale(100%) contrast(1.4);
+}
+
+.mediaLogo:hover {
+    -webkit-filter: grayscale(0%) contrast(1);
+            filter: grayscale(0%) contrast(1);
+}
+
+/* ----------------------------------card stuff */
 
 .card {
   border-radius: 20px;
@@ -83,7 +99,7 @@
     font-size: 2em;
   }
 
-  #team h1, #award h1, #privacy h1, #reference h1, #contribution h1 {
+  #team h1, #award h1, #privacy h1, #reference h1, #contribution h1, #acknowledge h1 {
     font-weight: bold;
     font-size: 2em;
   }
