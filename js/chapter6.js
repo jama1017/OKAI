@@ -42,8 +42,7 @@ var openingAnimWindow = select('#openingLottie'),
     loop: true,
     prerender: true,
     autoplay: true,
-    // path: './json/sushi_fitness.json',
-    path: './json/ch6_opening.json'
+    path: '/json/ch6_opening.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
@@ -58,8 +57,7 @@ var mnistAnimWindow = select('#mnistLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch6_mnist.json',
-    // path: './json/ch3_activationGroup.json',
+    path: '/json/ch6_mnist.json',
   };
 
 var mnistAnim = bodymovin.loadAnimation(mnistAnimData);
@@ -74,7 +72,7 @@ var mnistOutputAnimWindow = select('#mnistOutputLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch6_mnistOutput.json',
+    path: '/json/ch6_mnistOutput.json',
   };
 
 var mnistOutputAnim = bodymovin.loadAnimation(mnistOutputAnimData);
@@ -89,7 +87,7 @@ var propAnimWindow = select('#propLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch6_prop.json',
+    path: '/json/ch6_prop.json',
   };
 
 var propAnim = bodymovin.loadAnimation(propAnimData);
@@ -104,7 +102,7 @@ var repeatAnimWindow = select('#repeatLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch6_repeat.json',
+    path: '/json/ch6_repeat.json',
   };
 
 var repeatAnim = bodymovin.loadAnimation(repeatAnimData);
@@ -119,7 +117,7 @@ var codingAnimWindow = select('#codingLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch6_coding.json',
+    path: '/json/ch6_coding.json',
   };
 
 var codingAnim = bodymovin.loadAnimation(codingAnimData);

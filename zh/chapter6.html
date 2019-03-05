@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="/css/general.css">
+  <!-- change to own stylesheet -->
+  <link rel="stylesheet" href="/css/chapter6.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122864673-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122864673-1');
+    </script>
+
+  <title>第六章 Demo - OKAI</title>
+
+</head>
+
+<body>
+
+  <!-- scrollbar -->
+  <div class="scrollBar" id="myBar"></div>
+
+  <!-- navbar place holder -->
+  <div id="nav-placeholder" ></div>
+
+  <!-- ######################### -->
+  <!-- Chapter content beginning -->
+  <!-- ######################### -->
+
+  <!-- landing section -->
+  <div id="openingText" class="d-flex align-items-center justify-content-center">
+    <!-- start of row 1 -->
+    <div class="row align-items-center justify-content-center">
+      <!-- col 1 -->
+      <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
+        <a href="./chapter5.html" data-toggle="tooltip" title="Chapter 5"><i class="fas fa-caret-left fa-2x"></i></a>
+      </div>
+
+      <!-- col 2 -->
+      <div class="col-10 col-md-4 order-2 order-md-1 text-center">
+        <div class="text-left">
+          <p>第六章</p>
+          <h2>前馈神经网络实例</h2>
+          <p>Wondering how the module in chapter 0 works? Harness the knowledge
+          you have acquired so far and let's take a look at how you can build a network to recognize
+          handwritten digits. Keep scrolling!</p>
+        </div>
+      </div>
+
+      <!-- col 3 -->
+      <div class="col-md-5 order-1 order-md-2">
+        <div id="openingLottie" class="openingAnimation mx-auto"></div>
+      </div>
+
+      <!-- col-4 -->
+      <div class="d-none d-md-block col-1 arrowIcon"
+        style="position: absolute; right: 5px; visibility: visible;">
+        <a href="./about.html" data-toggle="tooltip" title="About"><i class="fas fa-caret-right fa-2x"></i></a>
+      </div>
+    </div>
+    <!-- end of row 1 -->
+
+    <!-- start of row 2 -->
+    <div class="" style="position: absolute; bottom: 20px;">
+      <div>
+        <p class="iconHeight" id="scrollIcon">Scroll</p>
+        <i class="iconHeight fas fa-angle-down fa-lg"></i>
+      </div>
+      <!-- end of row 2 -->
+    </div>
+  </div>
+  <!-- end of landing section -->
+
+
+  <!-- ######## Animation & text beginning ######## -->
+  <!-- animation divs -->
+  <div id="mnistLottie" class="animation animLeft upperLayer"></div>
+  <div id="mnistOutputLottie" class="animation animRight topLayer"></div>
+  <div id="propLottie" class="animation animLeft threeLayer"></div>
+  <div id="repeatLottie" class="animation animRight fourLayer"></div>
+  <div id="codingLottie" class="animation animLeft fiveLayer"></div>
+
+  <!-- text begins -->
+
+  <!-- mnist animation text section -->
+  <div id="text1" class="bg-1grey scene">
+    <div class="text right">
+      <p>In this chapter, we will explain how to make a practical network that will
+        recognize handwritten digits, just like the one in Chapter 0. We will be
+        using the MNIST dataset, a dataset of hand-written images from Computer
+        Scientist Yann LeCun's website.
+        <!-- We will be splitting 80% off the dataset to use for -->
+        <!-- training and the other 20% for checking our accuracy. -->
+      </p>
+    </div>
+  </div>
+
+  <div id="text2" class="bg-1grey scene">
+    <div class="text right">
+      <p>
+        Each of the images from the MNIST dataset is a 28 pixel by 28 pixel image.
+        These images will be used as training data to teach our FNN how to recognize
+        handwritten digits.
+      </p>
+    </div>
+  </div>
+
+  <div id="text3" class="bg-1grey scene">
+    <div class="text right">
+      <p>
+        Each pixel has a value from 0 to 1 to indicate how white the pixel is. 0
+        is black, 1 is white, and anywhere between them is a shade of gray. These 28 &times;
+        28 = 784 pixels are flattened into a single array to be fed into the input layer.
+      </p>
+    </div>
+  </div>
+
+  <div id="text4" class="bg-1grey scene">
+    <div class="text right">
+      <p>The input layer then transforms it into the first hidden layer of size 500,
+        so we have 500 numbers that will represent a transformation of the original image.
+
+        For a multilayer network to work well, we need to break linearity,
+        and thus we use ReLU as an activation function to achieve that.
+      </p>
+    </div>
+  </div>
+
+  <div id="text5" class="bg-1grey scene">
+    <div class="text right">
+      <p>
+        These 500 nodes are then feeding into another layer of 10 nodes.
+        Since we are working with classification, this would require us to
+        transform the output of these 10 nodes into probabilities.
+
+        To do this, we use <strong data-toggle="tooltip" class="highlight"
+        title="A hyped-up version of sigmoid where it generates the probability
+        of multiple things.">Softmax</strong> activation function.
+        In this way, we will get the probability associated with each digit that we can use to calculate loss.
+      </p>
+    </div>
+  </div>
+
+  <!-- mnistOutput animation text section -->
+  <div id="text6" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>Finally, the output layer will also have 10 nodes, each corresponding to
+        a digit from 0 to 9.
+      </p>
+    </div>
+  </div>
+
+  <div id="text7" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>Because of softmax, each final output node now contains a probability value that represents
+        how likely the FNN thinks the input image represents the corresponding digit.
+      </p>
+    </div>
+  </div>
+
+  <div id="text8" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>The highest probability, signaling the digit that the model thinks is the most
+        probable, will be our final output classification of the input handwritten digit.
+      </p>
+    </div>
+  </div>
+
+  <!-- prop animation text section -->
+  <div id="text9" class="scene bg-3grey topLayer">
+    <div class="text right">
+      <p>We then split images from MNIST by batches of 100 and feed them into the FNN for
+        training. During training, the model uses existing parameters (weights and biases) to generate
+        a tentative answer. This process is called <strong class="highlight"
+        data-toggle="tooltip" title="The process of making the neural network
+        generate a prediction based on input">forward propagation</strong>.
+      </p>
+    </div>
+  </div>
+
+  <div id="text10" class="scene bg-3grey topLayer">
+    <div class="text right">
+      <p>Then, after seeing the answer and computing the loss, it goes back into
+        the network and updates the parameters to get even closer to the desired answer.
+        This process is called <strong class="highlight"
+        data-toggle="tooltip" title="The process of adjusting parameters to
+        improve the performance of neural networks.">backpropagation</strong>.
+      <p>
+    </div>
+  </div>
+
+  <!-- repeat animation text section-->
+  <div id="text11" class="scene threeLayer bg-4grey">
+    <div class="text left">
+      <p>
+        To train the model, we would need to first initialize the values inside
+        the model. In this particular case, we will initialize them to
+        random values clustered around 0, which is usually a good starting point.
+      </p>
+    </div>
+  </div>
+
+  <div id="text12" class="scene threeLayer bg-4grey">
+    <div class="text left">
+      <p>
+        To train it, we are using Stochastic Gradient Descent (SGD)
+        with a learning rate of 0.7. This learning rate is chosen by experiment,
+        as it seems to work best for our model. Usually, you should try out a few
+        different values before settling on a reasonable one.
+      </p>
+    </div>
+  </div>
+
+  <div id="text13" class="scene threeLayer bg-4grey">
+    <div class="text left">
+      <p>
+        After going over the dataset 2 to 3 epochs, our model is good
+        enough to be used.
+        In our model, we would be able to achieve around 97% accuracy with only
+        2 runs over the dataset, and on an average laptop, it would run in under
+        a minute.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- coding animation text section -->
+  <div id="text14" class="scene fourLayer bg-5grey">
+    <div class="text right">
+      <p>
+        This is the FNN that we used in our interactive module in Chapter 0.
+
+        For those who want to experiment with the model more in depth, we have
+        written an easy-to-understand code that you can experiment with online.<br>
+        <a class="mt-2 btn btn-warning" id="colabButton" href="https://colab.research.google.com/drive/18bQA1ly8hsX_vjPILBkrHsbqkQKPpsdU"
+          role="button" target="_blank">
+          Get Coding
+        </a>
+      </p>
+    </div>
+  </div>
+
+
+  <!-- ending section -->
+  <div id="endingText" class="lastScene row align-items-center justify-content-around fiveLayer">
+
+    <!-- col 1 -->
+    <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
+      <a href="./chapter5.html" data-toggle="tooltip" title="Chapter 5"><i class="fas fa-caret-left fa-2x"></i></a>
+    </div>
+
+    <div class="col-12 col-md-10">
+      <div class="row justify-content-around">
+
+        <div class="col-10 col-md-5 fourLayer align-self-start">
+          <div class="text-left align-self-start">
+            <h3><strong>Summary</strong></h3>
+            <p>We have now understood how to apply the things we have learned so far
+              to build a functional neural network that can recognize handwritten digits.
+              There are much more powerful things that AI can do. Hope these chapters can serve
+              as a starting point for you to explore more in the world of AI!
+            </p>
+
+            <h3><strong>Further Reading</strong></h3>
+            <p>
+              <a href="https://yann.lecun.com/exdb/mnist/" target="_blank">
+                MNIST Dataset</a>
+              <br><a href="https://www.deeplearningbook.org/" target="_blank">
+                    Deep Learning: An MIT Press Book</a>
+              <br><a href="https://playground.tensorflow.org/" target="_blank">
+                    A Neural Network Playground</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-10 col-md-5 fourLayer align-self-start">
+          <div class="text-left">
+            <h3><strong>Glossary</strong></h3>
+            <p><strong>Softmax</strong>: A hyped-up version of sigmoid where it generates the probability of multiple things.<br><br>
+              <strong>Forward Propagation</strong>: The process of making the neural network generate a prediction based on input. <br><br>
+              <strong>Backpropagation</strong>: The process of adjusting parameters to improve the performance of neural networks.
+            </p>
+          </div>
+        </div>
+        <!-- end of inner row -->
+      </div>
+      <!-- end of outer col-10 -->
+    </div>
+
+    <!-- col-4 -->
+    <div class="d-none d-md-block col-1 arrowIcon"
+      style="position: absolute; right: 5px; visibility: visible;">
+      <a href="./about.html" data-toggle="tooltip" title="About"><i class="fas fa-caret-right fa-2x"></i></a>
+    </div>
+
+
+    <!-- end of ending section -->
+  </div>
+
+  <!-- end of text area -->
+
+  <div class="overlay"></div>
+
+
+  <!-- svg goo filter DO NOT DELETE-->
+  <!-- <svg version="1.1" xmlns="https://www.w3.org/2000/svg" style="height: 0; width: 0; position: absolute; top: -9999px; left: -99990px">
+    <defs>
+      <filter color-interpolation-filters="sRGB" id="goo2">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
+        <feBlend />
+      </filter>
+    </defs>
+  </svg> -->
+
+  <!-- Boostrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <!-- GSAP -->
+  <script type="text/javascript" src="/js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="/js/DrawSVGPlugin.min.js"></script>
+  <script type="text/javascript" src="/js/MorphSVGPlugin.min.js"></script>
+
+  <!-- Lottie -->
+  <script type="text/javascript" src="/js/lottie.js"></script>
+
+  <!-- ScrollMagic JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
+
+  <script type="text/javascript" src="/js/main.js"></script>
+
+  <!-- change to own js files -->
+  <script type="text/javascript" src="/js/chapter6.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip({
+        placement: "top"
+      });
+    });
+  </script>
+
+</body>
+
+</html>
