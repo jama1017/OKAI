@@ -18,8 +18,7 @@ var openingAnimWindow = select('#openingLottie'),
     loop: true,
     prerender: true,
     autoplay: true,
-    // path: './json/sushi_fitness.json',
-    path: './json/ch6_mnist.json'
+    path: '/json/ch6_mnist.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
