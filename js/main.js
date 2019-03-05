@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#nav-placeholder").load("./utilities/nav.html", function() {
+    $("#nav-placeholder").load("/utilities/nav.html", function() {
         $("#sidebar").mCustomScrollbar({
             theme: "minimal"
         });
