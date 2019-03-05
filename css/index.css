@@ -34,6 +34,11 @@
     font-size: 1.1rem;
 }
 
+#dropdownMenuButton {
+    border-radius: 20px;
+    border:none;
+}
+
 /* --------------------------------- animaiton backgrounds ---------------------- */
 #seedBG path {
   fill: #E8E8E8;
