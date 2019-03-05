@@ -1,3 +1,7 @@
+$(document).ajaxComplete(function() {
+    $('#navLinkToEn').attr("href", "/chapter1.html");
+    $('#navLinkToZh').attr("href", "/zh/chapter1.html");
+});
 // ---------------------------------------------------------
 // ------------------ functions  --------------------------
 // --------------------------------------------------------

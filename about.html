@@ -409,6 +409,11 @@
             	navigationTooltips: ['About', 'The Team', 'Support & Media', 'Contribute', 'References', 'Privacy Statement'],
             });
         }
+
+        $(document).ajaxComplete(function() {
+            $('#navLinkToEn').attr("href", "/about.html");
+            $('#navLinkToZh').attr("href", "/zh/about.html");
+        });
     });
   </script>
 
