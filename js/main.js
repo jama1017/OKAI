@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $("#nav-placeholder").load("/utilities/nav.html", function() {
+    //use relative path to get language version of nav
+    $("#nav-placeholder").load("./utilities/nav.html", function() {
         $("#sidebar").mCustomScrollbar({
             theme: "minimal"
         });
