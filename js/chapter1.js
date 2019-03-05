@@ -42,8 +42,7 @@ var openingAnimWindow = select('#openingLottie'),
     loop: true,
     prerender: true,
     autoplay: true,
-    // path: './json/sushi_fitness.json',
-    path: './json/ch1_opening.json'
+    path: '/json/ch1_opening.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
@@ -58,8 +57,7 @@ var seedAnimWindow = select('#seedLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_seed.json',
-    // path: './json/ch3_activationGroup.json',
+    path: '/json/ch1_seed.json',
   };
 
 var seedAnim = bodymovin.loadAnimation(seedAnimData);
@@ -74,7 +72,7 @@ var robotAnimWindow = select('#robotLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_robot.json',
+    path: '/json/ch1_robot.json',
   };
 
 var robotAnim = bodymovin.loadAnimation(robotAnimData);
@@ -89,7 +87,7 @@ var agiAnimWindow = select('#agiLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_agi.json',
+    path: '/json/ch1_agi.json',
   };
 
 var agiAnim = bodymovin.loadAnimation(agiAnimData);
@@ -104,7 +102,7 @@ var dataAnimWindow = select('#dataLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_data.json',
+    path: '/json/ch1_data.json',
   };
 
 var dataAnim = bodymovin.loadAnimation(dataAnimData);
@@ -119,7 +117,7 @@ var wordsAnimWindow = select('#wordsLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch1_words.json',
+    path: '/json/ch1_words.json',
   };
 
 var wordsAnim = bodymovin.loadAnimation(wordsAnimData);
