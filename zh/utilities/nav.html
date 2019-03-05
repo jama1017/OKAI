@@ -1,0 +1,134 @@
+<!-- navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <button type="button" id="sidebarCollapse" class="btn">
+      <i class="fas fa-bars fa-lg"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Sidebar  -->
+<nav id="sidebar">
+  <div id="dismiss">
+    <i class="fas fa-times fa-sm"></i>
+  </div>
+
+  <div class="sidebar-header d-flex align-items-center" id="navLogo">
+    <img id="logo" src="/img/logo_text.svg" alt="logo">
+  </div>
+
+  <ul class="list-unstyled components d-flex flex-column" id="sideItems">
+
+     <div class="text-left my-5">
+            <li>
+              <a href="index.html">首页</a>
+            </li>
+            <li>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                章节
+                <i class="fas fa-ellipsis-v" style="position: absolute; right: 25px;
+                top: 50%; transform: translateY(-50%);"></i>
+              </a>
+              <ol start="0" class="collapse" id="pageSubmenu">
+                <li>
+                  <a href="./chapter0.html">A Taste of AI</a>
+                </li>
+                <li>
+                  <a href="./chapter1.html">AI Is Around You</a>
+                </li>
+                <li>
+                  <a href="./chapter2.html">A Brief History of <br>Deep Learning</a>
+                </li>
+                <li>
+                  <a href="./chapter3.html">The Building Block of <br>Deep Learning</a>
+                </li>
+                <li>
+                  <a href="./chapter4.html">Perceptron Learning</a>
+                </li>
+                <li>
+                  <a href="./chapter5.html">Introduction to Feedforward <br>Neural Networks</a>
+                </li>
+                <li>
+                  <a href="./chapter6.html">Feedforward Neural <br>Networks in Action</a>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <a href="./about.html">关于我们</a>
+            </li>
+
+      <!-- end of text-left -->
+      </div>
+  <!-- end of sideItems ul -->
+  </ul>
+
+  <!-- social media section -->
+  <div class="text-left mt-5 text-muted" id="navSocial">
+      <i class="fab mr-1 fa-facebook-square fa-lg"></i>
+      <!-- <i class="fab mx-1 fa-instagram fa-lg"></i> -->
+      <i class="far mx-1 fa-envelope fa-lg"></i>
+      <i class="fab mx-1 fa-github fa-lg"></i>
+      <i class="fab mx-1 fa-medium-m fa-lg"></i>
+  </div>
+
+  <!-- tiny links section -->
+  <div class="text-left my-3" id="tinyLinks">
+      <ul class="list-unstyled">
+          <li>
+              <a class="text-muted d-block" data-toggle="modal" data-target="#adviceModalNav"
+              style="cursor: pointer">如何使用</a>
+          </li>
+          <li>
+              <a href="./about.html#privacy-statement" class="d-none d-md-block text-muted">隐私政策</a>
+              <a href="./about.html#privacy" class="d-block d-md-none text-muted">隐私政策</a>
+          </li>
+      </ul>
+  </div>
+
+  <!-- language selection -->
+  <div class="dropup my-5 text-left" id='navLangSel'>
+      <i class="text-muted ml-1 fas fa-globe-asia fa-sm"></i>
+      <button class="my-1 btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="navDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        简体中文   <i class="ml-3 fas fa-caret-up"></i>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="navDropdownMenuButton">
+        <a class="dropdown-item" href="#">English</a>
+        <a class="dropdown-item" href="#">简体中文</a>
+      </div>
+  </div>
+
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="adviceModalNav" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitleNav">How to Use</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body text-center">
+        <div id="tipsTextNav" class="text-left">
+            <p>Hi! Welcome to Project OKAI! Here are some usage tips for the optimal experience:</p>
+            <ul>
+                <li><p>For browsers, Chrome and Safari work the best!</p></li>
+                <li>
+                    <p class="d-none d-md-inline">Once you get to a chapter, keep scrolling down to view the content, and click on the left or right arrow icon
+                    to switch between chapters and pages.</p>
+                    <p class="d-inline d-md-none">Once you get to a chapter, keep scrolling down to view the content.</p>
+                </li>
+                <li><p>Whenever you see <strong id="navModalTooltip" data-toggle="tooltip" title="You got it!">bold texts
+                </strong>, hover over them to view additional information and explanation.</p></li>
+                <li><p>For quick navigation, click on the <i class="fas fa-bars fa-sm"></i> icon on the top left corner to open the side menu.</p></li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <button id="closeMyModalNav" type="button" class="btn btn-secondary" data-dismiss="modal">Got it</button>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
+</div>
