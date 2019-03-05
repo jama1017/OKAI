@@ -42,8 +42,7 @@ var openingAnimWindow = select('#openingLottie'),
     loop: true,
     prerender: true,
     autoplay: true,
-    // path: './json/sushi_fitness.json',
-    path: './json/ch5_opening.json'
+    path: '/json/ch5_opening.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
@@ -58,8 +57,7 @@ var fnnAnimWindow = select('#fnnLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch5_fnn.json',
-    // path: './json/ch3_activationGroup.json',
+    path: '/json/ch5_fnn.json',
   };
 
 var fnnAnim = bodymovin.loadAnimation(fnnAnimData);
@@ -74,7 +72,7 @@ var tempAnimWindow = select('#tempLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch5_temperature.json',
+    path: '/json/ch5_temperature.json',
   };
 
 var tempAnim = bodymovin.loadAnimation(tempAnimData);
@@ -88,7 +86,7 @@ var complexAnimWindow = select('#complexLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch5_complex.json',
+    path: '/json/ch5_complex.json',
   };
 
 var complexAnim = bodymovin.loadAnimation(complexAnimData);

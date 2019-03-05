@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="/css/general.css">
+  <!-- change to own stylesheet -->
+  <link rel="stylesheet" href="/css/chapter5.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122864673-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122864673-1');
+    </script>
+
+  <title>第五章 Demo - OKAI</title>
+
+</head>
+
+<body>
+  <!-- scrollbar -->
+  <div class="scrollBar" id="myBar"></div>
+
+  <!-- navbar place holder -->
+  <div id="nav-placeholder" ></div>
+
+  <!-- ######################### -->
+  <!-- Chapter content beginning -->
+  <!-- ######################### -->
+
+  <!-- landing section -->
+  <div id="openingText" class="d-flex align-items-center justify-content-center">
+    <!-- start of row 1 -->
+    <div class="row align-items-center justify-content-center">
+      <!-- col 1 -->
+      <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
+        <a href="./chapter4.html" data-toggle="tooltip" title="Chapter 4"><i class="fas fa-caret-left fa-2x"></i></a>
+      </div>
+
+      <!-- col 2 -->
+      <div class="col-10 col-md-4 order-2 order-md-1 text-center">
+        <div class="text-left">
+          <p>第五章</p>
+          <h2>前馈神经网络简介</h2>
+          <p>Building upon perceptrons, Feedforward Neural Networks (FNN) can complete far
+          more powerful tasks. This chapter presents an anatomy of this simplest type of
+          artificial nerual networks. Keep scrolling!</p>
+        </div>
+      </div>
+
+      <!-- col 3 -->
+      <div class="col-md-5 order-1 order-md-2">
+        <div id="openingLottie" class="openingAnimation mx-auto"></div>
+      </div>
+
+      <!-- col-4 -->
+      <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
+        <a href="./chapter6.html" data-toggle="tooltip" title="Chapter 6"><i class="fas fa-caret-right fa-2x"></i></a>
+      </div>
+    </div>
+    <!-- end of row 1 -->
+
+    <!-- start of row 2 -->
+    <div class="" style="position: absolute; bottom: 20px;">
+      <div>
+        <p class="iconHeight" id="scrollIcon">Scroll</p>
+        <i class="iconHeight fas fa-angle-down fa-lg"></i>
+      </div>
+      <!-- end of row 2 -->
+    </div>
+  </div>
+  <!-- end of landing section -->
+
+
+  <!-- ######## Animation & text beginning ######## -->
+  <!-- animation divs -->
+  <div id="fnnLottie" class="animation animLeft upperLayer"></div>
+  <div id="tempLottie" class="animation animRight topLayer"></div>
+  <div id="complexLottie" class="animation animLeft threeLayer"></div>
+
+  <!-- text begins -->
+
+  <!-- fnn animation text section -->
+  <div id="text1" class="bg-1grey scene">
+    <div class="text right">
+      <p>To this point, we have only discussed networks with a
+        single perceptron. These perceptron algorithms are not particularly powerful,
+        as they are slow to learn, and cannot learn complex concepts. To improve them,
+        we need to "stack" perceptrons together so that they can form a more complex model.
+      </p>
+    </div>
+  </div>
+
+  <div id="text2" class="bg-1grey scene">
+    <div class="text right">
+      <p>"Stacking" multiple perceptrons together give us a Feed-forward Neural Network (FNN). Now, instead of
+        only having several inputs, we now have an input layer. The layers that comes after
+        this first layer and exclude the last layer, are called <strong class="highlight"
+        data-toggle="tooltip"title="The middle layers
+        of FNN that performs computations.">hidden layers</strong>.
+      </p>
+    </div>
+  </div>
+
+  <div id="text3" class="bg-1grey scene">
+    <div class="text right">
+      <p>The last layer is called the output layer. We say that a network has
+        n layers when there are n layers that perform computations. That is,
+        there are n-1 hidden layers and 1 output layer. </p>
+    </div>
+  </div>
+
+
+  <!-- temp animation text section -->
+  <div id="text4" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>As an exmample, let’s say we want to predict the temperature
+        range of tomorrow, meaning that we would like to use an already trained FNN to predict the
+        max and min temperatures.
+        </thead>
+      </p>
+    </div>
+  </div>
+
+  <div id="text5" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>We will use the max and min temperature of today to use as inputs. The network
+        that we are using is a simple two-layer FNN that takes in two inputs.
+      </p>
+    </div>
+  </div>
+
+  <div id="text6" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>These two inputs in the input layer are then are split into 4 perceptrons in
+        the hiddent layer, and then the outputs of the hidden layer is is fed into
+        the 2 outputs in the output layer, which generates the max and min temperature
+        of tomorrow.</p>
+    </div>
+  </div>
+
+  <div id="text7" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>In this network, all of the <strong data-toggle="tooltip" class="highlight"
+        title="Refer to perceptrons">nodes</strong> in the hidden layer have a ReLU function, while the last layer is a
+        linear layer (Meaning that it has no activation function).
+        But why do we need activation functions when we don’t need to control the range of output here? And what
+        exactly is a ReLU function?
+      <p>
+    </div>
+  </div>
+
+  <div id="text8" class="scene bg-2grey upperLayer">
+    <div class="text left">
+      <p>
+        It turns out that, if we have consecutive linear layers, the network will
+        behave exactly the same as a network with a single linear layer (Recall the AND and XOR example in Chapter 2).
+        To make the extra layers count, we need to introduce non-linearity.
+
+        One of the most popular choices to break linearity is <strong data-toggle="tooltip"
+        class="highlight" title="ReLU stands for Rectified Linear Unit. It maintains the value if the input is bigger than 0, and if the input is negative,
+        it forces everything to be zero.">ReLU</strong>,
+
+      </p>
+    </div>
+  </div>
+
+
+  <!-- complex animation text section-->
+  <div id="text9" class="scene topLayer bg-3grey">
+    <div class="text right">
+      <p>
+        With these activation functions, we can stack more layers together so
+        they can learn to perform more complex tasks, such as recognizing
+        handwritten digits as showcased in Chapter 0.
+      </p>
+    </div>
+  </div>
+
+  <div id="text10" class="scene topLayer bg-3grey">
+    <div class="text right">
+      <p>
+        Now that we have understood the basics of how feedforward neural networks work, we can get
+        our hands a little dirty and look at how we can train a model to classify
+        handwritten digits.
+      </p>
+    </div>
+  </div>
+
+  <!-- ending section -->
+  <div id="endingText" class="lastScene row align-items-center justify-content-around fiveLayer">
+
+    <!-- col 1 -->
+    <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
+      <a href="./chapter4.html" data-toggle="tooltip" title="Chapter 4"><i class="fas fa-caret-left fa-2x"></i></a>
+    </div>
+
+    <div class="col-12 col-md-10">
+      <div class="row justify-content-around">
+
+        <div class="col-10 col-md-5 fourLayer align-self-start">
+          <div class="text-left align-self-start">
+            <h3><strong>Summary</strong></h3>
+            <p>In this chapter, we have examined how each component of a FNN works together
+            to build this powerful algorithm. Our interactive module in Chapter 0 is
+            powered by such algorithm. In the next chapter, we are breaking down the FNN we
+            used in Chapter 0.</p>
+
+            <h3><strong>Further Reading</strong></h3>
+            <p>
+              <a href="https://youtu.be/aircAruvnKk" target="_blank">
+                But what *is* a Neural Network? </a>
+              <br><a href="https://towardsdatascience.com/deep-learning-feedforward-neural-network-26a6705dbdc7" target="_blank">
+                    Deep Learning: Feedforward Neural Network</a>
+              <br><a href="https://cs.stanford.edu/people/eroberts/courses/soco/projects/neural-networks/Architecture/feedforward.html" target="_blank">
+                    Neural Networks - Architecture - Stanford CS</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-10 col-md-5 fourLayer align-self-start">
+          <div class="text-left">
+            <h3><strong>Glossary</strong></h3>
+            <p>
+              <strong>Hidden Layer</strong>: The middle layers of a FNN that performs computations.<br><br>
+              <strong>Node</strong>: In more complex neural networks, each perceptron is abstracted as a node.<br><br>
+              <strong>ReLU</strong>: Rectified Linear Unit. A type of activation functions most commonly used to break linearity.
+            </p>
+          </div>
+        </div>
+        <!-- end of inner row -->
+      </div>
+      <!-- end of outer col-10 -->
+    </div>
+
+
+    <!-- col-4 -->
+    <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
+      <a href="./chapter6.html" data-toggle="tooltip" title="Chapter 6"><i class="fas fa-caret-right fa-2x"></i></a>
+    </div>
+
+    <!-- end of ending section -->
+  </div>
+
+
+  <!-- end of text area -->
+
+  <div class="overlay"></div>
+
+
+  <!-- svg goo filter DO NOT DELETE-->
+  <svg version="1.1" xmlns="https://www.w3.org/2000/svg" style="height: 0; width: 0; position: absolute; top: -9999px; left: -99990px">
+    <defs>
+      <filter color-interpolation-filters="sRGB" id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
+        <feBlend />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Boostrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <!-- GSAP -->
+  <script type="text/javascript" src="/js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="/js/DrawSVGPlugin.min.js"></script>
+  <script type="text/javascript" src="/js/MorphSVGPlugin.min.js"></script>
+
+  <!-- Lottie -->
+  <script type="text/javascript" src="/js/lottie.js"></script>
+
+  <!-- ScrollMagic JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
+
+  <script type="text/javascript" src="/js/main.js"></script>
+
+  <!-- change to own js files -->
+  <script type="text/javascript" src="/js/chapter5.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip({
+        placement: "top"
+      });
+    });
+  </script>
+
+</body>
+
+</html>
