@@ -44,7 +44,7 @@ p {
   position: fixed;
   top: 0;
   left: -400px;
-  height: 100vh;
+  min-height: 100vh;
   z-index: 999;
   background: #fff;
   color: #000;
@@ -61,9 +61,19 @@ p {
     margin-left: 80px;
 }
 
-#tinyLinks {
+#tinyLinks, #navLangSel {
     margin-left: 70px;
     font-size: 12px;
+}
+
+.dropdown .dropdown-toggle::after,
+.dropup .dropdown-toggle::after {
+    display: none;
+}
+
+#navDropdownMenuButton {
+    border-radius: 20px;
+    border:none;
 }
 
 #navLogo {
@@ -289,7 +299,7 @@ p a:hover{
 }
 
 #openingText {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   margin: 0;
   position: relative;
@@ -493,7 +503,7 @@ p a:hover{
     left: -300px;
   }
 
-  #sideItems, #tinyLinks {
+  #sideItems, #tinyLinks, #navLangSel {
       margin-left: 40px;
   }
 
