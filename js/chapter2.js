@@ -42,8 +42,7 @@ var openingAnimWindow = select('#openingLottie'),
     loop: true,
     prerender: true,
     autoplay: true,
-    // path: './json/sushi_fitness.json',
-    path: './json/ch2_opening.json'
+    path: '/json/ch2_opening.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
@@ -58,8 +57,7 @@ var neuralAnimWindow = select('#neuralLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch2_neuralGroup.json',
-    // path: './json/ch3_activationGroup.json',
+    path: '/json/ch2_neuralGroup.json',
   };
 
 var neuralAnim = bodymovin.loadAnimation(neuralAnimData);
@@ -74,7 +72,7 @@ var andXorAnimWindow = select('#andXorLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch2_andXor.json',
+    path: '/json/ch2_andXor.json',
   };
 
 var andXorAnim = bodymovin.loadAnimation(andXorAnimData);
@@ -89,7 +87,7 @@ var fnnAnimWindow = select('#fnnLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch2_fnnIntro.json',
+    path: '/json/ch2_fnnIntro.json',
   };
 
 var fnnAnim = bodymovin.loadAnimation(fnnAnimData);
@@ -104,7 +102,7 @@ var dlAnimWindow = select('#dlLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch2_dl.json',
+    path: '/json/ch2_dl.json',
   };
 
 var dlAnim = bodymovin.loadAnimation(dlAnimData);
