@@ -42,8 +42,7 @@ var openingAnimWindow = select('#openingLottie'),
     loop: true,
     prerender: true,
     autoplay: true,
-    // path: './json/sushi_fitness.json',
-    path: './json/ch4_opening.json'
+    path: '/json/ch4_opening.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
@@ -58,8 +57,7 @@ var functionAnimWindow = select('#functionLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch4_function.json',
-    // path: './json/ch3_activationGroup.json',
+    path: '/json/ch4_function.json',
   };
 
 var functionAnim = bodymovin.loadAnimation(functionAnimData);
@@ -74,7 +72,7 @@ var lossAnimWindow = select('#lossLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch4_loss.json',
+    path: '/json/ch4_loss.json',
   };
 
 var lossAnim = bodymovin.loadAnimation(lossAnimData);
@@ -89,7 +87,7 @@ var gradientAnimWindow = select('#gradientLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch4_gradient.json',
+    path: '/json/ch4_gradient.json',
   };
 
 var gradientAnim = bodymovin.loadAnimation(gradientAnimData);

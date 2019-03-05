@@ -60,8 +60,7 @@ var neuronAnimWindow = select('#neuronLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch3_neuron.json',
-    // path: './json/ch3_activationGroup.json',
+    path: '/json/ch3_neuron.json',
   };
 
 var neuronAnim = bodymovin.loadAnimation(neuronAnimData);
@@ -75,7 +74,7 @@ var activationAnimWindow = select('#activationLottie'),
     loop: false,
     prerender: true,
     autoplay: false,
-    path: './json/ch3_activationGroup2.json',
+    path: '/json/ch3_activationGroup2.json',
   };
 
 var activationAnim = bodymovin.loadAnimation(activationAnimData);
@@ -89,8 +88,7 @@ var openingAnimWindow = select('#openingLottie'),
     loop: true,
     prerender: true,
     autoplay: true,
-    // path: './json/sushi_fitness.json',
-    path: './json/ch2_nestedPerc.json'
+    path: '/json/ch2_nestedPerc.json'
   };
 
 var openingAnim = bodymovin.loadAnimation(openingAnimData);
