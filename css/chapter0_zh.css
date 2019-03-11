@@ -1,0 +1,96 @@
+#demo {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#can {
+  /* border:2px solid black; */
+  border-radius: 25px;
+  width: 250px;
+  height: 250px;
+  background-color: white
+}
+
+#nnOut {
+  border-radius: 25px;
+  /* border:2px solid; */
+  font-size:200px;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  background-color: lightGrey;
+  margin: 0;
+  vertical-align: middle;
+}
+
+#credit {
+  color: gray;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Tooltip */
+.tooltip > .tooltip-inner {
+  background-color: white;
+  color: #000;
+  font-weight: inherit;
+  padding: 10px;
+  font-size: 14px;
+  font-family: 'Noto Sans SC', sans-serif;
+  text-align: left;
+  z-index: 900;
+}
+
+.bs-tooltip-top .tooltip-inner {
+    background-color: #ffc107;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Noto Sans SC', sans-serif;
+    text-align: left;
+    z-index: 900;
+}
+
+/* Tooltip on top */
+.bs-tooltip-auto.arrow::before, .bs-tooltip-top .arrow::before {
+  border-top-color: #ffc107;
+}
+
+/* Tooltip on bottom */
+.bs-tooltip-auto.arrow::before, .bs-tooltip-bottom .arrow::before {
+  border-bottom-color: white;
+}
+
+/* animation background colors */
+#mnistBG path {
+  fill: transparent;
+}
+
+/* 992px is medium sreen size */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  #can {
+    background-color: white;
+    border-radius: 25px;
+    width: 180px;
+    height: 180px;
+    -ms-touch-action: none;
+        touch-action: none;
+  }
+
+  #nnOut {
+    border-radius: 25px;
+    font-size:160px;
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    background-color: lightGrey;
+    margin: 0;
+  }
+
+  #demo h2 {
+    font-weight: bold;
+  }
+}
