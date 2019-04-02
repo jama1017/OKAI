@@ -2,269 +2,283 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
 
-  <!-- Bootstrap CSS CDN -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-  <!-- Scrollbar Custom CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
-  <!-- My stylesheet -->
-  <link rel="stylesheet" href="./css/general.css">
-  <!-- change to own stylesheet -->
-  <link rel="stylesheet" href="./css/chapter4.css">
+    <!-- My stylesheet -->
+    <link rel="stylesheet" href="./css/general.css">
+    <!-- change to own stylesheet -->
+    <link rel="stylesheet" href="./css/chapter4.css">
 
-  <!-- language annotations -->
-  <link rel="alternate" hreflang="zh-Hans" href="https://okai.brown.edu/zh/chapter4.html"/>
-  <link rel="alternate" hreflang="en" href="https://okai.brown.edu/chapter4.html"/>
-  <link rel="canonical" href="https://okai.brown.edu/chapter4.html"/>
+    <!-- language annotations -->
+    <link rel="alternate" hreflang="zh-Hans" href="https://okai.brown.edu/zh/chapter4.html" />
+    <link rel="alternate" hreflang="en" href="https://okai.brown.edu/chapter4.html" />
+    <link rel="canonical" href="https://okai.brown.edu/chapter4.html" />
 
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122864673-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122864673-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'UA-122864673-1');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-122864673-1');
     </script>
 
-  <title>Chapter 4 Demo - OKAI</title>
+    <title>Chapter 4 Demo - OKAI</title>
 
 </head>
 
 <body>
 
-  <!-- scrollbar -->
-  <div class="scrollBar" id="myBar"></div>
+    <!-- scrollbar -->
+    <div class="scrollBar" id="myBar"></div>
 
-  <!-- navbar place holder -->
-  <div id="nav-placeholder" ></div>
+    <!-- navbar place holder -->
+    <div id="nav-placeholder"></div>
 
-  <!-- ######################### -->
-  <!-- Chapter content beginning -->
-  <!-- ######################### -->
+    <!-- ######################### -->
+    <!-- Chapter content beginning -->
+    <!-- ######################### -->
 
-  <!-- landing section -->
-  <div id="openingText" class="d-flex align-items-center justify-content-center">
-    <!-- start of row 1 -->
-    <div class="row align-items-center justify-content-center">
-      <!-- col 1 -->
-      <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-        <a href="./chapter3.html" data-toggle="tooltip" title="Chapter 3"><i class="fas fa-caret-left fa-2x"></i></a>
-      </div>
+    <!-- landing section -->
+    <div id="openingText" class="d-flex align-items-center justify-content-center">
+        <!-- start of row 1 -->
+        <div class="row align-items-center justify-content-center">
+            <!-- col 1 -->
+            <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
+                <a href="./chapter3.html" data-toggle="tooltip" title="Chapter 3"><i class="fas fa-caret-left fa-2x"></i></a>
+            </div>
 
-      <!-- col 2 -->
-      <div class="col-10 col-md-4 order-2 order-md-1 text-center">
-        <div class="text-left">
-          <p>Chapter 4</p>
-          <h2>Perceptron Learning</h2>
-          <p>How do we make a perceptron learn to perform certain tasks? In this chapter,
-          we are going behind the scenes of “Perceptron Learning Institute”. Keep scrolling!</p>
+            <!-- col 2 -->
+            <div class="col-10 col-md-4 order-2 order-md-1 text-center">
+                <div class="text-left">
+                    <p>Chapter 4</p>
+                    <h2>Perceptron Learning</h2>
+                    <p>Perceptron Learning
+                        How do we make a perceptron learn to perform certain tasks? In this
+                        chapter, we are going behind the scenes of “Perceptron Learning Institute”.
+                        Keep scrolling!</p>
+                </div>
+            </div>
+
+            <!-- col 3 -->
+            <div class="col-md-5 order-1 order-md-2">
+                <div id="openingLottie" class="openingAnimation mx-auto"></div>
+            </div>
+
+            <!-- col-4 -->
+            <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
+                <a href="./chapter5.html" data-toggle="tooltip" title="Chapter 5"><i class="fas fa-caret-right fa-2x"></i></a>
+            </div>
         </div>
-      </div>
+        <!-- end of row 1 -->
 
-      <!-- col 3 -->
-      <div class="col-md-5 order-1 order-md-2">
-        <div id="openingLottie" class="openingAnimation mx-auto"></div>
-      </div>
-
-      <!-- col-4 -->
-      <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-        <a href="./chapter5.html" data-toggle="tooltip" title="Chapter 5"><i class="fas fa-caret-right fa-2x"></i></a>
-      </div>
+        <!-- start of row 2 -->
+        <div class="" style="position: absolute; bottom: 20px;">
+            <div>
+                <p class="iconHeight" id="scrollIcon">Scroll</p>
+                <i class="iconHeight fas fa-angle-down fa-lg"></i>
+            </div>
+            <!-- end of row 2 -->
+        </div>
     </div>
-    <!-- end of row 1 -->
+    <!-- end of landing section -->
 
-    <!-- start of row 2 -->
-    <div class="" style="position: absolute; bottom: 20px;">
-      <div>
-        <p class="iconHeight" id="scrollIcon">Scroll</p>
-        <i class="iconHeight fas fa-angle-down fa-lg"></i>
-      </div>
-      <!-- end of row 2 -->
+
+    <!-- ######## Animation & text beginning ######## -->
+    <!-- animation divs -->
+    <div id="functionLottie" class="animation animLeft upperLayer"></div>
+    <div id="lossLottie" class="animation animRight topLayer"></div>
+    <div id="gradientLottie" class="animation animLeft threeLayer"></div>
+
+    <!-- text begins -->
+
+    <!-- function animation text section -->
+    <div id="text1" class="bg-1grey scene">
+        <div class="text right">
+            <p>In the last chapter, we learned that a perceptron can take in some inputs and spit
+                out a valid output. How can we make it learn to perform tasks? To understand this,
+                we will first discuss what the perceptron is abstractly.
+            </p>
+        </div>
     </div>
-  </div>
-  <!-- end of landing section -->
 
-
-  <!-- ######## Animation & text beginning ######## -->
-  <!-- animation divs -->
-  <div id="functionLottie" class="animation animLeft upperLayer"></div>
-  <div id="lossLottie" class="animation animRight topLayer"></div>
-  <div id="gradientLottie" class="animation animLeft threeLayer"></div>
-
-  <!-- text begins -->
-
-  <!-- function animation text section -->
-  <div id="text1" class="bg-1grey scene">
-    <div class="text right">
-      <p>In the last chapter, we learned that a perceptron can
-        take in some inputs and spit out a valid output. How can we make it learn to perform tasks?
-        To understand this, we will first discuss what the perceptron is abstractly.
-      </p>
+    <div id="text2" class="bg-1grey scene">
+        <div class="text right">
+            <p>On a high level, the perceptron can be seen as a mathematical function, taking in
+                some inputs, some weights, a bias, and mixes them up mathematically to generate an
+                output.
+            </p>
+        </div>
     </div>
-  </div>
 
-  <div id="text2" class="bg-1grey scene">
-    <div class="text right">
-      <p>On a high level, the perceptron can be seen as a mathematical function, taking in some inputs,
-        some weights, a bias, and mixes them up mathematically to generate an output.
-      </p>
+    <div id="text3" class="bg-1grey scene">
+        <div class="text right">
+            <p>Since we have no control over the inputs (we cannot change the data that we are
+                learning from), we will try to change weights and bias so that the perceptron
+                function will produce an ideal output for all the input we stuffed into it.
+            </p>
+        </div>
     </div>
-  </div>
 
-  <div id="text3" class="bg-1grey scene">
-    <div class="text right">
-      <p>Since we have no control over the inputs (we cannot change the data we are learning from),
-        we will try to change weights and bias so that the perceptron function
-        will give out a good output for all the input we stuff into it.
-      </p>
+
+    <!-- loss animation text section -->
+    <div id="text4" class="scene bg-2grey upperLayer">
+        <div class="text left">
+            <p>The core of “teaching” a perceptron is to let it understand how far its actions or
+                predictions are from the ground truth (desired results). To achieve this, we used a
+                <strong class="highlight" data-toggle="tooltip" title="A function that determines the loss, a value representing how far
+        the output predictions are from the ground truth.">loss
+                    function</strong> to measure the performance of our perceptron. A commonly used
+                loss function is called cross entropy, which is very good at tasks like classifying
+                images.
+            </p>
+        </div>
     </div>
-  </div>
 
-
-  <!-- loss animation text section -->
-  <div id="text4" class="scene bg-2grey upperLayer">
-    <div class="text left">
-      <p>The core of “teaching” a perceptron is to let it understand how far
-        its actions or predictions are from the ground truth (desired results).
-        To achieve this, we use a <strong class="highlight" data-toggle="tooltip"
-        title="A function that determines the loss, a value representing how far
-        the output predictions are from the ground truth.">loss function</strong> to measure the
-        performance of our perceptron. A commonly used loss function is called
-        cross entropy, which is very good at tasks like classifying images.
-      </p>
+    <div id="text5" class="scene bg-2grey upperLayer">
+        <div class="text left">
+            <p>
+                Here, the cross entropy loss is visualized as the difference between the input
+                (rectangle) and the output (triangle). To train the perceptron can be considered as
+                the process of decreasing this difference. Once the loss is decreased to its
+                minimum, the perceptron completes its learning.
+            </p>
+        </div>
     </div>
-  </div>
 
-  <div id="text5" class="scene bg-2grey upperLayer">
-    <div class="text left">
-      <p>
-        Here, the cross entropy loss is visualized as the difference between the input (rectangle)
-        and the output (triangle). To train the perceptron can be considered as the process of
-        decreasing this difference. Once the loss is decreased to its minimum, the perceptron completes its learning.
-      </p>
+    <div id="text6" class="scene bg-2grey upperLayer">
+        <div class="text left">
+            <p>There are many other loss functions, but all loss functions share a common behavior:
+                the further off the prediction is from the ground truth, the bigger the output of
+                the loss function is. In this way, we can minimize the loss by changing the weights
+                and biases, and our perceptron will gradually improve until it reaches its
+                capacity.
+            </p>
+        </div>
     </div>
-  </div>
 
-  <div id="text6" class="scene bg-2grey upperLayer">
-    <div class="text left">
-      <p>There are many other loss functions, but all loss functions share a common
-        behavior: the further off the prediction is from the ground truth, the
-        bigger the output of the loss function is. In this way, we can try to minimize
-        the loss by changing the weights and biases, and our perceptron will gradually
-        improve until it reaches its capacity.
-      </p>
-    </div>
-  </div>
-
-  <!-- gradient animation text section-->
-  <div id="text7" class="scene bg-3grey topLayer">
-    <div class="text right">
-      <p>To minimize loss, we use an <strong data-toggle="tooltip" class="highlight"
-        title="A technique to minimize loss">optimizer</strong> called
-        <strong data-toggle="tooltip" class="highlight" title="Gradient Descent is
+    <!-- gradient animation text section-->
+    <div id="text7" class="scene bg-3grey topLayer">
+        <div class="text right">
+            <p>To minimize loss, we use an <strong data-toggle="tooltip" class="highlight" title="A technique to minimize loss">optimizer</strong>
+                called
+                <strong data-toggle="tooltip" class="highlight" title="Gradient Descent is
         quite inefficient in practice, so a variant called the Stochastic Gradient Descent (SGD) is used.">
-        Gradient Descent</strong>.
-
-        The "hill" here depicts the relationship
-        between the weights and bias of a perceptron and the loss. The higher upon the hill we are,
-        the greater the loss is.
-        Gradient Descent is a technique that directs us walking “downhill”,
-        with the optimizer finding the steepest way downwards.
-      <p>
-    </div>
-  </div>
-
-  <div id="text8" class="scene bg-3grey topLayer">
-    <div class="text right">
-      <p>
-        First, the Gradient Descent optimizer would look at the "hill" with respect
-        to the data, and generate <strong data-toggle="tooltip" class="highlight"
-          title="A group of numbers indicating which
-        direction would be the “steepest” way downhill.">gradients</strong>, providing
-        a direction downhill. Then, the optimizer picks a
-        learning rate to decide how far to walk before stopping and redetermining
-        the gradients. After many repetitions, we will slip our
-        way down to reach a minimum loss.
-      </p>
-    </div>
-  </div>
-
-
-  <!-- ending section -->
-  <div id="endingText" class="lastScene row align-items-center justify-content-around fiveLayer">
-
-    <!-- col 1 -->
-    <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-      <a href="./chapter3.html" data-toggle="tooltip" title="Chapter 3"><i class="fas fa-caret-left fa-2x"></i></a>
+                    Gradient Descent</strong>.
+                The "hill" here depicts the relationship between the weights and bias of a
+                perceptron and the loss. The higher upon the hill we are, the greater the loss is.
+                Gradient Descent is a technique that directs us walking “downhill”, with the
+                optimizer finding the steepest way downwards.
+                <p>
+        </div>
     </div>
 
-    <div class="col-12 col-md-10">
-      <div class="row justify-content-around">
-
-        <div class="col-10 col-md-5 fourLayer align-self-start">
-          <div class="text-left align-self-start">
-            <h3><strong>Summary</strong></h3>
-            <p>By now, we have learned what it means for the perptron to learn, and
-              how we can train the perptron. Let’s venture into more
-              complex neural network structures. We will discuss how we can adapt
-               perceptrons to a type of multilayer networks called the Feedforward Neural Network.
-            </p>
-
-            <h3><strong>Further Reading</strong></h3>
+    <div id="text8" class="scene bg-3grey topLayer">
+        <div class="text right">
             <p>
-              <a href="https://youtu.be/IHZwWFHWa-w" target="_blank">
-                Gradient descent, how neural networks learn </a>
-              <br><a href="https://towardsdatascience.com/gradient-descent-in-a-nutshell-eaf8c18212f0" target="_blank">
-                    Gradient Descent in a Nutshell</a>
-              <!-- <br><a href="https://cs.stanford.edu/people/eroberts/courses/soco/projects/neural-networks/Architecture/feedforward.html" target="_blank">
+                First, the Gradient Descent optimizer would look at the "hill" with respect
+                to the data, and generate <strong data-toggle="tooltip" class="highlight" title="A group of numbers indicating which
+        direction would be the “steepest” way downhill.">gradients</strong>,
+                providing a direction downhill. Then, the optimizer picks a learning rate to decide
+                how far to walk before stopping and redetermining the gradients. After many
+                repetitions, we will slip our way down to reach a minimum loss.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- ending section -->
+    <div id="endingText" class="lastScene row align-items-center justify-content-around fiveLayer">
+
+        <!-- col 1 -->
+        <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
+            <a href="./chapter3.html" data-toggle="tooltip" title="Chapter 3"><i class="fas fa-caret-left fa-2x"></i></a>
+        </div>
+
+        <div class="col-12 col-md-10">
+            <div class="row justify-content-around">
+
+                <div class="col-10 col-md-5 fourLayer align-self-start">
+                    <div class="text-left align-self-start">
+                        <h3><strong>Summary</strong></h3>
+                        <p>By now, we have learned what it means for the perceptron to learn, and
+                            how we can train the perceptron. Let us venture into more complex
+                            neural network structures. We will discuss how we can adapt perceptrons
+                            to a type of multilayer network called the Feedforward Neural Network.
+                        </p>
+
+                        <h3><strong>Further Reading</strong></h3>
+                        <p>
+                            <a href="https://youtu.be/IHZwWFHWa-w" target="_blank">
+                                Gradient descent, how neural networks learn </a>
+                            <br><a href="https://towardsdatascience.com/gradient-descent-in-a-nutshell-eaf8c18212f0"
+                                target="_blank">
+                                Gradient Descent in a Nutshell</a>
+                            <!-- <br><a href="https://cs.stanford.edu/people/eroberts/courses/soco/projects/neural-networks/Architecture/feedforward.html" target="_blank">
                     Neural Networks - Architecture - Stanford CS</a> -->
-            </p>
-          </div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-10 col-md-5 fourLayer align-self-start">
+                    <div class="text-left">
+                        <h3><strong>Glossary</strong></h3>
+                        <p>
+                            <strong>Loss Function</strong>: A function that determines the loss,
+                            the value that represents how far the output predictions are from the
+                            ground truth.
+                            <br><br>
+                            <strong>Gradient</strong>: A group of numbers indicating which
+                            direction would be the “steepest” way to minimize loss (downhill).
+                            <br><br>
+                            <strong>Gradient Descent</strong>: An optimizer that uses gradients to
+                            adjust the weights and bias to minimize loss.
+                            <br><br>
+                        </p>
+                    </div>
+                </div>
+                <!-- end of inner row -->
+            </div>
+            <!-- end of outer col-10 -->
         </div>
 
-        <div class="col-10 col-md-5 fourLayer align-self-start">
-          <div class="text-left">
-            <h3><strong>Glossary</strong></h3>
-            <p>
-              <strong>Loss Function</strong>: A function that determines the loss, a value representing how far the output predictions are from the ground truth.<br><br>
-              <strong>Gradient</strong>: A group of numbers indicating which direction would be the “steepest” way to minimize loss (downhill).<br><br>
-              <strong>Gradient Descent</strong>: An optimizer that uses gradients to adjust the weights and bias to minimize loss.<br><br>
-            </p>
-          </div>
+        <!-- col-4 -->
+        <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
+            <a href="./chapter5.html" data-toggle="tooltip" title="Chapter 5"><i class="fas fa-caret-right fa-2x"></i></a>
         </div>
-        <!-- end of inner row -->
-      </div>
-      <!-- end of outer col-10 -->
+
+        <!-- end of ending section -->
     </div>
 
-    <!-- col-4 -->
-    <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-      <a href="./chapter5.html" data-toggle="tooltip" title="Chapter 5"><i class="fas fa-caret-right fa-2x"></i></a>
-    </div>
 
-    <!-- end of ending section -->
-  </div>
+    <!-- end of text area -->
+
+    <div class="overlay"></div>
 
 
-  <!-- end of text area -->
-
-  <div class="overlay"></div>
-
-
-  <!-- svg goo filter DO NOT DELETE-->
-  <!-- <svg version="1.1" xmlns="https://www.w3.org/2000/svg" style="height: 0; width: 0; position: absolute; top: -9999px; left: -99990px">
+    <!-- svg goo filter DO NOT DELETE-->
+    <!-- <svg version="1.1" xmlns="https://www.w3.org/2000/svg" style="height: 0; width: 0; position: absolute; top: -9999px; left: -99990px">
     <defs>
       <filter color-interpolation-filters="sRGB" id="goo2">
         <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
@@ -274,39 +288,42 @@
     </defs>
   </svg> -->
 
-  <!-- Boostrap JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- Boostrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
 
-  <!-- jQuery Custom Scroller CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-  <!-- GSAP -->
-  <script type="text/javascript" src="./js/TweenMax.min.js"></script>
-  <script type="text/javascript" src="./js/DrawSVGPlugin.min.js"></script>
-  <script type="text/javascript" src="./js/MorphSVGPlugin.min.js"></script>
+    <!-- GSAP -->
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/DrawSVGPlugin.min.js"></script>
+    <script type="text/javascript" src="./js/MorphSVGPlugin.min.js"></script>
 
-  <!-- Lottie -->
-  <script type="text/javascript" src="./js/lottie.js"></script>
+    <!-- Lottie -->
+    <script type="text/javascript" src="./js/lottie.js"></script>
 
-  <!-- ScrollMagic JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
+    <!-- ScrollMagic JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
 
-  <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 
-  <!-- change to own js files -->
-  <script type="text/javascript" src="./js/chapter4.js"></script>
+    <!-- change to own js files -->
+    <script type="text/javascript" src="./js/chapter4.js"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('[data-toggle="tooltip"]').tooltip({
-        placement: "top"
-      });
-    });
-  </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip({
+                placement: "top"
+            });
+        });
+    </script>
 
 </body>
 
