@@ -74,9 +74,10 @@
                 <div class="text-left">
                     <p>Chapter 4</p>
                     <h2>Perceptron Learning</h2>
-                    <p>How do we make a perceptron learn to perform certain tasks? In this
-                        chapter, we are going behind the scenes of “Perceptron Learning Institute”.
-                        Keep scrolling!</p>
+                    <p>How do we make a perceptron learn to perform certain tasks? In this chapter,
+                        we are going behind the scenes of the “Perceptron Learning Institute”. Keep
+                        scrolling!
+                    </p>
                 </div>
             </div>
 
@@ -116,16 +117,16 @@
     <div id="text1" class="bg-1grey scene">
         <div class="text right">
             <p>In the last chapter, we learned that a perceptron can take in some inputs and spit
-                out a valid output. How can we make it learn to perform tasks? To understand this,
-                we will first discuss what the perceptron is abstractly.
+                out an output. How can we make it learn to perform tasks? To understand the
+                learning process, we will first discuss what the perceptron is abstractly.
             </p>
         </div>
     </div>
 
     <div id="text2" class="bg-1grey scene">
         <div class="text right">
-            <p>On a high level, the perceptron can be seen as a mathematical function, taking in
-                some inputs, some weights, a bias, and mixes them up mathematically to generate an
+            <p>At a high level, the perceptron can be seen as a mathematical function that takes in
+                some inputs, some weights, and some biases, and mixes them together to generate an
                 output.
             </p>
         </div>
@@ -144,14 +145,15 @@
     <!-- loss animation text section -->
     <div id="text4" class="scene bg-2grey upperLayer">
         <div class="text left">
-            <p>The core of “teaching” a perceptron is to let it understand how far its actions or
+            <p>The core of “training” a perceptron is to let it understand how far its actions or
                 predictions are from the ground truth (desired results). To achieve this, we use a
                 <strong class="highlight" data-toggle="tooltip" title="A function that determines the loss,
                 the value that represents how far the output predictions are from the
                 ground truth.">loss
                     function</strong> to measure the performance of our perceptron. A commonly used
                 loss function is called cross entropy, which is very good at tasks like classifying
-                images.
+                images. An ideal training algorithm modifies the weights and biases so the loss
+                decreases.
             </p>
         </div>
     </div>
@@ -159,21 +161,25 @@
     <div id="text5" class="scene bg-2grey upperLayer">
         <div class="text left">
             <p>
-                Here, the cross entropy loss is visualized as the difference between the input
-                (rectangle) and the output (triangle). To train the perceptron can be considered as
-                the process of decreasing this difference. Once the loss is decreased to its
-                minimum, the perceptron completes its learning.
+                Here, the loss is visualized as the difference between the output (triangle) and
+                the
+                desired ground truth output (rectangle). Training the perceptron is the process of
+                decreasing this difference. Once the loss is decreased to its
+                <strong class="highlight" data-toggle="tooltip" title="It
+                is often hard to decrease the loss to the absolute minimum (global minimum), but we
+                can always reach a local minimum (a minimum value within a region).">minimum</strong>,
+                the perceptron
+                completes its learning.
             </p>
         </div>
     </div>
 
     <div id="text6" class="scene bg-2grey upperLayer">
         <div class="text left">
-            <p>There are many other loss functions, but all loss functions share a common behavior:
-                the further off the prediction is from the ground truth, the bigger the output of
-                the loss function is. In this way, we can minimize the loss by changing the weights
-                and biases, and our perceptron will gradually improve until it reaches its
-                capacity.
+            <p>There are many loss functions, but all share a common behavior: the further off the
+                prediction is from the ground truth, the larger the output of the loss function is.
+                Minimizing the loss by changing the weights and biases means our perceptron will
+                gradually improve until it reaches its limit.
             </p>
         </div>
     </div>
@@ -183,26 +189,30 @@
         <div class="text right">
             <p>To minimize loss, we use an <strong data-toggle="tooltip" class="highlight" title="A technique to minimize loss">optimizer</strong>
                 called
-                <strong data-toggle="tooltip" class="highlight" title="Gradient Descent is
-        quite inefficient in practice, so a variant called the Stochastic Gradient Descent (SGD) is used.">
+                <strong data-toggle="tooltip" class="highlight" title="Gradient Descent can be
+                quite inefficient in practice, so a variant called the Stochastic Gradient Descent (SGD) is used.">
                     Gradient Descent</strong>.
-                The "hill" here depicts the relationship between the weights and bias of a
-                perceptron and the loss. The higher upon the hill we are, the greater the loss is.
-                Gradient Descent is a technique that directs us walking “downhill”, with the
-                optimizer finding the steepest way downwards.
-                <p>
+                The "hill" here depicts the <strong data-toggle="tooltip" class="highlight" title="The position
+                on the map corresponds to the weights and bias of the network. The height of
+                the hill represents its loss.">relationship</strong>
+                between the weights and bias of a perceptron and its loss. The higher up on the
+                hill we are, the greater the loss is. Gradient Descent is a technique that modifies
+                the weights and biases to walk “downhill”, and the optimizer finds the steepest way
+                downwards.
+            </p>
         </div>
     </div>
 
     <div id="text8" class="scene bg-3grey topLayer">
         <div class="text right">
             <p>
-                First, the Gradient Descent optimizer would look at the "hill" with respect
-                to the data, and generate <strong data-toggle="tooltip" class="highlight" title="A group of numbers indicating which
-        direction would be the “steepest” way downhill.">gradients</strong>,
+                First, the Gradient Descent optimizer would look at the "hill" with respect to the
+                data, and generate <strong data-toggle="tooltip" class="highlight" title="A group of numbers indicating which
+                direction would be the “steepest” way downhill.">gradients</strong>,
                 providing a direction downhill. Then, the optimizer picks a learning rate to decide
                 how far to walk before stopping and redetermining the gradients. After many
-                repetitions, we will slip our way down to reach a minimum loss.
+                repetitions, it slips its way down to a place where it can no longer go downhill
+                (minimum loss).
             </p>
         </div>
     </div>
@@ -225,7 +235,7 @@
                         <p>By now, we have learned what it means for the perceptron to learn, and
                             how we can train the perceptron. Let us venture into more complex
                             neural network structures. We will discuss how we can adapt perceptrons
-                            to a type of multilayer networks called the Feedforward Neural Network.
+                            to a type of multilayer networks called the feedforward neural network.
                         </p>
 
                         <h3><strong>Further Reading</strong></h3>

@@ -73,9 +73,9 @@
                 <div class="text-left">
                     <p>Chapter 6</p>
                     <h2>Feedforward Neural Networks in Action</h2>
-                    <p>Wondering how the module in chapter 0 works? Harness the knowledge you have
-                        acquired so far and let's take a look at how you can build a network to
-                        recognize handwritten digits. Keep scrolling!
+                    <p>Are you wondering how the module in chapter 0 works? Harness the knowledge
+                        you have acquired so far and let's take a look at how the interactive
+                        module in Chapter 0 works to recognize handwritten digits.. Keep scrolling!
                     </p>
                 </div>
             </div>
@@ -147,8 +147,8 @@
 
     <div id="text4" class="bg-1grey scene">
         <div class="text right">
-            <p>The input layer then transforms it into the first hidden layer of size 500, so we
-                have 500 numbers that will represent a transformation of the original image. For a
+            <p>The activations from the input layer are propagated to the 500 nodes in the hidden
+                layer, which transforms it to a new 500-number representation of the input. For a
                 multilayer network to work well, we need to break linearity, and thus we use ReLU
                 as an activation function to achieve that.
             </p>
@@ -158,15 +158,13 @@
     <div id="text5" class="bg-1grey scene">
         <div class="text right">
             <p>
-                These 500 nodes are then feeding into another layer of 10 nodes. Since we are
-                working with classification, this would require us to transform the output of these
-                10 nodes into probabilities.
+                These 500 nodes feed their outputs to a final output layer of 10 nodes. We will
+                interpret the outputs as being the probability that the input is each of the ten
+                possible digits.
 
-                To do this, we use <strong data-toggle="tooltip" class="highlight" title="A hyped-up
+                We use <strong data-toggle="tooltip" class="highlight" title="A hyped-up
                 version of sigmoid that generates probabilities over a set of categories.">softmax</strong>
-                activation function.
-                In this way, we will get the probability associated with each digit that we can use
-                to calculate loss.
+                activation function on the output layer to do so.
             </p>
         </div>
     </div>
@@ -191,8 +189,9 @@
 
     <div id="text8" class="scene bg-2grey upperLayer">
         <div class="text left">
-            <p>The highest probability, signaling the digit that the model thinks is the most
-                probable, will be our final output classification of the input handwritten digit.
+            <p>The highest output value (probability) signals the digit that the model thinks is
+                the most probable; that digit is the final output classification of the input
+                handwritten digit.
             </p>
         </div>
     </div>
@@ -200,10 +199,9 @@
     <!-- prop animation text section -->
     <div id="text9" class="scene bg-3grey topLayer">
         <div class="text right">
-            <p>We then split images from MNIST by batches of 100 and feed them into the FNN for
-                training. During training, the model uses existing parameters (weights and biases)
-                to generate a tentative answer. This process is called <strong class="highlight"
-                    data-toggle="tooltip" title="The process of making the neural network
+            <p>For training, we split the set of images from MNIST into batches of 100. During
+                training, the model uses the current weights and biases to generate its best guess.
+                This process is called <strong class="highlight" data-toggle="tooltip" title="The process of making the neural network
         generate a prediction based on input">forward
                     propagation</strong>.
             </p>
@@ -212,9 +210,10 @@
 
     <div id="text10" class="scene bg-3grey topLayer">
         <div class="text right">
-            <p>After seeing the answer and computing the loss, it goes back into the network and
-                updates the parameters to get even closer to the desired answer. This process is
-                called <strong class="highlight" data-toggle="tooltip" title="The process of adjusting parameters to
+            <p>After seeing the answer and computing the loss, the training algorithm goes back
+                into the network and updates the weights and biases using gradients to get closer
+                to the ground truth outputs. This process is called <strong class="highlight"
+                    data-toggle="tooltip" title="The process of adjusting parameters to
         improve the performance of neural networks.">backpropagation</strong>.
                 <p>
         </div>
@@ -224,9 +223,9 @@
     <div id="text11" class="scene threeLayer bg-4grey">
         <div class="text left">
             <p>
-                To train the model, we would need to first initialize the values inside the model.
-                In this particular case, we will initialize them to random values clustered around
-                0, which is usually a good starting point.
+                To train the model, we would need to first initialize its parameters (weights and
+                biases). In this particular case, we will initialize them to random values
+                clustered around 0, which is usually a good starting point.
             </p>
         </div>
     </div>
@@ -234,10 +233,10 @@
     <div id="text12" class="scene threeLayer bg-4grey">
         <div class="text left">
             <p>
-                To train it, we are using Stochastic Gradient Descent (SGD) with a learning rate of
-                0.7. This learning rate is chosen by experiment, as it seems to work best for our
-                model. Usually, you should try out a few different values before settling on a
-                reasonable one.
+                To train the network, we are using Stochastic Gradient Descent (SGD) with a
+                learning rate of 0.7. This learning rate was chosen through experiment, and it
+                seemed to work best for our network. Experts often try out a few different values
+                before settling on a reasonable one.
             </p>
         </div>
     </div>
@@ -245,9 +244,9 @@
     <div id="text13" class="scene threeLayer bg-4grey">
         <div class="text left">
             <p>
-                After going over the entire dataset for 2 to 3 epochs, our model is good enough to
-                be used. It would be able to achieve around 97% accuracy with only 2 runs over the
-                dataset, and on an average laptop, this would take less than a minute.
+                After going over the entire dataset for 2 to 3 times, our model is good enough to
+                be used. It is able to achieve around 97% accuracy with only 2 runs over the
+                dataset. On an average laptop, the training takes less than a minute.
             </p>
         </div>
     </div>
@@ -258,8 +257,8 @@
         <div class="text right">
             <p>
                 This is the FNN that we used in our interactive module in Chapter 0. For those who
-                want to experiment with the model more in depth, we have written an
-                easy-to-understand code that you can play around with online.<br>
+                want to experiment with the model more in depth, we have written easy-to-understand
+                code that you can play around with online.<br>
                 <a class="mt-2 btn btn-warning" id="colabButton" href="https://colab.research.google.com/drive/18bQA1ly8hsX_vjPILBkrHsbqkQKPpsdU"
                     role="button" target="_blank">
                     Get Coding
@@ -283,8 +282,7 @@
                 <div class="col-10 col-md-5 fourLayer align-self-start">
                     <div class="text-left align-self-start">
                         <h3><strong>Summary</strong></h3>
-                        <p>In summary, knowledge gained in previous chapters have been applied to
-                            build a
+                        <p>In summary, knowledge gained in previous chapters was applied to build a
                             functional neural network that can recognize handwritten digits. There
                             are much more powerful things that AI can do. We hope that these
                             chapters can serve as a starting point for you to explore more in the
@@ -306,8 +304,8 @@
                 <div class="col-10 col-md-5 fourLayer align-self-start">
                     <div class="text-left">
                         <h3><strong>Glossary</strong></h3>
-                        <p><strong>Softmax</strong>: A hyped-up version of sigmoid where it
-                            generates the probability of multiple things.
+                        <p><strong>Softmax</strong>: A hyped-up version of sigmoid that generates
+                            the probabilities of a set of categories.
                             <br><br>
                             <strong>Forward Propagation</strong>: The process of making the neural
                             network generate a prediction based on input.

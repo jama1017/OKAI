@@ -73,8 +73,8 @@
                 <div class="text-left">
                     <p>Chapter 5</p>
                     <h2>Introduction to Feedforward Neural Networks</h2>
-                    <p>Building upon perceptrons, Feedforward Neural Networks (FNN) can complete
-                        far more powerful tasks. This chapter presents an anatomy of this simplest
+                    <p>Feedforward neural networks combine multiple perceptrons to complete far
+                        more challenging tasks. This chapter presents the anatomy of this simplest
                         type of artificial neural networks. Keep scrolling!</p>
                 </div>
             </div>
@@ -115,21 +115,21 @@
     <div id="text1" class="bg-1grey scene">
         <div class="text right">
             <p>To this point, we have only discussed networks with a single perceptron. These
-                perceptron algorithms are not particularly powerful, as they are slow to learn, and
-                cannot learn complex concepts. To improve them, we need to "stack" perceptrons
-                together so that they can form a more complex model.
+                perceptron algorithms are not particularly powerful, as they cannot learn complex
+                concepts. To improve them, we need to "wire" perceptrons together so that they can
+                form a more complex model.
             </p>
         </div>
     </div>
 
     <div id="text2" class="bg-1grey scene">
         <div class="text right">
-            <p>"Stacking" multiple perceptrons together give us a Feed-forward Neural Network
-                (FNN). Now, instead of only having several inputs, we now have an input layer. The
-                layers that come after this first layer with the exclusion of the last layer are
-                called <strong class="highlight" data-toggle="tooltip" title="The middle layers
-        of FNN that performs computations.">hidden
-                    layers</strong>.
+            <p>"Wiring" multiple perceptrons together give us a feedforward neural network. Now,
+                instead of only having several inputs, we now have an input layer. The layers
+                between this first layer and the last layer are called <strong class="highlight"
+                    data-toggle="tooltip" title="The middle layers of FNN that performs computations.">
+                    hidden layers</strong> since they are invisible to the inputs and outputs of
+                the network.
             </p>
         </div>
     </div>
@@ -146,17 +146,17 @@
     <!-- temp animation text section -->
     <div id="text4" class="scene bg-2grey upperLayer">
         <div class="text left">
-            <p>As an example, let’s say we want to predict the temperature range of tomorrow,
-                meaning that we would like to use an already trained FNN to predict the maximum and
-                minimum temperatures.
+            <p>As an example of how a neural network can solve an everyday problem, let’s say that
+                we want to predict tomorrow’s temperature range using a network that has already
+                been trained.
             </p>
         </div>
     </div>
 
     <div id="text5" class="scene bg-2grey upperLayer">
         <div class="text left">
-            <p>We would use the maximum and minimum temperature of today as inputs. The network
-                that we are using is a simple two-layer FNN that takes in two inputs.
+            <p>The network that we are using is a simple two-layer FNN that takes in two inputs:
+                the maximum and minimum temperature of today.
             </p>
         </div>
     </div>
@@ -165,18 +165,21 @@
         <div class="text left">
             <p>These two inputs in the input layer are then sent to 4 perceptrons in the hidden
                 layer. Then, the outputs of the hidden layer are fed into the 2 outputs in the
-                output layer, which generates the maximum and minimum temperature of tomorrow.</p>
+                output layer, which generate the network’s guess of tomorrow’ maximum and minimum
+                temperatures.
+            </p>
         </div>
     </div>
 
     <div id="text7" class="scene bg-2grey upperLayer">
         <div class="text left">
-            <p>In this network, all of the <strong data-toggle="tooltip" class="highlight" title="Used as a synonym for a perceptron that is part of a more complex network.">nodes</strong>
+            <p>In this network, all of the <strong data-toggle="tooltip" class="highlight" title="Used as a synonym for a perceptron that is part of a more complex network.">
+                    nodes</strong>
                 in the hidden layer have a ReLU function, while the last layer is a linear layer
                 (meaning that it has no activation function). But why do we need activation
                 functions when we don’t need to control the range of output here? And what exactly
-                is a ReLU function?
-                <p>
+                does ReLU do?
+            </p>
         </div>
     </div>
 
@@ -184,14 +187,12 @@
         <div class="text left">
             <p>
                 It turns out that, if we have consecutive linear layers, the network will behave
-                exactly the same as a network with a single linear layer (recall the AND and XOR
-                example in Chapter 2). To make the extra layers count, we need to introduce
-                non-linearity.
+                exactly the same as a network with a single linear layer (recall the XOR example in
+                Chapter 2). To make the extra layers count, we need to introduce non-linearity.
 
                 One of the most popular choices to break linearity is <strong data-toggle="tooltip"
                     class="highlight" title="ReLU stands for Rectified Linear Unit. It maintains the value if the input is bigger than or equal to 0, and, if the input is negative,
         it forces everything to be 0.">ReLU</strong>.
-
             </p>
         </div>
     </div>
@@ -201,9 +202,9 @@
     <div id="text9" class="scene topLayer bg-3grey">
         <div class="text right">
             <p>
-                With these activation functions, we can stack more layers together so they can
-                learn to perform more complex tasks, such as recognizing handwritten digits as
-                showcased in Chapter 0.
+                With these activation functions, we can wire up enough layers so that the network
+                can learn complex tasks, such as recognizing handwritten digits as showcased in
+                Chapter 0.
             </p>
         </div>
     </div>
@@ -232,10 +233,11 @@
                 <div class="col-10 col-md-5 fourLayer align-self-start">
                     <div class="text-left align-self-start">
                         <h3><strong>Summary</strong></h3>
-                        <p>In this chapter, we have examined how each component of an FNN works
-                            together to build this powerful algorithm. Our interactive module in
-                            Chapter 0 is powered by such an algorithm. In the next chapter, we are
-                            breaking down the FNN we used in Chapter 0.</p>
+                        <p>In this chapter, we have examined how the components of a FNN work
+                            together to solve hard problems. In the next chapter, we break down the
+                            feedforward neural network used in Chapter 0 to interactively
+                            recognize digits.
+                        </p>
 
                         <h3><strong>Further Reading</strong></h3>
                         <p>
@@ -257,12 +259,12 @@
                     <div class="text-left">
                         <h3><strong>Glossary</strong></h3>
                         <p>
-                            <strong>Hidden Layer</strong>: The middle layers of a FNN that performs
-                            computations.<br><br>
-                            <strong>Node</strong>: In more complex neural networks, each perceptron
-                            is abstracted as a node.<br><br>
+                            <strong>Hidden Layer</strong>: The middle layers of a feedforward
+                            neural network that performs intermediate computations.<br><br>
+                            <strong>Node</strong>: Used as a synonym for a perceptron that is part
+                            of a more complex network.<br><br>
                             <strong>ReLU</strong>: Rectified Linear Unit. A type of activation
-                            functions most commonly used to break linearity.
+                            functions commonly used to break linearity.
                         </p>
                     </div>
                 </div>
