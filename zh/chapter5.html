@@ -39,7 +39,7 @@
       gtag('config', 'UA-122864673-1');
     </script>
 
-  <title>第五章 Demo - OKAI</title>
+  <title>第五章 - OKAI</title>
 
 </head>
 
@@ -60,7 +60,7 @@
     <div class="row align-items-center justify-content-center">
       <!-- col 1 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-        <a href="./chapter4.html" data-toggle="tooltip" title="Chapter 4"><i class="fas fa-caret-left fa-2x"></i></a>
+        <a href="./chapter4.html" data-toggle="tooltip" title="第四章"><i class="fas fa-caret-left fa-2x"></i></a>
       </div>
 
       <!-- col 2 -->
@@ -68,9 +68,7 @@
         <div class="text-left">
           <p>第五章</p>
           <h2>前馈神经网络简介</h2>
-          <p>Building upon perceptrons, Feedforward Neural Networks (FNN) can complete far
-          more powerful tasks. This chapter presents an anatomy of this simplest type of
-          artificial nerual networks. Keep scrolling!</p>
+          <p>前馈神经网络将多个感知器连接来完成更具有挑战性的任务。在这一章里，我们会为你剖析这种最简单的人工神经网络。请向下滚动继续阅读。</p>
         </div>
       </div>
 
@@ -81,7 +79,7 @@
 
       <!-- col-4 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-        <a href="./chapter6.html" data-toggle="tooltip" title="Chapter 6"><i class="fas fa-caret-right fa-2x"></i></a>
+        <a href="./chapter6.html" data-toggle="tooltip" title="第六章"><i class="fas fa-caret-right fa-2x"></i></a>
       </div>
     </div>
     <!-- end of row 1 -->
@@ -109,30 +107,23 @@
   <!-- fnn animation text section -->
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
-      <p>To this point, we have only discussed networks with a
-        single perceptron. These perceptron algorithms are not particularly powerful,
-        as they are slow to learn, and cannot learn complex concepts. To improve them,
-        we need to "stack" perceptrons together so that they can form a more complex model.
+      <p>到目前为止，我们只讲解过由一个感知器所构成的神经网络。单个感知器算法并不是很强大，他们学习不了过于复杂的概念。为了学习更加复杂的概念，我们需要把更多的感知器连接在一起从而组成更复杂的网络模型。
       </p>
     </div>
   </div>
 
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
-      <p>"Stacking" multiple perceptrons together give us a Feed-forward Neural Network (FNN). Now, instead of
-        only having several inputs, we now have an input layer. The layers that comes after
-        this first layer and exclude the last layer, are called <strong class="highlight"
-        data-toggle="tooltip"title="The middle layers
-        of FNN that performs computations.">hidden layers</strong>.
+      <p>把多个感知器分层连接在一起就构成了一个前馈神经网络。我们的输入单元也相应地被抽象成输入层。在输入层和输出层之间的被称为<strong class="highlight"
+        data-toggle="tooltip"title="一个神经网络中位于中间的所有执行数学运算的层">隐藏层</strong>。它们相对于这个网络的输入和输出是“隐身的”。
       </p>
     </div>
   </div>
 
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
-      <p>The last layer is called the output layer. We say that a network has
-        n layers when there are n layers that perform computations. That is,
-        there are n-1 hidden layers and 1 output layer. </p>
+      <p>最后一层是输出层。当一个网络中有n层需要进行计算时，我们称这个网络有n层。换句话说，这个网络具有n-1个隐藏层和1个输出层。
+      </p>
     </div>
   </div>
 
@@ -140,38 +131,29 @@
   <!-- temp animation text section -->
   <div id="text4" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>As an exmample, let’s say we want to predict the temperature
-        range of tomorrow, meaning that we would like to use an already trained FNN to predict the
-        max and min temperatures.
-        </thead>
+      <p>接下来，我们来看一个简单的神经网络解决现实问题的例子：我们将用一个已经训练好的神经网络来预测明天的温度区间。
       </p>
     </div>
   </div>
 
   <div id="text5" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>We will use the max and min temperature of today to use as inputs. The network
-        that we are using is a simple two-layer FNN that takes in two inputs.
+      <p>我们将使用一个简单的双层前馈神经网络。它只需要两个输入值：今天的最高和最低温度。
       </p>
     </div>
   </div>
 
   <div id="text6" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>These two inputs in the input layer are then are split into 4 perceptrons in
-        the hiddent layer, and then the outputs of the hidden layer is is fed into
-        the 2 outputs in the output layer, which generates the max and min temperature
-        of tomorrow.</p>
+      <p>输入层会接收这两个输入值，然后传递给位于隐藏层的四个感知器去进行运算。隐藏层的输出会接着传递到位于输出层的两个输出单元。这两个单元会生成最后的结果，也就是 这个网络对于明天最高和最低气温的预测。
+      </p>
     </div>
   </div>
 
   <div id="text7" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>In this network, all of the <strong data-toggle="tooltip" class="highlight"
-        title="Refer to perceptrons">nodes</strong> in the hidden layer have a ReLU function, while the last layer is a
-        linear layer (Meaning that it has no activation function).
-        But why do we need activation functions when we don’t need to control the range of output here? And what
-        exactly is a ReLU function?
+      <p>在这个网络中，位于隐藏层的每一个<strong data-toggle="tooltip" class="highlight"
+        title="一个复杂神经网络中的单个感知器">节点</strong>都有一个ReLU函数，但是最后一层却是一个线性层（也就是没有任何激活函数）。在这里我们并不需要控制感知器的输出，那为什么我们还是要使用激活函数呢？ReLU在这里究竟起到了什么作用？
       <p>
     </div>
   </div>
@@ -179,13 +161,8 @@
   <div id="text8" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>
-        It turns out that, if we have consecutive linear layers, the network will
-        behave exactly the same as a network with a single linear layer (Recall the AND and XOR example in Chapter 2).
-        To make the extra layers count, we need to introduce non-linearity.
-
-        One of the most popular choices to break linearity is <strong data-toggle="tooltip"
-        class="highlight" title="ReLU stands for Rectified Linear Unit. It maintains the value if the input is bigger than 0, and if the input is negative,
-        it forces everything to be zero.">ReLU</strong>,
+        这其中的原因是，即便我们有多个相连的线性层，从数学的角度看，这个更复杂的网络和只有单个线性层的网络是没有本质区别的。为了让这些被添加的层起到作用，我们需要加入<strong data-toggle="tooltip"
+        class="highlight" title="线性整流函数。一种被经常用于增加非线性的激活函数">ReLU函数</strong>让这些隐藏层变成非线性的。
 
       </p>
     </div>
@@ -196,9 +173,7 @@
   <div id="text9" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        With these activation functions, we can stack more layers together so
-        they can learn to perform more complex tasks, such as recognizing
-        handwritten digits as showcased in Chapter 0.
+        有了这些激活函数，我们就可以连接起足够多的隐藏层来让神经网络学习更复杂的任务，例如在第零章中所展示的手写数字识别任务。
       </p>
     </div>
   </div>
@@ -206,9 +181,7 @@
   <div id="text10" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        Now that we have understood the basics of how feedforward neural networks work, we can get
-        our hands a little dirty and look at how we can train a model to classify
-        handwritten digits.
+        我们已经理解了前馈神经网络的基本原理，现在就来看一看如何训练一个网络模型来识别手写数字吧！
       </p>
     </div>
   </div>
@@ -218,7 +191,7 @@
 
     <!-- col 1 -->
     <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-      <a href="./chapter4.html" data-toggle="tooltip" title="Chapter 4"><i class="fas fa-caret-left fa-2x"></i></a>
+      <a href="./chapter4.html" data-toggle="tooltip" title="第四章"><i class="fas fa-caret-left fa-2x"></i></a>
     </div>
 
     <div class="col-12 col-md-10">
@@ -226,13 +199,10 @@
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left align-self-start">
-            <h3><strong>Summary</strong></h3>
-            <p>In this chapter, we have examined how each component of a FNN works together
-            to build this powerful algorithm. Our interactive module in Chapter 0 is
-            powered by such algorithm. In the next chapter, we are breaking down the FNN we
-            used in Chapter 0.</p>
+            <h3><strong>总结</strong></h3>
+            <p>在这一章中，我们探究了前馈神经网络中的每一个元素是如何相互合作来解决复杂问题的。在下一章中，我们将解析第零章中所使用到的可以识别手写数字的神经网络。</p>
 
-            <h3><strong>Further Reading</strong></h3>
+            <h3><strong>延伸阅读</strong></h3>
             <p>
               <a href="https://youtu.be/aircAruvnKk" target="_blank">
                 But what *is* a Neural Network? </a>
@@ -246,11 +216,11 @@
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
-            <h3><strong>Glossary</strong></h3>
+            <h3><strong>核心词汇</strong></h3>
             <p>
-              <strong>Hidden Layer</strong>: The middle layers of a FNN that performs computations.<br><br>
-              <strong>Node</strong>: In more complex neural networks, each perceptron is abstracted as a node.<br><br>
-              <strong>ReLU</strong>: Rectified Linear Unit. A type of activation functions most commonly used to break linearity.
+              <strong>隐藏层</strong>：一个神经网络中位于中间的所有执行数学运算的层。<br><br>
+              <strong>节点</strong>：一个复杂神经网络中的单个感知器。<br><br>
+              <strong>ReLU</strong>：线性整流函数。一种被经常用于增加非线性的激活函数
             </p>
           </div>
         </div>
@@ -262,7 +232,7 @@
 
     <!-- col-4 -->
     <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-      <a href="./chapter6.html" data-toggle="tooltip" title="Chapter 6"><i class="fas fa-caret-right fa-2x"></i></a>
+      <a href="./chapter6.html" data-toggle="tooltip" title="第六章"><i class="fas fa-caret-right fa-2x"></i></a>
     </div>
 
     <!-- end of ending section -->

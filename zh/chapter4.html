@@ -39,7 +39,7 @@
       gtag('config', 'UA-122864673-1');
     </script>
 
-  <title>第四章 Demo - OKAI</title>
+  <title>第四章 - OKAI</title>
 
 </head>
 
@@ -61,7 +61,7 @@
     <div class="row align-items-center justify-content-center">
       <!-- col 1 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-        <a href="./chapter3.html" data-toggle="tooltip" title="Chapter 3"><i class="fas fa-caret-left fa-2x"></i></a>
+        <a href="./chapter3.html" data-toggle="tooltip" title="第三章"><i class="fas fa-caret-left fa-2x"></i></a>
       </div>
 
       <!-- col 2 -->
@@ -69,8 +69,8 @@
         <div class="text-left">
           <p>第四章</p>
           <h2>感知机学习</h2>
-          <p>How do we make a perceptron learn to perform certain tasks? In this chapter,
-          we are going behind the scenes of “Perceptron Learning Institute”. Keep scrolling!</p>
+          <p>我们应该如何让感知器去学习执行一些任务呢？在一章里，我们将走进“感知器蓝翔培训学校”来了解这背后的原理。请向下滚动继续阅读。
+          </p>
         </div>
       </div>
 
@@ -81,7 +81,7 @@
 
       <!-- col-4 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-        <a href="./chapter5.html" data-toggle="tooltip" title="Chapter 5"><i class="fas fa-caret-right fa-2x"></i></a>
+        <a href="./chapter5.html" data-toggle="tooltip" title="第五章"><i class="fas fa-caret-right fa-2x"></i></a>
       </div>
     </div>
     <!-- end of row 1 -->
@@ -109,26 +109,21 @@
   <!-- function animation text section -->
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
-      <p>In the last chapter, we learned that a perceptron can
-        take in some inputs and spit out a valid output. How can we make it learn to perform tasks?
-        To understand this, we will first discuss what the perceptron is abstractly.
+      <p>在上一章，我们了解到了一个感知器可以接收一些输入信号然后输出一个数值。那么，我们应该如何让它学习呢？想要了解这个学习过程，我们先来抽象化地理解一下感知器。
       </p>
     </div>
   </div>
 
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
-      <p>On a high level, the perceptron can be seen as a mathematical function, taking in some inputs,
-        some weights, a bias, and mixes them up mathematically to generate an output.
+      <p>从更高的层面来说，一个感知器可以被当做一个数学函数- 输入一些信号，权重，和偏置，进行一些数学运算，然后产生一个输出值。
       </p>
     </div>
   </div>
 
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
-      <p>Since we have no control over the inputs (we cannot change the data we are learning from),
-        we will try to change weights and bias so that the perceptron function
-        will give out a good output for all the input we stuff into it.
+      <p>因为我们没有办法控制输入值（我们不能改变我们用于学习的数据本身），所以我们就通过改变权重和偏置的值来让感知器函数产生理想的输出。
       </p>
     </div>
   </div>
@@ -137,13 +132,10 @@
   <!-- loss animation text section -->
   <div id="text4" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>The core of “teaching” a perceptron is to let it understand how far
-        its actions or predictions are from the ground truth (desired results).
-        To achieve this, we use a <strong class="highlight" data-toggle="tooltip"
-        title="A function that determines the loss, a value representing how far
-        the output predictions are from the ground truth.">loss function</strong> to measure the
-        performance of our perceptron. A commonly used loss function is called
-        cross entropy, which is very good at tasks like classifying images.
+      <p>“训练”一个感知器的核心是如何让它知道自己的行为（预测）和正确结果（ground truth）之间的差距。为了达成这一目的，我们利用
+        <strong class="highlight" data-toggle="tooltip"
+        title="一个用来计算损失的函数。损失是一个表示输出预测和正确结果之间的差别的数值。">损失函数
+        </strong>来测量感知器的表现。Cross entropy是一个常用的损失函数，很适合用来执行图片分类的任务。一个理想的训练算法会通过改变权重和偏置来让损失值减少。
       </p>
     </div>
   </div>
@@ -151,20 +143,16 @@
   <div id="text5" class="scene bg-2grey upperLayer">
     <div class="text left">
       <p>
-        Here, the cross entropy loss is visualized as the difference between the input (rectangle)
-        and the output (triangle). To train the perceptron can be considered as the process of
-        decreasing this difference. Once the loss is decreased to its minimum, the perceptron completes its learning.
+        在动画中，损失由输出值（三角形）和正确结果（正方形）的面积差所表示。训练感知器的过程就是缩小这个面积差的过程。一旦损失被减少到了<strong class="highlight" data-toggle="tooltip"
+        title="将损失减少到绝对最小值（global minimum）是一个很困难的事，但是将它减少的相对最小值（local minimum）的没有问题的">最小值
+        </strong>，感知器就完成了它的学习。
       </p>
     </div>
   </div>
 
   <div id="text6" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>There are many other loss functions, but all loss functions share a common
-        behavior: the further off the prediction is from the ground truth, the
-        bigger the output of the loss function is. In this way, we can try to minimize
-        the loss by changing the weights and biases, and our perceptron will gradually
-        improve until it reaches its capacity.
+      <p>损失函数是有很多不同种类的，不过它们全都有着同样的行为：当预测和正确结果的差距越大，损失函数的输出也就越大。通过调整权重和偏置的值，我们可以让损失函数的值变小，从而逐步提升感知机的性能。
       </p>
     </div>
   </div>
@@ -172,32 +160,22 @@
   <!-- gradient animation text section-->
   <div id="text7" class="scene bg-3grey topLayer">
     <div class="text right">
-      <p>To minimize loss, we use an <strong data-toggle="tooltip" class="highlight"
-        title="A technique to minimize loss">optimizer</strong> called
-        <strong data-toggle="tooltip" class="highlight" title="Gradient Descent is
-        quite inefficient in practice, so a variant called the Stochastic Gradient Descent (SGD) is used.">
-        Gradient Descent</strong>.
+      <p>为了可以系统地减少损失，我们采用一个叫做<strong data-toggle="tooltip" class="highlight"
+        title="梯度下降在实际操作中的效率不高，所以我们会使用它的一个叫做随机梯度下降的变体">梯度下降</strong>（Gradient Descent）的
+        <strong data-toggle="tooltip" class="highlight" title="一种用于减少损失的算法">
+        优化器算法</strong>（optimizer）。
 
-        The "hill" here depicts the relationship
-        between the weights and bias of a perceptron and the loss. The higher upon the hill we are,
-        the greater the loss is.
-        Gradient Descent is a technique that directs us walking “downhill”,
-        with the optimizer finding the steepest way downwards.
-      <p>
+        动画中的“小山丘”描绘了感知器的权重与偏置和损失函数之间的<strong data-toggle="tooltip" class="highlight"
+          title="在地图中的位置对应的权重和偏置，所在山丘的高度代表了损失">关系</strong>。我们如果处在山丘更高的位置上，损失函数的值也会越大。梯度下降就是一个通过改变权重和偏置来引领我们“走下山”的技巧。这个优化器会找出最陡峭（最快）的下山方向。
+      </p>
     </div>
   </div>
 
   <div id="text8" class="scene bg-3grey topLayer">
     <div class="text right">
       <p>
-        First, the Gradient Descent optimizer would look at the "hill" with respect
-        to the data, and generate <strong data-toggle="tooltip" class="highlight"
-          title="A group of numbers indicating which
-        direction would be the “steepest” way downhill.">gradients</strong>, providing
-        a direction downhill. Then, the optimizer picks a
-        learning rate to decide how far to walk before stopping and redetermining
-        the gradients. After many repetitions, we will slip our
-        way down to reach a minimum loss.
+        一开始，梯度下降优化器会根据数据来观测这个“山丘”，并通过生成<strong data-toggle="tooltip" class="highlight"
+          title="一组用来指示最快减少损失方向（最陡峭下山方向）的数值。">梯度</strong>（gradients）来提供一个下山的方向。然后，优化器会根据设定好的学习率（learning rate）来决定往山下走多远之后停住，再重新生成新的梯度。在重复很多次之后，优化器就到达了这个山丘区域的最低谷（最小损失）。
       </p>
     </div>
   </div>
@@ -208,7 +186,7 @@
 
     <!-- col 1 -->
     <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-      <a href="./chapter3.html" data-toggle="tooltip" title="Chapter 3"><i class="fas fa-caret-left fa-2x"></i></a>
+      <a href="./chapter3.html" data-toggle="tooltip" title="第三章"><i class="fas fa-caret-left fa-2x"></i></a>
     </div>
 
     <div class="col-12 col-md-10">
@@ -216,14 +194,11 @@
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left align-self-start">
-            <h3><strong>Summary</strong></h3>
-            <p>By now, we have learned what it means for the perptron to learn, and
-              how we can train the perptron. Let’s venture into more
-              complex neural network structures. We will discuss how we can adapt
-               perceptrons to a type of multilayer networks called the Feedforward Neural Network.
+            <h3><strong>总结</strong></h3>
+            <p>到目前为止，我们了解了损失函数优化与感知器学习的关系，以及训练感知器的算法。接下来，让我们去看一看更复杂的神经网络结构吧。我们会讲解如何将感知器运用到一种叫做前馈神经网络的多层神经网络。
             </p>
 
-            <h3><strong>Further Reading</strong></h3>
+            <h3><strong>延伸阅读</strong></h3>
             <p>
               <a href="https://youtu.be/IHZwWFHWa-w" target="_blank">
                 Gradient descent, how neural networks learn </a>
@@ -237,11 +212,12 @@
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
-            <h3><strong>Glossary</strong></h3>
+            <h3><strong>核心词汇</strong></h3>
             <p>
-              <strong>Loss Function</strong>: A function that determines the loss, a value representing how far the output predictions are from the ground truth.<br><br>
-              <strong>Gradient</strong>: A group of numbers indicating which direction would be the “steepest” way to minimize loss (downhill).<br><br>
-              <strong>Gradient Descent</strong>: An optimizer that uses gradients to adjust the weights and bias to minimize loss.<br><br>
+              <strong>损失函数</strong>: 一个用来计算损失的函数。损失是一个表示输出预测和正确结果之间的差别的数值。
+              <br><br>
+              <strong>梯度</strong>：一组用来指示最快减少损失方向（最陡峭下山方向）的数值。<br><br>
+              <strong>梯度下降</strong>：一种使用梯度来调整权重和偏置从而减少损失的优化器算法。<br><br>
             </p>
           </div>
         </div>
@@ -252,7 +228,7 @@
 
     <!-- col-4 -->
     <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-      <a href="./chapter5.html" data-toggle="tooltip" title="Chapter 5"><i class="fas fa-caret-right fa-2x"></i></a>
+      <a href="./chapter5.html" data-toggle="tooltip" title="第五章"><i class="fas fa-caret-right fa-2x"></i></a>
     </div>
 
     <!-- end of ending section -->

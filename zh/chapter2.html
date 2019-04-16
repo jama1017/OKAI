@@ -39,7 +39,7 @@
       gtag('config', 'UA-122864673-1');
     </script>
 
-  <title>第二章 Demo - OKAI</title>
+  <title>第二章 - OKAI</title>
 
 </head>
 
@@ -61,7 +61,7 @@
     <div class="row align-items-center justify-content-center">
       <!-- col 1 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-        <a href="./chapter1.html" data-toggle="tooltip" title="Chapter 1"><i class="fas fa-caret-left fa-2x"></i></a>
+        <a href="./chapter1.html" data-toggle="tooltip" title="第一章"><i class="fas fa-caret-left fa-2x"></i></a>
       </div>
 
       <!-- col 2 -->
@@ -69,9 +69,8 @@
         <div class="text-left">
           <p>第二章</p>
           <h2>深度学习简史</h2>
-          <p>Deep learning is currently powering some of the most powerful AIs.
-            We are going to give you a sense of how deep learning has
-            come to where it is today. Keep scrolling!</p>
+          <p>现今最强大的人工智能系统大多都由深度学习驱动。在这一章里，我们将带你探索神经网络是如何发展到今天的。请向下滚动继续阅读。
+          </p>
         </div>
       </div>
 
@@ -82,7 +81,7 @@
 
       <!-- col-4 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-        <a href="./chapter3.html" data-toggle="tooltip" title="Chapter 3"><i class="fas fa-caret-right fa-2x"></i></a>
+        <a href="./chapter3.html" data-toggle="tooltip" title="第三章"><i class="fas fa-caret-right fa-2x"></i></a>
       </div>
     </div>
     <!-- end of row 1 -->
@@ -111,30 +110,24 @@
   <!-- neural animation text section -->
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
-      <p>To understand how deep learning has progressed, we may first look at its
-        inspiration, the neuron, to get a glimpse of how AI extracts valuable
-        sensory experiences from this chaotic world and solidifies them into
-        algorithms that are “smart”.
+      <p>想要了解深度学习是如何发展的，我们先从启发了神经网络的神经元开始，一步步探索人工智能是如何从纷杂的世界中提取信息并将它们转化成“智能”程序的。
       </p>
     </div>
   </div>
 
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
-      <p>A neuron is the building block of the human brain. Neurons are nerve
-        cells that take in some stimuli from other neurons. When enough stimuli
-        are received, these neurons fire signals (stimuli) to other connected neurons.
+      <p>
+          神经元是人类大脑的基本元素。每个神经元都连接着许多其他的神经元。每个神经元会接收来自相邻神经元的刺激。当这些刺激足够强烈时，神经元就会给它所连接的神经元发出信号（更多的刺激）。
       </p>
     </div>
   </div>
 
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
-      <p>Inspired by neurons, computer scientists create <strong data-toggle="tooltip"
-        class="highlight" title="a single layer neural network that performs binary classification
-        on input data">perceptrons</strong> that take in
-        many stimuli, or inputs, and outputs one value.
-        We will go more in-depth about perceptrons in the next chapter.
+      <p>受到神经元的启发，计算机科学家创造了<strong data-toggle="tooltip"
+        class="highlight" title="一种可以对数据进行二元分类的单层神经网络">感知器算法
+        </strong>（perceptron）。感知器会接收许多刺激（输入）并生成一个输出值作为结果。我们会在下一章详细讲述感知器算法。
       </p>
     </div>
   </div>
@@ -143,25 +136,18 @@
   <!-- andXor animation text section -->
   <div id="text4" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>It turns out that perceptrons are far from enough to learn complicated concepts.
-         Some simple concepts, such as the logical <strong data-toggle="tooltip"
-         title="A and B is True (1) only if both A and B are True (1), otherwise it’s False (0)"
-         class="highlight">AND</strong>,
-         can be learned by a perceptron. The model can compute the logical AND of its inputs.
-         This computation is visualized in the animation as drawing a line to divide the possible outcomes
-         of the logical AND into two groups, each composed of the same type of circles.
+      <p>感知器算法并不能够学习相对复杂的概念。不过，一些简单的概念，比如<strong data-toggle="tooltip"
+         title="当A和B都为真（1）时A与B为真（1），若不然则为假（0）"
+         class="highlight">逻辑与</strong>就可以被感知器所学习。在动画中，感知机用一条直线将逻辑与的两种结果正确地分成两组，每一组都具有形式相同的圆圈。
       </p>
     </div>
   </div>
 
   <div id="text5" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>More complex concepts, such as <strong data-toggle="tooltip"
-        title="A and B is True (1) if A is different from B, otherwise it’s False(0)"
-        class="highlight">XOR</strong>,
-        cannot be learned by a simple perceptron. This is due to the “non-linearity”
-        of the concept, or in simple terms, we cannot find a straight line to
-        divide the filled circles from the open ones
+      <p>感知器不能学习一些更复杂的概念，比如<strong data-toggle="tooltip"
+        title="当A和B不同时，A异或B为真（1），若A，B相同则为假（0）"
+        class="highlight">逻辑异或</strong>。这是因为这些概念是“非线性的”，简而言之，就是我们不能找到一条直线正确地把实心圆和空心圆分隔开。
       </p>
     </div>
   </div>
@@ -170,24 +156,16 @@
   <!-- fnn animation text section -->
   <div id="text6" class="scene bg-3grey topLayer">
     <div class="text right">
-      <p>To solve this problem, computer scientists turn to more complicated
-        “simulations” of the brain. A <strong data-toggle="tooltip" class="highlight"
-        title="The first and simplest type of artificial neural network">Feedforward Neural Network</strong> is
-        a generalization of a network of perceptrons that are organized into layers. In theory, these simple
-        neural networks, if trained long enough on a good
-        set of data, can learn everything from classifying images to predicting
-        income.
+      <p>为了解决这个问题，计算机科学家转向了更加复杂的<strong data-toggle="tooltip" class="highlight"
+        title="最早，最简单的神经网络算法">前馈神经网络算法</strong>。前馈神经网络是一种由多层感知器组成的通用的神经网络。理论上讲，在优质数据上进行足够久的训练之后，前馈神经网络可以学会执行从图片分类到收入预测等复杂的任务。
       </p>
     </div>
   </div>
 
   <div id="text7" class="scene bg-3grey topLayer">
     <div class="text right">
-      <p>Simple Feedforward Neural Networks sound very nice, but they have their
-        own problems. Smaller networks do not have the capacity to take on complex problems,
-        while deeper networks need a lot more computation power. This
-        time, computer scientists looked at higher level human learning mechanisms for inspirations.
-      <p>
+      <p>简单的前馈神经网络听起来很棒，但是它们也有自己的问题。小型的神经网络不足以解决复杂的问题，但是深层的神经网络训练起来非常困难，并需要大量的计算资源和时间。因此，计算机科学家们尝试从大脑更高级的学习机制中寻找灵感。
+      </p>
     </div>
   </div>
 
@@ -196,13 +174,9 @@
   <div id="text8" class="scene threeLayer bg-4grey">
     <div class="text left">
       <p>
-        One such inspiration is that we humans conceptualize fundamental building
-        blocks of things, and combine them to create more complex concepts.
-        We recognize a dog as having a nose, two ears, and four legs.
-        This behavior inspired computer scientists to create <strong class="highlight"
-        data-toggle="tooltip" title="A type of artificial neural networks that is mainly used to analyze and classify images.">Convolutional
-        Neural Networks</strong> (CNN), which are constructed from reusable groups
-        of units that learn to recognize visual patterns like basic shapes.
+        人类会将物体拆分成基本组成单元进行理解，并利用这些单元的组合和位置关系来理解更复杂的概念。比如，我们看到图中有着一个鼻子，两个耳朵，四条腿的生物，就会把它们组合起来看到一条狗。这种行为启发计算机科学家们创造了可以学习如边、角、形状、质地等视觉元素的
+        <strong class="highlight" data-toggle="tooltip"
+        title="一种主要用来处理和分类图像的神经网络">卷积神经网络</strong>（Convolutional Neural Networks，CNN）。
       </p>
     </div>
   </div>
@@ -210,11 +184,8 @@
   <div id="text9" class="scene threeLayer bg-4grey">
     <div class="text left">
       <p>
-        The power of deep learning made some traditional machine learning techniques go out of fashion.
-        With enough data and computation power, Deep learning is able to achieve
-        a level of performance traditional algorithms could never hope for. With
-         recent developments in computer hardware, and the abundance of data,
-         we are finally able to apply deep learning to the real world.
+        深度学习的兴起使许多传统机器学习方法不再流行。在有足够数据和计算力的前提下，深度学习可以达到传统算法难以企及的性能。在计算机硬件的飞速发展以及互联网时代的海量数据之下，我们终于可以将深度学习应用在实际生活中了。
+      </p>
     </div>
   </div>
 
@@ -223,7 +194,7 @@
 
     <!-- col 1 -->
     <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-      <a href="./chapter1.html" data-toggle="tooltip" title="Chapter 1"><i class="fas fa-caret-left fa-2x"></i></a>
+      <a href="./chapter1.html" data-toggle="tooltip" title="第一章"><i class="fas fa-caret-left fa-2x"></i></a>
     </div>
 
     <div class="col-12 col-md-10">
@@ -231,15 +202,11 @@
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left align-self-start">
-            <h3><strong>Summary</strong></h3>
-            <p>Now, that you have a general idea of the inspirations behind some
-              of the most important concepts in deep learning, you are prepared
-              to get in to the details of how things work. In the next chapter,
-              we will discuss perceptrons, the idea that is behind all of Deep
-              Learning.
+            <h3><strong>总结</strong></h3>
+            <p>在这一章里，我们探索了深度学习一些主要概念背后的灵感，为你打好了了深入理解它们工作原理的基础。在下一章里，我们将详细解析感知器这个深度学习背后最重要的概念。
             </p>
 
-            <h3><strong>Further Reading</strong></h3>
+            <h3><strong>延伸阅读</strong></h3>
             <p>
               <a href="https://medium.com/@jayeshbahire/the-xor-problem-in-neural-networks-50006411840b" target="_blank">
                     The XOR Problem in Neural Networks</a>
@@ -253,11 +220,10 @@
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
-            <h3><strong>Glossary</strong></h3>
-            <p><strong>Perceptron</strong>: An algorithm inspired by neurons. A single layer neural network that performs binary classification
-            on input data.<br><br>
-              <strong>Feedforward Neural Networks</strong>: The first and simplest type of artificial neural network. Many perceptrons arranged into layers. Can perform more complex tasks than perceptrons.<br><br>
-              <strong>Convolutional Neural Networks</strong>: A type of artificial neural networks that is mainly used to analyze and classify images.
+            <h3><strong>核心词汇</strong></h3>
+            <p><strong>感知机</strong>：一个受到神经元启发的算法，是一种可以对数据进行二元分类的单层神经网络。<br><br>
+              <strong>前馈神经网络</strong>：最早也是最简单的人工神经网络。它是由多层感知器组成的通用的神经网络，可以执行更复杂的任务。<br><br>
+              <strong>卷积神经网络</strong>：一种主要用来处理和分类图像的神经网络。
             </p>
           </div>
         </div>
@@ -268,7 +234,7 @@
 
     <!-- col-4 -->
     <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-      <a href="./chapter3.html" data-toggle="tooltip" title="Chapter 3"><i class="fas fa-caret-right fa-2x"></i></a>
+      <a href="./chapter3.html" data-toggle="tooltip" title="第三章"><i class="fas fa-caret-right fa-2x"></i></a>
     </div>
 
     <!-- end of ending section -->

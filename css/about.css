@@ -82,6 +82,10 @@
   text-decoration: none;
 }
 
+a:hover{ /* for images */
+    text-decoration: none;
+}
+
 /* --------------------------------- animaiton backgrounds ---------------------- */
 #seedBG path {
   fill: #E8E8E8;

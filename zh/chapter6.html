@@ -39,7 +39,7 @@
       gtag('config', 'UA-122864673-1');
     </script>
 
-  <title>第六章 Demo - OKAI</title>
+  <title>第六章 - OKAI</title>
 
 </head>
 
@@ -61,7 +61,7 @@
     <div class="row align-items-center justify-content-center">
       <!-- col 1 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-        <a href="./chapter5.html" data-toggle="tooltip" title="Chapter 5"><i class="fas fa-caret-left fa-2x"></i></a>
+        <a href="./chapter5.html" data-toggle="tooltip" title="第五章"><i class="fas fa-caret-left fa-2x"></i></a>
       </div>
 
       <!-- col 2 -->
@@ -69,9 +69,8 @@
         <div class="text-left">
           <p>第六章</p>
           <h2>前馈神经网络实例</h2>
-          <p>Wondering how the module in chapter 0 works? Harness the knowledge
-          you have acquired so far and let's take a look at how you can build a network to recognize
-          handwritten digits. Keep scrolling!</p>
+          <p>你想知道第零章中交互模块的运行原理吗？回想一下你目前为止所学到的知识，一起来看一下第零章的模块是如何识别手写数字的吧！请向下滚动继续阅读。
+          </p>
         </div>
       </div>
 
@@ -83,7 +82,7 @@
       <!-- col-4 -->
       <div class="d-none d-md-block col-1 arrowIcon"
         style="position: absolute; right: 5px; visibility: visible;">
-        <a href="./about.html" data-toggle="tooltip" title="About"><i class="fas fa-caret-right fa-2x"></i></a>
+        <a href="./about.html" data-toggle="tooltip" title="关于"><i class="fas fa-caret-right fa-2x"></i></a>
       </div>
     </div>
     <!-- end of row 1 -->
@@ -113,12 +112,8 @@
   <!-- mnist animation text section -->
   <div id="text1" class="bg-1grey scene">
     <div class="text right">
-      <p>In this chapter, we will explain how to make a practical network that will
-        recognize handwritten digits, just like the one in Chapter 0. We will be
-        using the MNIST dataset, a dataset of hand-written images from Computer
-        Scientist Yann LeCun's website.
-        <!-- We will be splitting 80% off the dataset to use for -->
-        <!-- training and the other 20% for checking our accuracy. -->
+      <p>在这一章里，我们将会用实例解释如何构建一个可以识别手写数字的神经网络。我们将会使用来自于计算机科学家<strong data-toggle="tooltip" class="highlight"
+      title="与Yoshua Bengio和Geoffrey Hinton共同获得2018年图灵奖">Yann LeCun</strong>的MNIST数据集。
       </p>
     </div>
   </div>
@@ -126,9 +121,7 @@
   <div id="text2" class="bg-1grey scene">
     <div class="text right">
       <p>
-        Each of the images from the MNIST dataset is a 28 pixel by 28 pixel image.
-        These images will be used as training data to teach our FNN how to recognize
-        handwritten digits.
+        MNIST中的图片长28像素，宽28像素。每张图片都会被作为训练数据来教我们的前馈神经网络如何识别手写数字。
       </p>
     </div>
   </div>
@@ -136,20 +129,14 @@
   <div id="text3" class="bg-1grey scene">
     <div class="text right">
       <p>
-        Each pixel has a value from 0 to 1 to indicate how white the pixel is. 0
-        is black, 1 is white, and anywhere between them is a shade of gray. These 28 &times;
-        28 = 784 pixels are flattened into a single array to be fed into the input layer.
+        每个像素都有一个0到1之间的数值来表示他们的灰度。0是黑色，1代表白色，0和1之间的数字则代表某种深度的灰色。这些28 &times; 28 = 784个像素会被首尾相连构成一个长的向量（数组），作为输入传递到到输入层中。
       </p>
     </div>
   </div>
 
   <div id="text4" class="bg-1grey scene">
     <div class="text right">
-      <p>The input layer then transforms it into the first hidden layer of size 500,
-        so we have 500 numbers that will represent a transformation of the original image.
-
-        For a multilayer network to work well, we need to break linearity,
-        and thus we use ReLU as an activation function to achieve that.
+      <p>输入层会将这些输入像素转换成信号传递到下一个隐藏层中的500个节点中，生成500个数字来表示原有的图片的信息。为了让多层网络起到应有的作用，我们需要使用ReLU作为激活函数构造非线性隐藏层。
       </p>
     </div>
   </div>
@@ -157,14 +144,8 @@
   <div id="text5" class="bg-1grey scene">
     <div class="text right">
       <p>
-        These 500 nodes are then feeding into another layer of 10 nodes.
-        Since we are working with classification, this would require us to
-        transform the output of these 10 nodes into probabilities.
-
-        To do this, we use <strong data-toggle="tooltip" class="highlight"
-        title="A hyped-up version of sigmoid where it generates the probability
-        of multiple things.">Softmax</strong> activation function.
-        In this way, we will get the probability associated with each digit that we can use to calculate loss.
+        这500个节点把它们的输出值送到最后输出层的10个节点里。我们需要把这个10个输出值转换成可以代表输入图片中写的是0到9的概率。<strong data-toggle="tooltip" class="highlight"
+        title="一个增强版本的simgoid函数，可以计算多个事物的概率">Softmax激活函数</strong>可以完成这个转换。
       </p>
     </div>
   </div>
@@ -172,24 +153,21 @@
   <!-- mnistOutput animation text section -->
   <div id="text6" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Finally, the output layer will also have 10 nodes, each corresponding to
-        a digit from 0 to 9.
+      <p>最后，输出层的每个节点都对应着一个数字。
       </p>
     </div>
   </div>
 
   <div id="text7" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Because of softmax, each final output node now contains a probability value that represents
-        how likely the FNN thinks the input image represents the corresponding digit.
+      <p>因为我们使用了softmax函数，所以每个输出节点都会对应一个概率。这个概率代表着我们的前馈神经网络觉得输入图片有多大可能会对应某个数字。
       </p>
     </div>
   </div>
 
   <div id="text8" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>The highest probability, signaling the digit that the model thinks is the most
-        probable, will be our final output classification of the input handwritten digit.
+      <p>最高的输出值（概率）就是我们的网络觉得最有可能的结果。这个输出值所对应的数字就是对手写数字的最终的识别结果。
       </p>
     </div>
   </div>
@@ -197,22 +175,16 @@
   <!-- prop animation text section -->
   <div id="text9" class="scene bg-3grey topLayer">
     <div class="text right">
-      <p>We then split images from MNIST by batches of 100 and feed them into the FNN for
-        training. During training, the model uses existing parameters (weights and biases) to generate
-        a tentative answer. This process is called <strong class="highlight"
-        data-toggle="tooltip" title="The process of making the neural network
-        generate a prediction based on input">forward propagation</strong>.
+      <p>在训练前，我们会将MNIST数据集分成100组。训练时，我们的网络会根据现在的权重和偏置来生成一个预测。这个过程就叫做<strong class="highlight"
+        data-toggle="tooltip" title="根据输入数据来让神经网络生成预测的过程">正向传播</strong>.
       </p>
     </div>
   </div>
 
   <div id="text10" class="scene bg-3grey topLayer">
     <div class="text right">
-      <p>Then, after seeing the answer and computing the loss, it goes back into
-        the network and updates the parameters to get even closer to the desired answer.
-        This process is called <strong class="highlight"
-        data-toggle="tooltip" title="The process of adjusting parameters to
-        improve the performance of neural networks.">backpropagation</strong>.
+      <p>在比对结果和计算损失函数之后，训练算法会回到网络中根据梯度去更新权重和偏置的值，从而使神经网络的预测更接近理想的正确结果。这个过程叫<strong class="highlight"
+        data-toggle="tooltip" title="通过调整参数来提升神经网络表现的过程">反向传播</strong>.
       <p>
     </div>
   </div>
@@ -221,9 +193,7 @@
   <div id="text11" class="scene threeLayer bg-4grey">
     <div class="text left">
       <p>
-        To train the model, we would need to first initialize the values inside
-        the model. In this particular case, we will initialize them to
-        random values clustered around 0, which is usually a good starting point.
+        在一开始训练时，我们会先初始化网络的参数（权重和偏置）。在这个例子中，我们会先把参数初始化成大约为0的数值。这也是常用的初始化方法之一。
       </p>
     </div>
   </div>
@@ -231,10 +201,7 @@
   <div id="text12" class="scene threeLayer bg-4grey">
     <div class="text left">
       <p>
-        To train it, we are using Stochastic Gradient Descent (SGD)
-        with a learning rate of 0.7. This learning rate is chosen by experiment,
-        as it seems to work best for our model. Usually, you should try out a few
-        different values before settling on a reasonable one.
+        我们采用随机梯度下降法和0.7的学习率来训练我们的网络。这个学习率是通过实验得来的，对于我们手写数字识别网络的训练效果非常好。专业的研究者会通过多次尝试不同的数值来确定一个理想的学习率。
       </p>
     </div>
   </div>
@@ -242,11 +209,7 @@
   <div id="text13" class="scene threeLayer bg-4grey">
     <div class="text left">
       <p>
-        After going over the dataset 2 to 3 epochs, our model is good
-        enough to be used.
-        In our model, we would be able to achieve around 97% accuracy with only
-        2 runs over the dataset, and on an average laptop, it would run in under
-        a minute.
+        在用这个数据集训练过2到3遍之后，我们的网络就可以使用了。在用这个数据集训练到第2遍的时候，它就有97%的概率来正确的识别手写数字了。在一般的笔记本电脑上，这个训练过程只用花不到1分钟。
       </p>
     </div>
   </div>
@@ -256,13 +219,10 @@
   <div id="text14" class="scene fourLayer bg-5grey">
     <div class="text right">
       <p>
-        This is the FNN that we used in our interactive module in Chapter 0.
-
-        For those who want to experiment with the model more in depth, we have
-        written an easy-to-understand code that you can experiment with online.<br>
+        这就是我们用于第零章交互模块的前馈神经网络。如果你想亲手训练这个模型，或尝试对现有模型上进行改变，我们为你写好了简答易懂的代码，让你可以随意在网上试验（需要科学上网），或下载到本地进行测试。<br>
         <a class="mt-2 btn btn-warning" id="colabButton" href="https://colab.research.google.com/drive/18bQA1ly8hsX_vjPILBkrHsbqkQKPpsdU"
           role="button" target="_blank">
-          Get Coding
+          写代码喽
         </a>
       </p>
     </div>
@@ -274,7 +234,7 @@
 
     <!-- col 1 -->
     <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-      <a href="./chapter5.html" data-toggle="tooltip" title="Chapter 5"><i class="fas fa-caret-left fa-2x"></i></a>
+      <a href="./chapter5.html" data-toggle="tooltip" title="第五章"><i class="fas fa-caret-left fa-2x"></i></a>
     </div>
 
     <div class="col-12 col-md-10">
@@ -282,14 +242,11 @@
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left align-self-start">
-            <h3><strong>Summary</strong></h3>
-            <p>We have now understood how to apply the things we have learned so far
-              to build a functional neural network that can recognize handwritten digits.
-              There are much more powerful things that AI can do. Hope these chapters can serve
-              as a starting point for you to explore more in the world of AI!
+            <h3><strong>总结</strong></h3>
+            <p>在这一章中，我们运用了之前所学到的知识来构建一个可以识别手写数字的神经网络。AI还可以做到更多比这个更为强大的事情。希望这些章节可以激发你对探索AI世界的兴趣！
             </p>
 
-            <h3><strong>Further Reading</strong></h3>
+            <h3><strong>延伸阅读</strong></h3>
             <p>
               <a href="https://yann.lecun.com/exdb/mnist/" target="_blank">
                 MNIST Dataset</a>
@@ -303,10 +260,10 @@
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
-            <h3><strong>Glossary</strong></h3>
-            <p><strong>Softmax</strong>: A hyped-up version of sigmoid where it generates the probability of multiple things.<br><br>
-              <strong>Forward Propagation</strong>: The process of making the neural network generate a prediction based on input. <br><br>
-              <strong>Backpropagation</strong>: The process of adjusting parameters to improve the performance of neural networks.
+            <h3><strong>核心词汇</strong></h3>
+            <p><strong>Softmax</strong>：一个增强版本的simgoid函数，可以计算多个事物的概率。<br><br>
+              <strong>正向传播</strong>：根据输入数据来让神经网络生成预测的过程。<br><br>
+              <strong>反向传播</strong>：通过调整参数来提升神经网络表现的过程。
             </p>
           </div>
         </div>
@@ -318,7 +275,7 @@
     <!-- col-4 -->
     <div class="d-none d-md-block col-1 arrowIcon"
       style="position: absolute; right: 5px; visibility: visible;">
-      <a href="./about.html" data-toggle="tooltip" title="About"><i class="fas fa-caret-right fa-2x"></i></a>
+      <a href="./about.html" data-toggle="tooltip" title="关于"><i class="fas fa-caret-right fa-2x"></i></a>
     </div>
 
 
