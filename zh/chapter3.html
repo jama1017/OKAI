@@ -38,7 +38,7 @@
       gtag('config', 'UA-122864673-1');
     </script>
 
-  <title>第三章 Demo - OKAI</title>
+  <title>第三章 - OKAI</title>
 
 </head>
 
@@ -59,7 +59,7 @@
     <div class="row align-items-center justify-content-center">
       <!-- col 1 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-        <a href="./chapter2.html" data-toggle="tooltip" title="Chapter 2"><i class="fas fa-caret-left fa-2x"></i></a>
+        <a href="./chapter2.html" data-toggle="tooltip" title="第二章"><i class="fas fa-caret-left fa-2x"></i></a>
       </div>
 
       <!-- col 2 -->
@@ -67,8 +67,8 @@
         <div class="text-left">
           <p>第三章</p>
           <h2>深度学习的基本元素</h2>
-          <p>Complex algorithms, like the ones in deep learning, are built from many individual components.
-          In this chapter, we are taking a look at the perceptron, which constitutes a neural network. Keep scrolling!</p>
+          <p>用于深度学习的复杂神经网络是由多个简单的“零件”组成的。在这一章里，我们就来详细了解一下组成这些神经网络的基本元素 - 感知器。请向下滚动继续阅读。
+          </p>
         </div>
       </div>
 
@@ -79,7 +79,7 @@
 
       <!-- col-4 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-        <a href="./chapter4.html" data-toggle="tooltip" title="Chapter 4"><i class="fas fa-caret-right fa-2x"></i></a>
+        <a href="./chapter4.html" data-toggle="tooltip" title="第四章"><i class="fas fa-caret-right fa-2x"></i></a>
       </div>
     </div>
     <!-- end of row 1 -->
@@ -101,32 +101,31 @@
   <!-- text begins -->
   <div id="brainText" class="bg-1grey scene">
     <div class="text right">
-      <p>Early deep learning researchers in the 1970s took inspirations from a
-        neuron, the building block of our brain, to create an algorithm called
-        the perceptron.</p>
-      <p>Therefore, to understand what a perceptron is, let’s first take a look at a neuron. </p>
+      <p>上世纪50年代，早期神经网络研究者们从人类大脑的神经元那里得到了灵感，从而构建了名为感知器的算法。
+      </p>
+      <p>想要了解什么是感知器，我们先来看一下什么是神经元。
+      </p>
     </div>
   </div>
 
   <div id="nerveText" class="bg-1grey scene">
     <div class="text right">
-      <p>A neuron is composed of 3 main parts:</p>
-      <p>Dendrites: Spread out receivers of a neuron that
-        takes in stimuli from other neurons.</p>
-      <p>Soma: The “core” of a neuron where the nucleus is located in,
-          and it decides if a signal will be sent to other neurons.</p>
-      <p>Axon: Long extending neck of the neuron that passes
-        a signal to all connected neurons. </p>
+      <p>每一个神经元都由三部分组成：</p>
+      <p>树突：神经信息的接收器，用于感知其他神经元所传来的刺激。
+      </p>
+      <p>神经元胞体：包含着细胞核的神经元“核心”， 它决定一个神经信号是否会被传送到其他的神经元。
+      </p>
+      <p>轴突：神经元向外伸长的突起，用于将神经信号传递给临近的神经元。</p>
     </div>
   </div>
 
   <div id="neuron1Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>The perceptron, similarly, also has 3 major parts:</p>
-      <p>Inputs: inputs take in signals in the form of numbers and pass them to the perceptron.</p>
-      <p>Perceptron: the perceptron takes in the inputs and conducts some calculations on them.</p>
-      <p>
-        Output: the output of the perceptron spits out the result of the calculations.
+      <p>同样的，感知器也由三部分组成：
+      </p>
+      <p>输入单元：接受输入信号（数字）并传递给感知器。</p>
+      <p>感知器：汇总所有输入信号并进行数学运算。</p>
+      <p>输出单位：感知器的输出就是数学运算的结果。
       </p>
         </li>
       </ul>
@@ -135,10 +134,8 @@
 
   <div id="neuron2Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Between inputs and perceptrons, the axon-to-dendrite connection is simplified to an edge, and
-        signals transmitted are represented with numbers.
-        <br>The input on top here is connected to the perceptron with a thicker edge,
-        thus the signal is amplified by a factor of 2 when it reaches the neuron.
+      <p>在感知器里，神经元与神经元的连接被简化成了一条线，其中被传递的神经信号也用数字来表示。
+        <br>在动画中，位于上方的输入单元和感知器之间被一条很粗的线链接。这意味着感知器所接收到的信号值会被相应地放大（动画中的信号被放大了两倍）。
       </p>
 
     </div>
@@ -146,36 +143,32 @@
 
   <div id="neuron3Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>The input at the bottom, however, has a thinner connection to the neuron, and
-          thus the signal is reduced to 2, resulting in a final signal of 2 + 2 = 4 received, instead of
-        3 + 2 = 5.
+      <p>与之相比，位于下方的输入单元和感知器之间的连接线就细了许多。这会导致信号值被缩小为原来的三分之二。在接收到全部缩放后的信号后，感知器便会把这些信号加起来：来自上方的信号值2加上来自下方的信号值2, 得到汇总的信号值4。
         <br>
-        The thickness of the edge is called <strong class="highlight" data-toggle="tooltip"
-        title="A numeric value associated with an edge.
-        It can either amplify or reduce signals.">weight</strong>.
+        在深度学习中，连接线的粗细程度被称为<strong class="highlight" data-toggle="tooltip"
+        title="附于连接线上的数值，可以放大，减小，或倒置信号。">权重</strong>（weight）。
       </p>
     </div>
   </div>
 
   <div id="neuron4Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Next, the perceptron processes the signal by shaking itself. In this case, doing so incremented the signal by 1.
+      <p>接下来，感知器会通过“抖一抖”的方式来继续处理这些信号。在动画中，信号值增加了1。
       <br>
-        The “shakiness” of a perceptron is called <strong class="highlight" data-toggle="tooltip"
-        title="A numeric value being added onto the weighted sum of all input signals.">bias</strong>,
-        which can both increase or decrease the value of the signal by any set amount.
+        感知器的“抖动程度”被称为<strong class="highlight" data-toggle="tooltip"
+        title="一个被加到所有输入信号的加权和的数值。">偏置</strong>（bias） - 它可以增加或者减少一个信号的值。
       </p>
     </div>
   </div>
 
   <div id="neuron5Text" class="scene bg-2grey upperLayer">
     <div class="text left">
-      <p>Finally, an <strong class="highlight" data-toggle="tooltip"
-        title="A function that is used to control the final output of a perceptron.">
-        activation function</strong> is used to simulate how "fired" the perceptron is. More on this soon!</p>
+      <p>最后，我们用一个<strong class="highlight" data-toggle="tooltip"
+        title="一个用来控制感知器最后输出值的函数。">
+        激活函数</strong>（activation function）来控制一个感知器应该输出多强的信号。我们很快将解释什么是激活函数。
+      </p>
       <p>
-        Sigmoid, a type of activation functions, is used here. It maps the signal value into the range of 0-1.
-        In our case, 5 is being mapped to 0.99, which becomes the final output.
+        在这里，我们采用Sigmoid函数。它是激活函数的一种，可以把信号值映射到一个0到1的区间。在我们的示例中，信号值5被映射成了0.99，成为了最终的输出值。
       </p>
     </div>
   </div>
@@ -185,15 +178,11 @@
   <div id="appanana1Text" class="scene topLayer bg-3grey">
     <div class="text right">
       <h3>
-        Activation Functions
+        激活函数
       </h3>
       <hr>
       <p>
-        Early researchers used these perceptrons to model how human beings think.
-        In spite of early successes, they quickly ran into a problem.
-        When a researcher wanted to predict how likely an animal with 2 legs
-        and 2 arms is a human, the probability that the model gave back would often
-        be above 100% or below 0%.
+        早期的研究者试图用感知器来检测一张图片里有猫的概率，但是他们很快就遇到了一个问题：最后输出的概率经常会高于100%或者低于0%。
       </p>
       <!-- <p>
         Intuitively, this isn’t possible, but to the machine, it is just trying
@@ -205,10 +194,7 @@
   <div id="appanana2Text" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        To tackle such problems, the researchers put an activation function
-        behind the output of the perceptron, which can control the output range of that perceptron.
-        ReLU and Sigmoid are examples of activation
-        functions that are commonly used.
+        为了解决这些问题，研究者们把一个激活函数放在了感知器的输出单位里，从而控制感知器的输出数值区间。Sigmoid函数和ReLU都是用来限制输出范围的一些常用的激活函数。
       </p>
     </div>
   </div>
@@ -216,21 +202,14 @@
   <div id="appanana3Text" class="scene topLayer bg-3grey">
     <div class="text right">
       <p>
-        Sigmoid calculates the probability of two things, for example, if you
-        want to classify if an image is a cat or is not a cat, you would use a
-        sigmoid activation function, which transforms
-        the output value into a probability (a number between 0 and 1).
+        Sigmoid函数可以计算概率。例如，如果你想知道这是还是不是一张猫的图片，你就需要用到Sigmoid函数来把输出值变成一个概率（一个0到1之间的数字）。
       </p>
     </div>
   </div>
 
   <div id="appanana4Text" class="scene topLayer bg-3grey">
     <div class="text right">
-      <p>
-        ReLU makes sure that the final output is non-negative, and is commonly used in multilayer networks.
-        Unlike sigmoid, whose main purpose is to limit output range, ReLU is used
-        to break linearity so that multilayer networks can learn more complex concepts.
-        We will talk about this in depth in Chapter 5.
+      <p>ReLU（线性整流函数）则被用来确保输出值是非负的。有别于Sigmoid函数的是，ReLU主要被用来增加模型复杂度从而使多层神经网络学习更复杂的概念。我们会在第五章里更深度的讨论这一点。
       </p>
     </div>
   </div>
@@ -240,7 +219,7 @@
 
     <!-- col 1 -->
     <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; left: 5px;">
-      <a href="./chapter2.html" data-toggle="tooltip" title="Chapter 2"><i class="fas fa-caret-left fa-2x"></i></a>
+      <a href="./chapter2.html" data-toggle="tooltip" title="第二章"><i class="fas fa-caret-left fa-2x"></i></a>
     </div>
 
     <div class="col-12 col-md-10">
@@ -248,13 +227,11 @@
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left align-self-start">
-            <h3><strong>Summary</strong></h3>
-            <p>Up to this point, we have looked at how neurons inspired the perceptron algorithm,
-              and what are the components of the perceptron. In the next chapter,
-              we will discuss how data can be used to teach perceptrons and other more complex neural networks.
+            <h3><strong>总结</strong></h3>
+            <p>在这一章里，我们了解了感知器的工作原理和大脑里的神经元是如何启发感知器算法的构建的。在下一章里，我们会学习如何用数据来训练感知器和其他更复杂的神经网络。
             </p>
 
-            <h3><strong>Further Reading</strong></h3>
+            <h3><strong>延伸阅读</strong></h3>
             <p>
               <a href="https://towardsdatascience.com/what-the-hell-is-perceptron-626217814f53" target="_blank">
                 What the Hell is Perceptron?</a>
@@ -268,12 +245,12 @@
 
         <div class="col-10 col-md-5 fourLayer align-self-start">
           <div class="text-left">
-            <h3><strong>Glossary</strong></h3>
+            <h3><strong>核心词汇</strong></h3>
             <p>
-              <strong>Perceptron</strong>: A neuron-inspired algorithm that is the building block of more complex neural networks.<br><br>
-              <strong>Weight</strong>: A numeric value associated with an edge. It can either amplify or reduce signals.<br><br>
-              <strong>Bias</strong>: A numeric value being added onto the weighted sum of all input signals.<br><br>
-              <strong>Activation Function</strong>: A function that is used to control the final output of a perceptron.
+              <strong>感知器</strong>：一种源于神经元的算法，复杂神经网络的基本元素。<br><br>
+              <strong>权重</strong>：附于连接线上的数值，可以放大，减小，或倒置信号。<br><br>
+              <strong>偏置</strong>：一个被加到所有输入信号的加权和的数值。<br><br>
+              <strong>激活函数</strong>：一个用来控制感知器单元最后输出值的函数。
             </p>
           </div>
         </div>
@@ -284,7 +261,7 @@
 
     <!-- col-4 -->
     <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
-      <a href="./chapter4.html" data-toggle="tooltip" title="Chapter 4"><i class="fas fa-caret-right fa-2x"></i></a>
+      <a href="./chapter4.html" data-toggle="tooltip" title="第四章"><i class="fas fa-caret-right fa-2x"></i></a>
     </div>
 
     <!-- end of ending section -->
