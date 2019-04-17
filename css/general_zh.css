@@ -61,6 +61,9 @@ p {
     margin-left: 80px;
 }
 
+#navSocial a {color:inherit;}
+#navSocial a:hover {color:black;}
+
 #tinyLinks, #navLangSel {
     margin-left: 70px;
     font-size: 12px;
