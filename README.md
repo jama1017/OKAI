@@ -1,10 +1,12 @@
 # OKAI
 
-**OKAI** is an interactive introduction to Artificial Intelligence (AI).
+> **OKAI** is an **interactive introduction to Artificial Intelligence (AI)**.
 
-## Project Demo
-OKAI is currently in the phase of development. You can take a look at a demo chapter here:
-http://majiaju.io/SynGap_demo/index.html
+## View the Project
+OKAI just launched recently! Visit the full site at https://okai.brown.edu/<br>
+~~OKAI is currently in the phase of development. You can take a look at a demo chapter here:
+http://majiaju.io/SynGap_demo/index.html~~
+
 
 ## Project Goal
 OKAI aims to **demystify** and **introduce** concepts in **AI** to a broader audience other than people with backgrounds in related fields, such as computer science, applied math, and physics.
@@ -14,8 +16,10 @@ OKAI utilizes **web-based interactive graphics and animations** to visualize wor
 
 OKAI is in the format of a **website**, with each webpage functioning similar to a chapter in a book and introducing one concept at a time.
 
-## Project Page
-You can learn more about this project at http://majiaju.io/syngap.html
+## Related Pages
+You can learn more about this project on [my personal website](http://majiaju.io/syngap.html).
+
+If you are interested in learning how the scroll-based animations are created, read [this medium article](https://medium.com/@jiajuma/the-ultimate-workflow-of-creating-scroll-based-animations-7366b670630?source=friends_link&sk=03595c3a06eb78944c287d3d0dbafe16) written by me.
 
 ## License
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) <br>
