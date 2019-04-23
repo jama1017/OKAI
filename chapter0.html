@@ -8512,6 +8512,7 @@
           }
         }
 
+        let adjust_val = 1;
         //for touch events
         if (res == 'start') {
           if (clearBeforeDraw == true) {
@@ -8524,8 +8525,8 @@
 
           var touch = e.touches[0];
           let bound = canvas.getBoundingClientRect();
-          currX = touch.pageX - bound.left - canvas.clientLeft + 1.5*touch.target.offsetLeft;
-          currY = touch.clientY - bound.top - canvas.clientTop + 1.5*touch.target.offsetTop;
+          currX = touch.pageX - bound.left - canvas.clientLeft + adjust_val*touch.target.offsetLeft;
+          currY = touch.clientY - bound.top - canvas.clientTop + adjust_val*touch.target.offsetTop;
 
           //draw a circle
           ctx.beginPath();
@@ -8557,8 +8558,8 @@
 
             var touch = e.touches[0];
             let bound = canvas.getBoundingClientRect();
-            currX = touch.clientX - bound.left - canvas.clientLeft + 1.5*touch.target.offsetLeft;
-            currY = touch.clientY - bound.top - canvas.clientTop + 1.5*touch.target.offsetTop;
+            currX = touch.clientX - bound.left - canvas.clientLeft + adjust_val*touch.target.offsetLeft;
+            currY = touch.clientY - bound.top - canvas.clientTop + adjust_val*touch.target.offsetTop;
 
             currPath = paths[paths.length - 1];
             currPath[0].push(currX);
