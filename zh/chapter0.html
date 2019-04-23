@@ -127,7 +127,7 @@
         <a href="./index.html" data-toggle="tooltip" title="首页"><i class="fas fa-caret-left fa-2x"></i></a>
       </div>
 
-      <div class="col-8 col-md-4 text-center">
+      <div class="col-10 col-md-4 text-center">
         <div class="text-left p-3">
           <h2>手写数字识别</h1>
           <p>在白色方块内写一个0到9之间的数字，然后按下“识别”键。你写的数字有98.08%的几率可以被正确地识别。
@@ -139,19 +139,21 @@
         </div>
       </div>
 
-      <div class="col-8 col-md-6 text-center">
+      <div class="col-10 col-md-6 text-center">
         <div class="row align-items-start justify-content-around">
 
           <div class="order-2 order-md-1 col-10 col-md-5 text-left py-3">
-            <canvas id="can" width="250px" height="250px" class="d-block"></canvas>
+            <canvas id="can" width="250px" height="250px" class="d-block mx-auto"></canvas>
             <!-- buttons -->
-            <button type="button" id="recognize" onclick="recognize()" class="btn btn-light mt-3">识别</button>
-            <button type="button" id="clr" onclick="erase()" class="btn btn-light mt-3">擦除</button>
-            <div id="nnInput"></div>
+            <div class="text-center text-md-left">
+                <button type="button" id="recognize" onclick="recognize()" class="btn btn-light mt-3">识别</button>
+                <button type="button" id="clr" onclick="erase()" class="btn btn-light mt-3">擦除</button>
+                <div id="nnInput"></div>
+            </div>
           </div>
 
           <div class="order-1 order-md-2 col-10 col-md-5 py-3">
-            <div id="nnOut" class="d-flex justify-content-center align-items-center"></div>
+            <div id="nnOut" class="d-flex justify-content-center align-items-center mx-auto"></div>
           </div>
 
         </div>
@@ -160,6 +162,14 @@
       <!-- col-4 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
         <a href="./chapter1.html" data-toggle="tooltip" title="第一章"><i class="fas fa-caret-right fa-2x"></i></a>
+      </div>
+
+      <!-- mobile nav button groups -->
+      <div class="col-10 d-md-none fourLayer justify-content-start my-3">
+          <div class="btn-group d-flex" id="nextButtonGroup" role="group">
+              <a class="btn btn-warning w-100" href="/chapter1.html"
+                  role="button" id="chap0Button">下一章</a>
+          </div>
       </div>
 
     </div>
@@ -8500,6 +8510,7 @@
           }
         }
 
+        let adjust_val = 1;
         //for touch events
         if (res == 'start') {
           if (clearBeforeDraw == true) {
@@ -8512,8 +8523,8 @@
 
           var touch = e.touches[0];
           let bound = canvas.getBoundingClientRect();
-          currX = touch.pageX - bound.left - canvas.clientLeft + 1.5*touch.target.offsetLeft;
-          currY = touch.clientY - bound.top - canvas.clientTop + 1.5*touch.target.offsetTop;
+          currX = touch.pageX - bound.left - canvas.clientLeft + adjust_val*touch.target.offsetLeft;
+          currY = touch.clientY - bound.top - canvas.clientTop + adjust_val*touch.target.offsetTop;
 
           //draw a circle
           ctx.beginPath();
@@ -8545,8 +8556,8 @@
 
             var touch = e.touches[0];
             let bound = canvas.getBoundingClientRect();
-            currX = touch.clientX - bound.left - canvas.clientLeft + 1.5*touch.target.offsetLeft;
-            currY = touch.clientY - bound.top - canvas.clientTop + 1.5*touch.target.offsetTop;
+            currX = touch.clientX - bound.left - canvas.clientLeft + adjust_val*touch.target.offsetLeft;
+            currY = touch.clientY - bound.top - canvas.clientTop + adjust_val*touch.target.offsetTop;
 
             currPath = paths[paths.length - 1];
             currPath[0].push(currX);
