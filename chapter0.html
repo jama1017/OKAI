@@ -127,7 +127,7 @@
         <a href="./index.html" data-toggle="tooltip" title="Home"><i class="fas fa-caret-left fa-2x"></i></a>
       </div>
 
-      <div class="col-8 col-md-4 text-center">
+      <div class="col-10 col-md-4 text-center">
         <div class="text-left p-3">
           <h2>Handwritten Digit Recognition</h1>
           <p>Draw a single digit (0-9) in the white box below and click the "recognize" button.
@@ -141,19 +141,21 @@
         </div>
       </div>
 
-      <div class="col-8 col-md-6 text-center">
+      <div class="col-10 col-md-6 text-center">
         <div class="row align-items-start justify-content-around">
 
-          <div class="order-2 order-md-1 col-10 col-md-5 text-left py-3">
-            <canvas id="can" width="250px" height="250px" class="d-block"></canvas>
+          <div class="order-2 order-md-1 col-10 col-md-5 text-left py-3 mx-auto">
+            <canvas id="can" width="250px" height="250px" class="d-block mx-auto"></canvas>
             <!-- buttons -->
-            <button type="button" id="recognize" onclick="recognize()" class="btn btn-light mt-3">Recognize</button>
-            <button type="button" id="clr" onclick="erase()" class="btn btn-light mt-3">Erase</button>
+           <div class="text-center text-md-left">
+               <button type="button" id="recognize" onclick="recognize()" class="btn btn-light mt-3">Recognize</button>
+               <button type="button" id="clr" onclick="erase()" class="btn btn-light mt-3">Erase</button>
+           </div>
             <div id="nnInput"></div>
           </div>
 
           <div class="order-1 order-md-2 col-10 col-md-5 py-3">
-            <div id="nnOut" class="d-flex justify-content-center align-items-center"></div>
+            <div id="nnOut" class="d-flex justify-content-center align-items-center mx-auto"></div>
           </div>
 
         </div>
@@ -162,6 +164,14 @@
       <!-- col-4 -->
       <div class="d-none d-md-block col-1 arrowIcon" style="position: absolute; right: 5px;">
         <a href="./chapter1.html" data-toggle="tooltip" title="Chapter 1"><i class="fas fa-caret-right fa-2x"></i></a>
+      </div>
+
+      <!-- mobile nav button groups -->
+      <div class="col-10 d-md-none fourLayer justify-content-start my-3">
+          <div class="btn-group d-flex" id="nextButtonGroup" role="group">
+              <a class="btn btn-warning w-100" href="/chapter1.html"
+                  role="button" id="chap0Button">Next Chapter</a>
+          </div>
       </div>
 
     </div>
