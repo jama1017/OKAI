@@ -1,23 +1,34 @@
 /* ------------------------animation background colors------------------------- */
+/*
+#E8E8E8
+#E0E0E0
+#DCDCDC
+#D8D8D8
+#D3D3D3
+#D0D0D0
+#C8C8C8
+#C0C0C0
+#BEBEBE*/
+
 #seedBG path{
   fill: #E8E8E8;
 }
 
 #robotBG path{
-  fill: #DCDCDC;
+  fill: #E0E0E0;
 }
 
 #agiBG path{
-  fill: #D3D3D3;
+  fill: #DCDCDC;
 }
 
 #dataBG path{
-  fill: #C8C8C8;
+  fill: #D8D8D8;
 }
 
 
 #wordsBG path{
-  fill: #C0C0C0;
+  fill: #D3D3D3;
   /* fill: transparent; */
 }
 

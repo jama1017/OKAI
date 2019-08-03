@@ -14,11 +14,11 @@
 }
 
 #perceptronBG {
-  fill: #DCDCDC;
+  fill: #E0E0E0;
 }
 
 #activationsBG path{
-  fill: #D3D3D3;
+  fill: #DCDCDC;
   /* fill: red; */
 }
 

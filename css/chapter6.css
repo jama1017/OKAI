@@ -14,19 +14,19 @@
 }
 
 #mnistOutputBG path {
-  fill: #DCDCDC;
+  fill: #E0E0E0;
 }
 
 #propBG path {
-  fill: #D3D3D3;
+  fill: #DCDCDC;
 }
 
 #repeatBG path {
-  fill: #C8C8C8;
+  fill: #D8D8D8;
 }
 
 #codingBG path {
-  fill: #C0C0C0;
+  fill: #D3D3D3;
   /* fill: transparent; */
 }
 
