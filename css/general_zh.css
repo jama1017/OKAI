@@ -403,10 +403,10 @@ p a:hover{
 
 .bg-1grey { background-color: #E8E8E8; }
 /* .bg-1grey { background-color: red; } */
-.bg-2grey { background-color: #DCDCDC; }
-.bg-3grey { background-color: #D3D3D3; }
-.bg-4grey { background-color: #C8C8C8; }
-.bg-5grey { background-color: #C0C0C0; }
+.bg-2grey { background-color: #E0E0E0; }
+.bg-3grey { background-color: #DCDCDC; }
+.bg-4grey { background-color: #D8D8D8; }
+.bg-5grey { background-color: #D3D3D3; }
 
 .upperLayer {z-index: 1;}
 
