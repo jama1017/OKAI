@@ -17,7 +17,7 @@ OKAI utilizes **web-based interactive graphics and animations** to visualize wor
 OKAI is in the format of a **website**, with each webpage functioning similar to a chapter in a book and introducing one concept at a time.
 
 ## Related Pages
-You can learn more about this project on [my personal website](http://majiaju.io/syngap.html).
+You can learn more about this project on [my personal website](http://majiaju.io/okai.html).
 
 If you are interested in learning how the scroll-based animations are created, read [this medium article](https://medium.com/@jiajuma/the-ultimate-workflow-of-creating-scroll-based-animations-7366b670630?source=friends_link&sk=03595c3a06eb78944c287d3d0dbafe16) written by me.
 
